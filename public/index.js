@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// This code had major spoilers. Please don't look at the code if you don't want anything spoiled.//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 //Section for enabling use of cookies
 
 console.log('JS Version 1.15')
@@ -7001,3 +7005,37 @@ window.onclick = function (event) {
     zoomModal.style.display = 'none'
   }
 }
+
+// Secret code
+var secret = '3838404037393739666513' //Konami Code
+var input = ''
+var timer
+var mode = false
+var showclassName = false
+
+// $(document).ready(function () {
+//   $('#flash').hide()
+// })
+
+$(document).keyup(function (e) {
+  input += e.which
+  console.log(input)
+  clearTimeout(timer)
+  timer = setTimeout(function () {
+    input = ''
+  }, 5000)
+  check_input()
+})
+
+function check_input() {
+  if (input == secret) {
+    //the secret code
+    console.log(`You unlocked the BladeSwarm!`)
+  }
+}
+
+$(document).ready(function () {
+  setInterval(function () {
+    $('#info').html('Keystroke: ' + input)
+  }, 100)
+})
