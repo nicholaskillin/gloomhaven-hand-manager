@@ -965,7 +965,7 @@ playCardsButton.onclick = () => {
     longRestButton.classList.add('not-while-in-play')
     loseCardFromRestButton.classList.add('not-while-in-play')
     rerollShortRestButton.classList.add('not-while-in-play')
-    playCardsButton.classList.add('not-without-more-selected')
+    playCardsButton.classList.add('not-without-more-cards')
   }
 }
 
