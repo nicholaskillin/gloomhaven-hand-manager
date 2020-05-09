@@ -2,6 +2,28 @@
 
 console.log('JS Version 1.15')
 
+//characters
+let brute = document.getElementById('brute')
+let cragheart = document.getElementById('cragheart')
+let mindthief = document.getElementById('mindthief')
+let spellweaver = document.getElementById('spellweaver')
+let scoundrel = document.getElementById('scoundrel')
+let tinkerer = document.getElementById('tinkerer')
+let beastTyrant = document.getElementById('beastTyrant')
+let doomStalker = document.getElementById('doomStalker')
+let nightshroud = document.getElementById('nightshroud')
+let quartermaster = document.getElementById('quartermaster')
+let elementalist = document.getElementById('elementalist')
+let sunkeeper = document.getElementById('sunkeeper')
+let summoner = document.getElementById('summoner')
+let berserker = document.getElementById('berserker')
+let soothsinger = document.getElementById('soothsinger')
+let sawbones = document.getElementById('sawbones')
+let plagueherald = document.getElementById('plagueherald')
+
+let beastTyrantStaff = document.getElementById('beastTyrantStaff')
+let beastTyrantStaffLabel = document.getElementById('beastTyrantStaffLabel')
+
 function setCookie(cname, cvalue, exdays) {
   var d = new Date()
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000)
@@ -236,28 +258,6 @@ let numberOfActiveCards = 0
 let bearHealth = 0
 let bearMaxHealth = 0
 let lootCount = 0
-
-//characters
-let brute = document.getElementById('brute')
-let cragheart = document.getElementById('cragheart')
-let mindthief = document.getElementById('mindthief')
-let spellweaver = document.getElementById('spellweaver')
-let scoundrel = document.getElementById('scoundrel')
-let tinkerer = document.getElementById('tinkerer')
-let beastTyrant = document.getElementById('beastTyrant')
-let doomStalker = document.getElementById('doomStalker')
-let nightshroud = document.getElementById('nightshroud')
-let quartermaster = document.getElementById('quartermaster')
-let elementalist = document.getElementById('elementalist')
-let sunkeeper = document.getElementById('sunkeeper')
-let summoner = document.getElementById('summoner')
-let berserker = document.getElementById('berserker')
-let soothsinger = document.getElementById('soothsinger')
-let sawbones = document.getElementById('sawbones')
-let plagueherald = document.getElementById('plagueherald')
-
-let beastTyrantStaff = document.getElementById('beastTyrantStaff')
-let beastTyrantStaffLabel = document.getElementById('beastTyrantStaffLabel')
 
 //status effects
 let poisoned = false
