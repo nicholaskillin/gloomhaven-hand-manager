@@ -234,6 +234,7 @@ let loseDiscardButton = document.getElementById('lose-discard-button2')
 
 let playCard1 = ''
 let playCard2 = ''
+let playCard3 = ''
 
 //counters
 let cardCount = 0
@@ -740,6 +741,11 @@ const getCard2 = (card) => {
   flipCard(card)
 }
 
+const getCard3 = (card) => {
+  playCard3 = card.innerHTML
+  flipCard(card)
+}
+
 const flipChosenCard = (card) => {
   card.innerHTML = flippedCard
   card.className = ''
@@ -876,6 +882,7 @@ for (var i = 0; i < hand.length; i++) {
           handCard.classList.add('add-border')
           cardCount++
           loseHandCard.classList.remove('not-without-more-selected')
+          playExtraCardButton.classList.remove('not-without-more-selected')
         } else if (
           !isSelected(handCard) &&
           handChosen === true &&
@@ -892,6 +899,7 @@ for (var i = 0; i < hand.length; i++) {
           handCard.classList.remove('add-border')
           cardCount--
           loseHandCard.classList.add('not-without-more-selected')
+          playExtraCardButton.classList.add('not-without-more-selected')
         }
       }
     }
@@ -957,13 +965,24 @@ playCardsButton.onclick = () => {
     longRestButton.classList.add('not-while-in-play')
     loseCardFromRestButton.classList.add('not-while-in-play')
     rerollShortRestButton.classList.add('not-while-in-play')
-    playCardsButton.classList.add('not-without-more-cards')
-    playExtraCardButton.classList.remove('not-without-playing-cards')
+    playCardsButton.classList.add('not-without-more-selected')
   }
+}
+
+playExtraCardButton.onclick = () => {
+  let cardSelected = document.getElementsByClassName('hand add-border')[0]
+  getCard3(cardSelected)
+  chosenCard3.innerHTML = playCard3
+  chosenCard3.classList.remove('hiding')
+  playExtraCardButton.classList.add('not-without-more-selected')
+  loseHandCard.classList.add('not-without-more-selected')
+  cardsInPlayCounter++
+  cardCount--
 }
 
 let chosenCard1 = document.getElementById('chosen-card-1')
 let chosenCard2 = document.getElementById('chosen-card-2')
+let chosenCard3 = document.getElementById('chosen-card-3')
 let chosenCounter = 0
 chosenCard1.onclick = () => {
   if (
@@ -990,6 +1009,7 @@ chosenCard1.onclick = () => {
   ) {
     chosenCard2.classList.remove('add-border')
     chosenCard1.classList.add('add-border')
+    chosenCard3.classList.remove('add-border')
   }
 }
 
@@ -1018,6 +1038,36 @@ chosenCard2.onclick = () => {
   ) {
     chosenCard1.classList.remove('add-border')
     chosenCard2.classList.add('add-border')
+    chosenCard3.classList.remove('add-border')
+  }
+}
+
+chosenCard3.onclick = () => {
+  if (
+    chosenCounter < 1 &&
+    !isSelected(chosenCard3) &&
+    !isFlipped(chosenCard3) &&
+    mustLoseCount < 1
+  ) {
+    chosenCard3.classList.add('add-border')
+    chosenCounter++
+    discardButton.classList.remove('not-without-more-selected')
+    loseButton.classList.remove('not-without-more-selected')
+    activateButton.classList.remove('not-without-more-selected')
+  } else if (chosenCounter === 1 && isSelected(chosenCard3)) {
+    chosenCard3.classList.remove('add-border')
+    chosenCounter--
+    discardButton.classList.add('not-without-more-selected')
+    loseButton.classList.add('not-without-more-selected')
+    activateButton.classList.add('not-without-more-selected')
+  } else if (
+    chosenCounter == 1 &&
+    !isSelected(chosenCard3) &&
+    !isFlipped(chosenCard3)
+  ) {
+    chosenCard1.classList.remove('add-border')
+    chosenCard2.classList.remove('add-border')
+    chosenCard3.classList.add('add-border')
   }
 }
 
@@ -1161,6 +1211,76 @@ discardButton.onclick = () => {
     loseButton.classList.add('not-without-more-selected')
     activateButton.classList.add('not-without-more-selected')
   }
+  if (chosenCard3.classList.contains('add-border') && mustLoseCount < 1) {
+    if (discard1.classList.contains('flipped')) {
+      discard1.innerHTML = chosenCard3.innerHTML
+      discard1.classList.remove('hiding')
+      discard1.classList.remove('flipped')
+    } else if (discard2.classList.contains('flipped')) {
+      discard2.innerHTML = chosenCard3.innerHTML
+      discard2.classList.remove('hiding')
+      discard2.classList.remove('flipped')
+    } else if (discard3.classList.contains('flipped')) {
+      discard3.innerHTML = chosenCard3.innerHTML
+      discard3.classList.remove('hiding')
+      discard3.classList.remove('flipped')
+    } else if (discard4.classList.contains('flipped')) {
+      discard4.innerHTML = chosenCard3.innerHTML
+      discard4.classList.remove('hiding')
+      discard4.classList.remove('flipped')
+    } else if (discard5.classList.contains('flipped')) {
+      discard5.innerHTML = chosenCard3.innerHTML
+      discard5.classList.remove('hiding')
+      discard5.classList.remove('flipped')
+    } else if (discard6.classList.contains('flipped')) {
+      discard6.innerHTML = chosenCard3.innerHTML
+      discard6.classList.remove('hiding')
+      discard6.classList.remove('flipped')
+    } else if (discard7.classList.contains('flipped')) {
+      discard7.innerHTML = chosenCard3.innerHTML
+      discard7.classList.remove('hiding')
+      discard7.classList.remove('flipped')
+    } else if (discard8.classList.contains('flipped')) {
+      discard8.innerHTML = chosenCard3.innerHTML
+      discard8.classList.remove('hiding')
+      discard8.classList.remove('flipped')
+    } else if (discard9.classList.contains('flipped')) {
+      discard9.innerHTML = chosenCard3.innerHTML
+      discard9.classList.remove('hiding')
+      discard9.classList.remove('flipped')
+    } else if (discard10.classList.contains('flipped')) {
+      discard10.innerHTML = chosenCard3.innerHTML
+      discard10.classList.remove('hiding')
+      discard10.classList.remove('flipped')
+    } else if (discard11.classList.contains('flipped')) {
+      discard11.innerHTML = chosenCard3.innerHTML
+      discard11.classList.remove('hiding')
+      discard11.classList.remove('flipped')
+    } else if (discard12.classList.contains('flipped')) {
+      discard12.innerHTML = chosenCard3.innerHTML
+      discard12.classList.remove('hiding')
+      discard12.classList.remove('flipped')
+    }
+    chosenCard3.innerHTML = ''
+    chosenCard3.classList.remove('add-border')
+    chosenCard3.classList.add('hiding')
+    chosenCounter--
+    discardCount++
+    cardsInPlayCounter--
+    if (cardsInPlayCounter === 0) {
+      shortRestButton.classList.remove('not-while-in-play')
+      longRestButton.classList.remove('not-while-in-play')
+      loseCardFromRestButton.classList.remove('not-while-in-play')
+      rerollShortRestButton.classList.remove('not-while-in-play')
+    }
+    if (discardCount > 1) {
+      shortRestButton.classList.remove('not-without-more-cards')
+      longRestButton.classList.remove('not-without-more-cards')
+    }
+    discardButton.classList.add('not-without-more-selected')
+    loseButton.classList.add('not-without-more-selected')
+    activateButton.classList.add('not-without-more-selected')
+  }
 }
 
 loseButton.onclick = () => {
@@ -1278,6 +1398,71 @@ loseButton.onclick = () => {
       lost12.classList.remove('flipped')
     }
     flipChosenCard(chosenCard2)
+    chosenCounter--
+    cardsInPlayCounter--
+    if (cardsInPlayCounter === 0) {
+      shortRestButton.classList.remove('not-while-in-play')
+      longRestButton.classList.remove('not-while-in-play')
+      loseCardFromRestButton.classList.remove('not-while-in-play')
+      rerollShortRestButton.classList.remove('not-while-in-play')
+      discardButton.classList.add('not-without-more-selected')
+      loseButton.classList.add('not-without-more-selected')
+      activateButton.classList.add('not-without-more-selected')
+    }
+  }
+  if (chosenCard3.classList.contains('add-border') && mustLoseCount < 1) {
+    if (lost1.classList.contains('flipped')) {
+      lost1.innerHTML = chosenCard3.innerHTML
+      lost1.classList.remove('hiding')
+      lost1.classList.remove('flipped')
+    } else if (lost2.classList.contains('flipped')) {
+      lost2.innerHTML = chosenCard3.innerHTML
+      lost2.classList.remove('hiding')
+      lost2.classList.remove('flipped')
+    } else if (lost3.classList.contains('flipped')) {
+      lost3.innerHTML = chosenCard3.innerHTML
+      lost3.classList.remove('hiding')
+      lost3.classList.remove('flipped')
+    } else if (lost4.classList.contains('flipped')) {
+      lost4.innerHTML = chosenCard3.innerHTML
+      lost4.classList.remove('hiding')
+      lost4.classList.remove('flipped')
+    } else if (lost5.classList.contains('flipped')) {
+      lost5.innerHTML = chosenCard3.innerHTML
+      lost5.classList.remove('hiding')
+      lost5.classList.remove('flipped')
+    } else if (lost6.classList.contains('flipped')) {
+      lost6.innerHTML = chosenCard3.innerHTML
+      lost6.classList.remove('hiding')
+      lost6.classList.remove('flipped')
+    } else if (lost7.classList.contains('flipped')) {
+      lost7.innerHTML = chosenCard3.innerHTML
+      lost7.classList.remove('hiding')
+      lost7.classList.remove('flipped')
+    } else if (lost8.classList.contains('flipped')) {
+      lost8.innerHTML = chosenCard3.innerHTML
+      lost8.classList.remove('hiding')
+      lost8.classList.remove('flipped')
+    } else if (lost9.classList.contains('flipped')) {
+      lost9.innerHTML = chosenCard3.innerHTML
+      lost9.classList.remove('hiding')
+      lost9.classList.remove('flipped')
+    } else if (lost10.classList.contains('flipped')) {
+      lost10.innerHTML = chosenCard3.innerHTML
+      lost10.classList.remove('hiding')
+      lost10.classList.remove('flipped')
+    } else if (lost11.classList.contains('flipped')) {
+      lost11.innerHTML = chosenCard3.innerHTML
+      lost11.classList.remove('hiding')
+      lost11.classList.remove('flipped')
+    } else if (lost12.classList.contains('flipped')) {
+      lost12.innerHTML = chosenCard3.innerHTML
+      lost12.classList.remove('hiding')
+      lost12.classList.remove('flipped')
+    }
+    chosenCard3.innerHTML = ''
+    chosenCard3.classList.remove('add-border')
+    chosenCard3.classList.add('hiding')
     chosenCounter--
     cardsInPlayCounter--
     if (cardsInPlayCounter === 0) {
@@ -1439,6 +1624,87 @@ activateButton.onclick = () => {
       numberOfActiveCards++
     }
     flipChosenCard(chosenCard2)
+    chosenCounter--
+    cardsInPlayCounter--
+    if (cardsInPlayCounter === 0) {
+      shortRestButton.classList.remove('not-while-in-play')
+      longRestButton.classList.remove('not-while-in-play')
+      loseCardFromRestButton.classList.remove('not-while-in-play')
+      rerollShortRestButton.classList.remove('not-while-in-play')
+      discardButton.classList.add('not-without-more-selected')
+      loseButton.classList.add('not-without-more-selected')
+      activateButton.classList.add('not-without-more-selected')
+    }
+  }
+  if (
+    chosenCard3.classList.contains('add-border') &&
+    mustLoseCount < 1 &&
+    numberOfActiveCards < 6
+  ) {
+    if (active1.classList.contains('flipped')) {
+      let elements = chosenCard3.childNodes
+      elementsArray = Array.from(elements)
+      while (elementsArray.length > 0) {
+        let element = elementsArray.pop()
+        active1.prepend(element)
+      }
+      active1.classList.remove('hiding')
+      active1.classList.remove('flipped')
+      numberOfActiveCards++
+    } else if (active2.classList.contains('flipped')) {
+      let elements = chosenCard3.childNodes
+      elementsArray = Array.from(elements)
+      while (elementsArray.length > 0) {
+        let element = elementsArray.pop()
+        active2.prepend(element)
+      }
+      active2.classList.remove('hiding')
+      active2.classList.remove('flipped')
+      numberOfActiveCards++
+    } else if (active3.classList.contains('flipped')) {
+      let elements = chosenCard3.childNodes
+      elementsArray = Array.from(elements)
+      while (elementsArray.length > 0) {
+        let element = elementsArray.pop()
+        active3.prepend(element)
+      }
+      active3.classList.remove('hiding')
+      active3.classList.remove('flipped')
+      numberOfActiveCards++
+    } else if (active4.classList.contains('flipped')) {
+      let elements = chosenCard3.childNodes
+      elementsArray = Array.from(elements)
+      while (elementsArray.length > 0) {
+        let element = elementsArray.pop()
+        active4.prepend(element)
+      }
+      active4.classList.remove('hiding')
+      active4.classList.remove('flipped')
+      numberOfActiveCards++
+    } else if (active5.classList.contains('flipped')) {
+      let elements = chosenCard3.childNodes
+      elementsArray = Array.from(elements)
+      while (elementsArray.length > 0) {
+        let element = elementsArray.pop()
+        active5.prepend(element)
+      }
+      active5.classList.remove('hiding')
+      active5.classList.remove('flipped')
+      numberOfActiveCards++
+    } else if (active6.classList.contains('flipped')) {
+      let elements = chosenCard3.childNodes
+      elementsArray = Array.from(elements)
+      while (elementsArray.length > 0) {
+        let element = elementsArray.pop()
+        active6.prepend(element)
+      }
+      active6.classList.remove('hiding')
+      active6.classList.remove('flipped')
+      numberOfActiveCards++
+    }
+    chosenCard3.innerHTML = ''
+    chosenCard3.classList.remove('add-border')
+    chosenCard3.classList.add('hiding')
     chosenCounter--
     cardsInPlayCounter--
     if (cardsInPlayCounter === 0) {
