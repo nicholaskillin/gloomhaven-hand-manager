@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// This code had major spoilers. Please don't look at the code if you don't want anything spoiled.//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function getCharacter(character) {
   switch (character) {
     case 'plagueherald':
@@ -7420,6 +7424,362 @@ function getCharacter(character) {
             level: 9,
             enhancementSpots: 1,
             enchancements: [
+              {
+                top: 197,
+                left: 137,
+              },
+            ],
+          },
+        ],
+      }
+      return character
+    case 'bladeswarm':
+      character = {
+        name: 'bladeswarm',
+        initials: 'bs',
+        handSize: 11,
+        startingCards: 14,
+        cards: [
+          {
+            title: 'call-of-the-grave',
+            level: 1,
+            enhancementSpots: 0,
+          },
+          {
+            title: 'corrupting-parasites',
+            level: 1,
+            enhancementSpots: 3,
+            enchancements: [
+              {
+                top: 222,
+                left: 138,
+              },
+              {
+                top: 222,
+                left: 138,
+              },
+              {
+                top: 222,
+                left: 138,
+              },
+            ],
+          },
+          {
+            title: 'death-march',
+            level: 1,
+            enhancementSpots: 3,
+            enchancements: [
+              {
+                top: 80,
+                left: 139,
+              },
+              {
+                top: 80,
+                left: 139,
+              },
+              {
+                top: 80,
+                left: 139,
+              },
+            ],
+          },
+          {
+            title: 'deflecting-blades',
+            level: 1,
+            enhancementSpots: 1,
+            enchancements: [
+              {
+                top: 74,
+                left: 133,
+              },
+            ],
+          },
+          {
+            title: 'engulfing-stingers',
+            level: 1,
+            enhancementSpots: 3,
+            enchancements: [
+              {
+                top: 86,
+                left: 133,
+              },
+              {
+                top: 86,
+                left: 150,
+              },
+              {
+                top: 86,
+                left: 150,
+              },
+            ],
+          },
+          {
+            title: 'hive-mind',
+            level: 1,
+            enhancementSpots: 1,
+            enchancements: [
+              {
+                top: 74,
+                left: 139,
+              },
+            ],
+          },
+          {
+            title: 'omniscient-assault',
+            level: 1,
+            enhancementSpots: 1,
+            enchancements: [
+              {
+                top: 60,
+                left: 133,
+              },
+            ],
+          },
+          {
+            title: 'scattered-defense',
+            level: 1,
+            enhancementSpots: 0,
+          },
+          {
+            title: 'swarming-minions',
+            level: 1,
+            enhancementSpots: 0,
+          },
+          {
+            title: 'the-storms-edge',
+            level: 1,
+            enhancementSpots: 0,
+          },
+          {
+            title: 'venomous-barbs',
+            level: 1,
+            enhancementSpots: 0,
+          },
+          {
+            title: 'grasping-advance',
+            level: 1,
+            enhancementSpots: 2,
+            enchancements: [
+              {
+                top: 88,
+                left: 143,
+              },
+              {
+                top: 205,
+                left: 137,
+              },
+            ],
+          },
+          {
+            title: 'tomb-of-the-immortal',
+            level: 1,
+            enhancementSpots: 0,
+          },
+          {
+            title: 'unstoppable-army',
+            level: 1,
+            enhancementSpots: 3,
+            enchancements: [
+              {
+                top: 66,
+                left: 108,
+              },
+              {
+                top: 66,
+                left: 108,
+              },
+              {
+                top: 66,
+                left: 108,
+              },
+            ],
+          },
+          {
+            title: 'infest',
+            level: 2,
+            enhancementSpots: 0,
+          },
+          {
+            title: 'vampiric-tempest',
+            level: 2,
+            enhancementSpots: 3,
+            enchancements: [
+              {
+                top: 74,
+                left: 137,
+              },
+              {
+                top: 74,
+                left: 137,
+              },
+              {
+                top: 74,
+                left: 137,
+              },
+            ],
+          },
+          {
+            title: 'putrid-grubs',
+            level: 3,
+            enhancementSpots: 3,
+            enchancements: [
+              {
+                top: 74,
+                left: 134,
+              },
+              {
+                top: 74,
+                left: 149,
+              },
+              {
+                top: 74,
+                left: 149,
+              },
+            ],
+          },
+          {
+            title: 'sand-scythe',
+            level: 3,
+            enhancementSpots: 0,
+          },
+          {
+            title: 'incubation',
+            level: 4,
+            enhancementSpots: 1,
+            enchancements: [
+              {
+                top: 61,
+                left: 134,
+              },
+            ],
+          },
+          {
+            title: 'sword-of-tenacity',
+            level: 4,
+            enhancementSpots: 1,
+            enchancements: [
+              {
+                top: 230,
+                left: 132,
+              },
+            ],
+          },
+          {
+            title: 'bioluminescence',
+            level: 5,
+            enhancementSpots: 2,
+            enchancements: [
+              {
+                top: 75,
+                left: 140,
+              },
+              {
+                top: 75,
+                left: 140,
+              },
+            ],
+          },
+          {
+            title: 'bone-daggers',
+            level: 5,
+            enhancementSpots: 2,
+            enchancements: [
+              {
+                top: 67,
+                left: 140,
+              },
+              {
+                top: 210,
+                left: 133,
+              },
+            ],
+          },
+          {
+            title: 'erosion',
+            level: 6,
+            enhancementSpots: 0,
+          },
+          {
+            title: 'prismatic-cyclone',
+            level: 6,
+            enhancementSpots: 0,
+          },
+          {
+            title: 'solitary-horde',
+            level: 7,
+            enhancementSpots: 4,
+            enchancements: [
+              {
+                top: 96,
+                left: 133,
+              },
+              {
+                top: 196,
+                left: 137,
+              },
+              {
+                top: 96,
+                left: 133,
+              },
+              {
+                top: 196,
+                left: 137,
+              },
+            ],
+          },
+          {
+            title: 'sunstroke',
+            level: 7,
+            enhancementSpots: 2,
+            enchancements: [
+              {
+                top: 96,
+                left: 133,
+              },
+              {
+                top: 196,
+                left: 137,
+              },
+            ],
+          },
+          {
+            title: 'blood-drain',
+            level: 8,
+            enhancementSpots: 0,
+          },
+          {
+            title: 'focused-scourge',
+            level: 8,
+            enhancementSpots: 0,
+          },
+          {
+            title: 'oasis',
+            level: 9,
+            enhancementSpots: 1,
+            enchancements: [
+              {
+                top: 205,
+                left: 136,
+              },
+            ],
+          },
+          {
+            title: 'wasteland',
+            level: 9,
+            enhancementSpots: 4,
+            enchancements: [
+              {
+                top: 197,
+                left: 137,
+              },
+              {
+                top: 197,
+                left: 137,
+              },
+              {
+                top: 197,
+                left: 137,
+              },
               {
                 top: 197,
                 left: 137,

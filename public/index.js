@@ -86,6 +86,10 @@ function checkCookie() {
     perk14,
     perk15,
   ]
+  let bladeswarm = getCookie('bladeswarmUnlocked')
+  if (bladeswarm) {
+    unlockBladswarm()
+  }
   switch (currentLevel) {
     case '1':
       levelCount = 1
@@ -424,6 +428,9 @@ function confirmCharacter() {
       setupCharacter(character)
     } else if (plagueherald.classList.contains('character-selected')) {
       character = getCharacter('plagueherald')
+      setupCharacter(character)
+    } else if (bladeswarm.classList.contains('character-selected')) {
+      character = getCharacter('bladeswarm')
       setupCharacter(character)
     }
   }
@@ -4080,6 +4087,7 @@ let beConfirmPerksButton = document.getElementById('beConfirmPerksButton')
 let ssConfirmPerksButton = document.getElementById('ssConfirmPerksButton')
 let sbConfirmPerksButton = document.getElementById('sbConfirmPerksButton')
 let phConfirmPerksButton = document.getElementById('phConfirmPerksButton')
+let bsConfirmPerksButton = document.getElementById('bsConfirmPerksButton')
 
 //Doomstalker Perks
 let dsConfirmPerksButton = document.getElementById('dsConfirmPerksButton')
@@ -6806,7 +6814,7 @@ sbConfirmPerksButton.onclick = () => {
   confirmPerks()
 }
 
-//Sawbones Perks
+//Plagueherald Perks
 let phPerk1 = document.getElementById('phPerk1')
 let phPerk2 = document.getElementById('phPerk2-1')
 let phPerk3 = document.getElementById('phPerk2-2')
@@ -6987,6 +6995,186 @@ phConfirmPerksButton.onclick = () => {
   defaultDeckArray = modDeckArray.slice()
   confirmPerks()
 }
+
+//Bladeswarm Perks
+let bsPerk1 = document.getElementById('bsPerk1')
+let bsPerk2 = document.getElementById('bsPerk2')
+let bsPerk3 = document.getElementById('bsPerk3')
+let bsPerk4 = document.getElementById('bsPerk4')
+let bsPerk5 = document.getElementById('bsPerk5')
+let bsPerk6 = document.getElementById('bsPerk6')
+let bsPerk7 = document.getElementById('bsPerk7-1')
+let bsPerk8 = document.getElementById('bsPerk7-2')
+let bsPerk9 = document.getElementById('bsPerk8-1')
+let bsPerk10 = document.getElementById('bsPerk8-2')
+let bsPerk11 = document.getElementById('bsPerk9-1')
+let bsPerk12 = document.getElementById('bsPerk9-2')
+let bsPerk13 = document.getElementById('bsPerk10')
+let bsPerk14 = document.getElementById('bsPerk11')
+let bsPerk15 = document.getElementById('bsPerk12')
+
+bsConfirmPerksButton.onclick = () => {
+  if (bsPerk1.classList.contains('checked')) {
+    for (var i = 0; i < modDeckArray.length; i++) {
+      if (modDeckArray[i] === mod17) {
+        modDeckArray.splice(i, 1)
+        i = modDeckArray.length
+        cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+      }
+    }
+    setCookie('perk1', 'bschosen', 365)
+  } else {
+    setCookie('perk1', 'notChosen', 365)
+  }
+  if (bsPerk2.classList.contains('checked')) {
+    for (var i = 0; i < modDeckArray.length; i++) {
+      if (modDeckArray[i] === mod1) {
+        modDeckArray.splice(i, 4)
+        i = modDeckArray.length
+        cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+      }
+    }
+    setCookie('perk2', 'bschosen', 365)
+  } else {
+    setCookie('perk2', 'notChosen', 365)
+  }
+  if (bsPerk3.classList.contains('checked')) {
+    for (var i = 0; i < modDeckArray.length; i++) {
+      if (modDeckArray[i] === mod12) {
+        modDeckArray.splice(i, 1)
+        i = modDeckArray.length
+        cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+      }
+    }
+    let newCard = 'images/attack-modifiers/bs/am-bs-Plus1Wind.png'
+    modDeckArray.push(newCard)
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+    setCookie('perk3', 'bschosen', 365)
+  } else {
+    setCookie('perk3', 'notChosen', 365)
+  }
+  if (bsPerk4.classList.contains('checked')) {
+    for (var i = 0; i < modDeckArray.length; i++) {
+      if (modDeckArray[i] === mod12) {
+        modDeckArray.splice(i, 1)
+        i = modDeckArray.length
+        cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+      }
+    }
+    let newCard = 'images/attack-modifiers/bs/am-bs-Plus1Leaf.png'
+    modDeckArray.push(newCard)
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+    setCookie('perk4', 'bschosen', 365)
+  } else {
+    setCookie('perk4', 'notChosen', 365)
+  }
+  if (bsPerk5.classList.contains('checked')) {
+    for (var i = 0; i < modDeckArray.length; i++) {
+      if (modDeckArray[i] === mod12) {
+        modDeckArray.splice(i, 1)
+        i = modDeckArray.length
+        cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+      }
+    }
+    let newCard = 'images/attack-modifiers/bs/am-bs-Plus1Light.png'
+    modDeckArray.push(newCard)
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+    setCookie('perk5', 'bschosen', 365)
+  } else {
+    setCookie('perk5', 'notChosen', 365)
+  }
+  if (bsPerk6.classList.contains('checked')) {
+    for (var i = 0; i < modDeckArray.length; i++) {
+      if (modDeckArray[i] === mod12) {
+        modDeckArray.splice(i, 1)
+        i = modDeckArray.length
+        cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+      }
+    }
+    let newCard = 'images/attack-modifiers/bs/am-bs-Plus1Dark.png'
+    modDeckArray.push(newCard)
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+    setCookie('perk6', 'bschosen', 365)
+  } else {
+    setCookie('perk6', 'notChosen', 365)
+  }
+  if (bsPerk7.classList.contains('checked')) {
+    let newCard = 'images/attack-modifiers/bs/am-bs-RollingHeal1.png'
+    modDeckArray.push(newCard)
+    modDeckArray.push(newCard)
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+    setCookie('perk7', 'bschosen', 365)
+  } else {
+    setCookie('perk7', 'notChosen', 365)
+  }
+  if (bsPerk8.classList.contains('checked')) {
+    let newCard = 'images/attack-modifiers/bs/am-bs-RollingHeal1.png'
+    modDeckArray.push(newCard)
+    modDeckArray.push(newCard)
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+    setCookie('perk8', 'bschosen', 365)
+  } else {
+    setCookie('perk8', 'notChosen', 365)
+  }
+  if (bsPerk9.classList.contains('checked')) {
+    let newCard = 'images/attack-modifiers/bs/am-bs-Plus1Wound.png'
+    modDeckArray.push(newCard)
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+    setCookie('perk9', 'bschosen', 365)
+  } else {
+    setCookie('perk9', 'notChosen', 365)
+  }
+  if (bsPerk10.classList.contains('checked')) {
+    let newCard = 'images/attack-modifiers/bs/am-bs-Plus1Wound.png'
+    modDeckArray.push(newCard)
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+    setCookie('perk10', 'bschosen', 365)
+  } else {
+    setCookie('perk10', 'notChosen', 365)
+  }
+  if (bsPerk11.classList.contains('checked')) {
+    let newCard = 'images/attack-modifiers/bs/am-bs-Plus1Poison.png'
+    modDeckArray.push(newCard)
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+    setCookie('perk11', 'bschosen', 365)
+  } else {
+    setCookie('perk11', 'notChosen', 365)
+  }
+  if (bsPerk12.classList.contains('checked')) {
+    let newCard = 'images/attack-modifiers/bs/am-bs-Plus1Poison.png'
+    modDeckArray.push(newCard)
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+    setCookie('perk12', 'bschosen', 365)
+  } else {
+    setCookie('perk12', 'notChosen', 365)
+  }
+  if (bsPerk13.classList.contains('checked')) {
+    let newCard = 'images/attack-modifiers/bs/am-bs-Plus2Muddle.png'
+    modDeckArray.push(newCard)
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+    setCookie('perk13', 'bschosen', 365)
+  } else {
+    setCookie('perk13', 'notChosen', 365)
+  }
+  if (bsPerk14.classList.contains('checked')) {
+    let newCard = 'images/attack-modifiers/bs/am-bs-Plus1.png'
+    modDeckArray.push(newCard)
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+    setCookie('perk14', 'bschosen', 365)
+  } else {
+    setCookie('perk14', 'notChosen', 365)
+  }
+  if (bsPerk15.classList.contains('checked')) {
+    let newCard = 'images/attack-modifiers/bs/am-bs-Plus1.png'
+    modDeckArray.push(newCard)
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length
+    setCookie('perk15', 'bschosen', 365)
+  } else {
+    setCookie('perk15', 'notChosen', 365)
+  }
+  defaultDeckArray = modDeckArray.slice()
+  confirmPerks()
+}
 //Modal for showing what is in the played modifier deck
 
 var zoomModal = document.getElementById('zoomModal')
@@ -7007,11 +7195,11 @@ window.onclick = function (event) {
 }
 
 // Secret code
-var secret = '3838404037393739666513' //Konami Code
-var input = ''
-var timer
-var mode = false
-var showclassName = false
+let secret = '3838404037393739666513' //Konami Code
+let input = ''
+let timer
+let mode = false
+let showclassName = false
 
 // $(document).ready(function () {
 //   $('#flash').hide()
@@ -7019,7 +7207,6 @@ var showclassName = false
 
 $(document).keyup(function (e) {
   input += e.which
-  console.log(input)
   clearTimeout(timer)
   timer = setTimeout(function () {
     input = ''
@@ -7027,10 +7214,19 @@ $(document).keyup(function (e) {
   check_input()
 })
 
+function unlockBladswarm() {
+  let bladeswarm = document.getElementById('bladeswarm').parentElement
+  bladeswarm.classList.remove('hiding')
+}
+
 function check_input() {
   if (input == secret) {
     //the secret code
-    console.log(`You unlocked the BladeSwarm!`)
+    unlockBladswarm()
+    alert(
+      `You've unlocked Bladeswarm! We will remember this so that you don't have to enter that code each time you visit the site.`
+    )
+    setCookie('bladeswarmUnlocked', true, 365)
   }
 }
 
