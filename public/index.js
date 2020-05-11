@@ -309,6 +309,11 @@ function setCharacterFromCookie(character, perks) {
   console.log(`We found the ${character.name} in your cookie.`)
   let characterToSelect = eval(character.name)
   characterToSelect.classList.add('character-selected')
+  if (character.name === 'beastTyrant') {
+    beastTyrantStaff.classList.remove('hiding')
+    beastTyrantStaffLabel.classList.remove('hiding')
+    beastTyrantStaffLabel.classList.add('solo-scenario-label')
+  }
   characterSelected = true
   confirmCharacterButton.classList.remove('not-without-more-selected')
   perks.forEach(updatePerk, i)
@@ -397,10 +402,10 @@ function confirmCharacter() {
       character = getCharacter('tinkerer')
       setupCharacter(character)
     } else if (doomStalker.classList.contains('character-selected')) {
-      character = getCharacter('doomstalker')
+      character = getCharacter('doomStalker')
       setupCharacter(character)
     } else if (beastTyrant.classList.contains('character-selected')) {
-      character = getCharacter('beasttyrant')
+      character = getCharacter('beastTyrant')
       setupCharacter(character)
     } else if (nightshroud.classList.contains('character-selected')) {
       character = getCharacter('nightshroud')
