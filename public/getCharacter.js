@@ -7451,16 +7451,16 @@ function getCharacter(character) {
             enhancementSpots: 3,
             enchancements: [
               {
-                top: 222,
-                left: 138,
+                top: 69,
+                left: 80,
               },
               {
-                top: 222,
-                left: 138,
+                top: 69,
+                left: 121,
               },
               {
-                top: 222,
-                left: 138,
+                top: 223,
+                left: 137,
               },
             ],
           },
@@ -7470,16 +7470,16 @@ function getCharacter(character) {
             enhancementSpots: 3,
             enchancements: [
               {
-                top: 80,
-                left: 139,
+                top: 69,
+                left: 80,
               },
               {
-                top: 80,
-                left: 139,
+                top: 69,
+                left: 121,
               },
               {
-                top: 80,
-                left: 139,
+                top: 223,
+                left: 137,
               },
             ],
           },
@@ -7489,8 +7489,8 @@ function getCharacter(character) {
             enhancementSpots: 1,
             enchancements: [
               {
-                top: 74,
-                left: 133,
+                top: 189,
+                left: 137,
               },
             ],
           },
@@ -7500,16 +7500,16 @@ function getCharacter(character) {
             enhancementSpots: 3,
             enchancements: [
               {
-                top: 86,
-                left: 133,
+                top: 69,
+                left: 80,
               },
               {
-                top: 86,
-                left: 150,
+                top: 69,
+                left: 121,
               },
               {
-                top: 86,
-                left: 150,
+                top: 209,
+                left: 137,
               },
             ],
           },
@@ -7519,8 +7519,8 @@ function getCharacter(character) {
             enhancementSpots: 1,
             enchancements: [
               {
-                top: 74,
-                left: 139,
+                top: 205,
+                left: 136,
               },
             ],
           },
@@ -7530,8 +7530,8 @@ function getCharacter(character) {
             enhancementSpots: 1,
             enchancements: [
               {
-                top: 60,
-                left: 133,
+                top: 189,
+                left: 137,
               },
             ],
           },
@@ -7561,12 +7561,12 @@ function getCharacter(character) {
             enhancementSpots: 2,
             enchancements: [
               {
-                top: 88,
-                left: 143,
+                top: 73,
+                left: 137,
               },
               {
-                top: 205,
-                left: 137,
+                top: 196,
+                left: 138,
               },
             ],
           },
@@ -7581,16 +7581,16 @@ function getCharacter(character) {
             enhancementSpots: 3,
             enchancements: [
               {
-                top: 66,
-                left: 108,
+                top: 69,
+                left: 80,
               },
               {
-                top: 66,
-                left: 108,
+                top: 69,
+                left: 121,
               },
               {
-                top: 66,
-                left: 108,
+                top: 90,
+                left: 80,
               },
             ],
           },
@@ -7605,15 +7605,15 @@ function getCharacter(character) {
             enhancementSpots: 3,
             enchancements: [
               {
-                top: 74,
-                left: 137,
+                top: 184,
+                left: 136,
               },
               {
-                top: 74,
-                left: 137,
+                top: 205,
+                left: 139,
               },
               {
-                top: 74,
+                top: 240,
                 left: 137,
               },
             ],
@@ -7624,16 +7624,16 @@ function getCharacter(character) {
             enhancementSpots: 3,
             enchancements: [
               {
-                top: 74,
-                left: 134,
+                top: 69,
+                left: 80,
               },
               {
-                top: 74,
-                left: 149,
+                top: 69,
+                left: 121,
               },
               {
-                top: 74,
-                left: 149,
+                top: 205,
+                left: 137,
               },
             ],
           },
@@ -7648,8 +7648,8 @@ function getCharacter(character) {
             enhancementSpots: 1,
             enchancements: [
               {
-                top: 61,
-                left: 134,
+                top: 51,
+                left: 133,
               },
             ],
           },
@@ -7659,8 +7659,8 @@ function getCharacter(character) {
             enhancementSpots: 1,
             enchancements: [
               {
-                top: 230,
-                left: 132,
+                top: 184,
+                left: 137,
               },
             ],
           },
@@ -7670,12 +7670,12 @@ function getCharacter(character) {
             enhancementSpots: 2,
             enchancements: [
               {
-                top: 75,
-                left: 140,
+                top: 76,
+                left: 80,
               },
               {
-                top: 75,
-                left: 140,
+                top: 76,
+                left: 121,
               },
             ],
           },
@@ -7685,12 +7685,12 @@ function getCharacter(character) {
             enhancementSpots: 2,
             enchancements: [
               {
-                top: 67,
-                left: 140,
+                top: 78,
+                left: 139,
               },
               {
-                top: 210,
-                left: 133,
+                top: 204,
+                left: 137,
               },
             ],
           },
@@ -7710,16 +7710,16 @@ function getCharacter(character) {
             enhancementSpots: 4,
             enchancements: [
               {
-                top: 96,
-                left: 133,
+                top: 69,
+                left: 80,
               },
               {
-                top: 196,
-                left: 137,
+                top: 69,
+                left: 121,
               },
               {
-                top: 96,
-                left: 133,
+                top: 90,
+                left: 80,
               },
               {
                 top: 196,
@@ -7733,11 +7733,11 @@ function getCharacter(character) {
             enhancementSpots: 2,
             enchancements: [
               {
-                top: 96,
-                left: 133,
+                top: 67,
+                left: 138,
               },
               {
-                top: 196,
+                top: 185,
                 left: 137,
               },
             ],
@@ -7758,8 +7758,8 @@ function getCharacter(character) {
             enhancementSpots: 1,
             enchancements: [
               {
-                top: 205,
-                left: 136,
+                top: 217,
+                left: 138,
               },
             ],
           },
@@ -7769,19 +7769,19 @@ function getCharacter(character) {
             enhancementSpots: 4,
             enchancements: [
               {
-                top: 197,
-                left: 137,
+                top: 69,
+                left: 80,
               },
               {
-                top: 197,
-                left: 137,
+                top: 69,
+                left: 121,
               },
               {
-                top: 197,
-                left: 137,
+                top: 90,
+                left: 80,
               },
               {
-                top: 197,
+                top: 196,
                 left: 137,
               },
             ],
