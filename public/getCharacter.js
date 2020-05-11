@@ -1275,9 +1275,9 @@ function getCharacter(character) {
         ],
       }
       return character
-    case 'beasttyrant':
+    case 'beastTyrant':
       character = {
-        name: 'beasttyrant',
+        name: 'beastTyrant',
         initials: 'bt',
         handSize: 10,
         startingCards: 13,
@@ -5364,9 +5364,9 @@ function getCharacter(character) {
         ],
       }
       return character
-    case 'doomstalker':
+    case 'doomStalker':
       character = {
-        name: 'doomstalker',
+        name: 'doomStalker',
         initials: 'ds',
         handSize: 12,
         startingCards: 15,
