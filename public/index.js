@@ -3683,6 +3683,8 @@ goBack.onclick = () => {
   document.getElementById('damage-bear').classList.add('hiding')
   document.getElementById('heal-bear').classList.add('hiding')
   document.getElementById('bear-status-effects').classList.add('hiding')
+
+  // Reset the hand selection page
   flipCard(cardHand1)
   flipCard(cardHand2)
   flipCard(cardHand3)
@@ -3720,6 +3722,10 @@ goBack.onclick = () => {
       card.firstChild.classList.remove('add-border')
     }.call(this, i))
   }
+  let enhancementDropdowns = document.querySelectorAll('td.enhancement')
+  enhancementDropdowns.forEach((dropdownGroup) => {
+    dropdownGroup.innerHTML = ''
+  })
 }
 
 goBack2.onclick = () => {
