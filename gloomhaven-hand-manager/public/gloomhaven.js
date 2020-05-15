@@ -316,15 +316,15 @@ function setCharacterFromCookie(character, perks) {
   }
   characterSelected = true
   confirmCharacterButton.classList.remove('not-without-more-selected')
-  perks.forEach(updatePerk, i)
-  function updatePerk(perk, index) {
-    let perkToUpdate = eval(`${character.initials}Perk${index + 1}`)
-    if (perk === `${character.initials}chosen`) {
-      perkToUpdate.classList.add('checked')
-    } else {
-      perkToUpdate.classList.remove('checked')
-    }
-  }
+  // perks.forEach(updatePerk, i)
+  // function updatePerk(perk, index) {
+  //   let perkToUpdate = eval(`${character.initials}Perk${index + 1}`)
+  //   if (perk === `${character.initials}chosen`) {
+  //     perkToUpdate.classList.add('checked')
+  //   } else {
+  //     perkToUpdate.classList.remove('checked')
+  //   }
+  // }
 }
 
 var characterPortraits = document.querySelectorAll('.character.active')
@@ -440,7 +440,7 @@ function confirmCharacter() {
     }
   }
   goBack.classList.remove('hiding')
-  document.getElementById('select-class-section').classList.add('hiding')
+  // document.getElementById('select-class-section').classList.add('hiding')
   document.getElementById('level-selection').classList.add('hiding')
   document.getElementById('perk-section').classList.remove('hiding')
   setCookie('level', `${levelCount}`, 365)
@@ -7198,45 +7198,3 @@ window.onclick = function (event) {
     zoomModal.style.display = 'none'
   }
 }
-
-// Secret code
-let secret = '3838404037393739666513' //Konami Code
-let input = ''
-let timer
-let mode = false
-let showclassName = false
-
-// $(document).ready(function () {
-//   $('#flash').hide()
-// })
-
-$(document).keyup(function (e) {
-  input += e.which
-  clearTimeout(timer)
-  timer = setTimeout(function () {
-    input = ''
-  }, 5000)
-  check_input()
-})
-
-function unlockBladswarm() {
-  let bladeswarm = document.getElementById('bladeswarm').parentElement
-  bladeswarm.classList.remove('hiding')
-}
-
-function check_input() {
-  if (input == secret) {
-    //the secret code
-    unlockBladswarm()
-    alert(
-      `You've unlocked Bladeswarm! We will remember this so that you don't have to enter that code each time you visit the site.`
-    )
-    setCookie('bladeswarmUnlocked', true, 365)
-  }
-}
-
-$(document).ready(function () {
-  setInterval(function () {
-    $('#info').html('Keystroke: ' + input)
-  }, 100)
-})
