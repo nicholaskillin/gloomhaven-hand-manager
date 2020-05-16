@@ -65,11 +65,11 @@ function PerkSelection({ character, handleSetStage }) {
   ])
   const allCharacterData = require('./characterData.json')
 
-  function handleChange(id) {
+  function handleChange(id, value) {
     setPerk((prevPerks) => {
       let newPerks = [...prevPerks]
       console.log(newPerks[id])
-      newPerks[id].isChecked = !newPerks[id].isChecked
+      newPerks[id].isChecked = value
       console.log(newPerks[id])
       return newPerks
     })
@@ -83,7 +83,7 @@ function PerkSelection({ character, handleSetStage }) {
         <h2 id="perks-header" className="header">
           Select Your Perks
         </h2>
-        <div id="cragheart-perks" className="perks">
+        <div className="perks">
           {characterData.perks.map((perkData) => (
             <div key={perkData.id}>
               {perkData.checkboxes.map((checkbox) => (
@@ -95,13 +95,22 @@ function PerkSelection({ character, handleSetStage }) {
                       ? 'checkbox checked'
                       : 'checkbox'
                   }
-                  onClick={() => handleChange(checkbox.id)}
+                  onClick={
+                    perks[checkbox.id].isChecked
+                      ? () => handleChange(checkbox.id, false)
+                      : () => handleChange(checkbox.id, true)
+                  }
                 />
               ))}
               <p>{perkData.label}</p>
             </div>
           ))}
-          <button id="confirmPerksButton" className="button" type="button">
+          <button
+            id="confirmPerksButton"
+            className="button"
+            type="button"
+            onClick={() => handleSetStage('selectHand')}
+          >
             Confirm Perks
           </button>
         </div>

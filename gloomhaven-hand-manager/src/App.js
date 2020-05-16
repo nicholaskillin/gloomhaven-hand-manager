@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './App.css'
 import CharacterSelection from './CharacterSelection'
 import PerkSelection from './PerkSelection'
+import HandSelection from './HandSelection'
 
 function App() {
   const [stage, setStage] = useState('selectCharacter')
@@ -18,7 +19,6 @@ function App() {
   }
 
   function handleSetLevel(level) {
-    console.log(level)
     setLevel(level)
   }
 
@@ -35,6 +35,13 @@ function App() {
       )}
       {stage === 'selectPerks' && (
         <PerkSelection character={character} handleSetStage={handleSetStage} />
+      )}
+      {stage === 'selectHand' && (
+        <HandSelection
+          character={character}
+          level={level}
+          handleSetStage={handleSetStage}
+        />
       )}
     </>
   )
