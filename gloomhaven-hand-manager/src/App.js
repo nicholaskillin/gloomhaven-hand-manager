@@ -6,16 +6,17 @@ import HandSelection from './HandSelection'
 
 function App() {
   const [stage, setStage] = useState('selectCharacter')
-  const [character, setCharacter] = useState('')
+  const [character, setCharacter] = useState({})
   const [level, setLevel] = useState(1)
+  const allCharacterData = require('./characterData.json')
 
   function handleSetStage(stage) {
     setStage(stage)
   }
 
-  function handleSetCharacter(character) {
-    setCharacter(character)
-    setStage('selectPerks')
+  function handleSetCharacter(characterName) {
+    let characterData = allCharacterData.find((x) => x.name === characterName)
+    setCharacter(characterData, setStage('selectPerks'))
   }
 
   function handleSetLevel(level) {
@@ -34,7 +35,7 @@ function App() {
         </>
       )}
       {stage === 'selectPerks' && (
-        <PerkSelection character={character} handleSetStage={handleSetStage} />
+        <PerkSelection handleSetStage={handleSetStage} characterPerks={character.perks}/>
       )}
       {stage === 'selectHand' && (
         <HandSelection

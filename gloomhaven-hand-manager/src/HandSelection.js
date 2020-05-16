@@ -1,18 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 function HandSelection({ character, level, handleSetStage }) {
+  const [cardsSelected, setCardsSelected] = useState(0)
   console.log(character, level)
-  return <p>hand selection</p>
+  return (
+    <div id = "initial-table" class = "cardSet">
+      <h2 id ="choose-cards-number" class = "header">Choose {character.handSize} Cards</h2>
+      <div align = "center">
+        <p id = "card-counter" class = "card-counter" align = "center">{cardsSelected}/{character.handSize}</p>
+      </div>
+      <table class ="cardTable" align = "center"></table>
+    </div>
+  )
 }
 
 export default HandSelection
 
-{
-  /* <div id = "initial-table" class = "cardSet hiding">
-        <h2 id ="choose-cards-number" class = "header"></h2>
-        <div align = "center">
-          <p id = "card-counter" class = "card-counter" align = "center"></p>
-        </div>
+  /* 
         <table class ="cardTable" align = "center">
           <tr id = "level-1">
             <td class = "level">Level 1:</td>
@@ -128,4 +132,3 @@ export default HandSelection
           </tr>
         </table>
       </div> */
-}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function PerkSelection({ character, handleSetStage }) {
+function PerkSelection({ handleSetStage, characterPerks }) {
   const [perks, setPerk] = useState([
     {
       id: 1,
@@ -63,19 +63,14 @@ function PerkSelection({ character, handleSetStage }) {
       isChecked: false,
     },
   ])
-  const allCharacterData = require('./characterData.json')
-
+  
   function handleChange(id, value) {
     setPerk((prevPerks) => {
       let newPerks = [...prevPerks]
-      console.log(newPerks[id])
       newPerks[id].isChecked = value
-      console.log(newPerks[id])
       return newPerks
     })
   }
-
-  let characterData = allCharacterData.find((x) => x.name === character)
 
   return (
     <>
@@ -84,12 +79,11 @@ function PerkSelection({ character, handleSetStage }) {
           Select Your Perks
         </h2>
         <div className="perks">
-          {characterData.perks.map((perkData) => (
+          {characterPerks.map((perkData) => (
             <div key={perkData.id}>
               {perkData.checkboxes.map((checkbox) => (
                 <div
                   key={checkbox.id}
-                  className="checkbox"
                   className={
                     perks[checkbox.id].isChecked
                       ? 'checkbox checked'

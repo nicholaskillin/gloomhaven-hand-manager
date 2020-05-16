@@ -2,6 +2,489 @@
   {
     "name": "beastTyrant",
     "initials": "bt",
+    "handSize": 10,
+    "startingCards": 13,
+    "cards": [
+      {
+        "title": "disorienting-roar",
+        "level": 1,
+        "enhancementSpots": 0
+      },
+      {
+        "title": "spirit-swap",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enchancements": [
+          {
+            "top": 79,
+            "left": 136
+          },
+          {
+            "top": 79,
+            "left": 152
+          }
+        ]
+      },
+      {
+        "title": "venomous-ally",
+        "level": 1,
+        "enhancementSpots": 4,
+        "enchancements": [
+          {
+            "top": 78,
+            "left": 80
+          },
+          {
+            "top": 78,
+            "left": 121
+          },
+          {
+            "top": 97,
+            "left": 80
+          },
+          {
+            "top": 225,
+            "left": 130
+          }
+        ]
+      },
+      {
+        "title": "relentless-ally",
+        "level": 1,
+        "enhancementSpots": 4,
+        "enchancements": [
+          {
+            "top": 78,
+            "left": 80
+          },
+          {
+            "top": 78,
+            "left": 121
+          },
+          {
+            "top": 97,
+            "left": 80
+          },
+          {
+            "top": 223,
+            "left": 136
+          }
+        ]
+      },
+      {
+        "title": "concentrated-rage",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enchancements": [
+          {
+            "top": 79,
+            "left": 139
+          },
+          {
+            "top": 95,
+            "left": 130
+          }
+        ]
+      },
+      {
+        "title": "disappearing-wounds",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enchancements": [
+          {
+            "top": 87,
+            "left": 134
+          },
+          {
+            "top": 212,
+            "left": 138
+          },
+          {
+            "top": 212,
+            "left": 154
+          }
+        ]
+      },
+      {
+        "title": "patch-fur",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enchancements": [
+          {
+            "top": 205,
+            "left": 133
+          },
+          {
+            "top": 205,
+            "left": 151
+          }
+        ]
+      },
+      {
+        "title": "maul",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enchancements": [
+          {
+            "top": 94,
+            "left": 138
+          },
+          {
+            "top": 94,
+            "left": 154
+          },
+          {
+            "top": 193,
+            "left": 137
+          }
+        ]
+      },
+      {
+        "title": "forceful-swipe",
+        "level": 1,
+        "enhancementSpots": 4,
+        "enchancements": [
+          {
+            "top": 76,
+            "left": 127
+          },
+          {
+            "top": 85,
+            "left": 103
+          },
+          {
+            "top": 197,
+            "left": 137
+          },
+          {
+            "top": 216,
+            "left": 138
+          }
+        ]
+      },
+      {
+        "title": "howling-bolts",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enchancements": [
+          {
+            "top": 78,
+            "left": 138
+          },
+          {
+            "top": 107,
+            "left": 131
+          },
+          {
+            "top": 211,
+            "left": 136
+          }
+        ]
+      },
+      {
+        "title": "soaring-ally",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enchancements": [
+          {
+            "top": 78,
+            "left": 80
+          },
+          {
+            "top": 78,
+            "left": 121
+          }
+        ]
+      },
+      {
+        "title": "focused-aggression",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enchancements": [
+          {
+            "top": 101,
+            "left": 129
+          },
+          {
+            "top": 212,
+            "left": 138
+          },
+          {
+            "top": 212,
+            "left": 155
+          }
+        ]
+      },
+      {
+        "title": "borrowed-essence",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enchancements": [
+          {
+            "top": 52,
+            "left": 138
+          },
+          {
+            "top": 105,
+            "left": 134
+          }
+        ]
+      },
+      {
+        "title": "energizing-strike",
+        "level": 2,
+        "enhancementSpots": 2,
+        "enchancements": [
+          {
+            "top": 61,
+            "left": 138
+          },
+          {
+            "top": 61,
+            "left": 153
+          }
+        ]
+      },
+      {
+        "title": "earthen-spikes",
+        "level": 2,
+        "enhancementSpots": 1,
+        "enchancements": [
+          {
+            "top": 82,
+            "left": 130
+          }
+        ]
+      },
+      {
+        "title": "vicious-ally",
+        "level": 3,
+        "enhancementSpots": 5,
+        "enchancements": [
+          {
+            "top": 78,
+            "left": 80
+          },
+          {
+            "top": 78,
+            "left": 121
+          },
+          {
+            "top": 97,
+            "left": 80
+          },
+          {
+            "top": 205,
+            "left": 139
+          },
+          {
+            "top": 220,
+            "left": 131
+          }
+        ]
+      },
+      {
+        "title": "unstoppable-beast",
+        "level": 3,
+        "enhancementSpots": 3,
+        "enchancements": [
+          {
+            "top": 70,
+            "left": 134
+          },
+          {
+            "top": 77,
+            "left": 113
+          },
+          {
+            "top": 220,
+            "left": 137
+          }
+        ]
+      },
+      {
+        "title": "ancient-ward",
+        "level": 4,
+        "enhancementSpots": 3,
+        "enchancements": [
+          {
+            "top": 59,
+            "left": 138
+          },
+          {
+            "top": 90,
+            "left": 130
+          },
+          {
+            "top": 217,
+            "left": 134
+          }
+        ]
+      },
+      {
+        "title": "punch-through",
+        "level": 4,
+        "enhancementSpots": 3,
+        "enchancements": [
+          {
+            "top": 75,
+            "left": 138
+          },
+          {
+            "top": 90,
+            "left": 132
+          },
+          {
+            "top": 195,
+            "left": 137
+          }
+        ]
+      },
+      {
+        "title": "rampage",
+        "level": 5,
+        "enhancementSpots": 2,
+        "enchancements": [
+          {
+            "top": 75,
+            "left": 136
+          },
+          {
+            "top": 112,
+            "left": 136
+          }
+        ]
+      },
+      {
+        "title": "stone-sigil",
+        "level": 5,
+        "enhancementSpots": 2,
+        "enchancements": [
+          {
+            "top": 221,
+            "left": 136
+          },
+          {
+            "top": 221,
+            "left": 153
+          }
+        ]
+      },
+      {
+        "title": "primal-blessing",
+        "level": 6,
+        "enhancementSpots": 3,
+        "enchancements": [
+          {
+            "top": 95,
+            "left": 129
+          },
+          {
+            "top": 198,
+            "left": 137
+          },
+          {
+            "top": 247,
+            "left": 141
+          }
+        ]
+      },
+      {
+        "title": "blood-hunger",
+        "level": 6,
+        "enhancementSpots": 2,
+        "enchancements": [
+          {
+            "top": 202,
+            "left": 139
+          },
+          {
+            "top": 225,
+            "left": 133
+          }
+        ]
+      },
+      {
+        "title": "storm-sigil",
+        "level": 7,
+        "enhancementSpots": 2,
+        "enchancements": [
+          {
+            "top": 225,
+            "left": 138
+          },
+          {
+            "top": 225,
+            "left": 155
+          }
+        ]
+      },
+      {
+        "title": "tyrannical-force",
+        "level": 7,
+        "enhancementSpots": 1,
+        "enchancements": [
+          {
+            "top": 81,
+            "left": 130
+          }
+        ]
+      },
+      {
+        "title": "natural-remedy",
+        "level": 8,
+        "enhancementSpots": 2,
+        "enchancements": [
+          {
+            "top": 78,
+            "left": 133
+          },
+          {
+            "top": 205,
+            "left": 137
+          }
+        ]
+      },
+      {
+        "title": "lash-out",
+        "level": 8,
+        "enhancementSpots": 3,
+        "enchancements": [
+          {
+            "top": 73,
+            "left": 138
+          },
+          {
+            "top": 198,
+            "left": 137
+          },
+          {
+            "top": 217,
+            "left": 137
+          }
+        ]
+      },
+      {
+        "title": "tribal-sigil",
+        "level": 9,
+        "enhancementSpots": 0
+      },
+      {
+        "title": "jaws-of-death",
+        "level": 9,
+        "enhancementSpots": 2,
+        "enchancements": [
+          {
+            "top": 198,
+            "left": 139
+          },
+          {
+            "top": 255,
+            "left": 139
+          }
+        ]
+      }
+    ],
     "perks": [
       { "id": 1, "checkboxes": [{ "id": 0 }], "label": "Remove Two -1 Cards" },
       {

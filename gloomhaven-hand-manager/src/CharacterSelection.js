@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import Konami from 'react-konami-code'
 
 function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
-  const [character, setCharacter] = useState('')
+  const [characterName, setCharacterName] = useState('')
   const [bladeSwarmUnlocked, setBladeSwarmUnlocked] = useState(false)
 
-  function selectCharacter(character) {
-    setCharacter(character)
+  function selectCharacter(characterName) {
+    setCharacterName(characterName)
   }
 
   function handleUnlockBladeSwarm() {
@@ -27,7 +27,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="brute"
                   className={
-                    character === 'brute'
+                    characterName === 'brute'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -43,7 +43,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="cragheart"
                   className={
-                    character === 'cragheart'
+                    characterName === 'cragheart'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -59,7 +59,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="mindthief"
                   className={
-                    character === 'mindthief'
+                    characterName === 'mindthief'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -77,7 +77,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="scoundrel"
                   className={
-                    character === 'scoundrel'
+                    characterName === 'scoundrel'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -93,7 +93,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="spellweaver"
                   className={
-                    character === 'spellweaver'
+                    characterName === 'spellweaver'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -109,7 +109,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="tinkerer"
                   className={
-                    character === 'tinkerer'
+                    characterName === 'tinkerer'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -130,7 +130,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="beastTyrant"
                   className={
-                    character === 'beastTyrant'
+                    characterName === 'beastTyrant'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -155,7 +155,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="doomStalker"
                   className={
-                    character === 'doomStalker'
+                    characterName === 'doomStalker'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -171,7 +171,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="nightshroud"
                   className={
-                    character === 'nightshroud'
+                    characterName === 'nightshroud'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -189,7 +189,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="quartermaster"
                   className={
-                    character === 'quartermaster'
+                    characterName === 'quartermaster'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -205,7 +205,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="elementalist"
                   className={
-                    character === 'elementalist'
+                    characterName === 'elementalist'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -221,7 +221,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="sunkeeper"
                   className={
-                    character === 'sunkeeper'
+                    characterName === 'sunkeeper'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -239,7 +239,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="summoner"
                   className={
-                    character === 'summoner'
+                    characterName === 'summoner'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -255,7 +255,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="berserker"
                   className={
-                    character === 'berserker'
+                    characterName === 'berserker'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -271,7 +271,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="soothsinger"
                   className={
-                    character === 'soothsinger'
+                    characterName === 'soothsinger'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -289,7 +289,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="sawbones"
                   className={
-                    character === 'sawbones'
+                    characterName === 'sawbones'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -305,7 +305,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="plagueherald"
                   className={
-                    character === 'plaqueherald'
+                    characterName === 'plaqueherald'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -324,7 +324,7 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 <img
                   id="bladeswarm"
                   className={
-                    character === 'bladeswarm'
+                    characterName === 'bladeswarm'
                       ? 'character active character-selected'
                       : 'character active'
                   }
@@ -372,8 +372,8 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
           type="button"
           align="center"
           title="Must Select A Character"
-          onClick={() => handleSetCharacter(character)}
-          disabled={character === ''}
+          onClick={() => handleSetCharacter(characterName)}
+          disabled={characterName === ''}
         >
           Confirm Character
         </button>
