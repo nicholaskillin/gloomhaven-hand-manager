@@ -1,3 +1,5 @@
+## This code had major spoilers. Please don't look at the code if you don't want anything spoiled.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
