@@ -85,6 +85,10 @@ label.enhancement {
   width: 200px;
 }
 
+.chooseCardsTable {
+  position: relative;
+}
+
 .level {
   padding-right: 50px;
 }
@@ -369,10 +373,6 @@ h6,
 #cardsInDeck {
   padding: 0;
   margin: 0;
-}
-
-.enhanced-card {
-  position: relative;
 }
 
 .card {

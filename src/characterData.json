@@ -8,7 +8,8 @@
       {
         "title": "disorienting-roar",
         "level": 1,
-        "enhancementSpots": 0
+        "enhancementSpots": 0,
+        "enchancements": []
       },
       {
         "title": "spirit-swap",
@@ -467,7 +468,8 @@
       {
         "title": "tribal-sigil",
         "level": 9,
-        "enhancementSpots": 0
+        "enhancementSpots": 0,
+        "enchancements": []
       },
       {
         "title": "jaws-of-death",

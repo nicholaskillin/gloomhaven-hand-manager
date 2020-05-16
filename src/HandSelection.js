@@ -5,6 +5,31 @@ function HandSelection({ character, level, handleSetStage }) {
   const firstRow = character.cards.slice(0, 5)
   const secondRow = character.cards.slice(5, 10)
   const thirdRow = character.cards.slice(10, character.startingCards)
+  const enchancementOptions = [
+    '+1',
+    'Fly/Leap',
+    'Wind',
+    'Ice',
+    'Fire',
+    'Leaf',
+    'Sun',
+    'Moon',
+    'Wild Element',
+    'Bless',
+    'Curse',
+    'Disarm',
+    'Immobilize',
+    'Wound',
+    'Muddle',
+    'Poison',
+    'Strengthen',
+    'Area',
+  ]
+
+  function handleEnhancementChange(title, id, e) {
+    console.log(title, id, e.target.value)
+  }
+
   return (
     <div id="initial-table" className="cardSet">
       <h2 id="choose-cards-number" className="header">
@@ -16,19 +41,67 @@ function HandSelection({ character, level, handleSetStage }) {
         </p>
       </div>
       <table className="cardTable" align="center">
-        <tr>
-          <td className="level">Level 1:</td>
-          {firstRow.map((card) => {
-            return (
-              <td className="chooseCardsTable">
-                <img
-                  src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                  className="chooseCards"
-                />
-              </td>
-            )
-          })}
-        </tr>
+        <tbody>
+          <tr>
+            <td className="level">Level 1:</td>
+            {firstRow.map((card) => {
+              return (
+                <td key={card.title} className="chooseCardsTable">
+                  <img
+                    src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
+                    className="chooseCards"
+                    alt={card.title}
+                  />
+                  {card.enchancements.map((enhancement, index) => (
+                    <img
+                      key={`${card.title}-enhancementIcon-${index}`}
+                      className="enhancement-icon"
+                      src={`./images/enhancements/leaf.png`}
+                      style={{ top: enhancement.top, left: enhancement.left }}
+                      alt={`Enhancement Name`}
+                    />
+                  ))}
+                </td>
+              )
+            })}
+          </tr>
+          <tr>
+            <td className="enhancement-label" />
+            {firstRow.map((card) => {
+              return (
+                <td key={`${card.title}-Enhancements`} className="enchancement">
+                  {card.enchancements.map((enhancement, index) => {
+                    return (
+                      <div
+                        key={`${card.title}-${index}`}
+                        className="enhancement-row"
+                      >
+                        <label className="enhancement">Enhancement:</label>
+                        <select
+                          onChange={(e) =>
+                            handleEnhancementChange(card.title, index, e)
+                          }
+                        >
+                          <option value="none">None</option>
+                          {enchancementOptions.map((enhancementOption) => {
+                            return (
+                              <option
+                                key={enhancementOption}
+                                value={enhancementOption}
+                              >
+                                {enhancementOption}
+                              </option>
+                            )
+                          })}
+                        </select>
+                      </div>
+                    )
+                  })}
+                </td>
+              )
+            })}
+          </tr>
+        </tbody>
       </table>
     </div>
   )
