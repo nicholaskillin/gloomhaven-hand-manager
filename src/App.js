@@ -19,6 +19,10 @@ function App() {
     setCharacter(characterData, setStage('selectPerks'))
   }
 
+  function handleUpdateCharacter(character) {
+    setCharacter(character)
+  }
+
   function handleSetLevel(level) {
     setLevel(level)
   }
@@ -41,6 +45,7 @@ function App() {
         <HandSelection
           character={character}
           level={level}
+          handleUpdateCharacter={handleUpdateCharacter}
           handleSetStage={handleSetStage}
         />
       )}

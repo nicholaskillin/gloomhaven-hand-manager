@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function HandSelection({ character, level, handleSetStage }) {
+function HandSelection({ character, level, handleUpdateCharacter, handleSetStage }) {
   const [cardsSelected, setCardsSelected] = useState(0)
   const firstRow = character.cards.slice(0, 5)
   const secondRow = character.cards.slice(5, 10)
@@ -26,8 +26,12 @@ function HandSelection({ character, level, handleSetStage }) {
     'Area',
   ]
 
-  function handleEnhancementChange(title, id, e) {
-    console.log(title, id, e.target.value)
+  function handleEnhancementChange(cardTitle, id, e) {
+    let updatedData = character
+    const card = updatedData.cards.find((card) => card.title === cardTitle)
+    let enhancement = card.enchancements.find((enhancement) => enhancement.id === id)
+    enhancement.enhancement = e.target.value
+    handleUpdateCharacter(updatedData)
   }
 
   return (
@@ -52,14 +56,8 @@ function HandSelection({ character, level, handleSetStage }) {
                     className="chooseCards"
                     alt={card.title}
                   />
-                  {card.enchancements.map((enhancement, index) => (
-                    <img
-                      key={`${card.title}-enhancementIcon-${index}`}
-                      className="enhancement-icon"
-                      src={`./images/enhancements/leaf.png`}
-                      style={{ top: enhancement.top, left: enhancement.left }}
-                      alt={`Enhancement Name`}
-                    />
+                  {card.enchancements.map((enhancement) => (
+                    <EnhancementIcon card={card} enhancement={enhancement} />
                   ))}
                 </td>
               )
@@ -79,7 +77,7 @@ function HandSelection({ character, level, handleSetStage }) {
                         <label className="enhancement">Enhancement:</label>
                         <select
                           onChange={(e) =>
-                            handleEnhancementChange(card.title, index, e)
+                            handleEnhancementChange(card.title, enhancement.id, e)
                           }
                         >
                           <option value="none">None</option>
@@ -105,6 +103,19 @@ function HandSelection({ character, level, handleSetStage }) {
       </table>
     </div>
   )
+}
+
+function EnhancementIcon({card, enhancement}) {
+  console.log(enhancement)
+ return (
+  <img
+  key={`${card.title}-enhancementIcon-${enhancement.id}`}
+  className="enhancement-icon"
+  src={`./images/enhancements/${enhancement.enhancement}.png`}
+  style={{ top: enhancement.top, left: enhancement.left }}
+  alt={`Enhancement Name`}
+/>
+ )
 }
 
 export default HandSelection

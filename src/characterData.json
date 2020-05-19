@@ -17,12 +17,16 @@
         "enhancementSpots": 2,
         "enchancements": [
           {
+            "id": 1,
             "top": 79,
-            "left": 136
+            "left": 136,
+            "enhancement": "wind"
           },
           {
+            "id": 2,
             "top": 79,
-            "left": 152
+            "left": 152,
+            "enhancement": ""
           }
         ]
       },
@@ -32,20 +36,28 @@
         "enhancementSpots": 4,
         "enchancements": [
           {
+            "id": 3,
             "top": 78,
-            "left": 80
+            "left": 80,
+            "enhancement": ""
           },
           {
+            "id": 4,
             "top": 78,
-            "left": 121
+            "left": 121,
+            "enhancement": ""
           },
           {
+            "id": 5,
             "top": 97,
-            "left": 80
+            "left": 80,
+            "enhancement": ""
           },
           {
+            "id": 6,
             "top": 225,
-            "left": 130
+            "left": 130,
+            "enhancement": ""
           }
         ]
       },
@@ -55,20 +67,28 @@
         "enhancementSpots": 4,
         "enchancements": [
           {
+            "id": 7,
             "top": 78,
-            "left": 80
+            "left": 80,
+            "enhancement": ""
           },
           {
+            "id": 8,
             "top": 78,
-            "left": 121
+            "left": 121,
+            "enhancement": ""
           },
           {
+            "id": 9,
             "top": 97,
-            "left": 80
+            "left": 80,
+            "enhancement": ""
           },
           {
+            "id": 10,
             "top": 223,
-            "left": 136
+            "left": 136,
+            "enhancement": ""
           }
         ]
       },
@@ -78,12 +98,16 @@
         "enhancementSpots": 2,
         "enchancements": [
           {
+            "id": 11,
             "top": 79,
-            "left": 139
+            "left": 139,
+            "enhancement": ""
           },
           {
+            "id": 12,
             "top": 95,
-            "left": 130
+            "left": 130,
+            "enhancement": ""
           }
         ]
       },
@@ -93,16 +117,22 @@
         "enhancementSpots": 3,
         "enchancements": [
           {
+            "id": 13,
             "top": 87,
-            "left": 134
+            "left": 134,
+            "enhancement": ""
           },
           {
+            "id": 14,
             "top": 212,
-            "left": 138
+            "left": 138,
+            "enhancement": ""
           },
           {
+            "id": 15,
             "top": 212,
-            "left": 154
+            "left": 154,
+            "enhancement": ""
           }
         ]
       },
