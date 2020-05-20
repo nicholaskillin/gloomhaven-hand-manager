@@ -3,6 +3,7 @@ import './App.css'
 import CharacterSelection from './CharacterSelection'
 import PerkSelection from './PerkSelection'
 import HandSelection from './HandSelection'
+import PlayArea from './PlayArea'
 
 function App() {
   const [stage, setStage] = useState('selectCharacter')
@@ -20,6 +21,7 @@ function App() {
   }
 
   function handleUpdateCharacter(character) {
+    console.log(character)
     setCharacter(character)
   }
 
@@ -39,7 +41,10 @@ function App() {
         </>
       )}
       {stage === 'selectPerks' && (
-        <PerkSelection handleSetStage={handleSetStage} characterPerks={character.perks}/>
+        <PerkSelection
+          handleSetStage={handleSetStage}
+          characterPerks={character.perks}
+        />
       )}
       {stage === 'selectHand' && (
         <HandSelection
@@ -49,6 +54,7 @@ function App() {
           handleSetStage={handleSetStage}
         />
       )}
+      {stage === 'playing' && <PlayArea />}
     </>
   )
 }

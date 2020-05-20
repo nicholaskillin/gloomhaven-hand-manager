@@ -136,7 +136,7 @@ label.enhancement {
   font-size: 25px;
 }
 
-#chosen-cards-title {
+.chosen-cards-title {
   padding: 20px;
   width: 50%;
 }
