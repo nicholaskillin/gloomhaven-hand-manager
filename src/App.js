@@ -53,6 +53,7 @@ function App() {
       )}
       {stage === 'selectHand' && (
         <HandSelection
+          addCardToHand={addCardToHand}
           character={character}
           level={level}
           handleUpdateCharacter={handleUpdateCharacter}

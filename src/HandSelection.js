@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 function HandSelection({
+  addCardToHand,
   character,
   level,
   handleUpdateCharacter,
@@ -81,7 +82,7 @@ function HandSelection({
             <td className="level">Level 1:</td>
             {firstRow.map((card) => {
               return (
-                <td key={card.title} className="chooseCardsTable">
+                <td key={card.title} className="chooseCardsTable" onClick={(e) => addCardToHand(e.target)}>
                   <img
                     src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
                     className="chooseCards"
