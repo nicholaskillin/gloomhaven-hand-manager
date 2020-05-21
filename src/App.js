@@ -30,8 +30,13 @@ function App() {
     setLevel(level)
   }
 
-  function addCardToHand(card) {
-    console.log(card)
+  function addCardToHand(selectedCard) {
+    if (hand.length < character.handSize) {
+      let cardToAdd = character.cards.find((card) => card.title === selectedCard.alt)
+      setHand([...hand, cardToAdd])
+    } else {
+      console.log(`Can't add more cards to your hand`)
+    }
   }
 
   return (
@@ -56,6 +61,7 @@ function App() {
           addCardToHand={addCardToHand}
           character={character}
           level={level}
+          hand={hand}
           handleUpdateCharacter={handleUpdateCharacter}
           handleSetStage={handleSetStage}
         />

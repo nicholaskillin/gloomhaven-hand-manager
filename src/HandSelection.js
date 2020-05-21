@@ -4,10 +4,10 @@ function HandSelection({
   addCardToHand,
   character,
   level,
+  hand,
   handleUpdateCharacter,
   handleSetStage,
 }) {
-  const [cardsSelected, setCardsSelected] = useState(0)
   const firstRow = character.cards.slice(0, 5)
   const secondRow = character.cards.slice(5, 10)
   const thirdRow = character.cards.slice(10, character.startingCards)
@@ -66,6 +66,12 @@ function HandSelection({
     handleUpdateCharacter(updatedData)
   }
 
+  //TODO: Add a cardClicked function. Should check if card is in hand. If not, call addCardToHand. If it is, remove it from hand
+
+  function cardAddedToHand(card) {
+    //TODO: If card is in the hand state, return true
+  }
+
   return (
     <div id="initial-table" className="cardSet">
       <h2 id="choose-cards-number" className="header">
@@ -73,7 +79,7 @@ function HandSelection({
       </h2>
       <div align="center">
         <p id="card-counter" className="card-counter" align="center">
-          {cardsSelected}/{character.handSize}
+          {hand.length}/{character.handSize}
         </p>
       </div>
       <table className="cardTable" align="center">
@@ -812,6 +818,9 @@ function HandSelection({
           )}
         </tbody>
       </table>
+      <div>
+        <SelectedHand character={character} hand={hand} />
+      </div>
       <div align="center">
         <button
           className="button"
@@ -830,6 +839,56 @@ function HandSelection({
         </button>
       </div>
     </div>
+  )
+}
+
+function SelectedHand({character, hand}) {
+  const firstRow = hand.slice(0, 4)
+  const secondRow = hand.slice(4, 8)
+  const thirdRow = hand.slice(8, 12)
+  return (
+    <table align="center">
+      <tbody>
+        <tr>
+        {firstRow.map((card) => {
+      
+      return (<td key={card.title} className="hand">
+      <img
+        src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
+        className="chooseCards"
+        alt={card.title}
+      />
+      {card.enchancements.map((enhancement) => (
+        <EnhancementIcon
+          key={enhancement.id}
+          originalEnhancement={enhancement}
+        />
+      ))}
+    </td>)
+    
+    })}
+        </tr>
+        <tr>
+        {secondRow.map((card) => {
+      
+      return (<td key={card.title} className="hand">
+      <img
+        src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
+        className="chooseCards"
+        alt={card.title}
+      />
+      {card.enchancements.map((enhancement) => (
+        <EnhancementIcon
+          key={enhancement.id}
+          originalEnhancement={enhancement}
+        />
+      ))}
+    </td>)
+    
+    })}
+        </tr>
+      </tbody>
+    </table>
   )
 }
 

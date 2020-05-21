@@ -93,7 +93,7 @@ label.enhancement {
   padding-right: 50px;
 }
 
-#hand-cards td {
+.hand {
   position: relative;
 }
 
@@ -175,6 +175,7 @@ label.enhancement {
 .hiding {
   display: none;
 }
+
 .visible {
   display: block;
 }
