@@ -36,7 +36,7 @@ function HandSelection({
   })
   const enchancementOptions = [
     '+1',
-    'Fly/Leap',
+    'Leap',
     'Wind',
     'Ice',
     'Fire',
@@ -56,7 +56,7 @@ function HandSelection({
   ]
 
   function handleEnhancementChange(cardTitle, id, e) {
-    let updatedData = character
+    let updatedData = { ...character }
     const card = updatedData.cards.find((card) => card.title === cardTitle)
     let enhancement = card.enchancements.find(
       (enhancement) => enhancement.id === id
@@ -90,7 +90,6 @@ function HandSelection({
                   {card.enchancements.map((enhancement) => (
                     <EnhancementIcon
                       key={enhancement.id}
-                      card={card}
                       originalEnhancement={enhancement}
                     />
                   ))}
@@ -151,7 +150,6 @@ function HandSelection({
                   {card.enchancements.map((enhancement) => (
                     <EnhancementIcon
                       key={enhancement.id}
-                      card={card}
                       originalEnhancement={enhancement}
                     />
                   ))}
@@ -212,7 +210,6 @@ function HandSelection({
                   {card.enchancements.map((enhancement) => (
                     <EnhancementIcon
                       key={enhancement.id}
-                      card={card}
                       originalEnhancement={enhancement}
                     />
                   ))}
@@ -275,7 +272,6 @@ function HandSelection({
                       {card.enchancements.map((enhancement) => (
                         <EnhancementIcon
                           key={enhancement.id}
-                          card={card}
                           originalEnhancement={enhancement}
                         />
                       ))}
@@ -296,7 +292,6 @@ function HandSelection({
                           {card.enchancements.map((enhancement) => (
                             <EnhancementIcon
                               key={enhancement.id}
-                              card={card}
                               originalEnhancement={enhancement}
                             />
                           ))}
@@ -415,7 +410,6 @@ function HandSelection({
                       {card.enchancements.map((enhancement) => (
                         <EnhancementIcon
                           key={enhancement.id}
-                          card={card}
                           originalEnhancement={enhancement}
                         />
                       ))}
@@ -436,7 +430,6 @@ function HandSelection({
                           {card.enchancements.map((enhancement) => (
                             <EnhancementIcon
                               key={enhancement.id}
-                              card={card}
                               originalEnhancement={enhancement}
                             />
                           ))}
@@ -555,7 +548,6 @@ function HandSelection({
                       {card.enchancements.map((enhancement) => (
                         <EnhancementIcon
                           key={enhancement.id}
-                          card={card}
                           originalEnhancement={enhancement}
                         />
                       ))}
@@ -576,7 +568,6 @@ function HandSelection({
                           {card.enchancements.map((enhancement) => (
                             <EnhancementIcon
                               key={enhancement.id}
-                              card={card}
                               originalEnhancement={enhancement}
                             />
                           ))}
@@ -695,7 +686,6 @@ function HandSelection({
                       {card.enchancements.map((enhancement) => (
                         <EnhancementIcon
                           key={enhancement.id}
-                          card={card}
                           originalEnhancement={enhancement}
                         />
                       ))}
@@ -716,7 +706,6 @@ function HandSelection({
                           {card.enchancements.map((enhancement) => (
                             <EnhancementIcon
                               key={enhancement.id}
-                              card={card}
                               originalEnhancement={enhancement}
                             />
                           ))}
@@ -843,16 +832,20 @@ function HandSelection({
   )
 }
 
-function EnhancementIcon({ card, originalEnhancement }) {
+function EnhancementIcon({ originalEnhancement }) {
   const [enhancement, setEnhancement] = useState(originalEnhancement)
 
   return (
-    <img
-      className="enhancement-icon"
-      src={`./images/enhancements/${enhancement.enhancement}.png`}
-      style={{ top: enhancement.top, left: enhancement.left }}
-      alt={`Enhancement Name`}
-    />
+    <>
+      {enhancement.enhancement !== '' && (
+        <img
+          className="enhancement-icon"
+          src={`./images/enhancements/${enhancement.enhancement}.png`}
+          style={{ top: enhancement.top, left: enhancement.left }}
+          alt={`Enhancement Name`}
+        />
+      )}
+    </>
   )
 }
 
