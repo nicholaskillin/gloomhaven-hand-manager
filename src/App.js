@@ -9,6 +9,7 @@ function App() {
   const [stage, setStage] = useState('selectCharacter')
   const [character, setCharacter] = useState({})
   const [level, setLevel] = useState(1)
+  const [hand, setHand] = useState([])
   const allCharacterData = require('./characterData.json')
 
   function handleSetStage(stage) {
@@ -27,6 +28,10 @@ function App() {
 
   function handleSetLevel(level) {
     setLevel(level)
+  }
+
+  function addCardToHand(card) {
+    console.log(card)
   }
 
   return (
@@ -54,7 +59,7 @@ function App() {
           handleSetStage={handleSetStage}
         />
       )}
-      {stage === 'playing' && <PlayArea />}
+      {stage === 'playing' && <PlayArea character={character}/>}
     </>
   )
 }

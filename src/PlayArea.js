@@ -1,6 +1,7 @@
 import React from 'react'
 
-function PlayArea() {
+function PlayArea({character}) {
+  console.log(character)
   return (
     <>
       <div id="play-game" align="center">
@@ -20,14 +21,14 @@ function PlayArea() {
                       <td id="chosen-card-1" className="card-in-play">
                         <img
                           alt="Chosen Card 1"
-                          src={`./images/character-ability-cards/bt/bt-back.png`}
+                          src={`./images/character-ability-cards/${character.initials}/${character.initials}-back.png`}
                           className="card"
                         />
                       </td>
                       <td id="chosen-card-2" className="card-in-play">
                         <img
                           alt="Chosen Card 1"
-                          src={`./images/character-ability-cards/bt/bt-back.png`}
+                          src={`./images/character-ability-cards/${character.initials}/${character.initials}-back.png`}
                           className="card"
                         />
                       </td>
