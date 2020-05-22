@@ -194,6 +194,7 @@ function HandSelection({
           type="button"
           title="Must Have a Full Hand"
           onClick={() => handleSetStage('playing')}
+          disabled={hand.length < character.handSize}
         >
           Confirm Hand
         </button>
