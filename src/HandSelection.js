@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 function HandSelection({
   addCardToHand,
@@ -7,6 +7,7 @@ function HandSelection({
   hand,
   handleUpdateCharacter,
   handleSetStage,
+  removeCardFromHand,
 }) {
   const firstRow = character.cards.slice(0, 5)
   const secondRow = character.cards.slice(5, 10)
@@ -56,6 +57,15 @@ function HandSelection({
     'Area',
   ]
 
+  //TODO: Add a cardClicked function. Should check if card is in hand. If not, call addCardToHand. If it is, remove it from hand
+
+  function cardIsInHand(cardToCheck) {
+    if (hand.some((card) => card.title === cardToCheck.title)) {
+      return true
+    }
+    return false
+  }
+
   function handleEnhancementChange(cardTitle, id, e) {
     let updatedData = { ...character }
     const card = updatedData.cards.find((card) => card.title === cardTitle)
@@ -66,10 +76,19 @@ function HandSelection({
     handleUpdateCharacter(updatedData)
   }
 
-  //TODO: Add a cardClicked function. Should check if card is in hand. If not, call addCardToHand. If it is, remove it from hand
-
-  function cardAddedToHand(card) {
-    //TODO: If card is in the hand state, return true
+  function handleCardClick(selectedCard) {
+    let cardFromCharacter = character.cards.find(
+      (card) => card.title === selectedCard.alt
+    )
+    if (cardIsInHand(cardFromCharacter)) {
+      removeCardFromHand(cardFromCharacter)
+    } else {
+      if (hand.length < character.handSize) {
+        addCardToHand(cardFromCharacter)
+      } else {
+        console.log(`Can't add more cards to your hand`)
+      }
+    }
   }
 
   return (
@@ -84,737 +103,78 @@ function HandSelection({
       </div>
       <table className="cardTable" align="center">
         <tbody>
-          <tr>
-            <td className="level">Level 1:</td>
-            {firstRow.map((card) => {
-              return (
-                <td key={card.title} className="chooseCardsTable" onClick={(e) => addCardToHand(e.target)}>
-                  <img
-                    src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                    className="chooseCards"
-                    alt={card.title}
-                  />
-                  {card.enchancements.map((enhancement) => (
-                    <EnhancementIcon
-                      key={enhancement.id}
-                      originalEnhancement={enhancement}
-                    />
-                  ))}
-                </td>
-              )
-            })}
-          </tr>
-          <tr>
-            <td className="enhancement-label" />
-            {firstRow.map((card) => {
-              return (
-                <td key={`${card.title}-Enhancements`} className="enchancement">
-                  {card.enchancements.map((enhancement, index) => {
-                    return (
-                      <div
-                        key={`${card.title}-${index}`}
-                        className="enhancement-row"
-                      >
-                        <label className="enhancement">Enhancement:</label>
-                        <select
-                          onChange={(e) =>
-                            handleEnhancementChange(
-                              card.title,
-                              enhancement.id,
-                              e
-                            )
-                          }
-                        >
-                          <option value="none">None</option>
-                          {enchancementOptions.map((enhancementOption) => {
-                            return (
-                              <option
-                                key={enhancementOption}
-                                value={enhancementOption}
-                              >
-                                {enhancementOption}
-                              </option>
-                            )
-                          })}
-                        </select>
-                      </div>
-                    )
-                  })}
-                </td>
-              )
-            })}
-          </tr>
-          <tr>
-            <td className="level">Level 1:</td>
-            {secondRow.map((card) => {
-              return (
-                <td key={card.title} className="chooseCardsTable">
-                  <img
-                    src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                    className="chooseCards"
-                    alt={card.title}
-                  />
-                  {card.enchancements.map((enhancement) => (
-                    <EnhancementIcon
-                      key={enhancement.id}
-                      originalEnhancement={enhancement}
-                    />
-                  ))}
-                </td>
-              )
-            })}
-          </tr>
-          <tr>
-            <td className="enhancement-label" />
-            {secondRow.map((card) => {
-              return (
-                <td key={`${card.title}-Enhancements`} className="enchancement">
-                  {card.enchancements.map((enhancement, index) => {
-                    return (
-                      <div
-                        key={`${card.title}-${index}`}
-                        className="enhancement-row"
-                      >
-                        <label className="enhancement">Enhancement:</label>
-                        <select
-                          onChange={(e) =>
-                            handleEnhancementChange(
-                              card.title,
-                              enhancement.id,
-                              e
-                            )
-                          }
-                        >
-                          <option value="none">None</option>
-                          {enchancementOptions.map((enhancementOption) => {
-                            return (
-                              <option
-                                key={enhancementOption}
-                                value={enhancementOption}
-                              >
-                                {enhancementOption}
-                              </option>
-                            )
-                          })}
-                        </select>
-                      </div>
-                    )
-                  })}
-                </td>
-              )
-            })}
-          </tr>
-          <tr>
-            <td className="level">Level 1:</td>
-            {thirdRow.map((card) => {
-              return (
-                <td key={card.title} className="chooseCardsTable">
-                  <img
-                    src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                    className="chooseCards"
-                    alt={card.title}
-                  />
-                  {card.enchancements.map((enhancement) => (
-                    <EnhancementIcon
-                      key={enhancement.id}
-                      originalEnhancement={enhancement}
-                    />
-                  ))}
-                </td>
-              )
-            })}
-          </tr>
-          <tr>
-            <td className="enhancement-label" />
-            {thirdRow.map((card) => {
-              return (
-                <td key={`${card.title}-Enhancements`} className="enchancement">
-                  {card.enchancements.map((enhancement, index) => {
-                    return (
-                      <div
-                        key={`${card.title}-${index}`}
-                        className="enhancement-row"
-                      >
-                        <label className="enhancement">Enhancement:</label>
-                        <select
-                          onChange={(e) =>
-                            handleEnhancementChange(
-                              card.title,
-                              enhancement.id,
-                              e
-                            )
-                          }
-                        >
-                          <option value="none">None</option>
-                          {enchancementOptions.map((enhancementOption) => {
-                            return (
-                              <option
-                                key={enhancementOption}
-                                value={enhancementOption}
-                              >
-                                {enhancementOption}
-                              </option>
-                            )
-                          })}
-                        </select>
-                      </div>
-                    )
-                  })}
-                </td>
-              )
-            })}
-          </tr>
+          <CardTableRowLevelOne
+            handleCardClick={handleCardClick}
+            cardSet={firstRow}
+            character={character}
+            enchancementOptions={enchancementOptions}
+            handleEnhancementChange={handleEnhancementChange}
+          />
+          <CardTableRowLevelOne
+            handleCardClick={handleCardClick}
+            cardSet={secondRow}
+            character={character}
+            enchancementOptions={enchancementOptions}
+            handleEnhancementChange={handleEnhancementChange}
+          />
+          <CardTableRowLevelOne
+            handleCardClick={handleCardClick}
+            cardSet={thirdRow}
+            character={character}
+            enchancementOptions={enchancementOptions}
+            handleEnhancementChange={handleEnhancementChange}
+          />
           {level >= 2 && (
-            <>
-              <tr>
-                <td className="level">Level 2:</td>
-                {levelTwoCards.map((card) => {
-                  return (
-                    <td key={card.title} className="chooseCardsTable">
-                      <img
-                        src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                        className="chooseCards"
-                        alt={card.title}
-                      />
-                      {card.enchancements.map((enhancement) => (
-                        <EnhancementIcon
-                          key={enhancement.id}
-                          originalEnhancement={enhancement}
-                        />
-                      ))}
-                    </td>
-                  )
-                })}
-                {level >= 3 && (
-                  <>
-                    <td className="level">Level 3:</td>
-                    {levelThreeCards.map((card) => {
-                      return (
-                        <td key={card.title} className="chooseCardsTable">
-                          <img
-                            src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                            className="chooseCards"
-                            alt={card.title}
-                          />
-                          {card.enchancements.map((enhancement) => (
-                            <EnhancementIcon
-                              key={enhancement.id}
-                              originalEnhancement={enhancement}
-                            />
-                          ))}
-                        </td>
-                      )
-                    })}
-                  </>
-                )}
-              </tr>
-              <tr>
-                <td className="enhancement-label" />
-                {levelTwoCards.map((card) => {
-                  return (
-                    <td
-                      key={`${card.title}-Enhancements`}
-                      className="enchancement"
-                    >
-                      {card.enchancements.map((enhancement, index) => {
-                        return (
-                          <div
-                            key={`${card.title}-${index}`}
-                            className="enhancement-row"
-                          >
-                            <label className="enhancement">Enhancement:</label>
-                            <select
-                              onChange={(e) =>
-                                handleEnhancementChange(
-                                  card.title,
-                                  enhancement.id,
-                                  e
-                                )
-                              }
-                            >
-                              <option value="none">None</option>
-                              {enchancementOptions.map((enhancementOption) => {
-                                return (
-                                  <option
-                                    key={enhancementOption}
-                                    value={enhancementOption}
-                                  >
-                                    {enhancementOption}
-                                  </option>
-                                )
-                              })}
-                            </select>
-                          </div>
-                        )
-                      })}
-                    </td>
-                  )
-                })}
-                {level >= 3 && (
-                  <>
-                    <td className="enhancement-label" />
-                    {levelThreeCards.map((card) => {
-                      return (
-                        <td
-                          key={`${card.title}-Enhancements`}
-                          className="enchancement"
-                        >
-                          {card.enchancements.map((enhancement, index) => {
-                            return (
-                              <div
-                                key={`${card.title}-${index}`}
-                                className="enhancement-row"
-                              >
-                                <label className="enhancement">
-                                  Enhancement:
-                                </label>
-                                <select
-                                  onChange={(e) =>
-                                    handleEnhancementChange(
-                                      card.title,
-                                      enhancement.id,
-                                      e
-                                    )
-                                  }
-                                >
-                                  <option value="none">None</option>
-                                  {enchancementOptions.map(
-                                    (enhancementOption) => {
-                                      return (
-                                        <option
-                                          key={enhancementOption}
-                                          value={enhancementOption}
-                                        >
-                                          {enhancementOption}
-                                        </option>
-                                      )
-                                    }
-                                  )}
-                                </select>
-                              </div>
-                            )
-                          })}
-                        </td>
-                      )
-                    })}
-                  </>
-                )}
-              </tr>
-            </>
+            <CardTableRowTwoLevels
+              handleCardClick={handleCardClick}
+              character={character}
+              enchancementOptions={enchancementOptions}
+              handleEnhancementChange={handleEnhancementChange}
+              firstCardSet={levelTwoCards}
+              firstLevel={2}
+              level={level}
+              secondCardSet={levelThreeCards}
+              secondLevel={3}
+            />
           )}
           {level >= 4 && (
-            <>
-              <tr>
-                <td className="level">Level 4:</td>
-                {levelFourCards.map((card) => {
-                  return (
-                    <td key={card.title} className="chooseCardsTable">
-                      <img
-                        src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                        className="chooseCards"
-                        alt={card.title}
-                      />
-                      {card.enchancements.map((enhancement) => (
-                        <EnhancementIcon
-                          key={enhancement.id}
-                          originalEnhancement={enhancement}
-                        />
-                      ))}
-                    </td>
-                  )
-                })}
-                {level >= 5 && (
-                  <>
-                    <td className="level">Level 5:</td>
-                    {levelFiveCards.map((card) => {
-                      return (
-                        <td key={card.title} className="chooseCardsTable">
-                          <img
-                            src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                            className="chooseCards"
-                            alt={card.title}
-                          />
-                          {card.enchancements.map((enhancement) => (
-                            <EnhancementIcon
-                              key={enhancement.id}
-                              originalEnhancement={enhancement}
-                            />
-                          ))}
-                        </td>
-                      )
-                    })}
-                  </>
-                )}
-              </tr>
-              <tr>
-                <td className="enhancement-label" />
-                {levelFourCards.map((card) => {
-                  return (
-                    <td
-                      key={`${card.title}-Enhancements`}
-                      className="enchancement"
-                    >
-                      {card.enchancements.map((enhancement, index) => {
-                        return (
-                          <div
-                            key={`${card.title}-${index}`}
-                            className="enhancement-row"
-                          >
-                            <label className="enhancement">Enhancement:</label>
-                            <select
-                              onChange={(e) =>
-                                handleEnhancementChange(
-                                  card.title,
-                                  enhancement.id,
-                                  e
-                                )
-                              }
-                            >
-                              <option value="none">None</option>
-                              {enchancementOptions.map((enhancementOption) => {
-                                return (
-                                  <option
-                                    key={enhancementOption}
-                                    value={enhancementOption}
-                                  >
-                                    {enhancementOption}
-                                  </option>
-                                )
-                              })}
-                            </select>
-                          </div>
-                        )
-                      })}
-                    </td>
-                  )
-                })}
-                {level >= 5 && (
-                  <>
-                    <td className="enhancement-label" />
-                    {levelFiveCards.map((card) => {
-                      return (
-                        <td
-                          key={`${card.title}-Enhancements`}
-                          className="enchancement"
-                        >
-                          {card.enchancements.map((enhancement, index) => {
-                            return (
-                              <div
-                                key={`${card.title}-${index}`}
-                                className="enhancement-row"
-                              >
-                                <label className="enhancement">
-                                  Enhancement:
-                                </label>
-                                <select
-                                  onChange={(e) =>
-                                    handleEnhancementChange(
-                                      card.title,
-                                      enhancement.id,
-                                      e
-                                    )
-                                  }
-                                >
-                                  <option value="none">None</option>
-                                  {enchancementOptions.map(
-                                    (enhancementOption) => {
-                                      return (
-                                        <option
-                                          key={enhancementOption}
-                                          value={enhancementOption}
-                                        >
-                                          {enhancementOption}
-                                        </option>
-                                      )
-                                    }
-                                  )}
-                                </select>
-                              </div>
-                            )
-                          })}
-                        </td>
-                      )
-                    })}
-                  </>
-                )}
-              </tr>
-            </>
+            <CardTableRowTwoLevels
+              handleCardClick={handleCardClick}
+              character={character}
+              enchancementOptions={enchancementOptions}
+              handleEnhancementChange={handleEnhancementChange}
+              firstCardSet={levelFourCards}
+              firstLevel={4}
+              level={level}
+              secondCardSet={levelFiveCards}
+              secondLevel={5}
+            />
           )}
           {level >= 6 && (
-            <>
-              <tr>
-                <td className="level">Level 6:</td>
-                {levelSixCards.map((card) => {
-                  return (
-                    <td key={card.title} className="chooseCardsTable">
-                      <img
-                        src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                        className="chooseCards"
-                        alt={card.title}
-                      />
-                      {card.enchancements.map((enhancement) => (
-                        <EnhancementIcon
-                          key={enhancement.id}
-                          originalEnhancement={enhancement}
-                        />
-                      ))}
-                    </td>
-                  )
-                })}
-                {level >= 7 && (
-                  <>
-                    <td className="level">Level 7:</td>
-                    {levelSevenCards.map((card) => {
-                      return (
-                        <td key={card.title} className="chooseCardsTable">
-                          <img
-                            src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                            className="chooseCards"
-                            alt={card.title}
-                          />
-                          {card.enchancements.map((enhancement) => (
-                            <EnhancementIcon
-                              key={enhancement.id}
-                              originalEnhancement={enhancement}
-                            />
-                          ))}
-                        </td>
-                      )
-                    })}
-                  </>
-                )}
-              </tr>
-              <tr>
-                <td className="enhancement-label" />
-                {levelSixCards.map((card) => {
-                  return (
-                    <td
-                      key={`${card.title}-Enhancements`}
-                      className="enchancement"
-                    >
-                      {card.enchancements.map((enhancement, index) => {
-                        return (
-                          <div
-                            key={`${card.title}-${index}`}
-                            className="enhancement-row"
-                          >
-                            <label className="enhancement">Enhancement:</label>
-                            <select
-                              onChange={(e) =>
-                                handleEnhancementChange(
-                                  card.title,
-                                  enhancement.id,
-                                  e
-                                )
-                              }
-                            >
-                              <option value="none">None</option>
-                              {enchancementOptions.map((enhancementOption) => {
-                                return (
-                                  <option
-                                    key={enhancementOption}
-                                    value={enhancementOption}
-                                  >
-                                    {enhancementOption}
-                                  </option>
-                                )
-                              })}
-                            </select>
-                          </div>
-                        )
-                      })}
-                    </td>
-                  )
-                })}
-                {level >= 7 && (
-                  <>
-                    <td className="enhancement-label" />
-                    {levelSevenCards.map((card) => {
-                      return (
-                        <td
-                          key={`${card.title}-Enhancements`}
-                          className="enchancement"
-                        >
-                          {card.enchancements.map((enhancement, index) => {
-                            return (
-                              <div
-                                key={`${card.title}-${index}`}
-                                className="enhancement-row"
-                              >
-                                <label className="enhancement">
-                                  Enhancement:
-                                </label>
-                                <select
-                                  onChange={(e) =>
-                                    handleEnhancementChange(
-                                      card.title,
-                                      enhancement.id,
-                                      e
-                                    )
-                                  }
-                                >
-                                  <option value="none">None</option>
-                                  {enchancementOptions.map(
-                                    (enhancementOption) => {
-                                      return (
-                                        <option
-                                          key={enhancementOption}
-                                          value={enhancementOption}
-                                        >
-                                          {enhancementOption}
-                                        </option>
-                                      )
-                                    }
-                                  )}
-                                </select>
-                              </div>
-                            )
-                          })}
-                        </td>
-                      )
-                    })}
-                  </>
-                )}
-              </tr>
-            </>
+            <CardTableRowTwoLevels
+              handleCardClick={handleCardClick}
+              character={character}
+              enchancementOptions={enchancementOptions}
+              handleEnhancementChange={handleEnhancementChange}
+              firstCardSet={levelSixCards}
+              firstLevel={6}
+              level={level}
+              secondCardSet={levelSevenCards}
+              secondLevel={7}
+            />
           )}
           {level >= 8 && (
-            <>
-              <tr>
-                <td className="level">Level 8:</td>
-                {levelEightCards.map((card) => {
-                  return (
-                    <td key={card.title} className="chooseCardsTable">
-                      <img
-                        src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                        className="chooseCards"
-                        alt={card.title}
-                      />
-                      {card.enchancements.map((enhancement) => (
-                        <EnhancementIcon
-                          key={enhancement.id}
-                          originalEnhancement={enhancement}
-                        />
-                      ))}
-                    </td>
-                  )
-                })}
-                {level >= 9 && (
-                  <>
-                    <td className="level">Level 9:</td>
-                    {levelNineCards.map((card) => {
-                      return (
-                        <td key={card.title} className="chooseCardsTable">
-                          <img
-                            src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                            className="chooseCards"
-                            alt={card.title}
-                          />
-                          {card.enchancements.map((enhancement) => (
-                            <EnhancementIcon
-                              key={enhancement.id}
-                              originalEnhancement={enhancement}
-                            />
-                          ))}
-                        </td>
-                      )
-                    })}
-                  </>
-                )}
-              </tr>
-              <tr>
-                <td className="enhancement-label" />
-                {levelEightCards.map((card) => {
-                  return (
-                    <td
-                      key={`${card.title}-Enhancements`}
-                      className="enchancement"
-                    >
-                      {card.enchancements.map((enhancement, index) => {
-                        return (
-                          <div
-                            key={`${card.title}-${index}`}
-                            className="enhancement-row"
-                          >
-                            <label className="enhancement">Enhancement:</label>
-                            <select
-                              onChange={(e) =>
-                                handleEnhancementChange(
-                                  card.title,
-                                  enhancement.id,
-                                  e
-                                )
-                              }
-                            >
-                              <option value="none">None</option>
-                              {enchancementOptions.map((enhancementOption) => {
-                                return (
-                                  <option
-                                    key={enhancementOption}
-                                    value={enhancementOption}
-                                  >
-                                    {enhancementOption}
-                                  </option>
-                                )
-                              })}
-                            </select>
-                          </div>
-                        )
-                      })}
-                    </td>
-                  )
-                })}
-                {level >= 9 && (
-                  <>
-                    <td className="enhancement-label" />
-                    {levelNineCards.map((card) => {
-                      return (
-                        <td
-                          key={`${card.title}-Enhancements`}
-                          className="enchancement"
-                        >
-                          {card.enchancements.map((enhancement, index) => {
-                            return (
-                              <div
-                                key={`${card.title}-${index}`}
-                                className="enhancement-row"
-                              >
-                                <label className="enhancement">
-                                  Enhancement:
-                                </label>
-                                <select
-                                  onChange={(e) =>
-                                    handleEnhancementChange(
-                                      card.title,
-                                      enhancement.id,
-                                      e
-                                    )
-                                  }
-                                >
-                                  <option value="none">None</option>
-                                  {enchancementOptions.map(
-                                    (enhancementOption) => {
-                                      return (
-                                        <option
-                                          key={enhancementOption}
-                                          value={enhancementOption}
-                                        >
-                                          {enhancementOption}
-                                        </option>
-                                      )
-                                    }
-                                  )}
-                                </select>
-                              </div>
-                            )
-                          })}
-                        </td>
-                      )
-                    })}
-                  </>
-                )}
-              </tr>
-            </>
+            <CardTableRowTwoLevels
+              handleCardClick={handleCardClick}
+              character={character}
+              enchancementOptions={enchancementOptions}
+              handleEnhancementChange={handleEnhancementChange}
+              firstCardSet={levelEightCards}
+              firstLevel={8}
+              level={level}
+              secondCardSet={levelNineCards}
+              secondLevel={9}
+            />
           )}
         </tbody>
       </table>
@@ -842,7 +202,225 @@ function HandSelection({
   )
 }
 
-function SelectedHand({character, hand}) {
+function CardTableRowLevelOne({
+  handleCardClick,
+  cardSet,
+  character,
+  enchancementOptions,
+  handleEnhancementChange,
+}) {
+  return (
+    <>
+      <tr>
+        <td className="level">Level 1:</td>
+        {cardSet.map((card) => {
+          return (
+            <td
+              key={card.title}
+              className="chooseCardsTable"
+              onClick={(e) => handleCardClick(e.target)}
+            >
+              <img
+                src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
+                className="chooseCards"
+                alt={card.title}
+              />
+              {card.enchancements.map((enhancement) => (
+                <EnhancementIcon
+                  key={enhancement.id}
+                  enhancement={enhancement}
+                />
+              ))}
+            </td>
+          )
+        })}
+      </tr>
+      <tr>
+        <td className="enhancement-label" />
+        {cardSet.map((card) => {
+          return (
+            <td key={`${card.title}-Enhancements`} className="enchancement">
+              {card.enchancements.map((enhancement, index) => {
+                return (
+                  <div
+                    key={`${card.title}-${index}`}
+                    className="enhancement-row"
+                  >
+                    <label className="enhancement">Enhancement:</label>
+                    <select
+                      onChange={(e) =>
+                        handleEnhancementChange(card.title, enhancement.id, e)
+                      }
+                    >
+                      <option value="none">None</option>
+                      {enchancementOptions.map((enhancementOption) => {
+                        return (
+                          <option
+                            key={enhancementOption}
+                            value={enhancementOption}
+                          >
+                            {enhancementOption}
+                          </option>
+                        )
+                      })}
+                    </select>
+                  </div>
+                )
+              })}
+            </td>
+          )
+        })}
+      </tr>
+    </>
+  )
+}
+
+function CardTableRowTwoLevels({
+  handleCardClick,
+  character,
+  enchancementOptions,
+  handleEnhancementChange,
+  firstCardSet,
+  firstLevel,
+  level,
+  secondCardSet,
+  secondLevel,
+}) {
+  return (
+    <>
+      <tr>
+        <td className="level">Level {firstLevel}:</td>
+        {firstCardSet.map((card) => {
+          return (
+            <td
+              key={card.title}
+              className="chooseCardsTable"
+              onClick={(e) => handleCardClick(e.target)}
+            >
+              <img
+                src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
+                className="chooseCards"
+                alt={card.title}
+              />
+              {card.enchancements.map((enhancement) => (
+                <EnhancementIcon
+                  key={enhancement.id}
+                  enhancement={enhancement}
+                />
+              ))}
+            </td>
+          )
+        })}
+        {level >= secondLevel && (
+          <>
+            <td className="level">Level {secondLevel}:</td>
+            {secondCardSet.map((card) => {
+              return (
+                <td
+                  key={card.title}
+                  className="chooseCardsTable"
+                  onClick={(e) => handleCardClick(e.target)}
+                >
+                  <img
+                    src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
+                    className="chooseCards"
+                    alt={card.title}
+                  />
+                  {card.enchancements.map((enhancement) => (
+                    <EnhancementIcon
+                      key={enhancement.id}
+                      enhancement={enhancement}
+                    />
+                  ))}
+                </td>
+              )
+            })}
+          </>
+        )}
+      </tr>
+      <tr>
+        <td className="enhancement-label" />
+        {firstCardSet.map((card) => {
+          return (
+            <td key={`${card.title}-Enhancements`} className="enchancement">
+              {card.enchancements.map((enhancement, index) => {
+                return (
+                  <div
+                    key={`${card.title}-${index}`}
+                    className="enhancement-row"
+                  >
+                    <label className="enhancement">Enhancement:</label>
+                    <select
+                      onChange={(e) =>
+                        handleEnhancementChange(card.title, enhancement.id, e)
+                      }
+                    >
+                      <option value="none">None</option>
+                      {enchancementOptions.map((enhancementOption) => {
+                        return (
+                          <option
+                            key={enhancementOption}
+                            value={enhancementOption}
+                          >
+                            {enhancementOption}
+                          </option>
+                        )
+                      })}
+                    </select>
+                  </div>
+                )
+              })}
+            </td>
+          )
+        })}
+        {level >= secondLevel && (
+          <>
+            <td className="enhancement-label" />
+            {secondCardSet.map((card) => {
+              return (
+                <td key={`${card.title}-Enhancements`} className="enchancement">
+                  {card.enchancements.map((enhancement, index) => {
+                    return (
+                      <div
+                        key={`${card.title}-${index}`}
+                        className="enhancement-row"
+                      >
+                        <label className="enhancement">Enhancement:</label>
+                        <select
+                          onChange={(e) =>
+                            handleEnhancementChange(
+                              card.title,
+                              enhancement.id,
+                              e
+                            )
+                          }
+                        >
+                          <option value="none">None</option>
+                          {enchancementOptions.map((enhancementOption) => {
+                            return (
+                              <option
+                                key={enhancementOption}
+                                value={enhancementOption}
+                              >
+                                {enhancementOption}
+                              </option>
+                            )
+                          })}
+                        </select>
+                      </div>
+                    )
+                  })}
+                </td>
+              )
+            })}
+          </>
+        )}
+      </tr>
+    </>
+  )
+}
+
+function SelectedHand({ character, hand }) {
   const firstRow = hand.slice(0, 4)
   const secondRow = hand.slice(4, 8)
   const thirdRow = hand.slice(8, 12)
@@ -850,51 +428,68 @@ function SelectedHand({character, hand}) {
     <table align="center">
       <tbody>
         <tr>
-        {firstRow.map((card) => {
-      
-      return (<td key={card.title} className="hand">
-      <img
-        src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-        className="chooseCards"
-        alt={card.title}
-      />
-      {card.enchancements.map((enhancement) => (
-        <EnhancementIcon
-          key={enhancement.id}
-          originalEnhancement={enhancement}
-        />
-      ))}
-    </td>)
-    
-    })}
+          {firstRow.map((card) => {
+            return (
+              <td key={card.title} className="hand">
+                <img
+                  src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
+                  className="chooseCards"
+                  alt={card.title}
+                />
+                {card.enchancements.map((enhancement) => (
+                  <EnhancementIcon
+                    key={enhancement.id}
+                    enhancement={enhancement}
+                  />
+                ))}
+              </td>
+            )
+          })}
         </tr>
         <tr>
-        {secondRow.map((card) => {
-      
-      return (<td key={card.title} className="hand">
-      <img
-        src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-        className="chooseCards"
-        alt={card.title}
-      />
-      {card.enchancements.map((enhancement) => (
-        <EnhancementIcon
-          key={enhancement.id}
-          originalEnhancement={enhancement}
-        />
-      ))}
-    </td>)
-    
-    })}
+          {secondRow.map((card) => {
+            return (
+              <td key={card.title} className="hand">
+                <img
+                  src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
+                  className="chooseCards"
+                  alt={card.title}
+                />
+                {card.enchancements.map((enhancement) => (
+                  <EnhancementIcon
+                    key={enhancement.id}
+                    enhancement={enhancement}
+                  />
+                ))}
+              </td>
+            )
+          })}
+        </tr>
+        <tr>
+          {thirdRow.map((card) => {
+            return (
+              <td key={card.title} className="hand">
+                <img
+                  src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
+                  className="chooseCards"
+                  alt={card.title}
+                />
+                {card.enchancements.map((enhancement) => (
+                  <EnhancementIcon
+                    key={enhancement.id}
+                    enhancement={enhancement}
+                  />
+                ))}
+              </td>
+            )
+          })}
         </tr>
       </tbody>
     </table>
   )
 }
 
-function EnhancementIcon({ originalEnhancement }) {
-  const [enhancement, setEnhancement] = useState(originalEnhancement)
-
+function EnhancementIcon({ enhancement }) {
   return (
     <>
       {enhancement.enhancement !== '' && (

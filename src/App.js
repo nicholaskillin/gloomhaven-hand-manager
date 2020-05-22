@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
+import _ from 'lodash'
 import CharacterSelection from './CharacterSelection'
 import PerkSelection from './PerkSelection'
 import HandSelection from './HandSelection'
@@ -22,7 +23,6 @@ function App() {
   }
 
   function handleUpdateCharacter(character) {
-    console.log(character)
     setCharacter(character)
   }
 
@@ -30,13 +30,15 @@ function App() {
     setLevel(level)
   }
 
-  function addCardToHand(selectedCard) {
-    if (hand.length < character.handSize) {
-      let cardToAdd = character.cards.find((card) => card.title === selectedCard.alt)
-      setHand([...hand, cardToAdd])
-    } else {
-      console.log(`Can't add more cards to your hand`)
-    }
+  function addCardToHand(cardToAdd) {
+    setHand([...hand, cardToAdd])
+  }
+
+  function removeCardFromHand(cardReceived) {
+    let cardToRemove = hand.find((card) => card.title === cardReceived.title)
+    let previousHand = [...hand]
+    let newHand = _.reject(previousHand, ['title', cardToRemove.title])
+    setHand(newHand)
   }
 
   return (
@@ -64,9 +66,10 @@ function App() {
           hand={hand}
           handleUpdateCharacter={handleUpdateCharacter}
           handleSetStage={handleSetStage}
+          removeCardFromHand={removeCardFromHand}
         />
       )}
-      {stage === 'playing' && <PlayArea character={character}/>}
+      {stage === 'playing' && <PlayArea character={character} />}
     </>
   )
 }
