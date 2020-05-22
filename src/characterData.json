@@ -9,13 +9,13 @@
         "title": "disorienting-roar",
         "level": 1,
         "enhancementSpots": 0,
-        "enchancements": []
+        "enhancements": []
       },
       {
         "title": "spirit-swap",
         "level": 1,
         "enhancementSpots": 2,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 1,
             "top": 79,
@@ -34,7 +34,7 @@
         "title": "venomous-ally",
         "level": 1,
         "enhancementSpots": 4,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 3,
             "top": 78,
@@ -65,7 +65,7 @@
         "title": "relentless-ally",
         "level": 1,
         "enhancementSpots": 4,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 7,
             "top": 78,
@@ -96,7 +96,7 @@
         "title": "concentrated-rage",
         "level": 1,
         "enhancementSpots": 2,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 11,
             "top": 79,
@@ -115,7 +115,7 @@
         "title": "disappearing-wounds",
         "level": 1,
         "enhancementSpots": 3,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 13,
             "top": 87,
@@ -140,7 +140,7 @@
         "title": "patch-fur",
         "level": 1,
         "enhancementSpots": 2,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 16,
             "top": 205,
@@ -159,7 +159,7 @@
         "title": "maul",
         "level": 1,
         "enhancementSpots": 3,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 18,
             "top": 94,
@@ -184,7 +184,7 @@
         "title": "forceful-swipe",
         "level": 1,
         "enhancementSpots": 4,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 21,
             "top": 76,
@@ -215,7 +215,7 @@
         "title": "howling-bolts",
         "level": 1,
         "enhancementSpots": 3,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 25,
             "top": 78,
@@ -240,7 +240,7 @@
         "title": "soaring-ally",
         "level": 1,
         "enhancementSpots": 2,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 28,
             "top": 78,
@@ -259,7 +259,7 @@
         "title": "focused-aggression",
         "level": 1,
         "enhancementSpots": 3,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 30,
             "top": 101,
@@ -284,7 +284,7 @@
         "title": "borrowed-essence",
         "level": 1,
         "enhancementSpots": 2,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 33,
             "top": 52,
@@ -303,7 +303,7 @@
         "title": "energizing-strike",
         "level": 2,
         "enhancementSpots": 2,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 35,
             "top": 61,
@@ -322,7 +322,7 @@
         "title": "earthen-spikes",
         "level": 2,
         "enhancementSpots": 1,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 37,
             "top": 82,
@@ -335,7 +335,7 @@
         "title": "vicious-ally",
         "level": 3,
         "enhancementSpots": 5,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 38,
             "top": 78,
@@ -372,7 +372,7 @@
         "title": "unstoppable-beast",
         "level": 3,
         "enhancementSpots": 3,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 43,
             "top": 70,
@@ -397,7 +397,7 @@
         "title": "ancient-ward",
         "level": 4,
         "enhancementSpots": 3,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 46,
             "top": 59,
@@ -422,7 +422,7 @@
         "title": "punch-through",
         "level": 4,
         "enhancementSpots": 3,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 49,
             "top": 75,
@@ -447,7 +447,7 @@
         "title": "rampage",
         "level": 5,
         "enhancementSpots": 2,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 52,
             "top": 75,
@@ -466,7 +466,7 @@
         "title": "stone-sigil",
         "level": 5,
         "enhancementSpots": 2,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 54,
             "top": 221,
@@ -485,7 +485,7 @@
         "title": "primal-blessing",
         "level": 6,
         "enhancementSpots": 3,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 56,
             "top": 95,
@@ -510,7 +510,7 @@
         "title": "blood-hunger",
         "level": 6,
         "enhancementSpots": 2,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 59,
             "top": 202,
@@ -529,7 +529,7 @@
         "title": "storm-sigil",
         "level": 7,
         "enhancementSpots": 2,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 61,
             "top": 225,
@@ -548,7 +548,7 @@
         "title": "tyrannical-force",
         "level": 7,
         "enhancementSpots": 1,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 63,
             "top": 81,
@@ -561,7 +561,7 @@
         "title": "natural-remedy",
         "level": 8,
         "enhancementSpots": 2,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 64,
             "top": 78,
@@ -580,7 +580,7 @@
         "title": "lash-out",
         "level": 8,
         "enhancementSpots": 3,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 66,
             "top": 73,
@@ -605,13 +605,13 @@
         "title": "tribal-sigil",
         "level": 9,
         "enhancementSpots": 0,
-        "enchancements": []
+        "enhancements": []
       },
       {
         "title": "jaws-of-death",
         "level": 9,
         "enhancementSpots": 2,
-        "enchancements": [
+        "enhancements": [
           {
             "id": 69,
             "top": 198,

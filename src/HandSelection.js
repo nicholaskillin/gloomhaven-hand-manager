@@ -36,7 +36,7 @@ function HandSelection({
   const levelNineCards = character.cards.filter((card) => {
     return card.level === 9
   })
-  const enchancementOptions = [
+  const enhancementOptions = [
     '+1',
     'Leap',
     'Wind',
@@ -69,7 +69,7 @@ function HandSelection({
   function handleEnhancementChange(cardTitle, id, e) {
     let updatedData = { ...character }
     const card = updatedData.cards.find((card) => card.title === cardTitle)
-    let enhancement = card.enchancements.find(
+    let enhancement = card.enhancements.find(
       (enhancement) => enhancement.id === id
     )
     enhancement.enhancement = e.target.value
@@ -108,7 +108,7 @@ function HandSelection({
             handleCardClick={handleCardClick}
             cardSet={firstRow}
             character={character}
-            enchancementOptions={enchancementOptions}
+            enhancementOptions={enhancementOptions}
             handleEnhancementChange={handleEnhancementChange}
           />
           <CardTableRowLevelOne
@@ -116,7 +116,7 @@ function HandSelection({
             handleCardClick={handleCardClick}
             cardSet={secondRow}
             character={character}
-            enchancementOptions={enchancementOptions}
+            enhancementOptions={enhancementOptions}
             handleEnhancementChange={handleEnhancementChange}
           />
           <CardTableRowLevelOne
@@ -124,7 +124,7 @@ function HandSelection({
             handleCardClick={handleCardClick}
             cardSet={thirdRow}
             character={character}
-            enchancementOptions={enchancementOptions}
+            enhancementOptions={enhancementOptions}
             handleEnhancementChange={handleEnhancementChange}
           />
           {level >= 2 && (
@@ -132,7 +132,7 @@ function HandSelection({
               cardIsInHand={cardIsInHand}
               handleCardClick={handleCardClick}
               character={character}
-              enchancementOptions={enchancementOptions}
+              enhancementOptions={enhancementOptions}
               handleEnhancementChange={handleEnhancementChange}
               firstCardSet={levelTwoCards}
               firstLevel={2}
@@ -146,7 +146,7 @@ function HandSelection({
               cardIsInHand={cardIsInHand}
               handleCardClick={handleCardClick}
               character={character}
-              enchancementOptions={enchancementOptions}
+              enhancementOptions={enhancementOptions}
               handleEnhancementChange={handleEnhancementChange}
               firstCardSet={levelFourCards}
               firstLevel={4}
@@ -160,7 +160,7 @@ function HandSelection({
               cardIsInHand={cardIsInHand}
               handleCardClick={handleCardClick}
               character={character}
-              enchancementOptions={enchancementOptions}
+              enhancementOptions={enhancementOptions}
               handleEnhancementChange={handleEnhancementChange}
               firstCardSet={levelSixCards}
               firstLevel={6}
@@ -174,7 +174,7 @@ function HandSelection({
               cardIsInHand={cardIsInHand}
               handleCardClick={handleCardClick}
               character={character}
-              enchancementOptions={enchancementOptions}
+              enhancementOptions={enhancementOptions}
               handleEnhancementChange={handleEnhancementChange}
               firstCardSet={levelEightCards}
               firstLevel={8}
@@ -215,7 +215,7 @@ function CardTableRowLevelOne({
   handleCardClick,
   cardSet,
   character,
-  enchancementOptions,
+  enhancementOptions,
   handleEnhancementChange,
 }) {
   return (
@@ -236,7 +236,7 @@ function CardTableRowLevelOne({
                 }
                 alt={card.title}
               />
-              {card.enchancements.map((enhancement) => (
+              {card.enhancements.map((enhancement) => (
                 <EnhancementIcon
                   key={enhancement.id}
                   enhancement={enhancement}
@@ -250,8 +250,8 @@ function CardTableRowLevelOne({
         <td className="enhancement-label" />
         {cardSet.map((card) => {
           return (
-            <td key={`${card.title}-Enhancements`} className="enchancement">
-              {card.enchancements.map((enhancement, index) => {
+            <td key={`${card.title}-Enhancements`} className="enhancement">
+              {card.enhancements.map((enhancement, index) => {
                 return (
                   <div
                     key={`${card.title}-${index}`}
@@ -264,7 +264,7 @@ function CardTableRowLevelOne({
                       }
                     >
                       <option value="none">None</option>
-                      {enchancementOptions.map((enhancementOption) => {
+                      {enhancementOptions.map((enhancementOption) => {
                         return (
                           <option
                             key={enhancementOption}
@@ -290,7 +290,7 @@ function CardTableRowTwoLevels({
   cardIsInHand,
   handleCardClick,
   character,
-  enchancementOptions,
+  enhancementOptions,
   handleEnhancementChange,
   firstCardSet,
   firstLevel,
@@ -316,7 +316,7 @@ function CardTableRowTwoLevels({
                 }
                 alt={card.title}
               />
-              {card.enchancements.map((enhancement) => (
+              {card.enhancements.map((enhancement) => (
                 <EnhancementIcon
                   key={enhancement.id}
                   enhancement={enhancement}
@@ -344,7 +344,7 @@ function CardTableRowTwoLevels({
                     }
                     alt={card.title}
                   />
-                  {card.enchancements.map((enhancement) => (
+                  {card.enhancements.map((enhancement) => (
                     <EnhancementIcon
                       key={enhancement.id}
                       enhancement={enhancement}
@@ -360,8 +360,8 @@ function CardTableRowTwoLevels({
         <td className="enhancement-label" />
         {firstCardSet.map((card) => {
           return (
-            <td key={`${card.title}-Enhancements`} className="enchancement">
-              {card.enchancements.map((enhancement, index) => {
+            <td key={`${card.title}-Enhancements`} className="enhancement">
+              {card.enhancements.map((enhancement, index) => {
                 return (
                   <div
                     key={`${card.title}-${index}`}
@@ -374,7 +374,7 @@ function CardTableRowTwoLevels({
                       }
                     >
                       <option value="none">None</option>
-                      {enchancementOptions.map((enhancementOption) => {
+                      {enhancementOptions.map((enhancementOption) => {
                         return (
                           <option
                             key={enhancementOption}
@@ -396,8 +396,8 @@ function CardTableRowTwoLevels({
             <td className="enhancement-label" />
             {secondCardSet.map((card) => {
               return (
-                <td key={`${card.title}-Enhancements`} className="enchancement">
-                  {card.enchancements.map((enhancement, index) => {
+                <td key={`${card.title}-Enhancements`} className="enhancement">
+                  {card.enhancements.map((enhancement, index) => {
                     return (
                       <div
                         key={`${card.title}-${index}`}
@@ -414,7 +414,7 @@ function CardTableRowTwoLevels({
                           }
                         >
                           <option value="none">None</option>
-                          {enchancementOptions.map((enhancementOption) => {
+                          {enhancementOptions.map((enhancementOption) => {
                             return (
                               <option
                                 key={enhancementOption}
@@ -454,7 +454,7 @@ function SelectedHand({ character, hand }) {
                   className="chooseCards"
                   alt={card.title}
                 />
-                {card.enchancements.map((enhancement) => (
+                {card.enhancements.map((enhancement) => (
                   <EnhancementIcon
                     key={enhancement.id}
                     enhancement={enhancement}
@@ -473,7 +473,7 @@ function SelectedHand({ character, hand }) {
                   className="chooseCards"
                   alt={card.title}
                 />
-                {card.enchancements.map((enhancement) => (
+                {card.enhancements.map((enhancement) => (
                   <EnhancementIcon
                     key={enhancement.id}
                     enhancement={enhancement}
@@ -492,7 +492,7 @@ function SelectedHand({ character, hand }) {
                   className="chooseCards"
                   alt={card.title}
                 />
-                {card.enchancements.map((enhancement) => (
+                {card.enhancements.map((enhancement) => (
                   <EnhancementIcon
                     key={enhancement.id}
                     enhancement={enhancement}
