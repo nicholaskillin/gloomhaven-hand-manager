@@ -104,6 +104,7 @@ function HandSelection({
       <table className="cardTable" align="center">
         <tbody>
           <CardTableRowLevelOne
+            cardIsInHand={cardIsInHand}
             handleCardClick={handleCardClick}
             cardSet={firstRow}
             character={character}
@@ -111,6 +112,7 @@ function HandSelection({
             handleEnhancementChange={handleEnhancementChange}
           />
           <CardTableRowLevelOne
+            cardIsInHand={cardIsInHand}
             handleCardClick={handleCardClick}
             cardSet={secondRow}
             character={character}
@@ -118,6 +120,7 @@ function HandSelection({
             handleEnhancementChange={handleEnhancementChange}
           />
           <CardTableRowLevelOne
+            cardIsInHand={cardIsInHand}
             handleCardClick={handleCardClick}
             cardSet={thirdRow}
             character={character}
@@ -126,6 +129,7 @@ function HandSelection({
           />
           {level >= 2 && (
             <CardTableRowTwoLevels
+              cardIsInHand={cardIsInHand}
               handleCardClick={handleCardClick}
               character={character}
               enchancementOptions={enchancementOptions}
@@ -139,6 +143,7 @@ function HandSelection({
           )}
           {level >= 4 && (
             <CardTableRowTwoLevels
+              cardIsInHand={cardIsInHand}
               handleCardClick={handleCardClick}
               character={character}
               enchancementOptions={enchancementOptions}
@@ -152,6 +157,7 @@ function HandSelection({
           )}
           {level >= 6 && (
             <CardTableRowTwoLevels
+              cardIsInHand={cardIsInHand}
               handleCardClick={handleCardClick}
               character={character}
               enchancementOptions={enchancementOptions}
@@ -165,6 +171,7 @@ function HandSelection({
           )}
           {level >= 8 && (
             <CardTableRowTwoLevels
+              cardIsInHand={cardIsInHand}
               handleCardClick={handleCardClick}
               character={character}
               enchancementOptions={enchancementOptions}
@@ -204,6 +211,7 @@ function HandSelection({
 }
 
 function CardTableRowLevelOne({
+  cardIsInHand,
   handleCardClick,
   cardSet,
   character,
@@ -223,7 +231,9 @@ function CardTableRowLevelOne({
             >
               <img
                 src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                className="chooseCards"
+                className={
+                  cardIsInHand(card) ? 'chooseCards add-border' : 'chooseCards'
+                }
                 alt={card.title}
               />
               {card.enchancements.map((enhancement) => (
@@ -277,6 +287,7 @@ function CardTableRowLevelOne({
 }
 
 function CardTableRowTwoLevels({
+  cardIsInHand,
   handleCardClick,
   character,
   enchancementOptions,
@@ -300,7 +311,9 @@ function CardTableRowTwoLevels({
             >
               <img
                 src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                className="chooseCards"
+                className={
+                  cardIsInHand(card) ? 'chooseCards add-border' : 'chooseCards'
+                }
                 alt={card.title}
               />
               {card.enchancements.map((enhancement) => (
@@ -324,7 +337,11 @@ function CardTableRowTwoLevels({
                 >
                   <img
                     src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                    className="chooseCards"
+                    className={
+                      cardIsInHand(card)
+                        ? 'chooseCards add-border'
+                        : 'chooseCards'
+                    }
                     alt={card.title}
                   />
                   {card.enchancements.map((enhancement) => (
