@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
 import _ from 'lodash'
 
-function PerkSelection({ character, handleSetStage, characterPerks }) {
+function PerkSelection({
+  addCardsToModifier,
+  character,
+  handleSetStage,
+  characterPerks,
+  removeCardsFromModifierDeck,
+}) {
   const [perks, setPerk] = useState([
     {
       id: 1,
@@ -76,20 +82,42 @@ function PerkSelection({ character, handleSetStage, characterPerks }) {
 
     // Find changes needed to Attack Modifier based on this perk
     let changes = characterPerks.find((perk) => perk.id === perkId).changes
-    console.log(...changes)
 
     // Add or remove the changes for this perk from state, which is used in handleConfirmPerks()
     value === true
       ? setChangesToModifierDeck([...changesToModifierDeck, ...changes])
-      : console.log(
-          changesToModifierDeck.splice(
-            changesToModifierDeck.indexOf(...changes),
-            changesToModifierDeck.indexOf(...changes) + 1
-          )
+      : changesToModifierDeck.splice(
+          changesToModifierDeck.indexOf(...changes),
+          changesToModifierDeck.indexOf(...changes) + 1
         )
   }
 
   function handleConfirmPerks() {
+    // TODO: Got each function working independantly, but they don't work together. Need to combine these two functions into a single function and rework it.
+    // Adding cards to the modifier deck
+    let cardsToAdd = _.filter(changesToModifierDeck, { action: 'add' })
+    let formattedCards = []
+    cardsToAdd.forEach((card) => {
+      for (let i = 0; i < card.number; i++) {
+        formattedCards.push({
+          name: card.cardTitle,
+          image: `./images/attack-modifiers/${character.initials}/am-${character.initials}-${card.cardTitle}.png`,
+        })
+      }
+    })
+    addCardsToModifier(formattedCards)
+
+    // Removing cards from the modifier deck
+    let cardsToRemove = _.filter(changesToModifierDeck, { action: 'remove' })
+    console.log(cardsToRemove)
+    // Send array of formatted card names to remove
+    formattedCards = []
+    cardsToRemove.forEach((card) => {
+      for (let i = 0; i < card.number; i++) {
+        formattedCards.push({ name: card.cardTitle })
+      }
+    })
+    removeCardsFromModifierDeck(formattedCards)
     handleSetStage('selectHand')
   }
 

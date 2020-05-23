@@ -13,75 +13,75 @@ function App() {
   const [hand, setHand] = useState([])
   const [modifierDeck, setModifierDeck] = useState([
     {
-      name: 'plusZero',
+      name: 'plus0',
       image: './images/attack-modifiers/base/player/am-plus0.png',
     },
     {
-      name: 'plusZero',
+      name: 'plus0',
       image: './images/attack-modifiers/base/player/am-plus0.png',
     },
     {
-      name: 'plusZero',
+      name: 'plus0',
       image: './images/attack-modifiers/base/player/am-plus0.png',
     },
     {
-      name: 'plusZero',
+      name: 'plus0',
       image: './images/attack-modifiers/base/player/am-plus0.png',
     },
     {
-      name: 'plusZero',
+      name: 'plus0',
       image: './images/attack-modifiers/base/player/am-plus0.png',
     },
     {
-      name: 'plusZero',
+      name: 'plus0',
       image: './images/attack-modifiers/base/player/am-plus0.png',
     },
     {
-      name: 'plusOne',
+      name: 'plus1',
       image: './images/attack-modifiers/base/player/am-plus1.png',
     },
     {
-      name: 'plusOne',
+      name: 'plus1',
       image: './images/attack-modifiers/base/player/am-plus1.png',
     },
     {
-      name: 'plusOne',
+      name: 'plus1',
       image: './images/attack-modifiers/base/player/am-plus1.png',
     },
     {
-      name: 'plusOne',
+      name: 'plus1',
       image: './images/attack-modifiers/base/player/am-plus1.png',
     },
     {
-      name: 'plusOne',
+      name: 'plus1',
       image: './images/attack-modifiers/base/player/am-plus1.png',
     },
     {
-      name: 'minusOne',
+      name: 'minus1',
       image: './images/attack-modifiers/base/player/am-minus1.png',
     },
     {
-      name: 'minusOne',
+      name: 'minus1',
       image: './images/attack-modifiers/base/player/am-minus1.png',
     },
     {
-      name: 'minusOne',
+      name: 'minus1',
       image: './images/attack-modifiers/base/player/am-minus1.png',
     },
     {
-      name: 'minusOne',
+      name: 'minus1',
       image: './images/attack-modifiers/base/player/am-minus1.png',
     },
     {
-      name: 'minusOne',
+      name: 'minus1',
       image: './images/attack-modifiers/base/player/am-minus1.png',
     },
     {
-      name: 'minusTwo',
+      name: 'minus2',
       image: './images/attack-modifiers/base/player/am-minus2.png',
     },
     {
-      name: 'plusOne',
+      name: 'plus1',
       image: './images/attack-modifiers/base/player/am-plus2.png',
     },
     {
@@ -89,7 +89,7 @@ function App() {
       image: './images/attack-modifiers/base/player/am-miss.png',
     },
     {
-      name: 'timesTwo',
+      name: 'times2',
       image: './images/attack-modifiers/base/player/am-x2.png',
     },
   ])
@@ -123,12 +123,27 @@ function App() {
     setHand(newHand)
   }
 
-  function removeCardFromModifierDeck(card) {
-    console.log(`You tried to remove`, card)
+  function removeCardFromModifierDeck(cards) {
+    function findWithAttr(array, attr, value) {
+      for (var i = 0; i < array.length; i++) {
+        if (array[i][attr] === value) {
+          return i
+        }
+      }
+      return -1
+    }
+
+    console.log(`You tried to remove`, cards)
+    let newModifierDeck = [...modifierDeck]
+    cards.forEach((card) => {
+      let index = findWithAttr(newModifierDeck, 'name', card.name)
+      newModifierDeck.splice(index, 1)
+    })
+    setModifierDeck(newModifierDeck)
   }
 
-  function addCardToModifier(card) {
-    setModifierDeck([...modifierDeck, card])
+  function addCardToModifier(cards) {
+    setModifierDeck([...modifierDeck, ...cards])
   }
 
   return (
@@ -144,11 +159,11 @@ function App() {
       )}
       {stage === 'selectPerks' && (
         <PerkSelection
-          addCardToModifier={addCardToModifier}
+          addCardsToModifier={addCardToModifier}
           character={character}
           handleSetStage={handleSetStage}
           characterPerks={character.perks}
-          removeCardFromModifierDeck={removeCardFromModifierDeck}
+          removeCardsFromModifierDeck={removeCardFromModifierDeck}
         />
       )}
       {stage === 'selectHand' && (
