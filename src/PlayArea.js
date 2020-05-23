@@ -1,7 +1,6 @@
 import React from 'react'
 
-function PlayArea({character}) {
-  console.log(character)
+function PlayArea({ character, hand }) {
   return (
     <>
       <div id="play-game" align="center">
@@ -453,34 +452,72 @@ function PlayArea({character}) {
             <tr>
               <td
                 id="discarded-cards-title"
-                colspan="2"
+                colSpan="2"
                 style={{ border: '1px solid white', textAlign: 'center' }}
               >
                 Discarded Cards
                 <br />
                 <table id="discard-table">
-                  <tr>
-                    <td id="discard1" className="discarded flipped hiding"></td>
-                    <td id="discard2" className="discarded flipped hiding"></td>
-                    <td id="discard3" className="discarded flipped hiding"></td>
-                    <td id="discard4" className="discarded flipped hiding"></td>
-                    <td id="discard5" className="discarded flipped hiding"></td>
-                  </tr>
-                  <tr>
-                    <td id="discard6" class="discarded flipped hiding"></td>
-                    <td id="discard7" class="discarded flipped hiding"></td>
-                    <td id="discard8" class="discarded flipped hiding"></td>
-                    <td id="discard9" class="discarded flipped hiding"></td>
-                    <td id="discard10" class="discarded flipped hiding"></td>
-                  </tr>
-                  <tr>
-                    <td id="discard11" class="discarded flipped hiding"></td>
-                    <td id="discard12" class="discarded flipped hiding"></td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <td
+                        id="discard1"
+                        className="discarded flipped hiding"
+                      ></td>
+                      <td
+                        id="discard2"
+                        className="discarded flipped hiding"
+                      ></td>
+                      <td
+                        id="discard3"
+                        className="discarded flipped hiding"
+                      ></td>
+                      <td
+                        id="discard4"
+                        className="discarded flipped hiding"
+                      ></td>
+                      <td
+                        id="discard5"
+                        className="discarded flipped hiding"
+                      ></td>
+                    </tr>
+                    <tr>
+                      <td
+                        id="discard6"
+                        className="discarded flipped hiding"
+                      ></td>
+                      <td
+                        id="discard7"
+                        className="discarded flipped hiding"
+                      ></td>
+                      <td
+                        id="discard8"
+                        className="discarded flipped hiding"
+                      ></td>
+                      <td
+                        id="discard9"
+                        className="discarded flipped hiding"
+                      ></td>
+                      <td
+                        id="discard10"
+                        className="discarded flipped hiding"
+                      ></td>
+                    </tr>
+                    <tr>
+                      <td
+                        id="discard11"
+                        className="discarded flipped hiding"
+                      ></td>
+                      <td
+                        id="discard12"
+                        className="discarded flipped hiding"
+                      ></td>
+                    </tr>
+                  </tbody>
                 </table>
                 <button
                   id="short-rest-button"
-                  class="button"
+                  className="button"
                   type="button"
                   title="Must Have At Least 2 Discarded Cards And No Cards in Play"
                 >
@@ -488,7 +525,7 @@ function PlayArea({character}) {
                 </button>
                 <button
                   id="long-rest-button"
-                  class="button"
+                  className="button"
                   type="button"
                   title="Must Have At Least 2 Discarded Cards And No Cards in Play"
                 >
@@ -496,7 +533,7 @@ function PlayArea({character}) {
                 </button>
                 <button
                   id="recover-discard-button"
-                  class="button"
+                  className="button"
                   type="button"
                   title="Must Have A Discarded Card Selected"
                 >
@@ -505,7 +542,7 @@ function PlayArea({character}) {
                 <br />
                 <button
                   id="lose-discard-button"
-                  class="button"
+                  className="button"
                   type="button"
                   title="Must Be Resting"
                 >
@@ -513,7 +550,7 @@ function PlayArea({character}) {
                 </button>
                 <button
                   id="reroll-random-card-button"
-                  class="button"
+                  className="button"
                   type="button"
                   title="Can Only Be Used Once Per Short Rest"
                 >
@@ -521,7 +558,7 @@ function PlayArea({character}) {
                 </button>
                 <button
                   id="lose-discard-button2"
-                  class="button not-without-more-selected"
+                  className="button not-without-more-selected"
                   type="button"
                   title="Must Have A Discarded Card Selected - Must Lose 2 to Avoid Damage"
                 >
@@ -530,34 +567,36 @@ function PlayArea({character}) {
               </td>
               <td
                 id="lost-cards-title"
-                colspan="2"
+                colSpan="2"
                 style={{ border: '1px solid white', textAlign: 'center' }}
               >
                 Lost Cards
                 <br />
                 <table id="lost-table">
-                  <tr>
-                    <td id="lost1" class="lost flipped hiding"></td>
-                    <td id="lost2" class="lost flipped hiding"></td>
-                    <td id="lost3" class="lost flipped hiding"></td>
-                    <td id="lost4" class="lost flipped hiding"></td>
-                    <td id="lost5" class="lost flipped hiding"></td>
-                  </tr>
-                  <tr>
-                    <td id="lost6" class="lost flipped hiding"></td>
-                    <td id="lost7" class="lost flipped hiding"></td>
-                    <td id="lost8" class="lost flipped hiding"></td>
-                    <td id="lost9" class="lost flipped hiding"></td>
-                    <td id="lost10" class="lost flipped hiding"></td>
-                  </tr>
-                  <tr>
-                    <td id="lost11" class="lost flipped hiding"></td>
-                    <td id="lost12" class="lost flipped hiding"></td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <td id="lost1" className="lost flipped hiding"></td>
+                      <td id="lost2" className="lost flipped hiding"></td>
+                      <td id="lost3" className="lost flipped hiding"></td>
+                      <td id="lost4" className="lost flipped hiding"></td>
+                      <td id="lost5" className="lost flipped hiding"></td>
+                    </tr>
+                    <tr>
+                      <td id="lost6" className="lost flipped hiding"></td>
+                      <td id="lost7" className="lost flipped hiding"></td>
+                      <td id="lost8" className="lost flipped hiding"></td>
+                      <td id="lost9" className="lost flipped hiding"></td>
+                      <td id="lost10" className="lost flipped hiding"></td>
+                    </tr>
+                    <tr>
+                      <td id="lost11" className="lost flipped hiding"></td>
+                      <td id="lost12" className="lost flipped hiding"></td>
+                    </tr>
+                  </tbody>
                 </table>
                 <button
                   id="recover-lost"
-                  class="button"
+                  className="button"
                   type="button"
                   title="Must Have a Lost Card Selected"
                 >
