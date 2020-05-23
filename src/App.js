@@ -123,7 +123,8 @@ function App() {
     setHand(newHand)
   }
 
-  function removeCardFromModifierDeck(cards) {
+  function modifyModifierDeck(cardsToRemove, cardsToAdd) {
+    // Function to find index for cards to remove
     function findWithAttr(array, attr, value) {
       for (var i = 0; i < array.length; i++) {
         if (array[i][attr] === value) {
@@ -133,17 +134,19 @@ function App() {
       return -1
     }
 
-    console.log(`You tried to remove`, cards)
-    let newModifierDeck = [...modifierDeck]
-    cards.forEach((card) => {
-      let index = findWithAttr(newModifierDeck, 'name', card.name)
-      newModifierDeck.splice(index, 1)
+    // Remove cards from modifier deck
+    let modifierWithCardsRemoved = [...modifierDeck]
+    cardsToRemove.forEach((card) => {
+      let index = findWithAttr(modifierWithCardsRemoved, 'name', card.name)
+      modifierWithCardsRemoved.splice(index, 1)
     })
-    setModifierDeck(newModifierDeck)
-  }
 
-  function addCardToModifier(cards) {
-    setModifierDeck([...modifierDeck, ...cards])
+    // Add cards to modifier deck
+    let newModifierDeck = modifierWithCardsRemoved.concat(cardsToAdd)
+    console.log(newModifierDeck)
+
+    // Set state with new deck
+    setModifierDeck(newModifierDeck)
   }
 
   return (
@@ -159,11 +162,10 @@ function App() {
       )}
       {stage === 'selectPerks' && (
         <PerkSelection
-          addCardsToModifier={addCardToModifier}
+          modifyModifierDeck={modifyModifierDeck}
           character={character}
           handleSetStage={handleSetStage}
           characterPerks={character.perks}
-          removeCardsFromModifierDeck={removeCardFromModifierDeck}
         />
       )}
       {stage === 'selectHand' && (
@@ -177,7 +179,7 @@ function App() {
           removeCardFromHand={removeCardFromHand}
         />
       )}
-      {stage === 'playing' && <PlayArea character={character} />}
+      {stage === 'playing' && <PlayArea character={character} hand={hand} />}
     </>
   )
 }

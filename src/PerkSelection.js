@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import _ from 'lodash'
 
+// TODO: How do I persist what perks have been selected if someone navigates away and comes back?
+// TODO: What if someone selects a perk, confirms, then comes back and unchecks it?
+
 function PerkSelection({
-  addCardsToModifier,
+  modifyModifierDeck,
   character,
   handleSetStage,
   characterPerks,
-  removeCardsFromModifierDeck,
 }) {
   const [perks, setPerk] = useState([
     {
@@ -96,28 +98,26 @@ function PerkSelection({
     // TODO: Got each function working independantly, but they don't work together. Need to combine these two functions into a single function and rework it.
     // Adding cards to the modifier deck
     let cardsToAdd = _.filter(changesToModifierDeck, { action: 'add' })
-    let formattedCards = []
+    let formattedCardsToAdd = []
     cardsToAdd.forEach((card) => {
       for (let i = 0; i < card.number; i++) {
-        formattedCards.push({
+        formattedCardsToAdd.push({
           name: card.cardTitle,
           image: `./images/attack-modifiers/${character.initials}/am-${character.initials}-${card.cardTitle}.png`,
         })
       }
     })
-    addCardsToModifier(formattedCards)
 
     // Removing cards from the modifier deck
     let cardsToRemove = _.filter(changesToModifierDeck, { action: 'remove' })
-    console.log(cardsToRemove)
     // Send array of formatted card names to remove
-    formattedCards = []
+    let formattedCardsToRemove = []
     cardsToRemove.forEach((card) => {
       for (let i = 0; i < card.number; i++) {
-        formattedCards.push({ name: card.cardTitle })
+        formattedCardsToRemove.push({ name: card.cardTitle })
       }
     })
-    removeCardsFromModifierDeck(formattedCards)
+    modifyModifierDeck(formattedCardsToRemove, formattedCardsToAdd)
     handleSetStage('selectHand')
   }
 
