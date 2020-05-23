@@ -628,41 +628,65 @@
       }
     ],
     "perks": [
-      { "id": 1, "checkboxes": [{ "id": 0 }], "label": "Remove Two -1 Cards" },
+      {
+        "id": 1,
+        "checkboxes": [{ "id": 0 }],
+        "label": "Remove Two -1 Cards",
+        "changes": [{ "cardTitle": "minus1", "action": "remove", "number": 2 }]
+      },
       {
         "id": 2,
         "checkboxes": [{ "id": 1 }, { "id": 2 }, { "id": 3 }],
-        "label": "Replace One -1 Card With One +1 Card"
+        "label": "Replace One -1 Card With One +1 Card",
+        "changes": [
+          { "cardTitle": "minus1", "action": "remove", "number": 1 },
+          { "cardTitle": "plus1", "action": "add", "number": 1 }
+        ]
       },
       {
         "id": 3,
         "checkboxes": [{ "id": 4 }, { "id": 5 }],
-        "label": "Replace One +0 Card With One +2 Card"
+        "label": "Replace One +0 Card With One +2 Card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 1 },
+          { "cardTitle": "plus2", "action": "add", "number": 1 }
+        ]
       },
       {
         "id": 4,
         "checkboxes": [{ "id": 6 }, { "id": 7 }],
-        "label": "Add One +1 Wound Card"
+        "label": "Add One +1 Wound Card",
+        "changes": [{ "cardTitle": "plus1Wound", "action": "add", "number": 1 }]
       },
       {
         "id": 5,
         "checkboxes": [{ "id": 8 }, { "id": 9 }],
-        "label": "Add One +1 Immobilize Card"
+        "label": "Add One +1 Immobilize Card",
+        "changes": [
+          { "cardTitle": "plus1Immobilize", "action": "add", "number": 1 }
+        ]
       },
       {
         "id": 6,
         "checkboxes": [{ "id": 10 }, { "id": 11 }, { "id": 12 }],
-        "label": "Add Two Rolling Heal 1 Cards"
+        "label": "Add Two Rolling Heal 1 Cards",
+        "changes": [
+          { "cardTitle": "rollingHeal1", "action": "add", "number": 2 }
+        ]
       },
       {
         "id": 7,
         "checkboxes": [{ "id": 13 }],
-        "label": "Add Two Rolling Infuse Earth Cards"
+        "label": "Add Two Rolling Infuse Earth Cards",
+        "changes": [
+          { "cardTitle": "rollingLeaf", "action": "add", "number": 2 }
+        ]
       },
       {
         "id": 8,
         "checkboxes": [{ "id": 14 }],
-        "label": "Ignore Negative Scenario Effects"
+        "label": "Ignore Negative Scenario Effects",
+        "changes": []
       }
     ]
   },

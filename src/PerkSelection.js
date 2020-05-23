@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import _ from 'lodash'
 
-function PerkSelection({ handleSetStage, characterPerks }) {
+function PerkSelection({ character, handleSetStage, characterPerks }) {
   const [perks, setPerk] = useState([
     {
       id: 1,
@@ -63,13 +64,20 @@ function PerkSelection({ handleSetStage, characterPerks }) {
       isChecked: false,
     },
   ])
-  
-  function handleChange(id, value) {
+  const [changesToModifierDeck, setChangesToModifierDeck] = useState([])
+
+  function handlePerkChange(perkId, checkboxId, value) {
     setPerk((prevPerks) => {
       let newPerks = [...prevPerks]
-      newPerks[id].isChecked = value
+      newPerks[checkboxId].isChecked = value
       return newPerks
     })
+    let changes = characterPerks.find((perk) => perk.id === perkId).changes
+    setChangesToModifierDeck([...changesToModifierDeck, ...changes])
+  }
+
+  function handleConfirmPerks() {
+    handleSetStage('selectHand')
   }
 
   return (
@@ -91,8 +99,8 @@ function PerkSelection({ handleSetStage, characterPerks }) {
                   }
                   onClick={
                     perks[checkbox.id].isChecked
-                      ? () => handleChange(checkbox.id, false)
-                      : () => handleChange(checkbox.id, true)
+                      ? () => handlePerkChange(perkData.id, checkbox.id, false)
+                      : () => handlePerkChange(perkData.id, checkbox.id, true)
                   }
                 />
               ))}
@@ -103,7 +111,7 @@ function PerkSelection({ handleSetStage, characterPerks }) {
             id="confirmPerksButton"
             className="button"
             type="button"
-            onClick={() => handleSetStage('selectHand')}
+            onClick={() => handleConfirmPerks()}
           >
             Confirm Perks
           </button>
