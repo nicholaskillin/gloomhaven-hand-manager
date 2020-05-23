@@ -67,13 +67,26 @@ function PerkSelection({ character, handleSetStage, characterPerks }) {
   const [changesToModifierDeck, setChangesToModifierDeck] = useState([])
 
   function handlePerkChange(perkId, checkboxId, value) {
+    // Update value of perk in state
     setPerk((prevPerks) => {
       let newPerks = [...prevPerks]
       newPerks[checkboxId].isChecked = value
       return newPerks
     })
+
+    // Find changes needed to Attack Modifier based on this perk
     let changes = characterPerks.find((perk) => perk.id === perkId).changes
-    setChangesToModifierDeck([...changesToModifierDeck, ...changes])
+    console.log(...changes)
+
+    // Add or remove the changes for this perk from state, which is used in handleConfirmPerks()
+    value === true
+      ? setChangesToModifierDeck([...changesToModifierDeck, ...changes])
+      : console.log(
+          changesToModifierDeck.splice(
+            changesToModifierDeck.indexOf(...changes),
+            changesToModifierDeck.indexOf(...changes) + 1
+          )
+        )
   }
 
   function handleConfirmPerks() {
