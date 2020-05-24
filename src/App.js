@@ -135,6 +135,7 @@ function App() {
     }
 
     // Remove cards from modifier deck
+    // TODO: Does this work if someone has a single checkmark that removes 2 cards?
     let modifierWithCardsRemoved = [...modifierDeck]
     cardsToRemove.forEach((card) => {
       let index = findWithAttr(modifierWithCardsRemoved, 'name', card.name)
