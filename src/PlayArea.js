@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
+import _ from 'lodash'
+import CardContainer from './CardContainer'
 
 function PlayArea({ character, hand }) {
+  function handlePlayCards(cards) {
+    console.log(`You played cards`, cards)
+  }
   return (
     <>
       <div id="play-game" align="center">
@@ -607,57 +612,11 @@ function PlayArea({ character, hand }) {
           </tbody>
         </table>
       </div>
-      <div id="hand-cards">
-        <table align="center">
-          <tbody>
-            <tr>
-              <td id="card1" className="hand empty-hand"></td>
-              <td id="card2" className="hand empty-hand"></td>
-              <td id="card3" className="hand empty-hand"></td>
-              <td id="card4" className="hand empty-hand"></td>
-            </tr>
-            <tr>
-              <td id="card5" className="hand empty-hand"></td>
-              <td id="card6" className="hand empty-hand"></td>
-              <td id="card7" className="hand empty-hand"></td>
-              <td id="card8" className="hand empty-hand"></td>
-            </tr>
-            <tr>
-              <td id="card9" className="hand empty-hand"></td>
-              <td id="card10" className="hand empty-hand"></td>
-              <td id="card11" className="hand empty-hand"></td>
-              <td id="card12" className="hand empty-hand"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div id="confirm-buttons" align="center">
-        <button
-          id="play-cards-button"
-          className="button"
-          type="button"
-          title="Must Select 2 Cards, Not Have Any Cards In Play, And Not Be Resting"
-        >
-          Play Cards
-        </button>
-        <button
-          id="play-third-card"
-          className="button not-without-more-selected"
-          type="button"
-          title="Must Have Played Cards"
-        >
-          Play third card with Staff of Command
-        </button>
-        <button
-          id="lose-hand-card"
-          className="button not-without-more-selected"
-          type="button"
-          title="Must Have One Card Selected"
-        >
-          Lose Card To Avoid Damage
-        </button>
-      </div>
-
+      <HandCards
+        character={character}
+        hand={hand}
+        handlePlayCards={handlePlayCards}
+      />
       <div id="zoomModal">
         <div id="zoomContent">
           <h2 style={{ color: 'black', textAlign: 'center' }}>
@@ -666,6 +625,118 @@ function PlayArea({ character, hand }) {
           <span className="close">&times;</span>
           <div id="used-modifier-cards"></div>
         </div>
+      </div>
+    </>
+  )
+}
+
+function HandCards({ character, hand, handlePlayCards }) {
+  let rowOne = hand.slice(0, 4)
+  let rowTwo = hand.slice(4, 8)
+  let rowThree = hand.slice(8, 12)
+
+  const [selectedCards, setSelectedCards] = useState([])
+
+  function handleOnClick(cardClicked) {
+    let characterCard = character.cards.find(
+      (card) => card.title === cardClicked.alt
+    )
+    if (selectedCards.some((card) => card.title === cardClicked.alt)) {
+      let newSelection = [...selectedCards]
+      _.remove(newSelection, characterCard)
+      setSelectedCards(newSelection)
+    } else {
+      if (selectedCards.length < 2) {
+        setSelectedCards([...selectedCards, characterCard])
+      } else {
+        let newSelection = [...selectedCards]
+        newSelection.shift()
+        newSelection.push(characterCard)
+        setSelectedCards(newSelection)
+      }
+    }
+  }
+
+  function cardSelected(cardClicked) {
+    if (selectedCards.some((card) => card.title === cardClicked.title)) {
+      return true
+    }
+    return false
+  }
+
+  return (
+    <>
+      <div id="hand-cards">
+        <table align="center">
+          <tbody>
+            <tr>
+              {rowOne.map((card) => (
+                <CardContainer
+                  key={card.title}
+                  card={card}
+                  cardClass="hand"
+                  cardSelected={cardSelected}
+                  character={character}
+                  onClick={handleOnClick}
+                />
+              ))}
+            </tr>
+            <tr>
+              {rowTwo.map((card) => (
+                <CardContainer
+                  key={card.title}
+                  card={card}
+                  cardClass="hand"
+                  cardSelected={cardSelected}
+                  character={character}
+                  onClick={handleOnClick}
+                />
+              ))}
+            </tr>
+            <tr>
+              {rowThree.map((card) => (
+                <CardContainer
+                  key={card.title}
+                  card={card}
+                  cardClass="hand"
+                  cardSelected={cardSelected}
+                  character={character}
+                  onClick={handleOnClick}
+                />
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="confirm-buttons" align="center">
+        <button
+          id="play-cards-button"
+          className="button"
+          disabled={selectedCards.length !== 2}
+          type="button"
+          title="Must Select 2 Cards, Not Have Any Cards In Play, And Not Be Resting"
+          onClick={() => handlePlayCards(selectedCards)}
+        >
+          Play Cards
+        </button>
+        <button
+          id="play-third-card"
+          className="button"
+          disabled={true}
+          type="button"
+          title="Must Have Played Cards"
+        >
+          Play third card with Staff of Command
+        </button>
+        <button
+          id="lose-hand-card"
+          className="button"
+          disabled={selectedCards.length !== 1}
+          type="button"
+          title="Must Have One Card Selected"
+        >
+          Lose Card To Avoid Damage
+        </button>
       </div>
     </>
   )

@@ -1,3 +1,5 @@
+/* TODO: Convert everything over to .new-add-border*/
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -99,6 +101,10 @@ label.enhancement {
 
 .character-selected {
   border-color: white;
+}
+
+.new-add-border {
+  border: 4px white solid;
 }
 
 .add-border {

@@ -9,6 +9,7 @@ function HandSelection({
   handleSetStage,
   removeCardFromHand,
 }) {
+  // TODO: move cards over to use the CardContainer component
   const firstRow = character.cards.slice(0, 5)
   const secondRow = character.cards.slice(5, 10)
   const thirdRow = character.cards.slice(10, character.startingCards)
@@ -57,8 +58,6 @@ function HandSelection({
     'Area',
   ]
 
-  //TODO: Add a cardClicked function. Should check if card is in hand. If not, call addCardToHand. If it is, remove it from hand
-
   function cardIsInHand(cardToCheck) {
     if (hand.some((card) => card.title === cardToCheck.title)) {
       return true
@@ -86,7 +85,7 @@ function HandSelection({
       if (hand.length < character.handSize) {
         addCardToHand(cardFromCharacter)
       } else {
-        console.log(`Can't add more cards to your hand`)
+        // TODO: Alert that their hand is full
       }
     }
   }
