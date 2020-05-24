@@ -6,6 +6,7 @@ import PerkSelection from './PerkSelection'
 import HandSelection from './HandSelection'
 import PlayArea from './PlayArea'
 
+// TODO: Get Staff of Command working
 function App() {
   const [stage, setStage] = useState('selectCharacter')
   const [character, setCharacter] = useState({})
@@ -93,6 +94,7 @@ function App() {
       image: './images/attack-modifiers/base/player/am-x2.png',
     },
   ])
+  const [staffOfCommand, setStaffOfCommand] = useState(false)
   const allCharacterData = require('./characterData.json')
 
   function handleSetStage(stage) {
@@ -180,7 +182,13 @@ function App() {
           removeCardFromHand={removeCardFromHand}
         />
       )}
-      {stage === 'playing' && <PlayArea character={character} hand={hand} />}
+      {stage === 'playing' && (
+        <PlayArea
+          character={character}
+          hand={hand}
+          staffOfCommand={staffOfCommand}
+        />
+      )}
     </>
   )
 }

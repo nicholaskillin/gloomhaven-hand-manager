@@ -2,119 +2,27 @@ import React, { useState } from 'react'
 import _ from 'lodash'
 import CardContainer from './CardContainer'
 
-function PlayArea({ character, hand }) {
+function PlayArea({ character, hand, staffOfCommand }) {
+  const [hasCardsInPlay, setHasCardsInPlay] = useState(false)
+  const [chosenCards, setChosenCards] = useState([{}, {}, {}])
+
   function handlePlayCards(cards) {
     console.log(`You played cards`, cards)
+    // remove selected cards from hand
+    // add selected cards to ChosenCards component
   }
+
   return (
     <>
       <div id="play-game" align="center">
         <table id="play-area" align="center">
           <tbody>
             <tr>
-              <td
-                className="chosen-cards-title"
-                colSpan="2"
-                style={{ border: '1px solid white', textAlign: 'center' }}
-              >
-                Chosen Cards
-                <br />
-                <table align="center">
-                  <tbody>
-                    <tr>
-                      <td id="chosen-card-1" className="card-in-play">
-                        <img
-                          alt="Chosen Card 1"
-                          src={`./images/character-ability-cards/${character.initials}/${character.initials}-back.png`}
-                          className="card"
-                        />
-                      </td>
-                      <td id="chosen-card-2" className="card-in-play">
-                        <img
-                          alt="Chosen Card 1"
-                          src={`./images/character-ability-cards/${character.initials}/${character.initials}-back.png`}
-                          className="card"
-                        />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div>
-                  <br />
-                  <button
-                    id="discard-button"
-                    className="button tooltip"
-                    type="button"
-                    title="Must Have a Card In Play Selected"
-                  >
-                    Discard Card
-                  </button>
-                  <button
-                    id="lose-button"
-                    className="button tooltip"
-                    type="button"
-                    title="Must Have a Card In Play Selected"
-                  >
-                    Lose Card
-                  </button>
-                  <button
-                    id="activate-button"
-                    className="button tooltip"
-                    type="button"
-                    title="Must Have a Card In Play Selected"
-                  >
-                    Move Card to Active
-                  </button>
-                </div>
-                <div id="attack-modifier-deck" align="center">
-                  <h2
-                    id="mustShuffle"
-                    className="invisible"
-                    style={{ color: 'red' }}
-                  >
-                    Must Shuffle At End of Turn
-                  </h2>
-                  <h2 id="cardsInDeck" style={{ color: 'white' }}>
-                    Cards in Deck:{' '}
-                  </h2>
-                  <h6 id="blessesInDeck" style={{ color: 'white' }}>
-                    Extra Blesses in Deck: 0
-                  </h6>
-                  <h6 id="cursesInDeck" style={{ color: 'white' }}>
-                    Extra Curses in Deck: 0
-                  </h6>
-                  <img
-                    alt="Attack Modifier Deck"
-                    id="amDeck"
-                    className="attack-modifier"
-                    src="./images/modifier-deck/cardBack.png"
-                  />
-                  <img
-                    alt="Played Modifiers"
-                    id="playedModifiers"
-                    className="attack-modifier"
-                    style={{ display: 'hidden' }}
-                    src=""
-                  />
-                  <br />
-                  <button id="shuffleMods" className="button" type="button">
-                    Shuffle Modifiers
-                  </button>
-                  <br />
-                  <button id="bless" className="button" type="button">
-                    Bless
-                  </button>
-                  <button id="curse" className="button" type="button">
-                    Curse
-                  </button>
-                  <button id="add-minus-1" className="button" type="button">
-                    Add -1 Card
-                  </button>
-                  <button id="reset-deck" className="button" type="button">
-                    Reset Modifier Deck
-                  </button>
-                </div>
-              </td>
+              <ChosenCards
+                character={character}
+                chosenCards={chosenCards}
+                staffOfCommand={staffOfCommand}
+              />
               <td
                 id="active-cards-title"
                 colSpan="2"
@@ -616,6 +524,7 @@ function PlayArea({ character, hand }) {
         character={character}
         hand={hand}
         handlePlayCards={handlePlayCards}
+        staffOfCommand={staffOfCommand}
       />
       <div id="zoomModal">
         <div id="zoomContent">
@@ -630,7 +539,126 @@ function PlayArea({ character, hand }) {
   )
 }
 
-function HandCards({ character, hand, handlePlayCards }) {
+function ChosenCards({ character, chosenCards, staffOfCommand }) {
+  console.log(Object.keys(chosenCards[0]).length)
+  console.log(chosenCards[0] === {})
+  return (
+    <td
+      className="chosen-cards-title"
+      colSpan="2"
+      style={{ border: '1px solid white', textAlign: 'center' }}
+    >
+      Chosen Cards
+      <br />
+      <table align="center">
+        <tbody>
+          <tr>
+            <td id="chosen-card-1" className="card-in-play">
+              {Object.keys(chosenCards[0]).length === 0 && (
+                <img
+                  alt="Chosen Card 1"
+                  src={`./images/character-ability-cards/${character.initials}/${character.initials}-back.png`}
+                  className="card"
+                />
+              )}
+            </td>
+            {Object.keys(chosenCards[1]).length === 0 && (
+              <td id="chosen-card-2" className="card-in-play">
+                <img
+                  alt="Chosen Card 1"
+                  src={`./images/character-ability-cards/${character.initials}/${character.initials}-back.png`}
+                  className="card"
+                />
+              </td>
+            )}
+            {staffOfCommand && Object.keys(chosenCards[2]).length === 0 && (
+              <td id="chosen-card-3" className="card-in-play">
+                <img
+                  alt="Chosen Card 1"
+                  src={`./images/character-ability-cards/${character.initials}/${character.initials}-back.png`}
+                  className="card"
+                />
+              </td>
+            )}
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <br />
+        <button
+          id="discard-button"
+          className="button tooltip"
+          type="button"
+          title="Must Have a Card In Play Selected"
+        >
+          Discard Card
+        </button>
+        <button
+          id="lose-button"
+          className="button tooltip"
+          type="button"
+          title="Must Have a Card In Play Selected"
+        >
+          Lose Card
+        </button>
+        <button
+          id="activate-button"
+          className="button tooltip"
+          type="button"
+          title="Must Have a Card In Play Selected"
+        >
+          Move Card to Active
+        </button>
+      </div>
+      <div id="attack-modifier-deck" align="center">
+        <h2 id="mustShuffle" className="invisible" style={{ color: 'red' }}>
+          Must Shuffle At End of Turn
+        </h2>
+        <h2 id="cardsInDeck" style={{ color: 'white' }}>
+          Cards in Deck:{' '}
+        </h2>
+        <h6 id="blessesInDeck" style={{ color: 'white' }}>
+          Extra Blesses in Deck: 0
+        </h6>
+        <h6 id="cursesInDeck" style={{ color: 'white' }}>
+          Extra Curses in Deck: 0
+        </h6>
+        <img
+          alt="Attack Modifier Deck"
+          id="amDeck"
+          className="attack-modifier"
+          src="./images/modifier-deck/cardBack.png"
+        />
+        <img
+          alt="Played Modifiers"
+          id="playedModifiers"
+          className="attack-modifier"
+          style={{ display: 'hidden' }}
+          src=""
+        />
+        <br />
+        <button id="shuffleMods" className="button" type="button">
+          Shuffle Modifiers
+        </button>
+        <br />
+        <button id="bless" className="button" type="button">
+          Bless
+        </button>
+        <button id="curse" className="button" type="button">
+          Curse
+        </button>
+        <button id="add-minus-1" className="button" type="button">
+          Add -1 Card
+        </button>
+        <button id="reset-deck" className="button" type="button">
+          Reset Modifier Deck
+        </button>
+      </div>
+    </td>
+  )
+}
+
+function HandCards({ character, hand, handlePlayCards, staffOfCommand }) {
   let rowOne = hand.slice(0, 4)
   let rowTwo = hand.slice(4, 8)
   let rowThree = hand.slice(8, 12)
@@ -719,15 +747,17 @@ function HandCards({ character, hand, handlePlayCards }) {
         >
           Play Cards
         </button>
-        <button
-          id="play-third-card"
-          className="button"
-          disabled={true}
-          type="button"
-          title="Must Have Played Cards"
-        >
-          Play third card with Staff of Command
-        </button>
+        {staffOfCommand && (
+          <button
+            id="play-third-card"
+            className="button"
+            disabled={true}
+            type="button"
+            title="Must Have Played Cards"
+          >
+            Play third card with Staff of Command
+          </button>
+        )}
         <button
           id="lose-hand-card"
           className="button"
