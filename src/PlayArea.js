@@ -549,12 +549,19 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
 }
 
 function ChosenCards({ character, chosenCards, staffOfCommand }) {
+  const [selectedCard, setSelectedCard] = useState({})
+
   function cardSelected(card) {
+    if (selectedCard === card) {
+      return true
+    }
     return false
   }
 
   function handleCardClick(card) {
-    console.log(card)
+    // Find card in character.cards
+    // If card is selectedCard (remove it from selectedCard)
+    // Else add it to selectedCard
   }
   return (
     <td
