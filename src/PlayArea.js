@@ -11,7 +11,7 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
     let newHand = [...hand]
     cards.forEach((card) => {
       _.remove(newHand, card)
-    });
+    })
     setHand(newHand)
 
     // add selected cards to ChosenCards component
@@ -558,7 +558,14 @@ function ChosenCards({ character, chosenCards, staffOfCommand }) {
     return false
   }
 
-  function handleCardClick(card) {
+  function handleCardClick(cardClicked) {
+    let cardToSelect = character.cards.find(
+      (card) => card.title === cardClicked.alt
+    )
+    cardToSelect === selectedCard
+      ? setSelectedCard({})
+      : setSelectedCard(cardToSelect)
+    console.log(cardToSelect)
     // Find card in character.cards
     // If card is selectedCard (remove it from selectedCard)
     // Else add it to selectedCard
@@ -574,33 +581,42 @@ function ChosenCards({ character, chosenCards, staffOfCommand }) {
       <table align="center">
         <tbody>
           <tr>
-            {Object.keys(chosenCards[0]).length === 0
-              ? (
-                <td id="chosen-card-1" className="card-in-play">
-
-                  <img
-                    alt="Chosen Card 1"
-                    src={`./images/character-ability-cards/${character.initials}/${character.initials}-back.png`}
-                    className="card"
-                  />
-                </td>
-              )
-              : (
-                <CardContainer card={chosenCards[0]} cardClass={'chooseCards'} containerClass={'card-in-play'} cardSelected={cardSelected} character={character} onClick={handleCardClick} />
-              )}
-            {Object.keys(chosenCards[1]).length === 0
-              ? (
-                <td id="chosen-card-2" className="card-in-play">
-                  <img
-                    alt="Chosen Card 1"
-                    src={`./images/character-ability-cards/${character.initials}/${character.initials}-back.png`}
-                    className="card"
-                  />
-                </td>
-              )
-              : (
-                <CardContainer card={chosenCards[1]} cardClass={'chooseCards'} containerClass={'card-in-play'} cardSelected={cardSelected} character={character} onClick={handleCardClick} />
-              )}
+            {Object.keys(chosenCards[0]).length === 0 ? (
+              <td id="chosen-card-1" className="card-in-play">
+                <img
+                  alt="Chosen Card 1"
+                  src={`./images/character-ability-cards/${character.initials}/${character.initials}-back.png`}
+                  className="card"
+                />
+              </td>
+            ) : (
+              <CardContainer
+                card={chosenCards[0]}
+                cardClass={'chooseCards'}
+                containerClass={'card-in-play'}
+                cardSelected={cardSelected}
+                character={character}
+                onClick={handleCardClick}
+              />
+            )}
+            {Object.keys(chosenCards[1]).length === 0 ? (
+              <td id="chosen-card-2" className="card-in-play">
+                <img
+                  alt="Chosen Card 1"
+                  src={`./images/character-ability-cards/${character.initials}/${character.initials}-back.png`}
+                  className="card"
+                />
+              </td>
+            ) : (
+              <CardContainer
+                card={chosenCards[1]}
+                cardClass={'chooseCards'}
+                containerClass={'card-in-play'}
+                cardSelected={cardSelected}
+                character={character}
+                onClick={handleCardClick}
+              />
+            )}
             {staffOfCommand && Object.keys(chosenCards[2]).length === 0 && (
               <td id="chosen-card-3" className="card-in-play">
                 <img
@@ -611,7 +627,14 @@ function ChosenCards({ character, chosenCards, staffOfCommand }) {
               </td>
             )}
             {staffOfCommand && Object.keys(chosenCards[2]).length !== 0 && (
-              <CardContainer card={chosenCards[2]} cardClass={'chooseCards'} containerClass={'card-in-play'} cardSelected={cardSelected} character={character} onClick={handleCardClick} />
+              <CardContainer
+                card={chosenCards[2]}
+                cardClass={'chooseCards'}
+                containerClass={'card-in-play'}
+                cardSelected={cardSelected}
+                character={character}
+                onClick={handleCardClick}
+              />
             )}
           </tr>
         </tbody>
@@ -692,6 +715,9 @@ function ChosenCards({ character, chosenCards, staffOfCommand }) {
 }
 
 function HandCards({ character, hand, handlePlayCards, staffOfCommand }) {
+  // TODO: Clicking on the <td> of a card instead of the image blows up the app
+  // TODO: change these "let"s to "const"
+
   let rowOne = hand.slice(0, 4)
   let rowTwo = hand.slice(4, 8)
   let rowThree = hand.slice(8, 12)
