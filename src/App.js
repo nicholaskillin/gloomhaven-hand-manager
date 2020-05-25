@@ -11,7 +11,9 @@ function App() {
   const [stage, setStage] = useState('selectCharacter')
   const [character, setCharacter] = useState({})
   const [level, setLevel] = useState(1)
-  const [hand, setHand] = useState([])
+  // TODO: Put hand back to blank state
+  // const [hand, setHand] = useState([])
+  const [hand, setHand] = useState([{ "title": "disorienting-roar", "level": 1, "enhancementSpots": 0, "enhancements": [] }, { "title": "spirit-swap", "level": 1, "enhancementSpots": 2, "enhancements": [{ "id": 1, "top": 79, "left": 136, "enhancement": "" }, { "id": 2, "top": 79, "left": 152, "enhancement": "" }] }, { "title": "venomous-ally", "level": 1, "enhancementSpots": 4, "enhancements": [{ "id": 3, "top": 78, "left": 80, "enhancement": "" }, { "id": 4, "top": 78, "left": 121, "enhancement": "" }, { "id": 5, "top": 97, "left": 80, "enhancement": "" }, { "id": 6, "top": 225, "left": 130, "enhancement": "" }] }, { "title": "relentless-ally", "level": 1, "enhancementSpots": 4, "enhancements": [{ "id": 7, "top": 78, "left": 80, "enhancement": "" }, { "id": 8, "top": 78, "left": 121, "enhancement": "" }, { "id": 9, "top": 97, "left": 80, "enhancement": "" }, { "id": 10, "top": 223, "left": 136, "enhancement": "" }] }, { "title": "concentrated-rage", "level": 1, "enhancementSpots": 2, "enhancements": [{ "id": 11, "top": 79, "left": 139, "enhancement": "" }, { "id": 12, "top": 95, "left": 130, "enhancement": "" }] }, { "title": "howling-bolts", "level": 1, "enhancementSpots": 3, "enhancements": [{ "id": 25, "top": 78, "left": 138, "enhancement": "" }, { "id": 26, "top": 107, "left": 131, "enhancement": "" }, { "id": 27, "top": 211, "left": 136, "enhancement": "" }] }, { "title": "forceful-swipe", "level": 1, "enhancementSpots": 4, "enhancements": [{ "id": 21, "top": 76, "left": 127, "enhancement": "" }, { "id": 22, "top": 85, "left": 103, "enhancement": "" }, { "id": 23, "top": 197, "left": 137, "enhancement": "" }, { "id": 24, "top": 216, "left": 138, "enhancement": "" }] }, { "title": "maul", "level": 1, "enhancementSpots": 3, "enhancements": [{ "id": 18, "top": 94, "left": 138, "enhancement": "" }, { "id": 19, "top": 94, "left": 154, "enhancement": "" }, { "id": 20, "top": 193, "left": 137, "enhancement": "" }] }, { "title": "patch-fur", "level": 1, "enhancementSpots": 2, "enhancements": [{ "id": 16, "top": 205, "left": 133, "enhancement": "" }, { "id": 17, "top": 205, "left": 151, "enhancement": "" }] }, { "title": "disappearing-wounds", "level": 1, "enhancementSpots": 3, "enhancements": [{ "id": 13, "top": 87, "left": 134, "enhancement": "" }, { "id": 14, "top": 212, "left": 138, "enhancement": "" }, { "id": 15, "top": 212, "left": 154, "enhancement": "" }] }])
   const [modifierDeck, setModifierDeck] = useState([
     {
       name: 'plus0',
@@ -146,8 +148,6 @@ function App() {
 
     // Add cards to modifier deck
     let newModifierDeck = modifierWithCardsRemoved.concat(cardsToAdd)
-    console.log(newModifierDeck)
-
     // Set state with new deck
     setModifierDeck(newModifierDeck)
   }
@@ -186,6 +186,7 @@ function App() {
         <PlayArea
           character={character}
           hand={hand}
+          setHand={setHand}
           staffOfCommand={staffOfCommand}
         />
       )}

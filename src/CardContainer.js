@@ -1,15 +1,15 @@
 import React from 'react'
 
-function CardContainer({ card, cardClass, cardSelected, character, onClick }) {
+function CardContainer({ card, cardClass = '', containerClass, cardSelected, character, onClick }) {
   return (
     <td
       key={card.title}
-      className={cardClass}
+      className={containerClass}
       onClick={(e) => onClick(e.target)}
     >
       <img
         src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-        className={cardSelected(card) ? 'new-add-border' : ''}
+        className={cardSelected(card) ? `new-add-border ${cardClass}` : `${cardClass}`}
         alt={card.title}
       />
       {card.enhancements.map((enhancement) => (
