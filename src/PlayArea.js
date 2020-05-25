@@ -5,6 +5,19 @@ import CardContainer from './CardContainer'
 function PlayArea({ character, hand, setHand, staffOfCommand }) {
   const [hasCardsInPlay, setHasCardsInPlay] = useState(false)
   const [chosenCards, setChosenCards] = useState([{}, {}, {}])
+  const [discardedCards, setDiscardedCards] = useState([])
+  const [activeCards, setActiveCards] = useState([])
+  const [lostCards, setLostCards] = useState([])
+
+  function anyChosenCardsLeft(newArray) {
+    let cardsStillInPlay = newArray.filter(
+      (value) => Object.keys(value).length !== 0
+    )
+    if (cardsStillInPlay.length > 0) {
+      return true
+    }
+    return false
+  }
 
   function handlePlayCards(cards) {
     // remove selected cards from hand
@@ -19,6 +32,28 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
     newChosenCards[0] = cards[0]
     newChosenCards[1] = cards[1]
     setChosenCards(newChosenCards)
+
+    setHasCardsInPlay(true)
+  }
+
+  function handleDiscardChosenCard(cardDiscarded) {
+    console.log(`Discard`, cardDiscarded)
+    let i = _.indexOf(chosenCards, cardDiscarded)
+    let newChosenCards = [...chosenCards]
+    newChosenCards[i] = {}
+    setChosenCards(newChosenCards)
+    setDiscardedCards([...discardedCards, cardDiscarded])
+    if (!anyChosenCardsLeft(newChosenCards)) {
+      setHasCardsInPlay(false)
+    }
+  }
+
+  function handleLostChosenCard(cardLost) {
+    console.log('Lose', cardLost)
+  }
+
+  function handleActivateChosenCard(cardActivated) {
+    console.log(`activate`, cardActivated)
   }
 
   return (
@@ -30,6 +65,9 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
               <ChosenCards
                 character={character}
                 chosenCards={chosenCards}
+                handleActivateChosenCard={handleActivateChosenCard}
+                handleDiscardChosenCard={handleDiscardChosenCard}
+                handleLostChosenCard={handleLostChosenCard}
                 staffOfCommand={staffOfCommand}
               />
               <td
@@ -533,6 +571,7 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
         character={character}
         hand={hand}
         handlePlayCards={handlePlayCards}
+        hasCardsInPlay={hasCardsInPlay}
         staffOfCommand={staffOfCommand}
       />
       <div id="zoomModal">
@@ -548,7 +587,14 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
   )
 }
 
-function ChosenCards({ character, chosenCards, staffOfCommand }) {
+function ChosenCards({
+  character,
+  chosenCards,
+  handleActivateChosenCard,
+  handleDiscardChosenCard,
+  handleLostChosenCard,
+  staffOfCommand,
+}) {
   const [selectedCard, setSelectedCard] = useState({})
 
   function cardSelected(card) {
@@ -565,10 +611,6 @@ function ChosenCards({ character, chosenCards, staffOfCommand }) {
     cardToSelect === selectedCard
       ? setSelectedCard({})
       : setSelectedCard(cardToSelect)
-    console.log(cardToSelect)
-    // Find card in character.cards
-    // If card is selectedCard (remove it from selectedCard)
-    // Else add it to selectedCard
   }
   return (
     <td
@@ -644,14 +686,18 @@ function ChosenCards({ character, chosenCards, staffOfCommand }) {
         <button
           id="discard-button"
           className="button tooltip"
+          disabled={Object.keys(selectedCard).length === 0}
           type="button"
           title="Must Have a Card In Play Selected"
+          onClick={() => handleDiscardChosenCard(selectedCard)}
         >
           Discard Card
         </button>
         <button
           id="lose-button"
           className="button tooltip"
+          disabled={Object.keys(selectedCard).length === 0}
+          onClick={() => handleLostChosenCard(selectedCard)}
           type="button"
           title="Must Have a Card In Play Selected"
         >
@@ -660,61 +706,75 @@ function ChosenCards({ character, chosenCards, staffOfCommand }) {
         <button
           id="activate-button"
           className="button tooltip"
+          disabled={Object.keys(selectedCard).length === 0}
+          onClick={() => handleActivateChosenCard(selectedCard)}
           type="button"
           title="Must Have a Card In Play Selected"
         >
           Move Card to Active
         </button>
       </div>
-      <div id="attack-modifier-deck" align="center">
-        <h2 id="mustShuffle" className="invisible" style={{ color: 'red' }}>
-          Must Shuffle At End of Turn
-        </h2>
-        <h2 id="cardsInDeck" style={{ color: 'white' }}>
-          Cards in Deck:{' '}
-        </h2>
-        <h6 id="blessesInDeck" style={{ color: 'white' }}>
-          Extra Blesses in Deck: 0
-        </h6>
-        <h6 id="cursesInDeck" style={{ color: 'white' }}>
-          Extra Curses in Deck: 0
-        </h6>
-        <img
-          alt="Attack Modifier Deck"
-          id="amDeck"
-          className="attack-modifier"
-          src="./images/modifier-deck/cardBack.png"
-        />
-        <img
-          alt="Played Modifiers"
-          id="playedModifiers"
-          className="attack-modifier"
-          style={{ display: 'hidden' }}
-          src=""
-        />
-        <br />
-        <button id="shuffleMods" className="button" type="button">
-          Shuffle Modifiers
-        </button>
-        <br />
-        <button id="bless" className="button" type="button">
-          Bless
-        </button>
-        <button id="curse" className="button" type="button">
-          Curse
-        </button>
-        <button id="add-minus-1" className="button" type="button">
-          Add -1 Card
-        </button>
-        <button id="reset-deck" className="button" type="button">
-          Reset Modifier Deck
-        </button>
-      </div>
+      <ModifierDeck />
     </td>
   )
 }
 
-function HandCards({ character, hand, handlePlayCards, staffOfCommand }) {
+function ModifierDeck() {
+  return (
+    <div id="attack-modifier-deck" align="center">
+      <h2 id="mustShuffle" className="invisible" style={{ color: 'red' }}>
+        Must Shuffle At End of Turn
+      </h2>
+      <h2 id="cardsInDeck" style={{ color: 'white' }}>
+        Cards in Deck:{' '}
+      </h2>
+      <h6 id="blessesInDeck" style={{ color: 'white' }}>
+        Extra Blesses in Deck: 0
+      </h6>
+      <h6 id="cursesInDeck" style={{ color: 'white' }}>
+        Extra Curses in Deck: 0
+      </h6>
+      <img
+        alt="Attack Modifier Deck"
+        id="amDeck"
+        className="attack-modifier"
+        src="./images/modifier-deck/cardBack.png"
+      />
+      <img
+        alt="Played Modifiers"
+        id="playedModifiers"
+        className="attack-modifier"
+        style={{ display: 'hidden' }}
+        src=""
+      />
+      <br />
+      <button id="shuffleMods" className="button" type="button">
+        Shuffle Modifiers
+      </button>
+      <br />
+      <button id="bless" className="button" type="button">
+        Bless
+      </button>
+      <button id="curse" className="button" type="button">
+        Curse
+      </button>
+      <button id="add-minus-1" className="button" type="button">
+        Add -1 Card
+      </button>
+      <button id="reset-deck" className="button" type="button">
+        Reset Modifier Deck
+      </button>
+    </div>
+  )
+}
+
+function HandCards({
+  character,
+  hand,
+  handlePlayCards,
+  hasCardsInPlay,
+  staffOfCommand,
+}) {
   // TODO: Clicking on the <td> of a card instead of the image blows up the app
   // TODO: change these "let"s to "const"
 
@@ -799,7 +859,7 @@ function HandCards({ character, hand, handlePlayCards, staffOfCommand }) {
         <button
           id="play-cards-button"
           className="button"
-          disabled={selectedCards.length !== 2}
+          disabled={selectedCards.length !== 2 || hasCardsInPlay}
           type="button"
           title="Must Select 2 Cards, Not Have Any Cards In Play, And Not Be Resting"
           onClick={() => handlePlayCards(selectedCards)}
