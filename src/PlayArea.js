@@ -37,7 +37,6 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
   }
 
   function handleDiscardChosenCard(cardDiscarded) {
-    console.log(`Discard`, cardDiscarded)
     let i = _.indexOf(chosenCards, cardDiscarded)
     let newChosenCards = [...chosenCards]
     newChosenCards[i] = {}
@@ -49,11 +48,21 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
   }
 
   function handleLostChosenCard(cardLost) {
+    // TODO: Make this work
     console.log('Lose', cardLost)
   }
 
   function handleActivateChosenCard(cardActivated) {
+    // TODO: Make this work
     console.log(`activate`, cardActivated)
+  }
+
+  function handleMoveCardBackToHand(cardRecovered) {
+    setHand([...hand, cardRecovered])
+  }
+
+  function removeCardFromDiscard(card) {
+    _.remove(discardedCards, card)
   }
 
   return (
@@ -410,121 +419,12 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
               </td>
             </tr>
             <tr>
-              <td
-                id="discarded-cards-title"
-                colSpan="2"
-                style={{ border: '1px solid white', textAlign: 'center' }}
-              >
-                Discarded Cards
-                <br />
-                <table id="discard-table">
-                  <tbody>
-                    <tr>
-                      <td
-                        id="discard1"
-                        className="discarded flipped hiding"
-                      ></td>
-                      <td
-                        id="discard2"
-                        className="discarded flipped hiding"
-                      ></td>
-                      <td
-                        id="discard3"
-                        className="discarded flipped hiding"
-                      ></td>
-                      <td
-                        id="discard4"
-                        className="discarded flipped hiding"
-                      ></td>
-                      <td
-                        id="discard5"
-                        className="discarded flipped hiding"
-                      ></td>
-                    </tr>
-                    <tr>
-                      <td
-                        id="discard6"
-                        className="discarded flipped hiding"
-                      ></td>
-                      <td
-                        id="discard7"
-                        className="discarded flipped hiding"
-                      ></td>
-                      <td
-                        id="discard8"
-                        className="discarded flipped hiding"
-                      ></td>
-                      <td
-                        id="discard9"
-                        className="discarded flipped hiding"
-                      ></td>
-                      <td
-                        id="discard10"
-                        className="discarded flipped hiding"
-                      ></td>
-                    </tr>
-                    <tr>
-                      <td
-                        id="discard11"
-                        className="discarded flipped hiding"
-                      ></td>
-                      <td
-                        id="discard12"
-                        className="discarded flipped hiding"
-                      ></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <button
-                  id="short-rest-button"
-                  className="button"
-                  type="button"
-                  title="Must Have At Least 2 Discarded Cards And No Cards in Play"
-                >
-                  Short Rest
-                </button>
-                <button
-                  id="long-rest-button"
-                  className="button"
-                  type="button"
-                  title="Must Have At Least 2 Discarded Cards And No Cards in Play"
-                >
-                  Long Rest
-                </button>
-                <button
-                  id="recover-discard-button"
-                  className="button"
-                  type="button"
-                  title="Must Have A Discarded Card Selected"
-                >
-                  Recover Discarded Card
-                </button>
-                <br />
-                <button
-                  id="lose-discard-button"
-                  className="button"
-                  type="button"
-                  title="Must Be Resting"
-                >
-                  Lose Card From Rest
-                </button>
-                <button
-                  id="reroll-random-card-button"
-                  className="button"
-                  type="button"
-                  title="Can Only Be Used Once Per Short Rest"
-                >
-                  Reroll Lost Card
-                </button>
-                <button
-                  id="lose-discard-button2"
-                  className="button not-without-more-selected"
-                  type="button"
-                  title="Must Have A Discarded Card Selected - Must Lose 2 to Avoid Damage"
-                >
-                  Lose Card To Avoid Damage
-                </button>
-              </td>
+              <DiscardedCards
+                character={character}
+                discardedCards={discardedCards}
+                handleMoveCardBackToHand={handleMoveCardBackToHand}
+                removeCardFromDiscard={removeCardFromDiscard}
+              />
               <td
                 id="lost-cards-title"
                 colSpan="2"
@@ -584,6 +484,161 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
         </div>
       </div>
     </>
+  )
+}
+
+function DiscardedCards({
+  character,
+  discardedCards,
+  handleMoveCardBackToHand,
+  removeCardFromDiscard,
+}) {
+  const [selectedCards, setSelectedCards] = useState([])
+  const firstRow = discardedCards.slice(0, 5)
+  const secondRow = discardedCards.slice(5, 10)
+  const thirdRow = discardedCards.slice(10, 15)
+
+  function handleOnClick(cardClicked) {
+    let characterCard = character.cards.find(
+      (card) => card.title === cardClicked.alt
+    )
+    if (selectedCards.some((card) => card.title === cardClicked.alt)) {
+      let newSelection = [...selectedCards]
+      _.remove(newSelection, characterCard)
+      setSelectedCards(newSelection)
+    } else {
+      if (selectedCards.length < 2) {
+        setSelectedCards([...selectedCards, characterCard])
+      } else {
+        let newSelection = [...selectedCards]
+        newSelection.shift()
+        newSelection.push(characterCard)
+        setSelectedCards(newSelection)
+      }
+    }
+  }
+
+  function cardSelected(cardClicked) {
+    if (selectedCards.some((card) => card.title === cardClicked.title)) {
+      return true
+    }
+    return false
+  }
+
+  function handleRecoverDiscardedCard() {
+    handleMoveCardBackToHand(selectedCards[0])
+    removeCardFromDiscard(selectedCards[0])
+    setSelectedCards([])
+  }
+
+  return (
+    <td
+      id="discarded-cards-title"
+      colSpan="2"
+      style={{ border: '1px solid white', textAlign: 'center' }}
+    >
+      Discarded Cards
+      <br />
+      <table id="discard-table">
+        <tbody>
+          <tr>
+            {firstRow.map((card) => (
+              <CardContainer
+                card={card}
+                cardClass={'chooseCards'}
+                containerClass={'discarded'}
+                cardSelected={cardSelected}
+                character={character}
+                key={card.title}
+                onClick={handleOnClick}
+              />
+            ))}
+          </tr>
+          <tr>
+            {secondRow.map((card) => (
+              <CardContainer
+                card={card}
+                cardClass={'chooseCards'}
+                containerClass={'discarded'}
+                cardSelected={cardSelected}
+                character={character}
+                key={card.title}
+                onClick={handleOnClick}
+              />
+            ))}
+          </tr>
+          <tr>
+            {thirdRow.map((card) => (
+              <CardContainer
+                card={card}
+                cardClass={'chooseCards'}
+                containerClass={'discarded'}
+                cardSelected={cardSelected}
+                character={character}
+                key={card.title}
+                onClick={handleOnClick}
+              />
+            ))}
+          </tr>
+        </tbody>
+      </table>
+      <button
+        id="short-rest-button"
+        disabled={discardedCards.length < 2}
+        className="button"
+        type="button"
+        title="Must Have At Least 2 Discarded Cards And No Cards in Play"
+      >
+        Short Rest
+      </button>
+      <button
+        id="long-rest-button"
+        disabled={discardedCards.length < 2}
+        className="button"
+        type="button"
+        title="Must Have At Least 2 Discarded Cards And No Cards in Play"
+      >
+        Long Rest
+      </button>
+      <button
+        id="recover-discard-button"
+        disabled={selectedCards.length !== 1}
+        className="button"
+        onClick={() => handleRecoverDiscardedCard(selectedCards[0])}
+        type="button"
+        title="Must Have A Discarded Card Selected"
+      >
+        Recover Discarded Card
+      </button>
+      <br />
+      <button
+        id="lose-discard-button"
+        className="button"
+        disabled={true}
+        type="button"
+        title="Must Be Resting"
+      >
+        Lose Card From Rest
+      </button>
+      <button
+        id="reroll-random-card-button"
+        className="button"
+        disabled={true}
+        type="button"
+        title="Can Only Be Used Once Per Short Rest"
+      >
+        Reroll Lost Card
+      </button>
+      <button
+        id="lose-discard-button2"
+        className="button"
+        disabled={selectedCards.length !== 2}
+        type="button"
+        title="Must Have A Discarded Card Selected - Must Lose 2 to Avoid Damage"
+      >
+        Lose Cards To Avoid Damage
+      </button>
+    </td>
   )
 }
 
@@ -775,8 +830,9 @@ function HandCards({
   hasCardsInPlay,
   staffOfCommand,
 }) {
-  // TODO: Clicking on the <td> of a card instead of the image blows up the app
+  // TODO: Clicking on the <td> of a card instead of the image blows up the app. Test this in all areas of this page
   // TODO: change these "let"s to "const"
+  // TODO: Move handlePlayCards to local function so it can clear the selected cards once it plays them. make handleMoveCardsToChosen in parent component
 
   let rowOne = hand.slice(0, 4)
   let rowTwo = hand.slice(4, 8)
