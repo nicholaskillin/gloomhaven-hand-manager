@@ -19,7 +19,7 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
     return false
   }
 
-  function handlePlayCards(cards) {
+  function moveCardsToChosen(cards) {
     // remove selected cards from hand
     let newHand = [...hand]
     cards.forEach((card) => {
@@ -36,7 +36,7 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
     setHasCardsInPlay(true)
   }
 
-  function handleDiscardChosenCard(cardDiscarded) {
+  function moveCardToDiscard(cardDiscarded) {
     let i = _.indexOf(chosenCards, cardDiscarded)
     let newChosenCards = [...chosenCards]
     newChosenCards[i] = {}
@@ -47,12 +47,20 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
     }
   }
 
-  function handleLostChosenCard(cardLost) {
+  function moveCardToLost(cardLost) {
     // TODO: Make this work
     console.log('Lose', cardLost)
+    let i = _.indexOf(chosenCards, cardLost)
+    let newChosenCards = [...chosenCards]
+    newChosenCards[i] = {}
+    setChosenCards(newChosenCards)
+    setLostCards([...lostCards, cardLost])
+    if (!anyChosenCardsLeft(newChosenCards)) {
+      setHasCardsInPlay(false)
+    }
   }
 
-  function handleActivateChosenCard(cardActivated) {
+  function moveCardToActive(cardActivated) {
     // TODO: Make this work
     console.log(`activate`, cardActivated)
   }
@@ -74,9 +82,9 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
               <ChosenCards
                 character={character}
                 chosenCards={chosenCards}
-                handleActivateChosenCard={handleActivateChosenCard}
-                handleDiscardChosenCard={handleDiscardChosenCard}
-                handleLostChosenCard={handleLostChosenCard}
+                moveCardToActive={moveCardToActive}
+                moveCardToDiscard={moveCardToDiscard}
+                moveCardToLost={moveCardToLost}
                 staffOfCommand={staffOfCommand}
               />
               <td
@@ -425,44 +433,7 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
                 handleMoveCardBackToHand={handleMoveCardBackToHand}
                 removeCardFromDiscard={removeCardFromDiscard}
               />
-              <td
-                id="lost-cards-title"
-                colSpan="2"
-                style={{ border: '1px solid white', textAlign: 'center' }}
-              >
-                Lost Cards
-                <br />
-                <table id="lost-table">
-                  <tbody>
-                    <tr>
-                      <td id="lost1" className="lost flipped hiding"></td>
-                      <td id="lost2" className="lost flipped hiding"></td>
-                      <td id="lost3" className="lost flipped hiding"></td>
-                      <td id="lost4" className="lost flipped hiding"></td>
-                      <td id="lost5" className="lost flipped hiding"></td>
-                    </tr>
-                    <tr>
-                      <td id="lost6" className="lost flipped hiding"></td>
-                      <td id="lost7" className="lost flipped hiding"></td>
-                      <td id="lost8" className="lost flipped hiding"></td>
-                      <td id="lost9" className="lost flipped hiding"></td>
-                      <td id="lost10" className="lost flipped hiding"></td>
-                    </tr>
-                    <tr>
-                      <td id="lost11" className="lost flipped hiding"></td>
-                      <td id="lost12" className="lost flipped hiding"></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <button
-                  id="recover-lost"
-                  className="button"
-                  type="button"
-                  title="Must Have a Lost Card Selected"
-                >
-                  Recover Lost Card
-                </button>
-              </td>
+              <LostCards character={character} lostCards={lostCards} />
             </tr>
           </tbody>
         </table>
@@ -470,7 +441,7 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
       <HandCards
         character={character}
         hand={hand}
-        handlePlayCards={handlePlayCards}
+        moveCardsToChosen={moveCardsToChosen}
         hasCardsInPlay={hasCardsInPlay}
         staffOfCommand={staffOfCommand}
       />
@@ -645,9 +616,9 @@ function DiscardedCards({
 function ChosenCards({
   character,
   chosenCards,
-  handleActivateChosenCard,
-  handleDiscardChosenCard,
-  handleLostChosenCard,
+  moveCardToActive,
+  moveCardToDiscard,
+  moveCardToLost,
   staffOfCommand,
 }) {
   const [selectedCard, setSelectedCard] = useState({})
@@ -667,6 +638,22 @@ function ChosenCards({
       ? setSelectedCard({})
       : setSelectedCard(cardToSelect)
   }
+
+  function handleDiscardChosenCard() {
+    moveCardToDiscard(selectedCard)
+    setSelectedCard({})
+  }
+
+  function handleLostChosenCard() {
+    moveCardToLost(selectedCard)
+    setSelectedCard({})
+  }
+
+  function handleActivateChosenCard() {
+    moveCardToActive(selectedCard)
+    setSelectedCard({})
+  }
+
   return (
     <td
       className="chosen-cards-title"
@@ -744,7 +731,7 @@ function ChosenCards({
           disabled={Object.keys(selectedCard).length === 0}
           type="button"
           title="Must Have a Card In Play Selected"
-          onClick={() => handleDiscardChosenCard(selectedCard)}
+          onClick={() => handleDiscardChosenCard()}
         >
           Discard Card
         </button>
@@ -752,7 +739,7 @@ function ChosenCards({
           id="lose-button"
           className="button tooltip"
           disabled={Object.keys(selectedCard).length === 0}
-          onClick={() => handleLostChosenCard(selectedCard)}
+          onClick={() => handleLostChosenCard()}
           type="button"
           title="Must Have a Card In Play Selected"
         >
@@ -762,7 +749,7 @@ function ChosenCards({
           id="activate-button"
           className="button tooltip"
           disabled={Object.keys(selectedCard).length === 0}
-          onClick={() => handleActivateChosenCard(selectedCard)}
+          onClick={() => handleActivateChosenCard()}
           type="button"
           title="Must Have a Card In Play Selected"
         >
@@ -823,20 +810,104 @@ function ModifierDeck() {
   )
 }
 
+function LostCards({ character, lostCards }) {
+  // TODO: Convert selectedCards here from array to a single item. Can't pick more than 1
+  const [selectedCard, setSelectedCard] = useState({})
+  const firstRow = lostCards.slice(0, 5)
+  const secondRow = lostCards.slice(5, 10)
+  const thirdRow = lostCards.slice(10, 15)
+
+  function cardSelected(card) {
+    if (selectedCard === card) {
+      return true
+    }
+    return false
+  }
+
+  function handleOnClick(cardClicked) {
+    let cardToSelect = character.cards.find(
+      (card) => card.title === cardClicked.alt
+    )
+    cardToSelect === selectedCard
+      ? setSelectedCard({})
+      : setSelectedCard(cardToSelect)
+  }
+
+  return (
+    <td
+      id="lost-cards-title"
+      colSpan="2"
+      style={{ border: '1px solid white', textAlign: 'center' }}
+    >
+      Lost Cards
+      <br />
+      <table id="lost-table">
+        <tbody>
+          <tr>
+            {firstRow.map((card) => (
+              <CardContainer
+                card={card}
+                cardClass={'chooseCards'}
+                containerClass={'lost'}
+                cardSelected={cardSelected}
+                character={character}
+                key={card.title}
+                onClick={handleOnClick}
+              />
+            ))}
+          </tr>
+          <tr>
+            {secondRow.map((card) => (
+              <CardContainer
+                card={card}
+                cardClass={'chooseCards'}
+                containerClass={'lost'}
+                cardSelected={cardSelected}
+                character={character}
+                key={card.title}
+                onClick={handleOnClick}
+              />
+            ))}
+          </tr>
+          <tr>
+            {thirdRow.map((card) => (
+              <CardContainer
+                card={card}
+                cardClass={'chooseCards'}
+                containerClass={'lost'}
+                cardSelected={cardSelected}
+                character={character}
+                key={card.title}
+                onClick={handleOnClick}
+              />
+            ))}
+          </tr>
+        </tbody>
+      </table>
+      <button
+        id="recover-lost"
+        className="button"
+        type="button"
+        title="Must Have a Lost Card Selected"
+      >
+        Recover Lost Card
+      </button>
+    </td>
+  )
+}
+
 function HandCards({
   character,
   hand,
-  handlePlayCards,
+  moveCardsToChosen,
   hasCardsInPlay,
   staffOfCommand,
 }) {
   // TODO: Clicking on the <td> of a card instead of the image blows up the app. Test this in all areas of this page
-  // TODO: change these "let"s to "const"
-  // TODO: Move handlePlayCards to local function so it can clear the selected cards once it plays them. make handleMoveCardsToChosen in parent component
 
-  let rowOne = hand.slice(0, 4)
-  let rowTwo = hand.slice(4, 8)
-  let rowThree = hand.slice(8, 12)
+  const rowOne = hand.slice(0, 4)
+  const rowTwo = hand.slice(4, 8)
+  const rowThree = hand.slice(8, 12)
 
   const [selectedCards, setSelectedCards] = useState([])
 
@@ -865,6 +936,11 @@ function HandCards({
       return true
     }
     return false
+  }
+
+  function handlePlayCards() {
+    moveCardsToChosen(selectedCards)
+    setSelectedCards([])
   }
 
   return (
@@ -918,7 +994,7 @@ function HandCards({
           disabled={selectedCards.length !== 2 || hasCardsInPlay}
           type="button"
           title="Must Select 2 Cards, Not Have Any Cards In Play, And Not Be Resting"
-          onClick={() => handlePlayCards(selectedCards)}
+          onClick={() => handlePlayCards()}
         >
           Play Cards
         </button>
