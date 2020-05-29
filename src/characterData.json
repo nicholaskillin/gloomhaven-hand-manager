@@ -9,7 +9,8 @@
         "title": "disorienting-roar",
         "level": 1,
         "enhancementSpots": 0,
-        "enhancements": []
+        "enhancements": [],
+        "tracker": 0
       },
       {
         "title": "spirit-swap",
@@ -28,7 +29,8 @@
             "left": 152,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "venomous-ally",
@@ -59,7 +61,8 @@
             "left": 130,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "relentless-ally",
@@ -90,7 +93,8 @@
             "left": 136,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "concentrated-rage",
@@ -109,7 +113,8 @@
             "left": 130,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "disappearing-wounds",
@@ -134,7 +139,8 @@
             "left": 154,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "patch-fur",
@@ -153,7 +159,8 @@
             "left": 151,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "maul",
@@ -178,7 +185,8 @@
             "left": 137,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "forceful-swipe",
@@ -209,7 +217,8 @@
             "left": 138,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "howling-bolts",
@@ -234,7 +243,8 @@
             "left": 136,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "soaring-ally",
@@ -253,7 +263,8 @@
             "left": 121,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "focused-aggression",
@@ -278,7 +289,8 @@
             "left": 155,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "borrowed-essence",
@@ -297,7 +309,8 @@
             "left": 134,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "energizing-strike",
@@ -316,7 +329,8 @@
             "left": 153,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "earthen-spikes",
@@ -329,7 +343,8 @@
             "left": 130,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "vicious-ally",
@@ -366,7 +381,8 @@
             "left": 131,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "unstoppable-beast",
@@ -391,7 +407,8 @@
             "left": 137,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "ancient-ward",
@@ -416,7 +433,8 @@
             "left": 134,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "punch-through",
@@ -441,7 +459,8 @@
             "left": 137,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "rampage",
@@ -460,7 +479,8 @@
             "left": 136,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "stone-sigil",
@@ -479,7 +499,8 @@
             "left": 153,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "primal-blessing",
@@ -504,7 +525,8 @@
             "left": 141,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "blood-hunger",
@@ -523,7 +545,8 @@
             "left": 133,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 5
       },
       {
         "title": "storm-sigil",
@@ -542,7 +565,8 @@
             "left": 155,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "tyrannical-force",
@@ -555,7 +579,8 @@
             "left": 130,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "natural-remedy",
@@ -574,7 +599,8 @@
             "left": 137,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "lash-out",
@@ -599,7 +625,8 @@
             "left": 137,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       },
       {
         "title": "tribal-sigil",
@@ -624,7 +651,8 @@
             "left": 139,
             "enhancement": ""
           }
-        ]
+        ],
+        "tracker": 0
       }
     ],
     "perks": [

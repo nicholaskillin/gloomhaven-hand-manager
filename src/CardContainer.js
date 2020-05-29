@@ -1,6 +1,23 @@
 import React from 'react'
 
-function CardContainer({ card, cardClass = '', containerClass, cardSelected, character, onClick }) {
+function CardContainer({
+  card,
+  cardClass = '',
+  containerClass,
+  cardSelected,
+  character,
+  onClick,
+  tracker,
+}) {
+  // TODO: Create function to hide tracker buttons after they are pushed
+  const trackerButtons = []
+  for (let i = 0; i < card.tracker; i++) {
+    trackerButtons.push(
+      <button className="tracker-button" type="button">
+        {i + 1}
+      </button>
+    )
+  }
   return (
     <td
       key={card.title}
@@ -9,12 +26,20 @@ function CardContainer({ card, cardClass = '', containerClass, cardSelected, cha
     >
       <img
         src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-        className={cardSelected(card) ? `new-add-border ${cardClass}` : `${cardClass}`}
+        className={
+          cardSelected(card) ? `new-add-border ${cardClass}` : `${cardClass}`
+        }
         alt={card.title}
       />
       {card.enhancements.map((enhancement) => (
         <EnhancementIcon key={enhancement.id} enhancement={enhancement} />
       ))}
+      {containerClass === 'active-card' && (
+        <>
+          <br />
+          {trackerButtons}
+        </>
+      )}
     </td>
   )
 }

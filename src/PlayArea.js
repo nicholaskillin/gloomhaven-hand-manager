@@ -61,8 +61,16 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
   }
 
   function moveCardToActive(cardActivated) {
-    // TODO: Make this work
+    // TODO: Is there a limit to the number of active cards?
     console.log(`activate`, cardActivated)
+    let i = _.indexOf(chosenCards, cardActivated)
+    let newChosenCards = [...chosenCards]
+    newChosenCards[i] = {}
+    setChosenCards(newChosenCards)
+    setActiveCards([...activeCards, cardActivated])
+    if (!anyChosenCardsLeft(newChosenCards)) {
+      setHasCardsInPlay(false)
+    }
   }
 
   function handleMoveCardBackToHand(cardRecovered) {
@@ -87,344 +95,7 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
                 moveCardToLost={moveCardToLost}
                 staffOfCommand={staffOfCommand}
               />
-              <td
-                id="active-cards-title"
-                colSpan="2"
-                style={{ border: '1px solid white', textAlign: 'center' }}
-              >
-                Active Cards
-                <br />
-                <table id="active-table" align="center">
-                  <tbody>
-                    <tr>
-                      <td id="active1" className="flipped active-card">
-                        <br />
-                        <button
-                          id="tracker1-1"
-                          className="tracker-button tracker-button1 invisible"
-                          type="button"
-                        >
-                          1
-                        </button>
-                        <button
-                          id="tracker1-2"
-                          className="tracker-button1 invisible"
-                          type="button"
-                        >
-                          2
-                        </button>
-                        <button
-                          id="tracker1-3"
-                          className="tracker-button1 invisible"
-                          type="button"
-                        >
-                          3
-                        </button>
-                        <button
-                          id="tracker1-4"
-                          className="tracker-button1 invisible"
-                          type="button"
-                        >
-                          4
-                        </button>
-                        <button
-                          id="tracker1-5"
-                          className="tracker-button1 invisible"
-                          type="button"
-                        >
-                          5
-                        </button>
-                        <button
-                          id="tracker1-6"
-                          className="tracker-button1 invisible"
-                          type="button"
-                        >
-                          6
-                        </button>
-                      </td>
-                      <td id="active2" className="flipped active-card">
-                        <br />
-                        <button
-                          id="tracker2-1"
-                          className="tracker-button tracker-button2 invisible"
-                          type="button"
-                        >
-                          1
-                        </button>
-                        <button
-                          id="tracker2-2"
-                          className="tracker-button2 invisible"
-                          type="button"
-                        >
-                          2
-                        </button>
-                        <button
-                          id="tracker2-3"
-                          className="tracker-button2 invisible"
-                          type="button"
-                        >
-                          3
-                        </button>
-                        <button
-                          id="tracker2-4"
-                          className="tracker-button2 invisible"
-                          type="button"
-                        >
-                          4
-                        </button>
-                        <button
-                          id="tracker2-5"
-                          className="tracker-button2 invisible"
-                          type="button"
-                        >
-                          5
-                        </button>
-                        <button
-                          id="tracker2-6"
-                          className="tracker-button2 invisible"
-                          type="button"
-                        >
-                          6
-                        </button>
-                      </td>
-                      <td id="active3" className="flipped active-card">
-                        <br />
-                        <button
-                          id="tracker3-1"
-                          className="tracker-button tracker-button3 invisible"
-                          type="button"
-                        >
-                          1
-                        </button>
-                        <button
-                          id="tracker3-2"
-                          className="tracker-button3 invisible"
-                          type="button"
-                        >
-                          2
-                        </button>
-                        <button
-                          id="tracker3-3"
-                          className="tracker-button3 invisible"
-                          type="button"
-                        >
-                          3
-                        </button>
-                        <button
-                          id="tracker3-4"
-                          className="tracker-button3 invisible"
-                          type="button"
-                        >
-                          4
-                        </button>
-                        <button
-                          id="tracker3-5"
-                          className="tracker-button3 invisible"
-                          type="button"
-                        >
-                          5
-                        </button>
-                        <button
-                          id="tracker3-6"
-                          className="tracker-button3 invisible"
-                          type="button"
-                        >
-                          6
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td id="active4" className="flipped active-card">
-                        <br />
-                        <button
-                          id="tracker4-1"
-                          className="tracker-button tracker-button4 invisible"
-                          type="button"
-                        >
-                          1
-                        </button>
-                        <button
-                          id="tracker4-2"
-                          className="tracker-button4 invisible"
-                          type="button"
-                        >
-                          2
-                        </button>
-                        <button
-                          id="tracker4-3"
-                          className="tracker-button4 invisible"
-                          type="button"
-                        >
-                          3
-                        </button>
-                        <button
-                          id="tracker4-4"
-                          className="tracker-button4 invisible"
-                          type="button"
-                        >
-                          4
-                        </button>
-                        <button
-                          id="tracker4-5"
-                          className="tracker-button4 invisible"
-                          type="button"
-                        >
-                          5
-                        </button>
-                        <button
-                          id="tracker4-6"
-                          className="tracker-button4 invisible"
-                          type="button"
-                        >
-                          6
-                        </button>
-                      </td>
-                      <td id="active5" className="flipped active-card">
-                        <br />
-                        <button
-                          id="tracker5-1"
-                          className="tracker-button tracker-button5 invisible"
-                          type="button"
-                        >
-                          1
-                        </button>
-                        <button
-                          id="tracker5-2"
-                          className="tracker-button5 invisible"
-                          type="button"
-                        >
-                          2
-                        </button>
-                        <button
-                          id="tracker5-3"
-                          className="tracker-button5 invisible"
-                          type="button"
-                        >
-                          3
-                        </button>
-                        <button
-                          id="tracker5-4"
-                          className="tracker-button5 invisible"
-                          type="button"
-                        >
-                          4
-                        </button>
-                        <button
-                          id="tracker5-5"
-                          className="tracker-button5 invisible"
-                          type="button"
-                        >
-                          5
-                        </button>
-                        <button
-                          id="tracker5-6"
-                          className="tracker-button5 invisible"
-                          type="button"
-                        >
-                          6
-                        </button>
-                      </td>
-                      <td id="active6" className="flipped active-card">
-                        <br />
-                        <button
-                          id="tracker6-1"
-                          className="tracker-button tracker-button6 invisible"
-                          type="button"
-                        >
-                          1
-                        </button>
-                        <button
-                          id="tracker6-2"
-                          className="tracker-button6 invisible"
-                          type="button"
-                        >
-                          2
-                        </button>
-                        <button
-                          id="tracker6-3"
-                          className="tracker-button6 invisible"
-                          type="button"
-                        >
-                          3
-                        </button>
-                        <button
-                          id="tracker6-4"
-                          className="tracker-button6 invisible"
-                          type="button"
-                        >
-                          4
-                        </button>
-                        <button
-                          id="tracker6-5"
-                          className="tracker-button6 invisible"
-                          type="button"
-                        >
-                          5
-                        </button>
-                        <button
-                          id="tracker6-6"
-                          className="tracker-button6 invisible"
-                          type="button"
-                        >
-                          6
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <button
-                  id="discard-active-card"
-                  className="button tooltip"
-                  type="button"
-                  title="Must Have an Active Card Selected"
-                >
-                  Discard Active Card
-                </button>
-                <button
-                  id="lose-active-card"
-                  className="button tooltip"
-                  type="button"
-                  title="Must Have an Active Card Selected"
-                >
-                  Lose Active Card
-                </button>
-                <br />
-                <button
-                  id="create-active-tracker"
-                  className="button tooltip"
-                  type="button"
-                  title="Must Have an Active Card Without a Tracker Selected"
-                >
-                  Create Card Tracker
-                </button>
-                <br />
-                <p
-                  id="tracker-size"
-                  style={{
-                    fontSize: '18px',
-                    fontFamily: 'Palatino Linotype',
-                    color: 'white',
-                  }}
-                >
-                  Tracker Size: 1
-                </p>
-                <br />
-                <button
-                  id="decrease-tracker-size"
-                  className="button"
-                  type="button"
-                >
-                  -
-                </button>
-                <button
-                  id="increase-tracker-size"
-                  className="button"
-                  type="button"
-                >
-                  +
-                </button>
-                <br />
-              </td>
+              <ActiveCards character={character} activeCards={activeCards} />
             </tr>
             <tr>
               <DiscardedCards
@@ -609,6 +280,211 @@ function DiscardedCards({
       >
         Lose Cards To Avoid Damage
       </button>
+    </td>
+  )
+}
+
+function ActiveCards({ character, activeCards }) {
+  // NEXT: TODO: Figure out how I'm going to display these. I could use CardContainer, but how will trackers work?
+  const [selectedCard, setSelectedCard] = useState({})
+  const firstRow = activeCards.slice(0, 3)
+  const secondRow = activeCards.slice(3, 6)
+
+  function cardSelected(card) {
+    if (selectedCard === card) {
+      return true
+    }
+    return false
+  }
+
+  function handleCardClick(cardClicked) {
+    let cardToSelect = character.cards.find(
+      (card) => card.title === cardClicked.alt
+    )
+    cardToSelect === selectedCard
+      ? setSelectedCard({})
+      : setSelectedCard(cardToSelect)
+  }
+
+  return (
+    <td
+      id="active-cards-title"
+      colSpan="2"
+      style={{ border: '1px solid white', textAlign: 'center' }}
+    >
+      Active Cards
+      <br />
+      <table id="active-table" align="center">
+        <tbody>
+          <tr>
+            {firstRow.map((card) => (
+              <CardContainer
+                card={card}
+                cardClass={'chooseCards'}
+                containerClass={'active-card'}
+                cardSelected={cardSelected}
+                character={character}
+                key={card.title}
+                onClick={handleCardClick}
+              />
+            ))}
+          </tr>
+          <tr>
+            <td id="active4" className="flipped active-card">
+              <br />
+              <button
+                id="tracker4-1"
+                className="tracker-button tracker-button4 invisible"
+                type="button"
+              >
+                1
+              </button>
+              <button
+                id="tracker4-2"
+                className="tracker-button4 invisible"
+                type="button"
+              >
+                2
+              </button>
+              <button
+                id="tracker4-3"
+                className="tracker-button4 invisible"
+                type="button"
+              >
+                3
+              </button>
+              <button
+                id="tracker4-4"
+                className="tracker-button4 invisible"
+                type="button"
+              >
+                4
+              </button>
+              <button
+                id="tracker4-5"
+                className="tracker-button4 invisible"
+                type="button"
+              >
+                5
+              </button>
+              <button
+                id="tracker4-6"
+                className="tracker-button4 invisible"
+                type="button"
+              >
+                6
+              </button>
+            </td>
+            <td id="active5" className="flipped active-card">
+              <br />
+              <button
+                id="tracker5-1"
+                className="tracker-button tracker-button5 invisible"
+                type="button"
+              >
+                1
+              </button>
+              <button
+                id="tracker5-2"
+                className="tracker-button5 invisible"
+                type="button"
+              >
+                2
+              </button>
+              <button
+                id="tracker5-3"
+                className="tracker-button5 invisible"
+                type="button"
+              >
+                3
+              </button>
+              <button
+                id="tracker5-4"
+                className="tracker-button5 invisible"
+                type="button"
+              >
+                4
+              </button>
+              <button
+                id="tracker5-5"
+                className="tracker-button5 invisible"
+                type="button"
+              >
+                5
+              </button>
+              <button
+                id="tracker5-6"
+                className="tracker-button5 invisible"
+                type="button"
+              >
+                6
+              </button>
+            </td>
+            <td id="active6" className="flipped active-card">
+              <br />
+              <button
+                id="tracker6-1"
+                className="tracker-button tracker-button6 invisible"
+                type="button"
+              >
+                1
+              </button>
+              <button
+                id="tracker6-2"
+                className="tracker-button6 invisible"
+                type="button"
+              >
+                2
+              </button>
+              <button
+                id="tracker6-3"
+                className="tracker-button6 invisible"
+                type="button"
+              >
+                3
+              </button>
+              <button
+                id="tracker6-4"
+                className="tracker-button6 invisible"
+                type="button"
+              >
+                4
+              </button>
+              <button
+                id="tracker6-5"
+                className="tracker-button6 invisible"
+                type="button"
+              >
+                5
+              </button>
+              <button
+                id="tracker6-6"
+                className="tracker-button6 invisible"
+                type="button"
+              >
+                6
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button
+        id="discard-active-card"
+        className="button tooltip"
+        type="button"
+        title="Must Have an Active Card Selected"
+      >
+        Discard Active Card
+      </button>
+      <button
+        id="lose-active-card"
+        className="button tooltip"
+        type="button"
+        title="Must Have an Active Card Selected"
+      >
+        Lose Active Card
+      </button>
+      <br />
     </td>
   )
 }
