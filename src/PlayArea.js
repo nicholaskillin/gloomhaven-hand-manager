@@ -919,8 +919,6 @@ function HandCards({
   hasCardsInPlay,
   staffOfCommand,
 }) {
-  // TODO: Clicking on the <td> of a card instead of the image blows up the app. Test this in all areas of this page
-
   const rowOne = hand.slice(0, 4)
   const rowTwo = hand.slice(4, 8)
   const rowThree = hand.slice(8, 12)
