@@ -330,141 +330,17 @@ function ActiveCards({ character, activeCards }) {
             ))}
           </tr>
           <tr>
-            <td id="active4" className="flipped active-card">
-              <br />
-              <button
-                id="tracker4-1"
-                className="tracker-button tracker-button4 invisible"
-                type="button"
-              >
-                1
-              </button>
-              <button
-                id="tracker4-2"
-                className="tracker-button4 invisible"
-                type="button"
-              >
-                2
-              </button>
-              <button
-                id="tracker4-3"
-                className="tracker-button4 invisible"
-                type="button"
-              >
-                3
-              </button>
-              <button
-                id="tracker4-4"
-                className="tracker-button4 invisible"
-                type="button"
-              >
-                4
-              </button>
-              <button
-                id="tracker4-5"
-                className="tracker-button4 invisible"
-                type="button"
-              >
-                5
-              </button>
-              <button
-                id="tracker4-6"
-                className="tracker-button4 invisible"
-                type="button"
-              >
-                6
-              </button>
-            </td>
-            <td id="active5" className="flipped active-card">
-              <br />
-              <button
-                id="tracker5-1"
-                className="tracker-button tracker-button5 invisible"
-                type="button"
-              >
-                1
-              </button>
-              <button
-                id="tracker5-2"
-                className="tracker-button5 invisible"
-                type="button"
-              >
-                2
-              </button>
-              <button
-                id="tracker5-3"
-                className="tracker-button5 invisible"
-                type="button"
-              >
-                3
-              </button>
-              <button
-                id="tracker5-4"
-                className="tracker-button5 invisible"
-                type="button"
-              >
-                4
-              </button>
-              <button
-                id="tracker5-5"
-                className="tracker-button5 invisible"
-                type="button"
-              >
-                5
-              </button>
-              <button
-                id="tracker5-6"
-                className="tracker-button5 invisible"
-                type="button"
-              >
-                6
-              </button>
-            </td>
-            <td id="active6" className="flipped active-card">
-              <br />
-              <button
-                id="tracker6-1"
-                className="tracker-button tracker-button6 invisible"
-                type="button"
-              >
-                1
-              </button>
-              <button
-                id="tracker6-2"
-                className="tracker-button6 invisible"
-                type="button"
-              >
-                2
-              </button>
-              <button
-                id="tracker6-3"
-                className="tracker-button6 invisible"
-                type="button"
-              >
-                3
-              </button>
-              <button
-                id="tracker6-4"
-                className="tracker-button6 invisible"
-                type="button"
-              >
-                4
-              </button>
-              <button
-                id="tracker6-5"
-                className="tracker-button6 invisible"
-                type="button"
-              >
-                5
-              </button>
-              <button
-                id="tracker6-6"
-                className="tracker-button6 invisible"
-                type="button"
-              >
-                6
-              </button>
-            </td>
+            {secondRow.map((card) => (
+              <CardContainer
+                card={card}
+                cardClass={'chooseCards'}
+                containerClass={'active-card'}
+                cardSelected={cardSelected}
+                character={character}
+                key={card.title}
+                onClick={handleCardClick}
+              />
+            ))}
           </tr>
         </tbody>
       </table>
