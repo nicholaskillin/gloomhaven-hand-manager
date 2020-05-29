@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import _ from 'lodash'
 import CardContainer from './CardContainer'
 
-function PlayArea({ character, hand, setHand, staffOfCommand }) {
+function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
   const [hasCardsInPlay, setHasCardsInPlay] = useState(false)
   const [chosenCards, setChosenCards] = useState([{}, {}, {}])
   const [discardedCards, setDiscardedCards] = useState([])
@@ -117,6 +117,7 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
               <ChosenCards
                 character={character}
                 chosenCards={chosenCards}
+                modifierDeck={modifierDeck}
                 moveCardToActive={moveCardToActive}
                 moveCardToDiscard={moveCardToDiscard}
                 moveCardToLost={moveCardToLost}
@@ -431,6 +432,7 @@ function ActiveCards({
 function ChosenCards({
   character,
   chosenCards,
+  modifierDeck,
   moveCardToActive,
   moveCardToDiscard,
   moveCardToLost,
@@ -571,51 +573,127 @@ function ChosenCards({
           Move Card to Active
         </button>
       </div>
-      <ModifierDeck />
+      <ModifierDeck modifierDeck={modifierDeck} />
     </td>
   )
 }
 
-function ModifierDeck() {
+function ModifierDeck({ modifierDeck }) {
+  const [playedModifyCards, setPlayedModifyCards] = useState([])
+  const [localModifierDeck, setLocalModifierDeck] = useState(modifierDeck)
+  const [mustShuffle, setMustShuffle] = useState(false)
+  const [extraBlessCount, setExtraBlessCount] = useState(0)
+  const [extraCurseCount, setExtraCurseCount] = useState(0)
+
+  function handleFlipModifier() {
+    let newLocalModifierDeck = [...localModifierDeck]
+    setPlayedModifyCards([...playedModifyCards, newLocalModifierDeck[0]])
+    let playedCard = newLocalModifierDeck.shift()
+    setLocalModifierDeck(newLocalModifierDeck)
+    if (playedCard.name === 'times2' || playedCard.name === 'miss') {
+      setMustShuffle(true)
+    }
+  }
+
+  function handleShuffleModifierDeck(addPlayedCards) {
+    let shuffledModifierDeck = []
+    if (addPlayedCards) {
+      shuffledModifierDeck = [...localModifierDeck, ...playedModifyCards]
+      setPlayedModifyCards([])
+      setMustShuffle(false)
+    } else {
+      shuffledModifierDeck = [...localModifierDeck]
+      console.log('before shuffle', shuffledModifierDeck)
+    }
+    for (let i = shuffledModifierDeck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * i)
+      const temp = shuffledModifierDeck[i]
+      shuffledModifierDeck[i] = shuffledModifierDeck[j]
+      shuffledModifierDeck[j] = temp
+    }
+    console.log('after shuffle', shuffledModifierDeck)
+    setLocalModifierDeck(shuffledModifierDeck)
+  }
+
+  function handleAddBless() {
+    // TODO: Find out why this is shuffling before it adds the bless card
+    setLocalModifierDeck(
+      [
+        ...localModifierDeck,
+        {
+          name: 'extraBless',
+          image: './images/attack-modifiers/base/player-mod/am-pm-bless.png',
+        },
+      ],
+      handleShuffleModifierDeck(false)
+    )
+    setExtraBlessCount(extraBlessCount + 1)
+  }
+
+  function handleAddCurse() {
+    setExtraCurseCount(extraCurseCount + 1)
+  }
+
+  function handleAddMinusOneCard() {
+    console.log('you added a minus 1 card')
+  }
+
+  function handleResetModifierDeck() {
+    // Should remove all extra curses and blesses
+  }
   return (
     <div id="attack-modifier-deck" align="center">
-      <h2 id="mustShuffle" className="invisible" style={{ color: 'red' }}>
-        Must Shuffle At End of Turn
-      </h2>
+      {mustShuffle && (
+        <h2 id="mustShuffle" style={{ color: 'red' }}>
+          Must Shuffle At End of Turn
+        </h2>
+      )}
       <h2 id="cardsInDeck" style={{ color: 'white' }}>
-        Cards in Deck:{' '}
+        Cards in Deck:{` ${localModifierDeck.length}`}
       </h2>
       <h6 id="blessesInDeck" style={{ color: 'white' }}>
-        Extra Blesses in Deck: 0
+        Extra Blesses in Deck: {extraBlessCount}
       </h6>
       <h6 id="cursesInDeck" style={{ color: 'white' }}>
-        Extra Curses in Deck: 0
+        Extra Curses in Deck: {extraCurseCount}
       </h6>
-      <img
-        alt="Attack Modifier Deck"
-        id="amDeck"
-        className="attack-modifier"
-        src="./images/modifier-deck/cardBack.png"
-      />
-      <img
-        alt="Played Modifiers"
-        id="playedModifiers"
-        className="attack-modifier"
-        style={{ display: 'hidden' }}
-        src=""
-      />
+      {localModifierDeck.length > 0 && (
+        <img
+          alt="Attack Modifier Deck"
+          id="amDeck"
+          className="attack-modifier"
+          onClick={() => handleFlipModifier()}
+          src="./images/modifier-deck/cardBack.png"
+        />
+      )}
+      {playedModifyCards.length > 0 && (
+        <img
+          alt="Played Modifiers"
+          id="playedModifiers"
+          className="attack-modifier"
+          src={playedModifyCards[playedModifyCards.length - 1].image}
+        />
+      )}
       <br />
-      <button id="shuffleMods" className="button" type="button">
+      <button
+        className="button"
+        type="button"
+        onClick={() => handleShuffleModifierDeck(true)}
+      >
         Shuffle Modifiers
       </button>
       <br />
-      <button id="bless" className="button" type="button">
+      <button className="button" type="button" onClick={() => handleAddBless()}>
         Bless
       </button>
-      <button id="curse" className="button" type="button">
+      <button className="button" type="button" onClick={() => handleAddCurse()}>
         Curse
       </button>
-      <button id="add-minus-1" className="button" type="button">
+      <button
+        className="button"
+        type="button"
+        onClick={() => handleAddMinusOneCard()}
+      >
         Add -1 Card
       </button>
       <button id="reset-deck" className="button" type="button">
