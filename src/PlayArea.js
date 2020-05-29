@@ -47,6 +47,15 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
     }
   }
 
+  function moveDiscardedCardsToLost(cards) {
+    setLostCards([...lostCards, ...cards])
+    let newDiscardedCards = [...discardedCards]
+    cards.forEach((card) => {
+      _.remove(newDiscardedCards, card)
+    })
+    setDiscardedCards(newDiscardedCards)
+  }
+
   function moveActiveCardToDiscard(cardDiscarded) {
     let newActiveCards = [...activeCards]
     _.remove(newActiveCards, cardDiscarded)
@@ -66,7 +75,6 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
   }
 
   function moveActiveCardToLost(cardLost) {
-    console.log(cardLost)
     let newActiveCards = [...activeCards]
     _.remove(newActiveCards, cardLost)
     setActiveCards(newActiveCards)
@@ -91,6 +99,13 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
 
   function removeCardFromDiscard(card) {
     _.remove(discardedCards, card)
+  }
+
+  function moveLostCardToHand(card) {
+    setHand([...hand, card])
+    let newLostCards = [...lostCards]
+    _.remove(newLostCards, card)
+    setLostCards(newLostCards)
   }
 
   return (
@@ -119,9 +134,14 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
                 character={character}
                 discardedCards={discardedCards}
                 handleMoveCardBackToHand={handleMoveCardBackToHand}
+                moveDiscardedCardsToLost={moveDiscardedCardsToLost}
                 removeCardFromDiscard={removeCardFromDiscard}
               />
-              <LostCards character={character} lostCards={lostCards} />
+              <LostCards
+                character={character}
+                lostCards={lostCards}
+                moveLostCardToHand={moveLostCardToHand}
+              />
             </tr>
           </tbody>
         </table>
@@ -150,6 +170,7 @@ function DiscardedCards({
   character,
   discardedCards,
   handleMoveCardBackToHand,
+  moveDiscardedCardsToLost,
   removeCardFromDiscard,
 }) {
   const [selectedCards, setSelectedCards] = useState([])
@@ -187,6 +208,11 @@ function DiscardedCards({
   function handleRecoverDiscardedCard() {
     handleMoveCardBackToHand(selectedCards[0])
     removeCardFromDiscard(selectedCards[0])
+    setSelectedCards([])
+  }
+
+  function handleLoseCardsAvoidingDamage(cards) {
+    moveDiscardedCardsToLost(cards)
     setSelectedCards([])
   }
 
@@ -292,6 +318,7 @@ function DiscardedCards({
         id="lose-discard-button2"
         className="button"
         disabled={selectedCards.length !== 2}
+        onClick={() => handleLoseCardsAvoidingDamage(selectedCards)}
         type="button"
         title="Must Have A Discarded Card Selected - Must Lose 2 to Avoid Damage"
       >
@@ -598,7 +625,7 @@ function ModifierDeck() {
   )
 }
 
-function LostCards({ character, lostCards }) {
+function LostCards({ character, lostCards, moveLostCardToHand }) {
   // TODO: Convert selectedCards here from array to a single item. Can't pick more than 1
   const [selectedCard, setSelectedCard] = useState({})
   const firstRow = lostCards.slice(0, 5)
@@ -619,6 +646,11 @@ function LostCards({ character, lostCards }) {
     cardToSelect === selectedCard
       ? setSelectedCard({})
       : setSelectedCard(cardToSelect)
+  }
+
+  function handleRecoverLostCard(card) {
+    moveLostCardToHand(card)
+    setSelectedCard({})
   }
 
   return (
@@ -675,6 +707,8 @@ function LostCards({ character, lostCards }) {
       <button
         id="recover-lost"
         className="button"
+        disabled={Object.keys(selectedCard).length === 0}
+        onClick={() => handleRecoverLostCard(selectedCard)}
         type="button"
         title="Must Have a Lost Card Selected"
       >
