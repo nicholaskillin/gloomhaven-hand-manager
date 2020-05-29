@@ -47,9 +47,14 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
     }
   }
 
+  function moveActiveCardToDiscard(cardDiscarded) {
+    let newActiveCards = [...activeCards]
+    _.remove(newActiveCards, cardDiscarded)
+    setActiveCards(newActiveCards)
+    setDiscardedCards([...discardedCards, cardDiscarded])
+  }
+
   function moveCardToLost(cardLost) {
-    // TODO: Make this work
-    console.log('Lose', cardLost)
     let i = _.indexOf(chosenCards, cardLost)
     let newChosenCards = [...chosenCards]
     newChosenCards[i] = {}
@@ -60,9 +65,16 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
     }
   }
 
+  function moveActiveCardToLost(cardLost) {
+    console.log(cardLost)
+    let newActiveCards = [...activeCards]
+    _.remove(newActiveCards, cardLost)
+    setActiveCards(newActiveCards)
+    setLostCards([...lostCards, cardLost])
+  }
+
   function moveCardToActive(cardActivated) {
     // TODO: Is there a limit to the number of active cards?
-    console.log(`activate`, cardActivated)
     let i = _.indexOf(chosenCards, cardActivated)
     let newChosenCards = [...chosenCards]
     newChosenCards[i] = {}
@@ -95,7 +107,12 @@ function PlayArea({ character, hand, setHand, staffOfCommand }) {
                 moveCardToLost={moveCardToLost}
                 staffOfCommand={staffOfCommand}
               />
-              <ActiveCards character={character} activeCards={activeCards} />
+              <ActiveCards
+                character={character}
+                activeCards={activeCards}
+                moveActiveCardToDiscard={moveActiveCardToDiscard}
+                moveActiveCardToLost={moveActiveCardToLost}
+              />
             </tr>
             <tr>
               <DiscardedCards
@@ -284,7 +301,12 @@ function DiscardedCards({
   )
 }
 
-function ActiveCards({ character, activeCards }) {
+function ActiveCards({
+  character,
+  activeCards,
+  moveActiveCardToDiscard,
+  moveActiveCardToLost,
+}) {
   // NEXT: TODO: Figure out how I'm going to display these. I could use CardContainer, but how will trackers work?
   const [selectedCard, setSelectedCard] = useState({})
   const firstRow = activeCards.slice(0, 3)
@@ -304,6 +326,16 @@ function ActiveCards({ character, activeCards }) {
     cardToSelect === selectedCard
       ? setSelectedCard({})
       : setSelectedCard(cardToSelect)
+  }
+
+  function handleDiscardCard(card) {
+    moveActiveCardToDiscard(card)
+    setSelectedCard({})
+  }
+
+  function handleLoseCard(card) {
+    moveActiveCardToLost(card)
+    setSelectedCard({})
   }
 
   return (
@@ -347,6 +379,8 @@ function ActiveCards({ character, activeCards }) {
       <button
         id="discard-active-card"
         className="button tooltip"
+        disabled={Object.keys(selectedCard).length === 0}
+        onClick={() => handleDiscardCard(selectedCard)}
         type="button"
         title="Must Have an Active Card Selected"
       >
@@ -355,6 +389,8 @@ function ActiveCards({ character, activeCards }) {
       <button
         id="lose-active-card"
         className="button tooltip"
+        disabled={Object.keys(selectedCard).length === 0}
+        onClick={() => handleLoseCard(selectedCard)}
         type="button"
         title="Must Have an Active Card Selected"
       >
