@@ -47,13 +47,17 @@ function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
     }
   }
 
-  function moveDiscardedCardsToLost(cards) {
+  function moveDiscardedCardsToLost(cards, resetHand) {
     setLostCards([...lostCards, ...cards])
     let newDiscardedCards = [...discardedCards]
     cards.forEach((card) => {
       _.remove(newDiscardedCards, card)
     })
-    setDiscardedCards(newDiscardedCards)
+    if (resetHand) {
+      setHand([...hand, ...newDiscardedCards], setDiscardedCards([]))
+    } else {
+      setDiscardedCards(newDiscardedCards)
+    }
   }
 
   function moveActiveCardToDiscard(cardDiscarded) {
@@ -93,8 +97,8 @@ function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
     }
   }
 
-  function handleMoveCardBackToHand(cardRecovered) {
-    setHand([...hand, cardRecovered])
+  function handleMoveCardsBackToHand(cardsRecovered) {
+    setHand([...hand, ...cardsRecovered])
   }
 
   function removeCardFromDiscard(card) {
@@ -134,7 +138,7 @@ function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
               <DiscardedCards
                 character={character}
                 discardedCards={discardedCards}
-                handleMoveCardBackToHand={handleMoveCardBackToHand}
+                handleMoveCardsBackToHand={handleMoveCardsBackToHand}
                 moveDiscardedCardsToLost={moveDiscardedCardsToLost}
                 removeCardFromDiscard={removeCardFromDiscard}
               />
@@ -170,11 +174,16 @@ function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
 function DiscardedCards({
   character,
   discardedCards,
-  handleMoveCardBackToHand,
+  handleMoveCardsBackToHand,
   moveDiscardedCardsToLost,
   removeCardFromDiscard,
 }) {
+  // TODO: Figure out long rest
   const [selectedCards, setSelectedCards] = useState([])
+  const [resting, setResting] = useState(false)
+  const [canRerollLost, setCanRerollLost] = useState(false)
+  const [longResting, setLongResting] = useState(false)
+  const [cardToLose, setCardToLose] = useState({})
   const firstRow = discardedCards.slice(0, 5)
   const secondRow = discardedCards.slice(5, 10)
   const thirdRow = discardedCards.slice(10, 15)
@@ -183,18 +192,22 @@ function DiscardedCards({
     let characterCard = character.cards.find(
       (card) => card.title === cardClicked.alt
     )
-    if (selectedCards.some((card) => card.title === cardClicked.alt)) {
-      let newSelection = [...selectedCards]
-      _.remove(newSelection, characterCard)
-      setSelectedCards(newSelection)
+    if (longResting) {
+      setCardToLose(characterCard)
     } else {
-      if (selectedCards.length < 2) {
-        setSelectedCards([...selectedCards, characterCard])
-      } else {
+      if (selectedCards.some((card) => card.title === cardClicked.alt)) {
         let newSelection = [...selectedCards]
-        newSelection.shift()
-        newSelection.push(characterCard)
+        _.remove(newSelection, characterCard)
         setSelectedCards(newSelection)
+      } else {
+        if (selectedCards.length < 2) {
+          setSelectedCards([...selectedCards, characterCard])
+        } else {
+          let newSelection = [...selectedCards]
+          newSelection.shift()
+          newSelection.push(characterCard)
+          setSelectedCards(newSelection)
+        }
       }
     }
   }
@@ -207,14 +220,52 @@ function DiscardedCards({
   }
 
   function handleRecoverDiscardedCard() {
-    handleMoveCardBackToHand(selectedCards[0])
+    handleMoveCardsBackToHand(selectedCards)
     removeCardFromDiscard(selectedCards[0])
     setSelectedCards([])
   }
 
   function handleLoseCardsAvoidingDamage(cards) {
-    moveDiscardedCardsToLost(cards)
+    moveDiscardedCardsToLost(cards, false)
     setSelectedCards([])
+  }
+
+  function handleShortRest() {
+    setResting(true)
+    let cardToLose =
+      discardedCards[Math.floor(Math.random() * discardedCards.length)]
+    setCardToLose(cardToLose)
+    setCanRerollLost(true)
+  }
+
+  function handleLoseCardFromRest() {
+    moveDiscardedCardsToLost([cardToLose], true)
+    setResting(false)
+    setCanRerollLost(false)
+    setCardToLose({})
+    setLongResting(false)
+  }
+
+  function handleRerollLostCard() {
+    let cardsToChooseFrom = [...discardedCards]
+    _.remove(cardsToChooseFrom, cardToLose)
+    let newCardToLose =
+      cardsToChooseFrom[Math.floor(Math.random() * cardsToChooseFrom.length)]
+    setCardToLose(newCardToLose)
+    setCanRerollLost(false)
+  }
+
+  function handleLongRest() {
+    setLongResting(true)
+  }
+
+  function cardBoarder(card) {
+    if (card === cardToLose && resting) {
+      return 'chooseCards must-lose'
+    } else if (card === cardToLose && longResting) {
+      return 'chooseCards discard-selected'
+    }
+    return 'chooseCards'
   }
 
   return (
@@ -224,18 +275,19 @@ function DiscardedCards({
       style={{ border: '1px solid white', textAlign: 'center' }}
     >
       Discarded Cards
-      <br />
+      {longResting && <p id="choose-to-lose">Choose One Card to Lose</p>}
       <table id="discard-table">
         <tbody>
           <tr>
             {firstRow.map((card) => (
               <CardContainer
                 card={card}
-                cardClass={'chooseCards'}
+                cardClass={cardBoarder(card)}
                 containerClass={'discarded'}
                 cardSelected={cardSelected}
                 character={character}
                 key={card.title}
+                mustLose={card === cardToLose && resting}
                 onClick={handleOnClick}
               />
             ))}
@@ -270,8 +322,9 @@ function DiscardedCards({
       </table>
       <button
         id="short-rest-button"
-        disabled={discardedCards.length < 2}
+        disabled={discardedCards.length < 2 || resting}
         className="button"
+        onClick={() => handleShortRest()}
         type="button"
         title="Must Have At Least 2 Discarded Cards And No Cards in Play"
       >
@@ -279,8 +332,9 @@ function DiscardedCards({
       </button>
       <button
         id="long-rest-button"
-        disabled={discardedCards.length < 2}
+        disabled={discardedCards.length < 2 || resting}
         className="button"
+        onClick={() => handleLongRest()}
         type="button"
         title="Must Have At Least 2 Discarded Cards And No Cards in Play"
       >
@@ -300,7 +354,8 @@ function DiscardedCards({
       <button
         id="lose-discard-button"
         className="button"
-        disabled={true}
+        disabled={Object.keys(cardToLose).length === 0}
+        onClick={() => handleLoseCardFromRest()}
         type="button"
         title="Must Be Resting"
       >
@@ -309,7 +364,8 @@ function DiscardedCards({
       <button
         id="reroll-random-card-button"
         className="button"
-        disabled={true}
+        disabled={!canRerollLost}
+        onClick={() => handleRerollLostCard()}
         type="button"
         title="Can Only Be Used Once Per Short Rest"
       >
@@ -335,7 +391,6 @@ function ActiveCards({
   moveActiveCardToDiscard,
   moveActiveCardToLost,
 }) {
-  // NEXT: TODO: Figure out how I'm going to display these. I could use CardContainer, but how will trackers work?
   const [selectedCard, setSelectedCard] = useState({})
   const firstRow = activeCards.slice(0, 3)
   const secondRow = activeCards.slice(3, 6)
@@ -584,8 +639,21 @@ function ModifierDeck({ modifierDeck }) {
   const [mustShuffle, setMustShuffle] = useState(false)
   const [extraBlessCount, setExtraBlessCount] = useState(0)
   const [extraCurseCount, setExtraCurseCount] = useState(0)
+  const minus1Card = {
+    name: 'extraMinus1',
+    image: './images/attack-modifiers/base/player-mod/am-pm-minus1.png',
+  }
+  const curseCard = {
+    name: 'extraCurse',
+    image: './images/attack-modifiers/base/player-mod/am-pm-curse.png',
+  }
+  const blessingCard = {
+    name: 'extraBless',
+    image: './images/attack-modifiers/base/player-mod/am-pm-bless.png',
+  }
 
   function handleFlipModifier() {
+    // TODO: Handle logic for removing bless and curse counts in UI if they are played
     let newLocalModifierDeck = [...localModifierDeck]
     setPlayedModifyCards([...playedModifyCards, newLocalModifierDeck[0]])
     let playedCard = newLocalModifierDeck.shift()
@@ -596,6 +664,7 @@ function ModifierDeck({ modifierDeck }) {
   }
 
   function handleShuffleModifierDeck(addPlayedCards) {
+    // TODO: Handle logic for removing played bless, curse, and -1? cards
     let shuffledModifierDeck = []
     if (addPlayedCards) {
       shuffledModifierDeck = [...localModifierDeck, ...playedModifyCards]
@@ -616,30 +685,73 @@ function ModifierDeck({ modifierDeck }) {
   }
 
   function handleAddBless() {
-    // TODO: Find out why this is shuffling before it adds the bless card
-    setLocalModifierDeck(
-      [
-        ...localModifierDeck,
-        {
-          name: 'extraBless',
-          image: './images/attack-modifiers/base/player-mod/am-pm-bless.png',
-        },
-      ],
-      handleShuffleModifierDeck(false)
-    )
+    // TODO: Max blessing cards?
+    let newLocalModifierDeck = [...localModifierDeck, blessingCard]
+    // When I had it shuffle once, the bless was always the last card. Suffling twice fixes this, but there is likely a better way to do this.
+    for (let i = newLocalModifierDeck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * i)
+      const temp = newLocalModifierDeck[i]
+      newLocalModifierDeck[i] = newLocalModifierDeck[j]
+      newLocalModifierDeck[j] = temp
+    }
+    for (let i = newLocalModifierDeck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * i)
+      const temp = newLocalModifierDeck[i]
+      newLocalModifierDeck[i] = newLocalModifierDeck[j]
+      newLocalModifierDeck[j] = temp
+    }
+    setLocalModifierDeck(newLocalModifierDeck)
     setExtraBlessCount(extraBlessCount + 1)
   }
 
   function handleAddCurse() {
+    // TODO: Max curse cards?
+    let newLocalModifierDeck = [...localModifierDeck, curseCard]
+    // When I had it shuffle once, the bless was always the last card. Suffling twice fixes this, but there is likely a better way to do this.
+    for (let i = newLocalModifierDeck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * i)
+      const temp = newLocalModifierDeck[i]
+      newLocalModifierDeck[i] = newLocalModifierDeck[j]
+      newLocalModifierDeck[j] = temp
+    }
+    for (let i = newLocalModifierDeck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * i)
+      const temp = newLocalModifierDeck[i]
+      newLocalModifierDeck[i] = newLocalModifierDeck[j]
+      newLocalModifierDeck[j] = temp
+    }
+    setLocalModifierDeck(newLocalModifierDeck)
     setExtraCurseCount(extraCurseCount + 1)
   }
 
   function handleAddMinusOneCard() {
-    console.log('you added a minus 1 card')
+    let newLocalModifierDeck = [...localModifierDeck, minus1Card]
+    // When I had it shuffle once, the bless was always the last card. Suffling twice fixes this, but there is likely a better way to do this.
+    for (let i = newLocalModifierDeck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * i)
+      const temp = newLocalModifierDeck[i]
+      newLocalModifierDeck[i] = newLocalModifierDeck[j]
+      newLocalModifierDeck[j] = temp
+    }
+    for (let i = newLocalModifierDeck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * i)
+      const temp = newLocalModifierDeck[i]
+      newLocalModifierDeck[i] = newLocalModifierDeck[j]
+      newLocalModifierDeck[j] = temp
+    }
+    setLocalModifierDeck(newLocalModifierDeck)
   }
 
   function handleResetModifierDeck() {
-    // Should remove all extra curses and blesses
+    let newLocalModifierDeck = [...localModifierDeck, ...playedModifyCards]
+    // Probably a better way to do this...
+    _.remove(newLocalModifierDeck, minus1Card)
+    _.remove(newLocalModifierDeck, curseCard)
+    _.remove(newLocalModifierDeck, blessingCard)
+    setLocalModifierDeck(newLocalModifierDeck)
+    setPlayedModifyCards([])
+    setExtraCurseCount(0)
+    setExtraBlessCount(0)
   }
   return (
     <div id="attack-modifier-deck" align="center">
@@ -696,7 +808,11 @@ function ModifierDeck({ modifierDeck }) {
       >
         Add -1 Card
       </button>
-      <button id="reset-deck" className="button" type="button">
+      <button
+        className="button"
+        type="button"
+        onClick={() => handleResetModifierDeck()}
+      >
         Reset Modifier Deck
       </button>
     </div>

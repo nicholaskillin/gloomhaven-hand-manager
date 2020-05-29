@@ -6,6 +6,7 @@ function CardContainer({
   containerClass,
   cardSelected,
   character,
+  mustLose,
   onClick,
   tracker,
 }) {
@@ -34,6 +35,7 @@ function CardContainer({
       {card.enhancements.map((enhancement) => (
         <EnhancementIcon key={enhancement.id} enhancement={enhancement} />
       ))}
+      {mustLose && <p>Must Lose</p>}
       {containerClass === 'active-card' && (
         <>
           <br />
