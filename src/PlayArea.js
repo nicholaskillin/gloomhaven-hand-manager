@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import _ from 'lodash'
 import CardContainer from './CardContainer'
 
+// TODO: Get play 3rd card button working
 function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
   const [hasCardsInPlay, setHasCardsInPlay] = useState(false)
   const [chosenCards, setChosenCards] = useState([{}, {}, {}])

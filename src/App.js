@@ -6,7 +6,6 @@ import PerkSelection from './PerkSelection'
 import HandSelection from './HandSelection'
 import PlayArea from './PlayArea'
 
-// TODO: Get Staff of Command working
 function App() {
   const [stage, setStage] = useState('selectCharacter')
   const [character, setCharacter] = useState({})
@@ -259,6 +258,10 @@ function App() {
     setModifierDeck(newModifierDeck)
   }
 
+  function handleStaffOfCommand(selected) {
+    setStaffOfCommand(selected)
+  }
+
   return (
     <>
       {stage === 'selectCharacter' && (
@@ -266,6 +269,7 @@ function App() {
           <CharacterSelection
             handleSetCharacter={handleSetCharacter}
             handleSetLevel={handleSetLevel}
+            handleStaffOfCommand={handleStaffOfCommand}
             level={level}
           />
         </>

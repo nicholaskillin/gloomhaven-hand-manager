@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import Konami from 'react-konami-code'
 
-function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
+function CharacterSelection({
+  handleSetCharacter,
+  handleSetLevel,
+  handleStaffOfCommand,
+  level,
+}) {
   const [characterName, setCharacterName] = useState('')
   const [bladeSwarmUnlocked, setBladeSwarmUnlocked] = useState(false)
 
@@ -139,12 +144,30 @@ function CharacterSelection({ handleSetCharacter, handleSetLevel, level }) {
                 />
                 <br />
                 <div>
-                  <div id="beastTyrantStaffLabel" className="hiding">
+                  <div
+                    id="beastTyrantStaffLabel"
+                    className={
+                      characterName === 'beastTyrant'
+                        ? 'solo-scenario-label'
+                        : 'hiding'
+                    }
+                  >
                     Completed solo scenario
                   </div>
                   <label className="switch">
-                    <input id="beastTyrantSolo" type="checkbox" />
-                    <span id="beastTyrantStaff" className="slider hiding" />
+                    <input
+                      id="beastTyrantSolo"
+                      type="checkbox"
+                      onChange={(e) => handleStaffOfCommand(e.target.checked)}
+                    />
+                    <span
+                      id="beastTyrantStaff"
+                      className={
+                        characterName === 'beastTyrant'
+                          ? 'slider'
+                          : 'slider hiding'
+                      }
+                    />
                   </label>
                 </div>
                 <p className="character-title" align="center">
