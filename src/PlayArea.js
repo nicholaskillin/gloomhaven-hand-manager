@@ -37,6 +37,22 @@ function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
     setHasCardsInPlay(true)
   }
 
+  function moveThirdCardToChosen(cards) {
+    // remove selected cards from hand
+    let newHand = [...hand]
+    cards.forEach((card) => {
+      _.remove(newHand, card)
+    })
+    setHand(newHand)
+
+    // add selected cards to ChosenCards component
+    let newChosenCards = [...chosenCards]
+    newChosenCards[2] = cards[0]
+    setChosenCards(newChosenCards)
+
+    setHasCardsInPlay(true)
+  }
+
   function moveCardToDiscard(cardDiscarded) {
     let i = _.indexOf(chosenCards, cardDiscarded)
     let newChosenCards = [...chosenCards]
@@ -155,6 +171,7 @@ function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
       <HandCards
         character={character}
         hand={hand}
+        moveThirdCardToChosen={moveThirdCardToChosen}
         moveCardsToChosen={moveCardsToChosen}
         hasCardsInPlay={hasCardsInPlay}
         staffOfCommand={staffOfCommand}
@@ -917,6 +934,7 @@ function HandCards({
   character,
   hand,
   moveCardsToChosen,
+  moveThirdCardToChosen,
   hasCardsInPlay,
   staffOfCommand,
 }) {
@@ -955,6 +973,12 @@ function HandCards({
 
   function handlePlayCards() {
     moveCardsToChosen(selectedCards)
+    setSelectedCards([])
+  }
+
+  function handlePlayStaffOfCommand() {
+    let cardToPlay = selectedCards
+    moveThirdCardToChosen(cardToPlay)
     setSelectedCards([])
   }
 
@@ -1017,7 +1041,8 @@ function HandCards({
           <button
             id="play-third-card"
             className="button"
-            disabled={true}
+            disabled={!hasCardsInPlay || selectedCards.length !== 1}
+            onClick={() => handlePlayStaffOfCommand()}
             type="button"
             title="Must Have Played Cards"
           >
