@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import _ from 'lodash'
 
-// TODO: How do I persist what perks have been selected if someone navigates away and comes back?
-// TODO: What if someone selects a perk, confirms, then comes back and unchecks it?
+// TODO PRE LAUNCH: How do I persist what perks have been selected if someone navigates away and comes back?
+// TODO PRE LAUNCH: What if someone selects a perk, confirms, then comes back and unchecks it?
 
 function PerkSelection({
   modifyModifierDeck,

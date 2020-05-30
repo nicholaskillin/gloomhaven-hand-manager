@@ -10,7 +10,7 @@ function App() {
   const [stage, setStage] = useState('selectCharacter')
   const [character, setCharacter] = useState({})
   const [level, setLevel] = useState(1)
-  // TODO: Put hand back to blank state
+  // TODO PRE LAUNCH: Put hand back to blank state
   // const [hand, setHand] = useState([])
   const [hand, setHand] = useState([
     {
@@ -245,7 +245,7 @@ function App() {
     }
 
     // Remove cards from modifier deck
-    // TODO: Does this work if someone has a single checkmark that removes 2 cards?
+    // TODO PRE LAUNCH: Does this work if someone has a single checkmark that removes 2 cards?
     let modifierWithCardsRemoved = [...modifierDeck]
     cardsToRemove.forEach((card) => {
       let index = findWithAttr(modifierWithCardsRemoved, 'name', card.name)

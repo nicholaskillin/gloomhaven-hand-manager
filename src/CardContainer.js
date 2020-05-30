@@ -10,7 +10,7 @@ function CardContainer({
   onClick,
   tracker,
 }) {
-  // TODO: Create function to hide tracker buttons after they are pushed
+  // TODO PRE LAUNCH: Create function to hide tracker buttons after they are pushed
   const trackerButtons = []
   for (let i = 0; i < card.tracker; i++) {
     trackerButtons.push(

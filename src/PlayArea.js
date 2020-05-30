@@ -668,7 +668,7 @@ function ModifierDeck({ modifierDeck }) {
   }
 
   function handleFlipModifier() {
-    // TODO: Handle logic for removing bless and curse counts in UI if they are played
+    // TODO PRE LAUNCH: Handle logic for removing bless and curse counts in UI if they are played
     let newLocalModifierDeck = [...localModifierDeck]
     setPlayedModifyCards([...playedModifyCards, newLocalModifierDeck[0]])
     let playedCard = newLocalModifierDeck.shift()
@@ -679,7 +679,7 @@ function ModifierDeck({ modifierDeck }) {
   }
 
   function handleShuffleModifierDeck(addPlayedCards) {
-    // TODO: Handle logic for removing played bless, curse, and -1? cards
+    // TODO PRE LAUNCH: Handle logic for removing played bless, curse, and -1? cards
     let shuffledModifierDeck = []
     if (addPlayedCards) {
       shuffledModifierDeck = [...localModifierDeck, ...playedModifyCards]
