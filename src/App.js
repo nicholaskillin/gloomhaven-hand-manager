@@ -261,6 +261,91 @@ function App() {
     setStaffOfCommand(selected)
   }
 
+  function resetModifierDeck() {
+    setModifierDeck([
+      {
+        name: 'plus0',
+        image: './images/attack-modifiers/base/player/am-plus0.png',
+      },
+      {
+        name: 'plus0',
+        image: './images/attack-modifiers/base/player/am-plus0.png',
+      },
+      {
+        name: 'plus0',
+        image: './images/attack-modifiers/base/player/am-plus0.png',
+      },
+      {
+        name: 'plus0',
+        image: './images/attack-modifiers/base/player/am-plus0.png',
+      },
+      {
+        name: 'plus0',
+        image: './images/attack-modifiers/base/player/am-plus0.png',
+      },
+      {
+        name: 'plus0',
+        image: './images/attack-modifiers/base/player/am-plus0.png',
+      },
+      {
+        name: 'plus1',
+        image: './images/attack-modifiers/base/player/am-plus1.png',
+      },
+      {
+        name: 'plus1',
+        image: './images/attack-modifiers/base/player/am-plus1.png',
+      },
+      {
+        name: 'plus1',
+        image: './images/attack-modifiers/base/player/am-plus1.png',
+      },
+      {
+        name: 'plus1',
+        image: './images/attack-modifiers/base/player/am-plus1.png',
+      },
+      {
+        name: 'plus1',
+        image: './images/attack-modifiers/base/player/am-plus1.png',
+      },
+      {
+        name: 'minus1',
+        image: './images/attack-modifiers/base/player/am-minus1.png',
+      },
+      {
+        name: 'minus1',
+        image: './images/attack-modifiers/base/player/am-minus1.png',
+      },
+      {
+        name: 'minus1',
+        image: './images/attack-modifiers/base/player/am-minus1.png',
+      },
+      {
+        name: 'minus1',
+        image: './images/attack-modifiers/base/player/am-minus1.png',
+      },
+      {
+        name: 'minus1',
+        image: './images/attack-modifiers/base/player/am-minus1.png',
+      },
+      {
+        name: 'minus2',
+        image: './images/attack-modifiers/base/player/am-minus2.png',
+      },
+      {
+        name: 'plus1',
+        image: './images/attack-modifiers/base/player/am-plus2.png',
+      },
+      {
+        name: 'miss',
+        image: './images/attack-modifiers/base/player/am-miss.png',
+      },
+      {
+        name: 'times2',
+        image: './images/attack-modifiers/base/player/am-x2.png',
+      },
+    ])
+  }
+
   return (
     <>
       {stage === 'selectCharacter' && (
@@ -279,6 +364,7 @@ function App() {
           character={character}
           handleSetStage={handleSetStage}
           characterPerks={character.perks}
+          resetModifierDeck={resetModifierDeck}
         />
       )}
       {stage === 'selectHand' && (
