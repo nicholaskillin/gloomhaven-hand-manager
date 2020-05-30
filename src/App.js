@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css'
 import _ from 'lodash'
 import CharacterSelection from './CharacterSelection'
 import PerkSelection from './PerkSelection'
 import HandSelection from './HandSelection'
 import PlayArea from './PlayArea'
+import Cookies from 'universal-cookie'
 
 function App() {
   const [stage, setStage] = useState('selectCharacter')
@@ -204,6 +205,14 @@ function App() {
   ])
   const [staffOfCommand, setStaffOfCommand] = useState(false)
   const allCharacterData = require('./characterData.json')
+  const cookies = new Cookies()
+
+  useEffect(() => {
+    let cookieCharacter = cookies.get('character')
+    if (cookieCharacter !== undefined) {
+      console.log(`You selected the ${cookieCharacter} previously`)
+    }
+  })
 
   function handleSetStage(stage) {
     setStage(stage)
@@ -212,6 +221,10 @@ function App() {
   function handleSetCharacter(characterName) {
     let characterData = allCharacterData.find((x) => x.name === characterName)
     setCharacter(characterData, setStage('selectPerks'))
+    cookies.set('character', characterData.name, {
+      path: '/',
+      maxAge: 31104000,
+    })
   }
 
   function handleUpdateCharacter(character) {

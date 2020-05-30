@@ -12,6 +12,7 @@
     "react-dom": "^16.13.1",
     "react-konami-code": "^2.0.0-beta.1",
     "react-scripts": "3.4.1",
+    "universal-cookie": "^4.0.3",
     "yarn": "^1.22.4"
   },
   "scripts": {
