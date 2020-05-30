@@ -85,7 +85,7 @@ function HandSelection({
       if (hand.length < character.handSize) {
         addCardToHand(cardFromCharacter)
       } else {
-        // TODO: Alert that their hand is full
+        alert(`Your hand is full`)
       }
     }
   }
