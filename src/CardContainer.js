@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function CardContainer({
   card,
@@ -8,16 +8,13 @@ function CardContainer({
   character,
   mustLose,
   onClick,
-  tracker,
 }) {
-  // TODO PRE LAUNCH: Create function to hide tracker buttons after they are pushed
-  const trackerButtons = []
-  for (let i = 0; i < card.tracker; i++) {
-    trackerButtons.push(
-      <button className="tracker-button" type="button">
-        {i + 1}
-      </button>
-    )
+  const [trackerButtons, setTrackerButtons] = useState(card.tracker)
+
+  function handleClickTracker(i) {
+    let newTrackerButtons = [...trackerButtons]
+    newTrackerButtons[i].active = !newTrackerButtons[i].active
+    setTrackerButtons(newTrackerButtons)
   }
   return (
     <td key={card.title} className={containerClass}>
@@ -33,10 +30,17 @@ function CardContainer({
         <EnhancementIcon key={enhancement.id} enhancement={enhancement} />
       ))}
       {mustLose && <p>Must Lose</p>}
-      {containerClass === 'active-card' && (
+      {containerClass === 'active-card' && card.tracker.length > 0 && (
         <>
           <br />
-          {trackerButtons}
+          {card.tracker.map((tracker, i) => (
+            <button
+              disabled={!trackerButtons[i].active}
+              onClick={() => handleClickTracker(i)}
+            >
+              {i + 1}
+            </button>
+          ))}
         </>
       )}
     </td>

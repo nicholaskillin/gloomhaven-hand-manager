@@ -21,9 +21,11 @@ function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
 
   function moveCardsToChosen(cards) {
     // remove selected cards from hand
+    console.log(cards)
     let newHand = [...hand]
     cards.forEach((card) => {
       _.remove(newHand, card)
+      console.log(newHand)
     })
     setHand(newHand)
 

@@ -11,14 +11,14 @@ function App() {
   const [character, setCharacter] = useState({})
   const [level, setLevel] = useState(1)
   // TODO PRE LAUNCH: Put hand back to blank state
-  // const [hand, setHand] = useState([])
+  //const [hand, setHand] = useState([])
   const [hand, setHand] = useState([
     {
       title: 'disorienting-roar',
       level: 1,
       enhancementSpots: 0,
       enhancements: [],
-      tracker: 0,
+      tracker: [],
     },
     {
       title: 'spirit-swap',
@@ -28,7 +28,7 @@ function App() {
         { id: 1, top: 79, left: 136, enhancement: '' },
         { id: 2, top: 79, left: 152, enhancement: '' },
       ],
-      tracker: 0,
+      tracker: [],
     },
     {
       title: 'venomous-ally',
@@ -40,7 +40,17 @@ function App() {
         { id: 5, top: 97, left: 80, enhancement: '' },
         { id: 6, top: 225, left: 130, enhancement: '' },
       ],
-      tracker: 0,
+      tracker: [],
+    },
+    {
+      title: 'concentrated-rage',
+      level: 1,
+      enhancementSpots: 2,
+      enhancements: [
+        { id: 11, top: 79, left: 139, enhancement: '' },
+        { id: 12, top: 95, left: 130, enhancement: '' },
+      ],
+      tracker: [],
     },
     {
       title: 'relentless-ally',
@@ -52,17 +62,7 @@ function App() {
         { id: 9, top: 97, left: 80, enhancement: '' },
         { id: 10, top: 223, left: 136, enhancement: '' },
       ],
-      tracker: 0,
-    },
-    {
-      title: 'concentrated-rage',
-      level: 1,
-      enhancementSpots: 2,
-      enhancements: [
-        { id: 11, top: 79, left: 139, enhancement: '' },
-        { id: 12, top: 95, left: 130, enhancement: '' },
-      ],
-      tracker: 0,
+      tracker: [],
     },
     {
       title: 'howling-bolts',
@@ -73,7 +73,7 @@ function App() {
         { id: 26, top: 107, left: 131, enhancement: '' },
         { id: 27, top: 211, left: 136, enhancement: '' },
       ],
-      tracker: 0,
+      tracker: [],
     },
     {
       title: 'forceful-swipe',
@@ -85,7 +85,7 @@ function App() {
         { id: 23, top: 197, left: 137, enhancement: '' },
         { id: 24, top: 216, left: 138, enhancement: '' },
       ],
-      tracker: 0,
+      tracker: [],
     },
     {
       title: 'maul',
@@ -96,17 +96,7 @@ function App() {
         { id: 19, top: 94, left: 154, enhancement: '' },
         { id: 20, top: 193, left: 137, enhancement: '' },
       ],
-      tracker: 0,
-    },
-    {
-      title: 'patch-fur',
-      level: 1,
-      enhancementSpots: 2,
-      enhancements: [
-        { id: 16, top: 205, left: 133, enhancement: '' },
-        { id: 17, top: 205, left: 151, enhancement: '' },
-      ],
-      tracker: 0,
+      tracker: [],
     },
     {
       title: 'disappearing-wounds',
@@ -117,7 +107,17 @@ function App() {
         { id: 14, top: 212, left: 138, enhancement: '' },
         { id: 15, top: 212, left: 154, enhancement: '' },
       ],
-      tracker: 0,
+      tracker: [],
+    },
+    {
+      title: 'patch-fur',
+      level: 1,
+      enhancementSpots: 2,
+      enhancements: [
+        { id: 16, top: 205, left: 133, enhancement: '' },
+        { id: 17, top: 205, left: 151, enhancement: '' },
+      ],
+      tracker: [],
     },
   ])
   const [modifierDeck, setModifierDeck] = useState([
@@ -245,7 +245,6 @@ function App() {
     }
 
     // Remove cards from modifier deck
-    // TODO PRE LAUNCH: Does this work if someone has a single checkmark that removes 2 cards?
     let modifierWithCardsRemoved = [...modifierDeck]
     cardsToRemove.forEach((card) => {
       let index = findWithAttr(modifierWithCardsRemoved, 'name', card.name)
