@@ -21,9 +21,12 @@ function CharacterSelection({
   }
 
   useEffect(() => {
-    let cookieCharacter = cookies.get('character')
-    if (cookieCharacter !== undefined) {
-      selectCharacter(cookieCharacter)
+    let cookieInfo = cookies.getAll()
+    if (cookieInfo.character) {
+      selectCharacter(cookieInfo.character)
+    }
+    if (cookieInfo.level) {
+      handleSetLevel(parseInt(cookieInfo.level, 10))
     }
   })
 

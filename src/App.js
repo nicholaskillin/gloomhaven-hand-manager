@@ -225,6 +225,7 @@ function App() {
   }
 
   function handleSetLevel(level) {
+    cookies.set('level', level, { maxAge: 31104000 })
     setLevel(level)
   }
 
