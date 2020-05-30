@@ -207,13 +207,6 @@ function App() {
   const allCharacterData = require('./characterData.json')
   const cookies = new Cookies()
 
-  useEffect(() => {
-    let cookieCharacter = cookies.get('character')
-    if (cookieCharacter !== undefined) {
-      console.log(`You selected the ${cookieCharacter} previously`)
-    }
-  })
-
   function handleSetStage(stage) {
     setStage(stage)
   }

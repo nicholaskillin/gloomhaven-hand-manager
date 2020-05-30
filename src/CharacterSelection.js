@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Konami from 'react-konami-code'
+import Cookies from 'universal-cookie'
 
 function CharacterSelection({
   handleSetCharacter,
@@ -9,6 +10,7 @@ function CharacterSelection({
 }) {
   const [characterName, setCharacterName] = useState('')
   const [bladeSwarmUnlocked, setBladeSwarmUnlocked] = useState(false)
+  const cookies = new Cookies()
 
   function selectCharacter(characterName) {
     setCharacterName(characterName)
@@ -17,6 +19,13 @@ function CharacterSelection({
   function handleUnlockBladeSwarm() {
     setBladeSwarmUnlocked(true)
   }
+
+  useEffect(() => {
+    let cookieCharacter = cookies.get('character')
+    if (cookieCharacter !== undefined) {
+      selectCharacter(cookieCharacter)
+    }
+  })
 
   return (
     <>
