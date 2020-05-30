@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import _ from 'lodash'
 import CardContainer from './CardContainer'
 
-// TODO: Get play 3rd card button working
 function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
   const [hasCardsInPlay, setHasCardsInPlay] = useState(false)
   const [chosenCards, setChosenCards] = useState([{}, {}, {}])
@@ -103,7 +102,6 @@ function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
   }
 
   function moveCardToActive(cardActivated) {
-    // TODO: Is there a limit to the number of active cards?
     let i = _.indexOf(chosenCards, cardActivated)
     let newChosenCards = [...chosenCards]
     newChosenCards[i] = {}
@@ -196,7 +194,6 @@ function DiscardedCards({
   moveDiscardedCardsToLost,
   removeCardFromDiscard,
 }) {
-  // TODO: Figure out long rest
   const [selectedCards, setSelectedCards] = useState([])
   const [resting, setResting] = useState(false)
   const [canRerollLost, setCanRerollLost] = useState(false)
@@ -703,43 +700,45 @@ function ModifierDeck({ modifierDeck }) {
   }
 
   function handleAddBless() {
-    // TODO: Max blessing cards?
-    let newLocalModifierDeck = [...localModifierDeck, blessingCard]
-    // When I had it shuffle once, the bless was always the last card. Suffling twice fixes this, but there is likely a better way to do this.
-    for (let i = newLocalModifierDeck.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * i)
-      const temp = newLocalModifierDeck[i]
-      newLocalModifierDeck[i] = newLocalModifierDeck[j]
-      newLocalModifierDeck[j] = temp
+    if (extraBlessCount < 10) {
+      let newLocalModifierDeck = [...localModifierDeck, blessingCard]
+      // When I had it shuffle once, the bless was always the last card. Suffling twice fixes this, but there is likely a better way to do this.
+      for (let i = newLocalModifierDeck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * i)
+        const temp = newLocalModifierDeck[i]
+        newLocalModifierDeck[i] = newLocalModifierDeck[j]
+        newLocalModifierDeck[j] = temp
+      }
+      for (let i = newLocalModifierDeck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * i)
+        const temp = newLocalModifierDeck[i]
+        newLocalModifierDeck[i] = newLocalModifierDeck[j]
+        newLocalModifierDeck[j] = temp
+      }
+      setLocalModifierDeck(newLocalModifierDeck)
+      setExtraBlessCount(extraBlessCount + 1)
     }
-    for (let i = newLocalModifierDeck.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * i)
-      const temp = newLocalModifierDeck[i]
-      newLocalModifierDeck[i] = newLocalModifierDeck[j]
-      newLocalModifierDeck[j] = temp
-    }
-    setLocalModifierDeck(newLocalModifierDeck)
-    setExtraBlessCount(extraBlessCount + 1)
   }
 
   function handleAddCurse() {
-    // TODO: Max curse cards?
-    let newLocalModifierDeck = [...localModifierDeck, curseCard]
-    // When I had it shuffle once, the bless was always the last card. Suffling twice fixes this, but there is likely a better way to do this.
-    for (let i = newLocalModifierDeck.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * i)
-      const temp = newLocalModifierDeck[i]
-      newLocalModifierDeck[i] = newLocalModifierDeck[j]
-      newLocalModifierDeck[j] = temp
+    if (extraCurseCount < 10) {
+      let newLocalModifierDeck = [...localModifierDeck, curseCard]
+      // When I had it shuffle once, the bless was always the last card. Suffling twice fixes this, but there is likely a better way to do this.
+      for (let i = newLocalModifierDeck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * i)
+        const temp = newLocalModifierDeck[i]
+        newLocalModifierDeck[i] = newLocalModifierDeck[j]
+        newLocalModifierDeck[j] = temp
+      }
+      for (let i = newLocalModifierDeck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * i)
+        const temp = newLocalModifierDeck[i]
+        newLocalModifierDeck[i] = newLocalModifierDeck[j]
+        newLocalModifierDeck[j] = temp
+      }
+      setLocalModifierDeck(newLocalModifierDeck)
+      setExtraCurseCount(extraCurseCount + 1)
     }
-    for (let i = newLocalModifierDeck.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * i)
-      const temp = newLocalModifierDeck[i]
-      newLocalModifierDeck[i] = newLocalModifierDeck[j]
-      newLocalModifierDeck[j] = temp
-    }
-    setLocalModifierDeck(newLocalModifierDeck)
-    setExtraCurseCount(extraCurseCount + 1)
   }
 
   function handleAddMinusOneCard() {
@@ -838,7 +837,6 @@ function ModifierDeck({ modifierDeck }) {
 }
 
 function LostCards({ character, lostCards, moveLostCardToHand }) {
-  // TODO: Convert selectedCards here from array to a single item. Can't pick more than 1
   const [selectedCard, setSelectedCard] = useState({})
   const firstRow = lostCards.slice(0, 5)
   const secondRow = lostCards.slice(5, 10)
