@@ -4,6 +4,7 @@ import Cookies from 'universal-cookie'
 
 function CharacterSelection({
   availableCharacters,
+  handleGameChange,
   handleSetCharacter,
   handleSetLevel,
   handleStaffOfCommand,
@@ -44,6 +45,12 @@ function CharacterSelection({
         <h2 className="header" align="center" style={{ color: 'white' }}>
           Select Your Character
         </h2>
+        <select
+          id="game-selector"
+          onChange={(event) => handleGameChange(event.target.value)}
+        >
+          <option value="gloomhaven">Gloomhaven</option>
+        </select>
         <table>
           <tbody>
             <tr>

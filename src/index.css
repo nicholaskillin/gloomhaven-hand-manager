@@ -9,6 +9,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h2 {
+  margin-bottom: 20px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -101,6 +105,10 @@ label.enhancement {
 
 .character-selected {
   border-color: white;
+}
+
+#game-selector {
+  margin-bottom: 1em;
 }
 
 .new-add-border {
