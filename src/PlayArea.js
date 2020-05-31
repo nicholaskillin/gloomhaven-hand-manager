@@ -176,15 +176,6 @@ function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
         hasCardsInPlay={hasCardsInPlay}
         staffOfCommand={staffOfCommand}
       />
-      <div id="zoomModal">
-        <div id="zoomContent">
-          <h2 style={{ color: 'black', textAlign: 'center' }}>
-            Played Modifiers
-          </h2>
-          <span className="close">&times;</span>
-          <div id="used-modifier-cards"></div>
-        </div>
-      </div>
     </>
   )
 }
@@ -657,7 +648,8 @@ function ModifierDeck({ modifierDeck }) {
   const [extraBlessCount, setExtraBlessCount] = useState(0)
   const [extraCurseCount, setExtraCurseCount] = useState(0)
   // PICK UP HERE: add a modal component and hand showModal state
-  const [showModal, setShowModal] = useState(false)
+  const [displayModal, setDisplayModal] = useState(false)
+
   const minus1Card = {
     name: 'extraMinus1',
     image: './images/attack-modifiers/base/player-mod/am-pm-minus1.png',
@@ -786,8 +778,12 @@ function ModifierDeck({ modifierDeck }) {
     setExtraBlessCount(0)
   }
 
-  function handleDisplayPlayedModifiers() {
-    console.log(`forgot what you played?`)
+  function showModal() {
+    setDisplayModal(true)
+  }
+
+  function hideModal() {
+    setDisplayModal(false)
   }
   return (
     <div id="attack-modifier-deck" align="center">
@@ -819,7 +815,7 @@ function ModifierDeck({ modifierDeck }) {
           alt="Played Modifiers"
           id="playedModifiers"
           className="attack-modifier"
-          onClick={() => handleDisplayPlayedModifiers()}
+          onClick={() => showModal()}
           src={playedModifyCards[playedModifyCards.length - 1].image}
         />
       )}
@@ -852,6 +848,24 @@ function ModifierDeck({ modifierDeck }) {
       >
         Reset Modifier Deck
       </button>
+      <ModifierModal handleClose={hideModal} show={displayModal} />
+    </div>
+  )
+}
+
+function ModifierModal({ handleClose, show }) {
+  const style = show ? { display: 'block' } : { display: 'none' }
+  return (
+    <div id="zoomModal" style={style}>
+      <div id="zoomContent">
+        <h2 style={{ color: 'black', textAlign: 'center' }}>
+          Played Modifiers
+        </h2>
+        <span className="close" onClick={handleClose}>
+          &times;
+        </span>
+        <div id="used-modifier-cards"></div>
+      </div>
     </div>
   )
 }
