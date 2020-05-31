@@ -21,11 +21,9 @@ function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
 
   function moveCardsToChosen(cards) {
     // remove selected cards from hand
-    console.log(cards)
     let newHand = [...hand]
     cards.forEach((card) => {
       _.remove(newHand, card)
-      console.log(newHand)
     })
     setHand(newHand)
 
@@ -663,8 +661,6 @@ function ModifierDeck({ modifierDeck }) {
     image: './images/attack-modifiers/base/player-mod/am-pm-bless.png',
   }
 
-  // TODO PRE LAUNCH: Shuffle Modifier Deck on first mount
-
   function handleFlipModifier() {
     let newLocalModifierDeck = [...localModifierDeck]
     setPlayedModifyCards([...playedModifyCards, newLocalModifierDeck[0]])
@@ -694,7 +690,6 @@ function ModifierDeck({ modifierDeck }) {
       setMustShuffle(false)
     } else {
       shuffledModifierDeck = [...localModifierDeck]
-      console.log('before shuffle', shuffledModifierDeck)
     }
     for (let i = shuffledModifierDeck.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * i)
@@ -702,7 +697,6 @@ function ModifierDeck({ modifierDeck }) {
       shuffledModifierDeck[i] = shuffledModifierDeck[j]
       shuffledModifierDeck[j] = temp
     }
-    console.log('after shuffle', shuffledModifierDeck)
     setLocalModifierDeck(shuffledModifierDeck)
   }
 

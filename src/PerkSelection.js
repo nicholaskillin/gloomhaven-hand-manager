@@ -84,7 +84,6 @@ function PerkSelection({
     if (cookieInfo.modifierChanges) {
       setChangesToModifierDeck(cookieInfo.modifierChanges)
     }
-    console.log(cookieInfo)
   }, [])
 
   function handlePerkChange(perkId, checkboxId, value) {
