@@ -3,6 +3,7 @@ import Konami from 'react-konami-code'
 import Cookies from 'universal-cookie'
 
 function CharacterSelection({
+  availableCharacters,
   handleSetCharacter,
   handleSetLevel,
   handleStaffOfCommand,
@@ -11,6 +12,12 @@ function CharacterSelection({
   const [characterName, setCharacterName] = useState('')
   const [bladeSwarmUnlocked, setBladeSwarmUnlocked] = useState(false)
   const cookies = new Cookies()
+  const firstRow = availableCharacters.slice(0, 2)
+  const secondRow = availableCharacters.slice(2, 5)
+  const thirdRow = availableCharacters.slice(5, 8)
+  const fourthRow = availableCharacters.slice(8, 11)
+  const fifthRow = availableCharacters.slice(11, 14)
+  const sixthRow = availableCharacters.slice(14, 17)
 
   function selectCharacter(characterName) {
     setCharacterName(characterName)
@@ -40,337 +47,64 @@ function CharacterSelection({
         <table>
           <tbody>
             <tr>
-              <td onClick={() => selectCharacter('brute')}>
-                <img
-                  id="brute"
-                  className={
-                    characterName === 'brute'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/br-icon.png"
-                  alt="brute"
+              {firstRow.map((character) => (
+                <CharacterContainer
+                  character={character}
+                  characterName={characterName}
+                  handleStaffOfCommand={handleStaffOfCommand}
+                  selectCharacter={selectCharacter}
                 />
-                <br />
-                <p className="character-title" align="center">
-                  Brute
-                </p>
-              </td>
-              <td onClick={() => selectCharacter('cragheart')}>
-                <img
-                  id="cragheart"
-                  className={
-                    characterName === 'cragheart'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/ch-icon.png"
-                  alt="cragheart"
-                />
-                <br />
-                <p className="character-title" align="center">
-                  Cragheart
-                </p>
-              </td>
-              <td onClick={() => selectCharacter('mindthief')}>
-                <img
-                  id="mindthief"
-                  className={
-                    characterName === 'mindthief'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/mt-icon.png"
-                  alt="mindthief"
-                />
-                <br />
-                <p className="character-title" align="center">
-                  Mindthief
-                </p>
-              </td>
+              ))}
             </tr>
             <tr>
-              <td onClick={() => selectCharacter('scoundrel')}>
-                <img
-                  id="scoundrel"
-                  className={
-                    characterName === 'scoundrel'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/sc-icon.png"
-                  alt="scoundrel"
+              {secondRow.map((character) => (
+                <CharacterContainer
+                  character={character}
+                  characterName={characterName}
+                  handleStaffOfCommand={handleStaffOfCommand}
+                  selectCharacter={selectCharacter}
                 />
-                <br />
-                <p className="character-title" align="center">
-                  Scoundrel
-                </p>
-              </td>
-              <td onClick={() => selectCharacter('spellweaver')}>
-                <img
-                  id="spellweaver"
-                  className={
-                    characterName === 'spellweaver'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/sw-icon.png"
-                  alt="spellweaver"
-                />
-                <br />
-                <p className="character-title" align="center">
-                  Spellweaver
-                </p>
-              </td>
-              <td onClick={() => selectCharacter('tinkerer')}>
-                <img
-                  id="tinkerer"
-                  className={
-                    characterName === 'tinkerer'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/ti-icon.png"
-                  alt="tinkerer"
-                />
-                <br />
-                <p className="character-title" align="center">
-                  Tinkerer
-                </p>
-              </td>
+              ))}
             </tr>
             <tr>
-              <td
-                id="beastTyrantOption"
-                onClick={() => selectCharacter('beastTyrant')}
-              >
-                <img
-                  id="beastTyrant"
-                  className={
-                    characterName === 'beastTyrant'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/bt-icon.png"
-                  alt="beastTyrant"
+              {thirdRow.map((character) => (
+                <CharacterContainer
+                  character={character}
+                  characterName={characterName}
+                  handleStaffOfCommand={handleStaffOfCommand}
+                  selectCharacter={selectCharacter}
                 />
-                <br />
-                <div>
-                  <div
-                    id="beastTyrantStaffLabel"
-                    className={
-                      characterName === 'beastTyrant'
-                        ? 'solo-scenario-label'
-                        : 'hiding'
-                    }
-                  >
-                    Completed solo scenario
-                  </div>
-                  <label className="switch">
-                    <input
-                      id="beastTyrantSolo"
-                      type="checkbox"
-                      onChange={(e) => handleStaffOfCommand(e.target.checked)}
-                    />
-                    <span
-                      id="beastTyrantStaff"
-                      className={
-                        characterName === 'beastTyrant'
-                          ? 'slider'
-                          : 'slider hiding'
-                      }
-                    />
-                  </label>
-                </div>
-                <p className="character-title" align="center">
-                  "Two Minis"
-                </p>
-              </td>
-              <td onClick={() => selectCharacter('doomStalker')}>
-                <img
-                  id="doomStalker"
-                  className={
-                    characterName === 'doomStalker'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/ds-icon.png"
-                  alt="doomStalker"
-                />
-                <br />
-                <p className="character-title" align="center">
-                  "Spiky Face"
-                </p>
-              </td>
-              <td onClick={() => selectCharacter('nightshroud')}>
-                <img
-                  id="nightshroud"
-                  className={
-                    characterName === 'nightshroud'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/ns-icon.png"
-                  alt="nightshroud"
-                />
-                <br />
-                <p className="character-title" align="center">
-                  "Eclipse"
-                </p>
-              </td>
+              ))}
             </tr>
             <tr>
-              <td onClick={() => selectCharacter('quartermaster')}>
-                <img
-                  id="quartermaster"
-                  className={
-                    characterName === 'quartermaster'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/qm-icon.png"
-                  alt="quartermaster"
+              {fourthRow.map((character) => (
+                <CharacterContainer
+                  character={character}
+                  characterName={characterName}
+                  handleStaffOfCommand={handleStaffOfCommand}
+                  selectCharacter={selectCharacter}
                 />
-                <br />
-                <p className="character-title" align="center">
-                  "Three Spears"
-                </p>
-              </td>
-              <td onClick={() => selectCharacter('elementalist')}>
-                <img
-                  id="elementalist"
-                  className={
-                    characterName === 'elementalist'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/el-icon.png"
-                  alt="elementalist"
-                />
-                <br />
-                <p className="character-title" align="center">
-                  "Triangles"
-                </p>
-              </td>
-              <td onClick={() => selectCharacter('sunkeeper')}>
-                <img
-                  id="sunkeeper"
-                  className={
-                    characterName === 'sunkeeper'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/sk-icon.png"
-                  alt="sunkeeper"
-                />
-                <br />
-                <p className="character-title" align="center">
-                  "Sun"
-                </p>
-              </td>
+              ))}
             </tr>
             <tr>
-              <td onClick={() => selectCharacter('summoner')}>
-                <img
-                  id="summoner"
-                  className={
-                    characterName === 'summoner'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/su-icon.png"
-                  alt="summoner"
+              {fifthRow.map((character) => (
+                <CharacterContainer
+                  character={character}
+                  characterName={characterName}
+                  handleStaffOfCommand={handleStaffOfCommand}
+                  selectCharacter={selectCharacter}
                 />
-                <br />
-                <p className="character-title" align="center">
-                  "Circles"
-                </p>
-              </td>
-              <td onClick={() => selectCharacter('berserker')}>
-                <img
-                  id="berserker"
-                  className={
-                    characterName === 'berserker'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/be-icon.png"
-                  alt="berserker"
-                />
-                <br />
-                <p className="character-title" align="center">
-                  "Lightning"
-                </p>
-              </td>
-              <td onClick={() => selectCharacter('soothsinger')}>
-                <img
-                  id="soothsinger"
-                  className={
-                    characterName === 'soothsinger'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/ss-icon.png"
-                  alt="soothsinger"
-                />
-                <br />
-                <p className="character-title" align="center">
-                  "Music Notes"
-                </p>
-              </td>
+              ))}
             </tr>
             <tr>
-              <td onClick={() => selectCharacter('sawbones')}>
-                <img
-                  id="sawbones"
-                  className={
-                    characterName === 'sawbones'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/sb-icon.png"
-                  alt="sawbones"
+              {sixthRow.map((character) => (
+                <CharacterContainer
+                  character={character}
+                  characterName={characterName}
+                  handleStaffOfCommand={handleStaffOfCommand}
+                  selectCharacter={selectCharacter}
                 />
-                <br />
-                <p className="character-title" align="center">
-                  "Saw"
-                </p>
-              </td>
-              <td onClick={() => selectCharacter('plaqueherald')}>
-                <img
-                  id="plagueherald"
-                  className={
-                    characterName === 'plaqueherald'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/ph-icon.png"
-                  alt="plaqueherald"
-                />
-                <br />
-                <p className="character-title" align="center">
-                  "Cthulhu"
-                </p>
-              </td>
-              <td
-                className={!bladeSwarmUnlocked ? 'hiding' : ''}
-                onClick={() => selectCharacter('bladeswarm')}
-              >
-                <img
-                  id="bladeswarm"
-                  className={
-                    characterName === 'bladeswarm'
-                      ? 'character active character-selected'
-                      : 'character active'
-                  }
-                  src="./images/character-icons/bs-icon.png"
-                  alt="bladeswarm"
-                />
-                <br />
-                <p className="character-title" align="center">
-                  Bladeswarm
-                </p>
-              </td>
+              ))}
             </tr>
           </tbody>
         </table>
@@ -414,6 +148,57 @@ function CharacterSelection({
         </button>
       </div>
     </>
+  )
+}
+
+function CharacterContainer({
+  character,
+  characterName,
+  handleStaffOfCommand,
+  selectCharacter,
+}) {
+  return (
+    <td onClick={() => selectCharacter(character.name)}>
+      <img
+        id={character.name}
+        className={
+          characterName === character.name
+            ? 'character active character-selected'
+            : 'character active'
+        }
+        src={`./images/character-icons/${character.initials}-icon.png`}
+        alt={character.name}
+      />
+      <br />
+      {character.name === 'beastTyrant' && (
+        <div>
+          <div
+            id="beastTyrantStaffLabel"
+            className={
+              characterName === 'beastTyrant' ? 'solo-scenario-label' : 'hiding'
+            }
+          >
+            Completed solo scenario
+          </div>
+          <label className="switch">
+            <input
+              id="beastTyrantSolo"
+              type="checkbox"
+              onChange={(e) => handleStaffOfCommand(e.target.checked)}
+            />
+            <span
+              id="beastTyrantStaff"
+              className={
+                characterName === 'beastTyrant' ? 'slider' : 'slider hiding'
+              }
+            />
+          </label>
+        </div>
+      )}
+      <p className="character-title" align="center">
+        {character.noSpoilerName}
+      </p>
+    </td>
   )
 }
 

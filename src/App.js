@@ -203,7 +203,7 @@ function App() {
     },
   ])
   const [staffOfCommand, setStaffOfCommand] = useState(false)
-  const allCharacterData = require('./characterData.json')
+  const allCharacterData = require('./gloomhavenCharacterData.json')
   const cookies = new Cookies()
 
   function handleSetStage(stage) {
@@ -370,6 +370,7 @@ function App() {
       {stage === 'selectCharacter' && (
         <>
           <CharacterSelection
+            availableCharacters={allCharacterData}
             handleSetCharacter={handleSetCharacter}
             handleSetLevel={handleSetLevel}
             handleStaffOfCommand={handleStaffOfCommand}

@@ -2,6 +2,7 @@
   {
     "name": "beastTyrant",
     "initials": "bt",
+    "noSpoilerName": "\"Two Minis\"",
     "handSize": 10,
     "startingCards": 13,
     "cards": [
@@ -721,58 +722,6 @@
         "checkboxes": [{ "id": 14 }],
         "label": "Ignore Negative Scenario Effects",
         "changes": []
-      }
-    ]
-  },
-  {
-    "name": "berserker",
-    "initials": "be",
-    "perks": [
-      { "id": 1, "checkboxes": [{ "id": 1 }], "label": "Remove Two -1 Cards" },
-      {
-        "id": 2,
-        "checkboxes": [{ "id": 1 }],
-        "label": "Remove four +0 cards"
-      },
-      {
-        "id": 3,
-        "checkboxes": [{ "id": 1 }, { "id": 2 }],
-        "label": "Replace one -1 card with one +1 card"
-      },
-      {
-        "id": 4,
-        "checkboxes": [{ "id": 1 }, { "id": 2 }],
-        "label": "Replace one +0 card with one rolling +2 card"
-      },
-      {
-        "id": 5,
-        "checkboxes": [{ "id": 1 }, { "id": 2 }],
-        "label": "Add two rolling Wound cards"
-      },
-      {
-        "id": 6,
-        "checkboxes": [{ "id": 1 }, { "id": 2 }],
-        "label": "Add one rolling Stun card"
-      },
-      {
-        "id": 7,
-        "checkboxes": [{ "id": 1 }],
-        "label": "Add one rolling +1 with Disarm card"
-      },
-      {
-        "id": 8,
-        "checkboxes": [{ "id": 1 }],
-        "label": "Add two rolling Heal 1 cards"
-      },
-      {
-        "id": 9,
-        "checkboxes": [{ "id": 1 }, { "id": 1 }],
-        "label": "Add one +2 with Fire card"
-      },
-      {
-        "id": 10,
-        "checkboxes": [{ "id": 1 }],
-        "label": "Ignore negative item effects"
       }
     ]
   }
