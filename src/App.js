@@ -8,6 +8,7 @@ import PlayArea from './PlayArea'
 import Cookies from 'universal-cookie'
 
 function App() {
+  // TODO PRE LAUNCH: Remove console.log from whole app
   const [stage, setStage] = useState('selectCharacter')
   const [character, setCharacter] = useState({})
   const [level, setLevel] = useState(1)

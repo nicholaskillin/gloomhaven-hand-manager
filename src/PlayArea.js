@@ -656,6 +656,8 @@ function ModifierDeck({ modifierDeck }) {
   const [mustShuffle, setMustShuffle] = useState(false)
   const [extraBlessCount, setExtraBlessCount] = useState(0)
   const [extraCurseCount, setExtraCurseCount] = useState(0)
+  // PICK UP HERE: add a modal component and hand showModal state
+  const [showModal, setShowModal] = useState(false)
   const minus1Card = {
     name: 'extraMinus1',
     image: './images/attack-modifiers/base/player-mod/am-pm-minus1.png',
@@ -668,6 +670,8 @@ function ModifierDeck({ modifierDeck }) {
     name: 'extraBless',
     image: './images/attack-modifiers/base/player-mod/am-pm-bless.png',
   }
+
+  // TODO PRE LAUNCH: Shuffle Modifier Deck on first mount
 
   function handleFlipModifier() {
     let newLocalModifierDeck = [...localModifierDeck]
@@ -781,6 +785,10 @@ function ModifierDeck({ modifierDeck }) {
     setExtraCurseCount(0)
     setExtraBlessCount(0)
   }
+
+  function handleDisplayPlayedModifiers() {
+    console.log(`forgot what you played?`)
+  }
   return (
     <div id="attack-modifier-deck" align="center">
       {mustShuffle && (
@@ -811,6 +819,7 @@ function ModifierDeck({ modifierDeck }) {
           alt="Played Modifiers"
           id="playedModifiers"
           className="attack-modifier"
+          onClick={() => handleDisplayPlayedModifiers()}
           src={playedModifyCards[playedModifyCards.length - 1].image}
         />
       )}
