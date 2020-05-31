@@ -265,6 +265,15 @@ function App() {
 
     // Add cards to modifier deck
     let newModifierDeck = modifierWithCardsRemoved.concat(cardsToAdd)
+
+    // Shuffle new deck
+    for (let i = newModifierDeck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * i)
+      const temp = newModifierDeck[i]
+      newModifierDeck[i] = newModifierDeck[j]
+      newModifierDeck[j] = temp
+    }
+
     // Set state with new deck
     setModifierDeck(newModifierDeck)
   }
