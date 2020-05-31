@@ -28,7 +28,7 @@ function CharacterSelection({
     if (cookieInfo.level) {
       handleSetLevel(parseInt(cookieInfo.level, 10))
     }
-  })
+  }, [])
 
   return (
     <>

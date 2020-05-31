@@ -213,11 +213,15 @@ function App() {
 
   function handleSetCharacter(characterName) {
     let characterData = allCharacterData.find((x) => x.name === characterName)
-    setCharacter(characterData, setStage('selectPerks'))
+    if (characterName !== cookies.get('character')) {
+      cookies.remove('perks')
+      cookies.remove('modifierChanges')
+    }
     cookies.set('character', characterData.name, {
       path: '/',
       maxAge: 31104000,
     })
+    setCharacter(characterData, setStage('selectPerks'))
   }
 
   function handleUpdateCharacter(character) {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import _ from 'lodash'
-
+import Cookies from 'universal-cookie'
 // TODO: How do I persist what perks have been selected if someone navigates away and comes back?
 
 function PerkSelection({
@@ -73,9 +73,18 @@ function PerkSelection({
     },
   ])
   const [changesToModifierDeck, setChangesToModifierDeck] = useState([])
+  const cookie = new Cookies()
 
   useEffect(() => {
     resetModifierDeck()
+    let cookieInfo = cookie.getAll()
+    if (cookieInfo.perks) {
+      setPerk(cookieInfo.perks)
+    }
+    if (cookieInfo.modifierChanges) {
+      setChangesToModifierDeck(cookieInfo.modifierChanges)
+    }
+    console.log(cookieInfo)
   }, [])
 
   function handlePerkChange(perkId, checkboxId, value) {
@@ -99,6 +108,17 @@ function PerkSelection({
   }
 
   function handleConfirmPerks() {
+    // Add perks to cookie
+    cookie.set('perks', perks, {
+      path: '/',
+      maxAge: 31104000,
+    })
+
+    cookie.set('modifierChanges', changesToModifierDeck, {
+      path: '/',
+      maxAge: 31104000,
+    })
+
     // TODO: Got each function working independantly, but they don't work together. Need to combine these two functions into a single function and rework it.
     // Adding cards to the modifier deck
     let cardsToAdd = _.filter(changesToModifierDeck, { action: 'add' })
