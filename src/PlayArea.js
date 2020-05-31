@@ -848,12 +848,16 @@ function ModifierDeck({ modifierDeck }) {
       >
         Reset Modifier Deck
       </button>
-      <ModifierModal handleClose={hideModal} show={displayModal} />
+      <ModifierModal
+        handleClose={hideModal}
+        playedModifierCards={playedModifyCards}
+        show={displayModal}
+      />
     </div>
   )
 }
 
-function ModifierModal({ handleClose, show }) {
+function ModifierModal({ handleClose, playedModifierCards, show }) {
   const style = show ? { display: 'block' } : { display: 'none' }
   return (
     <div id="zoomModal" style={style}>
@@ -864,7 +868,11 @@ function ModifierModal({ handleClose, show }) {
         <span className="close" onClick={handleClose}>
           &times;
         </span>
-        <div id="used-modifier-cards"></div>
+        <div id="used-modifier-cards">
+          {playedModifierCards.map((card) => (
+            <img alt={card.title} src={card.image} />
+          ))}
+        </div>
       </div>
     </div>
   )
