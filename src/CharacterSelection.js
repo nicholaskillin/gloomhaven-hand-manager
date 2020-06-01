@@ -165,7 +165,10 @@ function CharacterContainer({
   selectCharacter,
 }) {
   return (
-    <td onClick={() => selectCharacter(character.name)}>
+    <td
+      id={character.name === 'beastTyrant' ? 'beastTyrantOption' : ''}
+      onClick={() => selectCharacter(character.name)}
+    >
       <img
         id={character.name}
         className={
