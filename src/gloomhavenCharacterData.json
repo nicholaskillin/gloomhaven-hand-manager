@@ -1509,362 +1509,13 @@
     "startingCards": 13,
     "cards": [
       {
-        "title": "opposing-strike",
+        "title": "submissive-affliction",
         "level": 1,
-        "enhancementSpots": 2,
+        "enhancementSpots": 1,
         "enhancements": [
           {
             "id": 1,
-            "top": 84,
-            "left": 100,
-            "enhancement": ""
-          },
-          {
-            "id": 2,
-            "top": 84,
-            "left": 117,
-            "enhancement": ""
-          }
-        ],
-        "tracker": [
-          { "active": true },
-          { "active": true },
-          { "active": true },
-          { "active": true },
-          { "active": true },
-          { "active": true }
-        ]
-      },
-      {
-        "title": "crushing-grasp",
-        "level": 1,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 3,
-            "top": 75,
-            "left": 139,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "avalanche",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 4,
-            "top": 69,
-            "left": 101,
-            "enhancement": ""
-          },
-          {
-            "id": 5,
-            "top": 74,
-            "left": 129,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "rumbling-advance",
-        "level": 1,
-        "enhancementSpots": 3,
-        "enhancements": [
-          {
-            "id": 6,
-            "top": 72,
-            "left": 133,
-            "enhancement": ""
-          },
-          {
-            "id": 7,
-            "top": 87,
-            "left": 129,
-            "enhancement": ""
-          },
-          {
-            "id": 8,
-            "top": 194,
-            "left": 139,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "massive-boulder",
-        "level": 1,
-        "enhancementSpots": 3,
-        "enhancements": [
-          {
-            "id": 9,
-            "top": 60,
-            "left": 138,
-            "enhancement": ""
-          },
-          {
-            "id": 10,
-            "top": 75,
-            "left": 129,
-            "enhancement": ""
-          },
-          {
-            "id": 11,
-            "top": 222,
-            "left": 137,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "backup-ammunition",
-        "level": 1,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 12,
-            "top": 222,
-            "left": 136,
-            "enhancement": ""
-          }
-        ],
-        "tracker": [
-          { "active": true },
-          { "active": true },
-          { "active": true },
-          { "active": true }
-        ]
-      },
-      {
-        "title": "rock-tunnel",
-        "level": 1,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 13,
-            "top": 186,
-            "left": 136,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "unstable-upheaval",
-        "level": 1,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 14,
-            "top": 52,
-            "left": 139,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "crater",
-        "level": 1,
-        "enhancementSpots": 3,
-        "enhancements": [
-          {
-            "id": 15,
-            "top": 72,
-            "left": 140,
-            "enhancement": ""
-          },
-          {
-            "id": 16,
-            "top": 87,
-            "left": 130,
-            "enhancement": ""
-          },
-          {
-            "id": 17,
-            "top": 210,
-            "left": 136,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "dirt-tornado",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 18,
-            "top": 61,
-            "left": 105,
-            "enhancement": ""
-          },
-          {
-            "id": 19,
-            "top": 222,
-            "left": 136,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "earthen-clod",
-        "level": 1,
-        "enhancementSpots": 3,
-        "enhancements": [
-          {
-            "id": 20,
-            "top": 75,
-            "left": 139,
-            "enhancement": ""
-          },
-          {
-            "id": 21,
-            "top": 218,
-            "left": 135,
-            "enhancement": ""
-          },
-          {
-            "id": 22,
-            "top": 234,
-            "left": 130,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "heaving-swing",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 23,
-            "top": 55,
-            "left": 139,
-            "enhancement": ""
-          },
-          {
-            "id": 24,
-            "top": 71,
-            "left": 130,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "forceful-storm",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 25,
-            "top": 58,
-            "left": 116,
-            "enhancement": ""
-          },
-          {
-            "id": 26,
-            "top": 74,
-            "left": 139,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "natures-lift",
-        "level": 1,
-        "enhancementSpots": 3,
-        "enhancements": [
-          {
-            "id": 27,
-            "top": 77,
-            "left": 133,
-            "enhancement": ""
-          },
-          {
-            "id": 28,
-            "top": 92,
-            "left": 129,
-            "enhancement": ""
-          },
-          {
-            "id": 29,
-            "top": 107,
-            "left": 129,
-            "enhancement": ""
-          }
-        ],
-        "tracker": [
-          { "active": true },
-          { "active": true },
-          { "active": true },
-          { "active": true },
-          { "active": true },
-          { "active": true }
-        ]
-      },
-      {
-        "title": "explosive-punch",
-        "level": 2,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 30,
-            "top": 78,
-            "left": 138,
-            "enhancement": ""
-          },
-          {
-            "id": 31,
-            "top": 222,
-            "left": 137,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "sentient-growth",
-        "level": 2,
-        "enhancementSpots": 5,
-        "enhancements": [
-          {
-            "id": 32,
-            "top": 60,
-            "left": 111,
-            "enhancement": ""
-          },
-          {
-            "id": 33,
-            "top": 85,
-            "left": 133,
-            "enhancement": ""
-          },
-          {
-            "id": 34,
-            "top": 99,
-            "left": 107,
-            "enhancement": ""
-          },
-          {
-            "id": 35,
-            "top": 210,
-            "left": 134,
-            "enhancement": ""
-          },
-          {
-            "id": 36,
-            "top": 246,
+            "top": 64,
             "left": 138,
             "enhancement": ""
           }
@@ -1872,110 +1523,243 @@
         "tracker": []
       },
       {
-        "title": "clear-the-way",
-        "level": 3,
-        "enhancementSpots": 3,
-        "enhancements": [
-          {
-            "id": 37,
-            "top": 87,
-            "left": 139,
-            "enhancement": ""
-          },
-          {
-            "id": 38,
-            "top": 188,
-            "left": 135,
-            "enhancement": ""
-          },
-          {
-            "id": 39,
-            "top": 188,
-            "left": 150,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "blunt-force",
-        "level": 3,
-        "enhancementSpots": 4,
-        "enhancements": [
-          {
-            "id": 40,
-            "top": 66,
-            "left": 138,
-            "enhancement": ""
-          },
-          {
-            "id": 41,
-            "top": 66,
-            "left": 152,
-            "enhancement": ""
-          },
-          {
-            "id": 42,
-            "top": 192,
-            "left": 136,
-            "enhancement": ""
-          },
-          {
-            "id": 43,
-            "top": 219,
-            "left": 143,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "rock-slide",
-        "level": 4,
+        "title": "into-the-night",
+        "level": 1,
         "enhancementSpots": 0,
         "enhancements": [],
         "tracker": []
       },
       {
-        "title": "kinetic-assault",
-        "level": 4,
+        "title": "fearsome-blade",
+        "level": 1,
         "enhancementSpots": 4,
         "enhancements": [
           {
-            "id": 44,
-            "top": 82,
-            "left": 135,
+            "id": 2,
+            "top": 73,
+            "left": 138,
             "enhancement": ""
           },
           {
-            "id": 45,
-            "top": 105,
-            "left": 139,
-            "enhancement": ""
-          },
-          {
-            "id": 46,
-            "top": 203,
-            "left": 143,
-            "enhancement": ""
-          },
-          {
-            "id": 47,
-            "top": 218,
+            "id": 3,
+            "top": 88,
             "left": 131,
+            "enhancement": ""
+          },
+          {
+            "id": 4,
+            "top": 223,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 5,
+            "top": 223,
+            "left": 153,
             "enhancement": ""
           }
         ],
         "tracker": []
       },
       {
-        "title": "petrify",
-        "level": 5,
+        "title": "feedback-loop",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 6,
+            "top": 98,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 7,
+            "top": 187,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "gnawing-horde",
+        "level": 1,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 8,
+            "top": 78,
+            "left": 81,
+            "enhancement": ""
+          },
+          {
+            "id": 9,
+            "top": 78,
+            "left": 122,
+            "enhancement": ""
+          },
+          {
+            "id": 10,
+            "top": 98,
+            "left": 81,
+            "enhancement": ""
+          },
+          {
+            "id": 11,
+            "top": 224,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "the-minds-weakness",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 12,
+            "top": 98,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 13,
+            "top": 217,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "parasitic-influence",
+        "level": 1,
         "enhancementSpots": 1,
         "enhancements": [
           {
-            "id": 48,
-            "top": 204,
+            "id": 14,
+            "top": 100,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "scurry",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 15,
+            "top": 81,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 16,
+            "top": 105,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "perverse-edge",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 17,
+            "top": 77,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 18,
+            "top": 198,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 19,
+            "top": 214,
+            "left": 130,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "empathetic-assault",
+        "level": 1,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 20,
+            "top": 65,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 21,
+            "top": 65,
+            "left": 154,
+            "enhancement": ""
+          },
+          {
+            "id": 22,
+            "top": 203,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 22,
+            "top": 228,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "withering-claw",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 23,
+            "top": 96,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "possession",
+        "level": 1,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "frigid-apparition",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 24,
+            "top": 83,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 25,
+            "top": 191,
             "left": 137,
             "enhancement": ""
           }
@@ -1983,43 +1767,76 @@
         "tracker": []
       },
       {
-        "title": "stone-pummel",
-        "level": 5,
-        "enhancementSpots": 3,
+        "title": "wretched-creature",
+        "level": 2,
+        "enhancementSpots": 4,
         "enhancements": [
           {
-            "id": 49,
-            "top": 73,
-            "left": 102,
+            "id": 26,
+            "top": 78,
+            "left": 80,
             "enhancement": ""
           },
           {
-            "id": 50,
-            "top": 79,
-            "left": 162,
+            "id": 27,
+            "top": 78,
+            "left": 121,
             "enhancement": ""
           },
           {
-            "id": 51,
-            "top": 111,
-            "left": 108,
+            "id": 28,
+            "top": 98,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 29,
+            "top": 208,
+            "left": 136,
             "enhancement": ""
           }
         ],
-        "tracker": [
-          { "active": true },
-          { "active": true },
-          { "active": true },
-          { "active": true }
-        ]
+        "tracker": []
       },
       {
-        "title": "dig-pit",
-        "level": 6,
-        "enhancementSpots": 1,
+        "title": "hostile-takeover",
+        "level": 2,
+        "enhancementSpots": 2,
         "enhancements": [
           {
-            "id": 52,
+            "id": 30,
+            "top": 64,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 31,
+            "top": 80,
+            "left": 130,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "brain-leech",
+        "level": 3,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 32,
+            "top": 55,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 33,
+            "top": 94,
+            "left": 133,
+            "enhancement": ""
+          },
+          {
+            "id": 34,
             "top": 205,
             "left": 138,
             "enhancement": ""
@@ -2028,39 +1845,77 @@
         "tracker": []
       },
       {
-        "title": "cataclysm",
-        "level": 6,
-        "enhancementSpots": 2,
+        "title": "silent-scream",
+        "level": 3,
+        "enhancementSpots": 3,
         "enhancements": [
           {
-            "id": 53,
-            "top": 64,
-            "left": 105,
+            "id": 35,
+            "top": 99,
+            "left": 138,
             "enhancement": ""
           },
           {
-            "id": 54,
-            "top": 214,
-            "left": 137,
+            "id": 36,
+            "top": 194,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 37,
+            "top": 219,
+            "left": 139,
             "enhancement": ""
           }
         ],
         "tracker": []
       },
       {
-        "title": "meteor",
-        "level": 7,
-        "enhancementSpots": 2,
+        "title": "pilfer",
+        "level": 4,
+        "enhancementSpots": 3,
         "enhancements": [
           {
-            "id": 55,
-            "top": 83,
+            "id": 38,
+            "top": 189,
             "left": 138,
             "enhancement": ""
           },
           {
-            "id": 56,
-            "top": 216,
+            "id": 39,
+            "top": 213,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 40,
+            "top": 236,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "cranium-overload",
+        "level": 4,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 41,
+            "top": 79,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 42,
+            "top": 79,
+            "left": 155,
+            "enhancement": ""
+          },
+          {
+            "id": 43,
+            "top": 225,
             "left": 136,
             "enhancement": ""
           }
@@ -2068,105 +1923,199 @@
         "tracker": []
       },
       {
-        "title": "brutal-momentum",
-        "level": 7,
-        "enhancementSpots": 2,
+        "title": "mass-hysteria",
+        "level": 5,
+        "enhancementSpots": 1,
         "enhancements": [
           {
-            "id": 57,
-            "top": 62,
-            "left": 139,
-            "enhancement": ""
-          },
-          {
-            "id": 58,
-            "top": 78,
-            "left": 129,
+            "id": 44,
+            "top": 89,
+            "left": 130,
             "enhancement": ""
           }
         ],
         "tracker": []
       },
       {
-        "title": "rocky-end",
+        "title": "frozen-mind",
+        "level": 5,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 45,
+            "top": 99,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "corrupting-embrace",
+        "level": 6,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 46,
+            "top": 67,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 47,
+            "top": 104,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 48,
+            "top": 185,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "dark-frenzy",
+        "level": 6,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 49,
+            "top": 71,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 50,
+            "top": 191,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 51,
+            "top": 214,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "vicious-blood",
+        "level": 7,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 52,
+            "top": 100,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 53,
+            "top": 212,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 54,
+            "top": 235,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "psychic-projection",
+        "level": 7,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 55,
+            "top": 54,
+            "left": 133,
+            "enhancement": ""
+          },
+          {
+            "id": 56,
+            "top": 85,
+            "left": 135,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "shared-nightmare",
+        "level": 8,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 57,
+            "top": 53,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 58,
+            "top": 82,
+            "left": 130,
+            "enhancement": ""
+          },
+          {
+            "id": 59,
+            "top": 209,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "domination",
         "level": 8,
         "enhancementSpots": 0,
         "enhancements": [],
         "tracker": []
       },
       {
-        "title": "lumbering-bash",
-        "level": 8,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 59,
-            "top": 70,
-            "left": 136,
-            "enhancement": ""
-          },
-          {
-            "id": 60,
-            "top": 91,
-            "left": 138,
-            "enhancement": ""
-          }
-        ],
-        "tracker": [
-          { "active": true },
-          { "active": true },
-          { "active": true },
-          { "active": true },
-          { "active": true }
-        ]
-      },
-      {
-        "title": "blind-destruction",
+        "title": "many-as-one",
         "level": 9,
         "enhancementSpots": 2,
         "enhancements": [
           {
-            "id": 61,
-            "top": 80,
-            "left": 130,
+            "id": 60,
+            "top": 78,
+            "left": 81,
             "enhancement": ""
           },
           {
-            "id": 62,
-            "top": 190,
-            "left": 137,
+            "id": 61,
+            "top": 78,
+            "left": 121,
             "enhancement": ""
           }
         ],
         "tracker": []
       },
       {
-        "title": "pulverize",
+        "title": "phantasmal-killer",
         "level": 9,
-        "enhancementSpots": 4,
+        "enhancementSpots": 2,
         "enhancements": [
           {
+            "id": 62,
+            "top": 99,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
             "id": 63,
-            "top": 52,
-            "left": 138,
-            "enhancement": ""
-          },
-          {
-            "id": 64,
-            "top": 68,
-            "left": 129,
-            "enhancement": ""
-          },
-          {
-            "id": 65,
-            "top": 186,
-            "left": 138,
-            "enhancement": ""
-          },
-          {
-            "id": 66,
-            "top": 245,
-            "left": 137,
+            "top": 184,
+            "left": 136,
             "enhancement": ""
           }
         ],
@@ -2176,76 +2125,91 @@
     "perks": [
       {
         "id": 1,
-        "checkboxes": [{ "id": 0 }],
-        "label": "Remove four +0 Cards",
-        "changes": [{ "cardTitle": "plus0", "action": "remove", "number": 4 }]
+        "checkboxes": [{ "id": 0 }, { "id": 1 }],
+        "label": "Remove two -1 Cards",
+        "changes": [{ "cardTitle": "minus1", "action": "remove", "number": 2 }]
       },
       {
         "id": 2,
-        "checkboxes": [{ "id": 1 }, { "id": 2 }, { "id": 3 }],
-        "label": "Replace one -1 card with one +1 Card",
-        "changes": [
-          { "cardTitle": "minus1", "action": "remove", "number": 1 },
-          { "cardTitle": "plus1", "action": "add", "number": 1 }
-        ]
+        "checkboxes": [{ "id": 2 }],
+        "label": "Remove four +0 cards",
+        "changes": [{ "cardTitle": "plus0", "action": "remove", "number": 4 }]
       },
       {
         "id": 3,
-        "checkboxes": [{ "id": 4 }],
-        "label": "Add one -2 card and two +2 cards",
+        "checkboxes": [{ "id": 3 }],
+        "label": "Replace two +1 cards with two +2 cards",
         "changes": [
-          { "cardTitle": "minus2", "action": "add", "number": 1 },
+          { "cardTitle": "plus1", "action": "remove", "number": 2 },
           { "cardTitle": "plus2", "action": "add", "number": 2 }
         ]
       },
       {
         "id": 4,
-        "checkboxes": [{ "id": 5 }, { "id": 6 }],
-        "label": "Add one +1 Immobilize card",
+        "checkboxes": [{ "id": 4 }],
+        "label": "Replace one -2 card with one +0 card",
         "changes": [
-          { "cardTitle": "plus1Immobilize", "action": "add", "number": 1 }
+          { "cardTitle": "minus2", "action": "remove", "number": 1 },
+          { "cardTitle": "plus0", "action": "add", "number": 1 }
         ]
       },
       {
         "id": 5,
-        "checkboxes": [{ "id": 7 }, { "id": 8 }],
-        "label": "Add one +2 Muddle card",
-        "changes": [
-          { "cardTitle": "plus2Muddle", "action": "add", "number": 1 }
-        ]
+        "checkboxes": [{ "id": 5 }, { "id": 6 }],
+        "label": "Add one +2 Ice card",
+        "changes": [{ "cardTitle": "plus2Ice", "action": "add", "number": 1 }]
       },
       {
         "id": 6,
-        "checkboxes": [{ "id": 9 }],
-        "label": "Add two rolling Push 2 cards",
+        "checkboxes": [{ "id": 7 }, { "id": 8 }],
+        "label": "Add two rolling Plus 1 cards",
         "changes": [
-          { "cardTitle": "rollingPush2", "action": "add", "number": 2 }
+          { "cardTitle": "rollingPlus1", "action": "add", "number": 2 }
         ]
       },
       {
         "id": 7,
-        "checkboxes": [{ "id": 10 }, { "id": 11 }],
-        "label": "Add two rolling Leaf cards",
+        "checkboxes": [{ "id": 9 }],
+        "label": "Add three rolling Pull 1 cards",
         "changes": [
-          { "cardTitle": "rollingLeaf", "action": "add", "number": 2 }
+          { "cardTitle": "rollingPull1", "action": "add", "number": 3 }
         ]
       },
       {
         "id": 8,
-        "checkboxes": [{ "id": 12 }],
-        "label": "Add two rolling Wind cards",
+        "checkboxes": [{ "id": 10 }],
+        "label": "Add three rolling Muddle cards",
         "changes": [
-          { "cardTitle": "rollingWind", "action": "add", "number": 2 }
+          { "cardTitle": "rollingMuddle", "action": "add", "number": 3 }
         ]
       },
       {
         "id": 9,
-        "checkboxes": [{ "id": 13 }],
-        "label": "Ignore negative item effects",
-        "changes": []
+        "checkboxes": [{ "id": 11 }],
+        "label": "Add two rolling Immobilize cards",
+        "changes": [
+          { "cardTitle": "rollingImmobilize", "action": "add", "number": 2 }
+        ]
       },
       {
         "id": 10,
+        "checkboxes": [{ "id": 12 }],
+        "label": "Add one rolling Stun card",
+        "changes": [
+          { "cardTitle": "rollingStun", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 11,
+        "checkboxes": [{ "id": 13 }],
+        "label": "Add one rolling Disarm card and one rolling Muddle card",
+        "changes": [
+          { "cardTitle": "rollingDisarm", "action": "add", "number": 1 },
+          { "cardTitle": "rollingMuddle", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 12,
         "checkboxes": [{ "id": 14 }],
         "label": "Ignore negative scenario effects",
         "changes": []
