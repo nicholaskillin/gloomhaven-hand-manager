@@ -24,6 +24,10 @@ html {
   font-family: 'Palatino Linotype', sans-serif;
 }
 
+#root {
+  margin-bottom: 30px;
+}
+
 label.enhancement {
   font-size: 15px;
   padding-right: 5px;
