@@ -59,6 +59,7 @@ function CharacterSelection({
                   character={character}
                   characterName={characterName}
                   handleStaffOfCommand={handleStaffOfCommand}
+                  key={character.name}
                   selectCharacter={selectCharacter}
                 />
               ))}
@@ -69,6 +70,7 @@ function CharacterSelection({
                   character={character}
                   characterName={characterName}
                   handleStaffOfCommand={handleStaffOfCommand}
+                  key={character.name}
                   selectCharacter={selectCharacter}
                 />
               ))}
@@ -79,6 +81,7 @@ function CharacterSelection({
                   character={character}
                   characterName={characterName}
                   handleStaffOfCommand={handleStaffOfCommand}
+                  key={character.name}
                   selectCharacter={selectCharacter}
                 />
               ))}
@@ -89,6 +92,7 @@ function CharacterSelection({
                   character={character}
                   characterName={characterName}
                   handleStaffOfCommand={handleStaffOfCommand}
+                  key={character.name}
                   selectCharacter={selectCharacter}
                 />
               ))}
@@ -99,6 +103,7 @@ function CharacterSelection({
                   character={character}
                   characterName={characterName}
                   handleStaffOfCommand={handleStaffOfCommand}
+                  key={character.name}
                   selectCharacter={selectCharacter}
                 />
               ))}
@@ -109,6 +114,7 @@ function CharacterSelection({
                   character={character}
                   characterName={characterName}
                   handleStaffOfCommand={handleStaffOfCommand}
+                  key={character.name}
                   selectCharacter={selectCharacter}
                 />
               ))}
