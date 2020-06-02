@@ -2217,6 +2217,667 @@
     ]
   },
   {
+    "name": "scoundrel",
+    "initials": "sc",
+    "noSpoilerName": "Scoundrel",
+    "handSize": 9,
+    "startingCards": 12,
+    "cards": [
+      {
+        "title": "single-out",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 1,
+            "top": 77,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": [
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true }
+        ]
+      },
+      {
+        "title": "flanking-strike",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 2,
+            "top": 77,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 3,
+            "top": 223,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "smoke-bomb",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 4,
+            "top": 53,
+            "left": 147,
+            "enhancement": ""
+          },
+          {
+            "id": 5,
+            "top": 216,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 6,
+            "top": 232,
+            "left": 130,
+            "enhancement": ""
+          }
+        ],
+        "tracker": [{ "active": true }]
+      },
+      {
+        "title": "backstab",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 7,
+            "top": 59,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 8,
+            "top": 59,
+            "left": 154,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "thiefs-knack",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 9,
+            "top": 211,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "venom-shiv",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 10,
+            "top": 73,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 11,
+            "top": 223,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "throwing-knives",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 12,
+            "top": 82,
+            "left": 130,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "quick-hands",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 13,
+            "top": 82,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 14,
+            "top": 104,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "special-mixture",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 15,
+            "top": 87,
+            "left": 134,
+            "enhancement": ""
+          },
+          {
+            "id": 16,
+            "top": 207,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "sinister-opportunity",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 17,
+            "top": 68,
+            "left": 140,
+            "enhancement": ""
+          },
+          {
+            "id": 18,
+            "top": 190,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "tricksters-reversal",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 19,
+            "top": 67,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 20,
+            "top": 67,
+            "left": 153,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "swift-bow",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 21,
+            "top": 85,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 22,
+            "top": 101,
+            "left": 130,
+            "enhancement": ""
+          },
+          {
+            "id": 23,
+            "top": 211,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "open-wound",
+        "level": 2,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 24,
+            "top": 77,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 25,
+            "top": 223,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "flintlock",
+        "level": 2,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 26,
+            "top": 204,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 27,
+            "top": 204,
+            "left": 152,
+            "enhancement": ""
+          },
+          {
+            "id": 28,
+            "top": 220,
+            "left": 130,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "hidden-daggers",
+        "level": 3,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 29,
+            "top": 65,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 30,
+            "top": 80,
+            "left": 130,
+            "enhancement": ""
+          },
+          {
+            "id": 31,
+            "top": 95,
+            "left": 130,
+            "enhancement": ""
+          },
+          {
+            "id": 32,
+            "top": 218,
+            "left": 147,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "duelists-advance",
+        "level": 3,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 33,
+            "top": 82,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 34,
+            "top": 105,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "flurry-of-blades",
+        "level": 4,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 35,
+            "top": 80,
+            "left": 131,
+            "enhancement": ""
+          },
+          {
+            "id": 36,
+            "top": 197,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "gruesome-advantage",
+        "level": 4,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 37,
+            "top": 59,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 38,
+            "top": 59,
+            "left": 154,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "cull-the-weak",
+        "level": 5,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 39,
+            "top": 74,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": [
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true }
+        ]
+      },
+      {
+        "title": "visage-of-the-inevitable",
+        "level": 5,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 40,
+            "top": 205,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "crippling-poison",
+        "level": 6,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 41,
+            "top": 198,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "burning-oil",
+        "level": 6,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 42,
+            "top": 66,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 43,
+            "top": 82,
+            "left": 130,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "stick-to-the-shadows",
+        "level": 7,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 44,
+            "top": 78,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 45,
+            "top": 78,
+            "left": 153,
+            "enhancement": ""
+          },
+          {
+            "id": 46,
+            "top": 227,
+            "left": 147,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "spring-the-trap",
+        "level": 7,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": [{ "active": true }]
+      },
+      {
+        "title": "stiletto-storm",
+        "level": 8,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 47,
+            "top": 81,
+            "left": 131,
+            "enhancement": ""
+          },
+          {
+            "id": 48,
+            "top": 195,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 49,
+            "top": 216,
+            "left": 143,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "pains-end",
+        "level": 8,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 50,
+            "top": 73,
+            "left": 133,
+            "enhancement": ""
+          },
+          {
+            "id": 51,
+            "top": 73,
+            "left": 149,
+            "enhancement": ""
+          },
+          {
+            "id": 52,
+            "top": 210,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "long-con",
+        "level": 9,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 53,
+            "top": 78,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "watch-it-burn",
+        "level": 9,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 54,
+            "top": 206,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 55,
+            "top": 229,
+            "left": 144,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      }
+    ],
+    "perks": [
+      {
+        "id": 1,
+        "checkboxes": [{ "id": 0 }, { "id": 1 }],
+        "label": "Remove two -1 Cards",
+        "changes": [{ "cardTitle": "minus1", "action": "remove", "number": 2 }]
+      },
+      {
+        "id": 2,
+        "checkboxes": [{ "id": 2 }],
+        "label": "Remove four +0 cards",
+        "changes": [{ "cardTitle": "plus0", "action": "remove", "number": 4 }]
+      },
+      {
+        "id": 3,
+        "checkboxes": [{ "id": 3 }],
+        "label": "Replace one -2 card with one +0 card",
+        "changes": [
+          { "cardTitle": "minus2", "action": "remove", "number": 1 },
+          { "cardTitle": "plus0", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 4,
+        "checkboxes": [{ "id": 4 }],
+        "label": "Replace one -1 card with one +1 card",
+        "changes": [
+          { "cardTitle": "minus1", "action": "remove", "number": 1 },
+          { "cardTitle": "plus1", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 5,
+        "checkboxes": [{ "id": 5 }, { "id": 6 }],
+        "label": "Replace one +0 card with one +2 card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 1 },
+          { "cardTitle": "plus2", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 6,
+        "checkboxes": [{ "id": 7 }, { "id": 8 }],
+        "label": "Add two rolling Plus 1 cards",
+        "changes": [
+          { "cardTitle": "rollingPlus1", "action": "add", "number": 2 }
+        ]
+      },
+      {
+        "id": 7,
+        "checkboxes": [{ "id": 9 }],
+        "label": "Add two rolling Pierce 3 cards",
+        "changes": [
+          { "cardTitle": "rollingPierce3", "action": "add", "number": 2 }
+        ]
+      },
+      {
+        "id": 8,
+        "checkboxes": [{ "id": 10 }, { "id": 11 }],
+        "label": "Add two rolling Poison cards",
+        "changes": [
+          { "cardTitle": "rollingPoison", "action": "add", "number": 2 }
+        ]
+      },
+      {
+        "id": 9,
+        "checkboxes": [{ "id": 12 }],
+        "label": "Add two rolling Muddle cards",
+        "changes": [
+          { "cardTitle": "rollingMuddle", "action": "add", "number": 2 }
+        ]
+      },
+      {
+        "id": 10,
+        "checkboxes": [{ "id": 13 }],
+        "label": "Add one rolling Invisible card",
+        "changes": [
+          { "cardTitle": "rollingInvisible", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 11,
+        "checkboxes": [{ "id": 14 }],
+        "label": "Ignore negative scenario effects",
+        "changes": []
+      }
+    ]
+  },
+  {
     "name": "beastTyrant",
     "initials": "bt",
     "noSpoilerName": "\"Two Minis\"",
