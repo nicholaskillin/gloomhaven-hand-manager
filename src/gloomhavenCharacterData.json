@@ -5057,5 +5057,705 @@
         "changes": []
       }
     ]
+  },
+  {
+    "name": "doomStalker",
+    "initials": "ds",
+    "noSpoilerName": "\"Spiky Face\"",
+    "handSize": 12,
+    "startingCards": 15,
+    "cards": [
+      {
+        "title": "rain-of-arrows",
+        "level": 1,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": [
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true }
+        ]
+      },
+      {
+        "title": "crippling-noose",
+        "level": 1,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "felling-swoop",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 1,
+            "top": 78,
+            "left": 81,
+            "enhancement": ""
+          },
+          {
+            "id": 2,
+            "top": 78,
+            "left": 122,
+            "enhancement": ""
+          },
+          {
+            "id": 3,
+            "top": 98,
+            "left": 81,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "vital-charge",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 4,
+            "top": 78,
+            "left": 81,
+            "enhancement": ""
+          },
+          {
+            "id": 5,
+            "top": 78,
+            "left": 122,
+            "enhancement": ""
+          },
+          {
+            "id": 6,
+            "top": 98,
+            "left": 81,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "race-to-the-grave",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 7,
+            "top": 72,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 8,
+            "top": 72,
+            "left": 153,
+            "enhancement": ""
+          },
+          {
+            "id": 9,
+            "top": 88,
+            "left": 129,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "multi-pronged-assault",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 10,
+            "top": 66,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 11,
+            "top": 81,
+            "left": 129,
+            "enhancement": ""
+          },
+          {
+            "id": 12,
+            "top": 96,
+            "left": 129,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "detonation",
+        "level": 1,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "frightening-curse",
+        "level": 1,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": [{ "active": true }, { "active": true }, { "active": true }]
+      },
+      {
+        "title": "foot-snare",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 13,
+            "top": 243,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "solid-bow",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 14,
+            "top": 85,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 15,
+            "top": 100,
+            "left": 130,
+            "enhancement": ""
+          },
+          {
+            "id": 16,
+            "top": 222,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "a-moments-peace",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 17,
+            "top": 205,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 18,
+            "top": 231,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "swift-trickery",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 19,
+            "top": 77,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 20,
+            "top": 92,
+            "left": 130,
+            "enhancement": ""
+          },
+          {
+            "id": 21,
+            "top": 222,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "sap-life",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 22,
+            "top": 73,
+            "left": 144,
+            "enhancement": ""
+          },
+          {
+            "id": 23,
+            "top": 89,
+            "left": 131,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "the-hunt-begins",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 24,
+            "top": 78,
+            "left": 81,
+            "enhancement": ""
+          },
+          {
+            "id": 25,
+            "top": 78,
+            "left": 122,
+            "enhancement": ""
+          },
+          {
+            "id": 26,
+            "top": 98,
+            "left": 81,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "fresh-kill",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 27,
+            "top": 66,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 28,
+            "top": 81,
+            "left": 131,
+            "enhancement": ""
+          },
+          {
+            "id": 29,
+            "top": 217,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "expose",
+        "level": 2,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "relentless-offensive",
+        "level": 2,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 30,
+            "top": 78,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 31,
+            "top": 108,
+            "left": 131,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "darkened-skies",
+        "level": 3,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 32,
+            "top": 72,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "press-the-attack",
+        "level": 3,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 33,
+            "top": 77,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 34,
+            "top": 92,
+            "left": 130,
+            "enhancement": ""
+          },
+          {
+            "id": 35,
+            "top": 204,
+            "left": 143,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "singular-focus",
+        "level": 4,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "flight-of-flame",
+        "level": 4,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 36,
+            "top": 218,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "inescapable-fate",
+        "level": 5,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": [{ "active": true }, { "active": true }, { "active": true }]
+      },
+      {
+        "title": "wild-command",
+        "level": 5,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 37,
+            "top": 205,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 38,
+            "top": 229,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "natures-hunger",
+        "level": 6,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 39,
+            "top": 78,
+            "left": 81,
+            "enhancement": ""
+          },
+          {
+            "id": 40,
+            "top": 78,
+            "left": 122,
+            "enhancement": ""
+          },
+          {
+            "id": 41,
+            "top": 98,
+            "left": 81,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "camouflage",
+        "level": 6,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 42,
+            "top": 64,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 43,
+            "top": 205,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "impending-end",
+        "level": 7,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 44,
+            "top": 71,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 45,
+            "top": 86,
+            "left": 129,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "crashing-wave",
+        "level": 7,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 46,
+            "top": 65,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 47,
+            "top": 89,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 48,
+            "top": 89,
+            "left": 153,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "rising-momentum",
+        "level": 8,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 49,
+            "top": 64,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 50,
+            "top": 80,
+            "left": 130,
+            "enhancement": ""
+          },
+          {
+            "id": 51,
+            "top": 94,
+            "left": 132,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "feral-instincts",
+        "level": 8,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 52,
+            "top": 67,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 52,
+            "top": 92,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 53,
+            "top": 205,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 54,
+            "top": 230,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "predator-and-prey",
+        "level": 9,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 55,
+            "top": 78,
+            "left": 81,
+            "enhancement": ""
+          },
+          {
+            "id": 56,
+            "top": 78,
+            "left": 122,
+            "enhancement": ""
+          },
+          {
+            "id": 57,
+            "top": 98,
+            "left": 81,
+            "enhancement": ""
+          },
+          {
+            "id": 58,
+            "top": 98,
+            "left": 122,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "lead-to-slaughter",
+        "level": 9,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 59,
+            "top": 64,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 60,
+            "top": 79,
+            "left": 131,
+            "enhancement": ""
+          },
+          {
+            "id": 61,
+            "top": 203,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      }
+    ],
+    "perks": [
+      {
+        "id": 1,
+        "checkboxes": [{ "id": 0 }, { "id": 1 }],
+        "label": "Remove Two -1 Cards",
+        "changes": [{ "cardTitle": "minus1", "action": "remove", "number": 2 }]
+      },
+      {
+        "id": 2,
+        "checkboxes": [{ "id": 2 }, { "id": 3 }, { "id": 4 }],
+        "label": "Replace two +0 cards with two +1 cards",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 2 },
+          { "cardTitle": "plus1", "action": "add", "number": 2 }
+        ]
+      },
+      {
+        "id": 3,
+        "checkboxes": [{ "id": 5 }, { "id": 6 }],
+        "label": "Add two rolling +1 cards",
+        "changes": [{ "cardTitle": "plus1", "action": "add", "number": 2 }]
+      },
+      {
+        "id": 4,
+        "checkboxes": [{ "id": 7 }],
+        "label": "Add one +2 Muddle card",
+        "changes": [
+          { "cardTitle": "plus2Muddle", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 5,
+        "checkboxes": [{ "id": 8 }],
+        "label": "Add one +1 Poison card",
+        "changes": [
+          { "cardTitle": "plus1Poison", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 6,
+        "checkboxes": [{ "id": 9 }],
+        "label": "Add one +1 Wound card",
+        "changes": [{ "cardTitle": "plus1Wound", "action": "add", "number": 1 }]
+      },
+      {
+        "id": 7,
+        "checkboxes": [{ "id": 10 }],
+        "label": "Add one +1 Immobilize card",
+        "changes": [
+          { "cardTitle": "plus1Immobilize", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 8,
+        "checkboxes": [{ "id": 11 }],
+        "label": "Add one +0 Stun card",
+        "changes": [{ "cardTitle": "Stun", "action": "add", "number": 1 }]
+      },
+      {
+        "id": 9,
+        "checkboxes": [{ "id": 12 }, { "id": 13 }],
+        "label": "Add one rolling Add Target card",
+        "changes": [
+          { "cardTitle": "rollingAddTarget", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 10,
+        "checkboxes": [{ "id": 14 }],
+        "label": "Ignore negative scenario effects",
+        "changes": []
+      }
+    ]
   }
 ]
