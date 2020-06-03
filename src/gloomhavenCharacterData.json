@@ -5757,5 +5757,534 @@
         "changes": []
       }
     ]
+  },
+  {
+    "name": "nightshroud",
+    "initials": "ns",
+    "noSpoilerName": "\"Eclipse\"",
+    "handSize": 9,
+    "startingCards": 12,
+    "cards": [
+      {
+        "title": "black-knives",
+        "level": 1,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": [
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true }
+        ]
+      },
+      {
+        "title": "cloak-of-shade",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 1,
+            "top": 80,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 2,
+            "top": 80,
+            "left": 154,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "empowering-void",
+        "level": 1,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "doomed-breeze",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 3,
+            "top": 67,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 4,
+            "top": 82,
+            "left": 130,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "enervating-wound",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 5,
+            "top": 56,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 6,
+            "top": 91,
+            "left": 135,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "spirit-of-the-night",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 7,
+            "top": 213,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 8,
+            "top": 213,
+            "left": 152,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "dancing-shadows",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 9,
+            "top": 80,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "silent-force",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 10,
+            "top": 212,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "smoke-step",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 11,
+            "top": 211,
+            "left": 135,
+            "enhancement": ""
+          },
+          {
+            "id": 12,
+            "top": 211,
+            "left": 150,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "wings-of-the-night",
+        "level": 1,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": [
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true }
+        ]
+      },
+      {
+        "title": "concealed-dominance",
+        "level": 1,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "dark-cloud",
+        "level": 1,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "prepare-for-the-kill",
+        "level": 2,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 13,
+            "top": 80,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 14,
+            "top": 80,
+            "left": 154,
+            "enhancement": ""
+          },
+          {
+            "id": 15,
+            "top": 211,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 16,
+            "top": 211,
+            "left": 152,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "soulfire",
+        "level": 2,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 17,
+            "top": 78,
+            "left": 130,
+            "enhancement": ""
+          },
+          {
+            "id": 18,
+            "top": 217,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 19,
+            "top": 217,
+            "left": 154,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "terror-blade",
+        "level": 3,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 20,
+            "top": 99,
+            "left": 130,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "armor-of-the-night",
+        "level": 3,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 21,
+            "top": 205,
+            "left": 135,
+            "enhancement": ""
+          },
+          {
+            "id": 22,
+            "top": 205,
+            "left": 151,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "nightfall",
+        "level": 4,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": [{ "active": true }, { "active": true }, { "active": true }]
+      },
+      {
+        "title": "grim-sustenance",
+        "level": 4,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "claws-of-the-night",
+        "level": 5,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 23,
+            "top": 75,
+            "left": 115,
+            "enhancement": ""
+          }
+        ],
+        "tracker": [
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true }
+        ]
+      },
+      {
+        "title": "black-arrow",
+        "level": 5,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 24,
+            "top": 75,
+            "left": 131,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "unseen-dread",
+        "level": 6,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 25,
+            "top": 79,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 26,
+            "top": 79,
+            "left": 153,
+            "enhancement": ""
+          },
+          {
+            "id": 27,
+            "top": 215,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "swallowed-by-fear",
+        "level": 6,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 28,
+            "top": 79,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "eyes-of-the-night",
+        "level": 7,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "quiet-frenzy",
+        "level": 7,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "gloom-darts",
+        "level": 8,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 29,
+            "top": 77,
+            "left": 130,
+            "enhancement": ""
+          },
+          {
+            "id": 30,
+            "top": 211,
+            "left": 135,
+            "enhancement": ""
+          },
+          {
+            "id": 31,
+            "top": 211,
+            "left": 151,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "lurking-ruin",
+        "level": 8,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "angel-of-death",
+        "level": 9,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 32,
+            "top": 63,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 33,
+            "top": 203,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "voice-of-the-night",
+        "level": 9,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 34,
+            "top": 201,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 35,
+            "top": 225,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": [
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true }
+        ]
+      }
+    ],
+    "perks": [
+      {
+        "id": 1,
+        "checkboxes": [{ "id": 0 }, { "id": 1 }],
+        "label": "Remove two -1 Cards",
+        "changes": [{ "cardTitle": "minus1", "action": "remove", "number": 2 }]
+      },
+      {
+        "id": 2,
+        "checkboxes": [{ "id": 2 }],
+        "label": "Remove four +0 cards",
+        "changes": [{ "cardTitle": "plus0", "action": "remove", "number": 4 }]
+      },
+      {
+        "id": 3,
+        "checkboxes": [{ "id": 3 }, { "id": 4 }],
+        "label": "Add one -1 Dark card",
+        "changes": [{ "cardTitle": "minus1Dark", "action": "add", "number": 1 }]
+      },
+      {
+        "id": 4,
+        "checkboxes": [{ "id": 5 }, { "id": 6 }],
+        "label": "Replace one -1 Dark card with one +1 Dark card",
+        "changes": [
+          { "cardTitle": "minus1Dark", "action": "remove", "number": 1 },
+          { "cardTitle": "plus1Dark", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 5,
+        "checkboxes": [{ "id": 7 }, { "id": 8 }],
+        "label": "Add one +1 Invisible card",
+        "changes": [
+          { "cardTitle": "plus1Invisible", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 6,
+        "checkboxes": [{ "id": 9 }, { "id": 10 }],
+        "label": "Add three rolling Muddle cards",
+        "changes": [
+          { "cardTitle": "rollingMuddle", "action": "add", "number": 3 }
+        ]
+      },
+      {
+        "id": 7,
+        "checkboxes": [{ "id": 11 }],
+        "label": "Add two rolling Heal Self 1 cards",
+        "changes": [
+          { "cardTitle": "rollingHeal1", "action": "add", "number": 2 }
+        ]
+      },
+      {
+        "id": 8,
+        "checkboxes": [{ "id": 12 }],
+        "label": "Add two rolling Curse cards",
+        "changes": [
+          { "cardTitle": "rollingCurse", "action": "add", "number": 2 }
+        ]
+      },
+      {
+        "id": 9,
+        "checkboxes": [{ "id": 13 }],
+        "label": "Add one rolling Add Target card",
+        "changes": [
+          { "cardTitle": "rollingAddTarget", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 10,
+        "checkboxes": [{ "id": 14 }],
+        "label": "Ignore negative scenario effects and add two +1 cards",
+        "changes": [{ "cardTitle": "plus1", "action": "add", "number": 2 }]
+      }
+    ]
   }
 ]
