@@ -16,9 +16,9 @@ function CharacterSelection({
   const firstRow = availableCharacters.slice(0, 3)
   const secondRow = availableCharacters.slice(3, 6)
   const thirdRow = availableCharacters.slice(6, 9)
-  const fourthRow = availableCharacters.slice(8, 11)
-  const fifthRow = availableCharacters.slice(11, 14)
-  const sixthRow = availableCharacters.slice(14, 17)
+  const fourthRow = availableCharacters.slice(9, 12)
+  const fifthRow = availableCharacters.slice(12, 15)
+  const sixthRow = availableCharacters.slice(15, 18)
 
   function selectCharacter(characterName) {
     setCharacterName(characterName)
