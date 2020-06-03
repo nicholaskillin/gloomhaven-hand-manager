@@ -156,26 +156,26 @@ function App() {
       return -1
     }
 
+    // Add cards to modifier deck
+    let newModifierDeck = modifierDeck.concat(cardsToAdd)
+
     // Remove cards from modifier deck
-    let modifierWithCardsRemoved = [...modifierDeck]
+    let modifierWithCardsRemoved = [...newModifierDeck]
     cardsToRemove.forEach((card) => {
       let index = findWithAttr(modifierWithCardsRemoved, 'name', card.name)
       modifierWithCardsRemoved.splice(index, 1)
     })
 
-    // Add cards to modifier deck
-    let newModifierDeck = modifierWithCardsRemoved.concat(cardsToAdd)
-
     // Shuffle new deck
-    for (let i = newModifierDeck.length - 1; i > 0; i--) {
+    for (let i = modifierWithCardsRemoved.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * i)
-      const temp = newModifierDeck[i]
-      newModifierDeck[i] = newModifierDeck[j]
-      newModifierDeck[j] = temp
+      const temp = modifierWithCardsRemoved[i]
+      modifierWithCardsRemoved[i] = modifierWithCardsRemoved[j]
+      modifierWithCardsRemoved[j] = temp
     }
 
     // Set state with new deck
-    setModifierDeck(newModifierDeck)
+    setModifierDeck(modifierWithCardsRemoved)
   }
 
   function handleStaffOfCommand(selected) {
