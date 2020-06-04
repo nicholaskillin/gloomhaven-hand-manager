@@ -6837,5 +6837,760 @@
         "changes": [{ "cardTitle": "plus1", "action": "add", "number": 2 }]
       }
     ]
+  },
+  {
+    "name": "elementalist",
+    "initials": "el",
+    "noSpoilerName": "\"Triangles\"",
+    "handSize": 10,
+    "startingCards": 13,
+    "cards": [
+      {
+        "title": "raw-enhancement",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 1,
+            "top": 61,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 2,
+            "top": 200,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "pure-augmentation",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 3,
+            "top": 61,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 4,
+            "top": 200,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "formless-power",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 5,
+            "top": 61,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 6,
+            "top": 76,
+            "left": 130,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "shaping-the-ether",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 7,
+            "top": 57,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "stoking-hail",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 8,
+            "top": 75,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 9,
+            "top": 91,
+            "left": 129,
+            "enhancement": ""
+          },
+          {
+            "id": 10,
+            "top": 211,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "tremulant-cyclone",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 11,
+            "top": 69,
+            "left": 109,
+            "enhancement": ""
+          },
+          {
+            "id": 12,
+            "top": 211,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "infernal-vortex",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 13,
+            "top": 73,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 14,
+            "top": 73,
+            "left": 154,
+            "enhancement": ""
+          },
+          {
+            "id": 15,
+            "top": 211,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "lava-eruption",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 16,
+            "top": 73,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 17,
+            "top": 211,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "ice-spikes",
+        "level": 1,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 18,
+            "top": 68,
+            "left": 116,
+            "enhancement": ""
+          },
+          {
+            "id": 19,
+            "top": 86,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 20,
+            "top": 198,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 21,
+            "top": 213,
+            "left": 131,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "frigid-torrent",
+        "level": 1,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 22,
+            "top": 76,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 23,
+            "top": 198,
+            "left": 110,
+            "enhancement": ""
+          },
+          {
+            "id": 24,
+            "top": 215,
+            "left": 132,
+            "enhancement": ""
+          },
+          {
+            "id": 25,
+            "top": 227,
+            "left": 102,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "malleable-evocation",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 26,
+            "top": 54,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 27,
+            "top": 69,
+            "left": 129,
+            "enhancement": ""
+          },
+          {
+            "id": 28,
+            "top": 194,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "brilliant-flash",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 29,
+            "top": 72,
+            "left": 133,
+            "enhancement": ""
+          },
+          {
+            "id": 30,
+            "top": 72,
+            "left": 148,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "encompassing-shadow",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 31,
+            "top": 193,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "boiling-arc",
+        "level": 2,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 32,
+            "top": 81,
+            "left": 110,
+            "enhancement": ""
+          },
+          {
+            "id": 33,
+            "top": 206,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "crystallizing-blast",
+        "level": 2,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 34,
+            "top": 72,
+            "left": 109,
+            "enhancement": ""
+          },
+          {
+            "id": 35,
+            "top": 88,
+            "left": 100,
+            "enhancement": ""
+          },
+          {
+            "id": 36,
+            "top": 207,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "burial",
+        "level": 3,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 37,
+            "top": 55,
+            "left": 117,
+            "enhancement": ""
+          },
+          {
+            "id": 38,
+            "top": 204,
+            "left": 140,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "chain-lightning",
+        "level": 3,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 39,
+            "top": 51,
+            "left": 141,
+            "enhancement": ""
+          },
+          {
+            "id": 40,
+            "top": 204,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "primal-duality",
+        "level": 4,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 41,
+            "top": 65,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 42,
+            "top": 65,
+            "left": 153,
+            "enhancement": ""
+          },
+          {
+            "id": 43,
+            "top": 95,
+            "left": 130,
+            "enhancement": ""
+          },
+          {
+            "id": 44,
+            "top": 213,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "gravel-vortex",
+        "level": 4,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 45,
+            "top": 72,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "obsidian-shards",
+        "level": 5,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 46,
+            "top": 66,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 47,
+            "top": 191,
+            "left": 135,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "winters-edge",
+        "level": 5,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 48,
+            "top": 72,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 49,
+            "top": 202,
+            "left": 134,
+            "enhancement": ""
+          },
+          {
+            "id": 50,
+            "top": 218,
+            "left": 129,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "eye-of-the-hurricane",
+        "level": 6,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 51,
+            "top": 53,
+            "left": 133,
+            "enhancement": ""
+          },
+          {
+            "id": 52,
+            "top": 85,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 53,
+            "top": 202,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "simulacrum",
+        "level": 6,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 54,
+            "top": 51,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 55,
+            "top": 213,
+            "left": 81,
+            "enhancement": ""
+          },
+          {
+            "id": 56,
+            "top": 213,
+            "left": 122,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "vengeance",
+        "level": 7,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 57,
+            "top": 86,
+            "left": 146,
+            "enhancement": ""
+          },
+          {
+            "id": 58,
+            "top": 183,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 59,
+            "top": 205,
+            "left": 144,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "pragmatic-reinforcement",
+        "level": 7,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 60,
+            "top": 56,
+            "left": 131,
+            "enhancement": ""
+          },
+          {
+            "id": 61,
+            "top": 191,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "volatile-consumption",
+        "level": 8,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 62,
+            "top": 186,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "elemental-aegis",
+        "level": 8,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 63,
+            "top": 61,
+            "left": 135,
+            "enhancement": ""
+          },
+          {
+            "id": 64,
+            "top": 205,
+            "left": 133,
+            "enhancement": ""
+          },
+          {
+            "id": 65,
+            "top": 205,
+            "left": 150,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "ethereal-manifestation",
+        "level": 9,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 66,
+            "top": 78,
+            "left": 79,
+            "enhancement": ""
+          },
+          {
+            "id": 67,
+            "top": 78,
+            "left": 122,
+            "enhancement": ""
+          },
+          {
+            "id": 68,
+            "top": 98,
+            "left": 122,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "eternal-equilibrium",
+        "level": 9,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 69,
+            "top": 62,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 70,
+            "top": 195,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      }
+    ],
+    "perks": [
+      {
+        "id": 1,
+        "checkboxes": [{ "id": 0 }, { "id": 1 }],
+        "label": "Remove two -1 Cards",
+        "changes": [{ "cardTitle": "minus1", "action": "remove", "number": 2 }]
+      },
+      {
+        "id": 2,
+        "checkboxes": [{ "id": 2 }],
+        "label": "Replace one -1 card with one +1 card",
+        "changes": [
+          { "cardTitle": "minus1", "action": "remove", "number": 1 },
+          { "cardTitle": "plus1", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 3,
+        "checkboxes": [{ "id": 3 }, { "id": 4 }],
+        "label": "Replace one +0 card with one +2 card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 1 },
+          { "cardTitle": "plus2", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 4,
+        "checkboxes": [{ "id": 5 }],
+        "label": "Add three +0 Fire cards",
+        "changes": [{ "cardTitle": "fire", "action": "add", "number": 3 }]
+      },
+      {
+        "id": 5,
+        "checkboxes": [{ "id": 6 }],
+        "label": "Add three +0 Ice cards",
+        "changes": [{ "cardTitle": "ice", "action": "add", "number": 3 }]
+      },
+      {
+        "id": 6,
+        "checkboxes": [{ "id": 7 }],
+        "label": "Add three +0 Wind cards",
+        "changes": [{ "cardTitle": "wind", "action": "add", "number": 3 }]
+      },
+      {
+        "id": 7,
+        "checkboxes": [{ "id": 8 }],
+        "label": "Add three +0 Leaf cards",
+        "changes": [{ "cardTitle": "leaf", "action": "add", "number": 3 }]
+      },
+      {
+        "id": 8,
+        "checkboxes": [{ "id": 9 }],
+        "label": "Replace two +0 cards with one +0 Fire and one +0 Leaf card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 2 },
+          { "cardTitle": "fire", "action": "add", "number": 1 },
+          { "cardTitle": "leaf", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 9,
+        "checkboxes": [{ "id": 10 }],
+        "label": "Replace two +0 cards with one +0 Ice and one +0 Wind card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 2 },
+          { "cardTitle": "ice", "action": "add", "number": 1 },
+          { "cardTitle": "wind", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 10,
+        "checkboxes": [{ "id": 11 }],
+        "label": "Add two +1 Push 1 cards",
+        "changes": [{ "cardTitle": "plus1Push1", "action": "add", "number": 2 }]
+      },
+      {
+        "id": 11,
+        "checkboxes": [{ "id": 12 }],
+        "label": "Add one +1 Wound card",
+        "changes": [{ "cardTitle": "plus1Wound", "action": "add", "number": 1 }]
+      },
+      {
+        "id": 12,
+        "checkboxes": [{ "id": 13 }],
+        "label": "Add one +0 Stun card",
+        "changes": [{ "cardTitle": "stun", "action": "add", "number": 1 }]
+      },
+      {
+        "id": 13,
+        "checkboxes": [{ "id": 14 }],
+        "label": "Add one +0 Add Target card",
+        "changes": [{ "cardTitle": "addTarget", "action": "add", "number": 1 }]
+      }
+    ]
   }
 ]
