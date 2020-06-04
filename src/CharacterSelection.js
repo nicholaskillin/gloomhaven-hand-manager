@@ -24,6 +24,10 @@ function CharacterSelection({
     setCharacterName(characterName)
   }
 
+  if (bladeSwarmUnlocked) {
+    alert(`You unlocked bladeswarm`)
+  }
+
   function handleUnlockBladeSwarm() {
     setBladeSwarmUnlocked(true)
   }
