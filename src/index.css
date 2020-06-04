@@ -28,6 +28,10 @@ html {
   margin-bottom: 30px;
 }
 
+.select-class-section {
+  width: fit-content;
+}
+
 label.enhancement {
   font-size: 15px;
   padding-right: 5px;
