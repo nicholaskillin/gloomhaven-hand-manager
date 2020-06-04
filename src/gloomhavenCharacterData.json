@@ -8248,5 +8248,716 @@
         "changes": []
       }
     ]
+  },
+  {
+    "name": "summoner",
+    "initials": "su",
+    "noSpoilerName": "\"Circles\"",
+    "handSize": 9,
+    "startingCards": 12,
+    "cards": [
+      {
+        "title": "forged-ferocity",
+        "level": 1,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 1,
+            "top": 79,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 2,
+            "top": 79,
+            "left": 121,
+            "enhancement": ""
+          },
+          {
+            "id": 3,
+            "top": 98,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 4,
+            "top": 205,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "wild-animation",
+        "level": 1,
+        "enhancementSpots": 5,
+        "enhancements": [
+          {
+            "id": 5,
+            "top": 79,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 6,
+            "top": 79,
+            "left": 121,
+            "enhancement": ""
+          },
+          {
+            "id": 7,
+            "top": 98,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 8,
+            "top": 98,
+            "left": 121,
+            "enhancement": ""
+          },
+          {
+            "id": 9,
+            "top": 213,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "living-night",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 10,
+            "top": 79,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 11,
+            "top": 98,
+            "left": 80,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "unending-dominance",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 12,
+            "top": 79,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 13,
+            "top": 79,
+            "left": 121,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "unwavering-hand",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 14,
+            "top": 76,
+            "left": 132,
+            "enhancement": ""
+          },
+          {
+            "id": 15,
+            "top": 76,
+            "left": 149,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "mighty-bond",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 16,
+            "top": 218,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "bonded-might",
+        "level": 1,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "biting-wind",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 17,
+            "top": 74,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 18,
+            "top": 90,
+            "left": 129,
+            "enhancement": ""
+          },
+          {
+            "id": 19,
+            "top": 218,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "black-fire",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 20,
+            "top": 67,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 21,
+            "top": 97,
+            "left": 131,
+            "enhancement": ""
+          },
+          {
+            "id": 22,
+            "top": 203,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "leathery-wings",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 23,
+            "top": 79,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 24,
+            "top": 79,
+            "left": 121,
+            "enhancement": ""
+          },
+          {
+            "id": 25,
+            "top": 217,
+            "left": 158,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "volatile-flame",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 26,
+            "top": 79,
+            "left": 121,
+            "enhancement": ""
+          },
+          {
+            "id": 27,
+            "top": 98,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 28,
+            "top": 204,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "ethereal-vines",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 29,
+            "top": 77,
+            "left": 111,
+            "enhancement": ""
+          },
+          {
+            "id": 30,
+            "top": 205,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 31,
+            "top": 230,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "earthen-steed",
+        "level": 2,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 32,
+            "top": 219,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "grasping-the-void",
+        "level": 2,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 33,
+            "top": 68,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 34,
+            "top": 199,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 35,
+            "top": 237,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "tear-the-fabric",
+        "level": 3,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 36,
+            "top": 209,
+            "left": 132,
+            "enhancement": ""
+          },
+          {
+            "id": 37,
+            "top": 209,
+            "left": 148,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "oozing-manifestation",
+        "level": 3,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 38,
+            "top": 79,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 39,
+            "top": 79,
+            "left": 121,
+            "enhancement": ""
+          },
+          {
+            "id": 40,
+            "top": 98,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 41,
+            "top": 200,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "living-mountain",
+        "level": 4,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 42,
+            "top": 79,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 43,
+            "top": 79,
+            "left": 121,
+            "enhancement": ""
+          },
+          {
+            "id": 44,
+            "top": 212,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "divided-mind",
+        "level": 4,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "strength-in-numbers",
+        "level": 5,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "conjured-aid",
+        "level": 5,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 45,
+            "top": 79,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 46,
+            "top": 79,
+            "left": 121,
+            "enhancement": ""
+          },
+          {
+            "id": 47,
+            "top": 98,
+            "left": 121,
+            "enhancement": ""
+          },
+          {
+            "id": 48,
+            "top": 224,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "endless-spikes",
+        "level": 6,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 49,
+            "top": 79,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 50,
+            "top": 79,
+            "left": 121,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "inexorable-momentum",
+        "level": 6,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 51,
+            "top": 68,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 52,
+            "top": 97,
+            "left": 132,
+            "enhancement": ""
+          },
+          {
+            "id": 53,
+            "top": 203,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 54,
+            "top": 245,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "negative-energy",
+        "level": 7,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 55,
+            "top": 79,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 56,
+            "top": 79,
+            "left": 121,
+            "enhancement": ""
+          },
+          {
+            "id": 57,
+            "top": 98,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 58,
+            "top": 98,
+            "left": 121,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "staff-of-visions",
+        "level": 7,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 59,
+            "top": 78,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 60,
+            "top": 78,
+            "left": 155,
+            "enhancement": ""
+          },
+          {
+            "id": 61,
+            "top": 206,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 62,
+            "top": 228,
+            "left": 158,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "intervening-apparitions",
+        "level": 8,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": [{ "active": true }, { "active": true }, { "active": true }]
+      },
+      {
+        "title": "otherworldly-rage",
+        "level": 8,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 63,
+            "top": 237,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "interplanar-mastery",
+        "level": 9,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 64,
+            "top": 216,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "horned-majesty",
+        "level": 9,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 65,
+            "top": 79,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 66,
+            "top": 79,
+            "left": 121,
+            "enhancement": ""
+          },
+          {
+            "id": 67,
+            "top": 98,
+            "left": 80,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      }
+    ],
+    "perks": [
+      {
+        "id": 1,
+        "checkboxes": [{ "id": 0 }],
+        "label": "Remove two -1 Cards",
+        "changes": [{ "cardTitle": "minus1", "action": "remove", "number": 2 }]
+      },
+      {
+        "id": 2,
+        "checkboxes": [{ "id": 1 }],
+        "label": "Replace one -2 card with one +0 card",
+        "changes": [
+          { "cardTitle": "minus2", "action": "remove", "number": 1 },
+          { "cardTitle": "plus0", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 3,
+        "checkboxes": [{ "id": 2 }, { "id": 3 }, { "id": 4 }],
+        "label": "Replace one -1 caard with one +1 card",
+        "changes": [
+          { "cardTitle": "minus1", "action": "remove", "number": 1 },
+          { "cardTitle": "plus1", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 4,
+        "checkboxes": [{ "id": 5 }, { "id": 6 }],
+        "label": "Add one +2 card",
+        "changes": [{ "cardTitle": "plus2", "action": "add", "number": 1 }]
+      },
+      {
+        "id": 5,
+        "checkboxes": [{ "id": 7 }],
+        "label": "Add two rolling Wound cards",
+        "changes": [
+          { "cardTitle": "rollingWound", "action": "add", "number": 2 }
+        ]
+      },
+      {
+        "id": 6,
+        "checkboxes": [{ "id": 8 }],
+        "label": "Add two rolling Poison cards",
+        "changes": [
+          { "cardTitle": "rollingPoison", "action": "add", "number": 2 }
+        ]
+      },
+      {
+        "id": 7,
+        "checkboxes": [{ "id": 9 }, { "id": 10 }, { "id": 11 }],
+        "label": "Add two rolling Heal Self 1 cards",
+        "changes": [
+          { "cardTitle": "rollingHeal1", "action": "add", "number": 2 }
+        ]
+      },
+      {
+        "id": 8,
+        "checkboxes": [{ "id": 12 }],
+        "label": "Add one rolling Fire and one rolling Wind",
+        "changes": [
+          { "cardTitle": "rollingFire", "action": "add", "number": 1 },
+          { "cardTitle": "rollingWind", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 10,
+        "checkboxes": [{ "id": 13 }],
+        "label": "Add one rolling Dark and one rolling Leaf",
+        "changes": [
+          { "cardTitle": "rollingDark", "action": "add", "number": 1 },
+          { "cardTitle": "rollingLeaf", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 11,
+        "checkboxes": [{ "id": 14 }],
+        "label": "Ignore negative scenario effects and add two +1 cards",
+        "changes": [{ "cardTitle": "plus1", "action": "add", "number": 2 }]
+      }
+    ]
   }
 ]
