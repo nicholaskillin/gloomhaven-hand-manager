@@ -302,11 +302,12 @@ function DiscardedCards({
             {secondRow.map((card) => (
               <CardContainer
                 card={card}
-                cardClass={'chooseCards'}
+                cardClass={cardBoarder(card)}
                 containerClass={'discarded'}
                 cardSelected={cardSelected}
                 character={character}
                 key={card.title}
+                mustLose={card === cardToLose && resting}
                 onClick={handleOnClick}
               />
             ))}
@@ -315,11 +316,12 @@ function DiscardedCards({
             {thirdRow.map((card) => (
               <CardContainer
                 card={card}
-                cardClass={'chooseCards'}
+                cardClass={cardBoarder(card)}
                 containerClass={'discarded'}
                 cardSelected={cardSelected}
                 character={character}
                 key={card.title}
+                mustLose={card === cardToLose && resting}
                 onClick={handleOnClick}
               />
             ))}
