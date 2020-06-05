@@ -5061,7 +5061,7 @@
   {
     "name": "doomStalker",
     "initials": "ds",
-    "noSpoilerName": "\"Spiky Face\"",
+    "noSpoilerName": "\"Angry Face\"",
     "handSize": 12,
     "startingCards": 15,
     "cards": [
@@ -9599,16 +9599,629 @@
         ]
       },
       {
-        "id": 10,
+        "id": 9,
         "checkboxes": [{ "id": 12 }, { "id": 13 }],
         "label": "Add one +2 Fire card",
         "changes": [{ "cardTitle": "plus2Fire", "action": "add", "number": 1 }]
       },
       {
-        "id": 11,
+        "id": 10,
         "checkboxes": [{ "id": 14 }],
         "label": "Ignore negative item effects",
         "changes": []
+      }
+    ]
+  },
+  {
+    "name": "soothsinger",
+    "initials": "ss",
+    "noSpoilerName": "\"Music Notes\"",
+    "handSize": 9,
+    "startingCards": 12,
+    "cards": [
+      {
+        "title": "power-ballad",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 1,
+            "top": 192,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 2,
+            "top": 217,
+            "left": 155,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "defensive-ditty",
+        "level": 1,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "song-of-speed",
+        "level": 1,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "tuning-the-outcome",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 3,
+            "top": 87,
+            "left": 135,
+            "enhancement": ""
+          },
+          {
+            "id": 4,
+            "top": 204,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 5,
+            "top": 230,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "call-to-action",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 6,
+            "top": 230,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "warding-dagger",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 7,
+            "top": 86,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 8,
+            "top": 190,
+            "left": 135,
+            "enhancement": ""
+          },
+          {
+            "id": 9,
+            "top": 214,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "throw-voice",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 10,
+            "top": 82,
+            "left": 126,
+            "enhancement": ""
+          },
+          {
+            "id": 11,
+            "top": 210,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "singing-arrow",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 12,
+            "top": 84,
+            "left": 126,
+            "enhancement": ""
+          },
+          {
+            "id": 13,
+            "top": 210,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 14,
+            "top": 226,
+            "left": 130,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "marching-beat",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 17,
+            "top": 101,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 18,
+            "top": 223,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "wistful-wounding",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 19,
+            "top": 205,
+            "left": 130,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "unending-chant",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 20,
+            "top": 215,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": [
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true }
+        ]
+      },
+      {
+        "title": "nimble-knife",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 21,
+            "top": 67,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 22,
+            "top": 106,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 23,
+            "top": 221,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "soothing-lullaby",
+        "level": 2,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 24,
+            "top": 204,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "change-tempo",
+        "level": 2,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 25,
+            "top": 221,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "echoing-aria",
+        "level": 3,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "crippling-chorus",
+        "level": 3,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 26,
+            "top": 73,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 27,
+            "top": 206,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 28,
+            "top": 228,
+            "left": 143,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "disorienting-dirge",
+        "level": 4,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 29,
+            "top": 187,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 30,
+            "top": 223,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "inspiring-anthem",
+        "level": 4,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 31,
+            "top": 100,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 32,
+            "top": 231,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "melody-and-harmony",
+        "level": 5,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 33,
+            "top": 203,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 34,
+            "top": 229,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "mobilizing-measure",
+        "level": 5,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 35,
+            "top": 211,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "pull-the-strings",
+        "level": 6,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "provoke-terror",
+        "level": 6,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 36,
+            "top": 84,
+            "left": 125,
+            "enhancement": ""
+          },
+          {
+            "id": 37,
+            "top": 209,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 38,
+            "top": 238,
+            "left": 129,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "nightmare-serenade",
+        "level": 7,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 39,
+            "top": 198,
+            "left": 109,
+            "enhancement": ""
+          },
+          {
+            "id": 40,
+            "top": 211,
+            "left": 126,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "booming-proclamation",
+        "level": 7,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 41,
+            "top": 79,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 42,
+            "top": 109,
+            "left": 129,
+            "enhancement": ""
+          },
+          {
+            "id": 43,
+            "top": 219,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "tranquil-trill",
+        "level": 8,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 44,
+            "top": 204,
+            "left": 143,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "commanding-presence",
+        "level": 8,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 45,
+            "top": 92,
+            "left": 140,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "captivating-performance",
+        "level": 9,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 46,
+            "top": 198,
+            "left": 134,
+            "enhancement": ""
+          },
+          {
+            "id": 47,
+            "top": 227,
+            "left": 130,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "shadow-puppets",
+        "level": 9,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 48,
+            "top": 56,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      }
+    ],
+    "perks": [
+      {
+        "id": 1,
+        "checkboxes": [{ "id": 0 }, { "id": 1 }],
+        "label": "Remove two -1 Cards",
+        "changes": [{ "cardTitle": "minus1", "action": "remove", "number": 2 }]
+      },
+      {
+        "id": 2,
+        "checkboxes": [{ "id": 2 }],
+        "label": "Remove one -2 card",
+        "changes": [{ "cardTitle": "minus2", "action": "remove", "number": 1 }]
+      },
+      {
+        "id": 3,
+        "checkboxes": [{ "id": 3 }, { "id": 4 }],
+        "label": "Replace two +1 cards with one +4 card",
+        "changes": [
+          { "cardTitle": "plus1", "action": "remove", "number": 2 },
+          { "cardTitle": "plus4", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 4,
+        "checkboxes": [{ "id": 5 }],
+        "label": "Replace one +0 card with one +1 Immobilize card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 1 },
+          { "cardTitle": "plus1Immobilize", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 5,
+        "checkboxes": [{ "id": 6 }],
+        "label": "Replace one +0 card with one +1 Disarm card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 1 },
+          { "cardTitle": "plus1Disarm", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 6,
+        "checkboxes": [{ "id": 7 }],
+        "label": "Replace one +0 card with one +2 Wound card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 1 },
+          { "cardTitle": "plus2Wound", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 7,
+        "checkboxes": [{ "id": 8 }],
+        "label": "Replace one +0 card with one +2 Poison card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 1 },
+          { "cardTitle": "plus2Poison", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 8,
+        "checkboxes": [{ "id": 9 }],
+        "label": "Replace one +0 card with one +2 Curse card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 1 },
+          { "cardTitle": "plus2Curse", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 9,
+        "checkboxes": [{ "id": 10 }],
+        "label": "Replace one +0 card with one +3 Muddle card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 1 },
+          { "cardTitle": "plus3Muddle", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 10,
+        "checkboxes": [{ "id": 11 }],
+        "label": "Replace one -1 card with one +0 Stun card",
+        "changes": [
+          { "cardTitle": "minus1", "action": "remove", "number": 1 },
+          { "cardTitle": "stun", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 11,
+        "checkboxes": [{ "id": 12 }],
+        "label": "Add three rolling +1 cards",
+        "changes": [
+          { "cardTitle": "rollingPlus1", "action": "add", "number": 3 }
+        ]
+      },
+      {
+        "id": 12,
+        "checkboxes": [{ "id": 13 }, { "id": 14 }],
+        "label": "Add two rolling Curse cards",
+        "changes": [
+          { "cardTitle": "rollingCurse", "action": "add", "number": 2 }
+        ]
       }
     ]
   }
