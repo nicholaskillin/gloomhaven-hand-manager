@@ -195,6 +195,12 @@ function DiscardedCards({
   const thirdRow = discardedCards.slice(10, 15)
 
   function handleOnClick(cardClicked) {
+    while (cardClicked.className === 'enhancement-icon') {
+      cardClicked = cardClicked.previousSibling
+    }
+    if (cardClicked.className === 'hand') {
+      cardClicked = cardClicked.firstChild
+    }
     let characterCard = character.cards.find(
       (card) => card.title === cardClicked.alt
     )
@@ -411,6 +417,12 @@ function ActiveCards({
   }
 
   function handleCardClick(cardClicked) {
+    while (cardClicked.className === 'enhancement-icon') {
+      cardClicked = cardClicked.previousSibling
+    }
+    if (cardClicked.className === 'hand') {
+      cardClicked = cardClicked.firstChild
+    }
     let cardToSelect = character.cards.find(
       (card) => card.title === cardClicked.alt
     )
@@ -511,6 +523,12 @@ function ChosenCards({
   }
 
   function handleCardClick(cardClicked) {
+    while (cardClicked.className === 'enhancement-icon') {
+      cardClicked = cardClicked.previousSibling
+    }
+    if (cardClicked.className === 'hand') {
+      cardClicked = cardClicked.firstChild
+    }
     let cardToSelect = character.cards.find(
       (card) => card.title === cardClicked.alt
     )
@@ -888,6 +906,12 @@ function LostCards({ character, lostCards, moveLostCardToHand }) {
   }
 
   function handleOnClick(cardClicked) {
+    while (cardClicked.className === 'enhancement-icon') {
+      cardClicked = cardClicked.previousSibling
+    }
+    if (cardClicked.className === 'hand') {
+      cardClicked = cardClicked.firstChild
+    }
     let cardToSelect = character.cards.find(
       (card) => card.title === cardClicked.alt
     )
@@ -981,6 +1005,12 @@ function HandCards({
   const [selectedCards, setSelectedCards] = useState([])
 
   function handleOnClick(cardClicked) {
+    while (cardClicked.className === 'enhancement-icon') {
+      cardClicked = cardClicked.previousSibling
+    }
+    if (cardClicked.className === 'hand') {
+      cardClicked = cardClicked.firstChild
+    }
     let characterCard = character.cards.find(
       (card) => card.title === cardClicked.alt
     )

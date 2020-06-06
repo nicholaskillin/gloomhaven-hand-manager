@@ -17,14 +17,17 @@ function CardContainer({
     setTrackerButtons(newTrackerButtons)
   }
   return (
-    <td key={card.title} className={containerClass}>
+    <td
+      key={card.title}
+      className={containerClass}
+      onClick={(e) => onClick(e.target)}
+    >
       <img
         src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
         className={
           cardSelected(card) ? `new-add-border ${cardClass}` : `${cardClass}`
         }
         alt={card.title}
-        onClick={(e) => onClick(e.target)}
       />
       {card.enhancements.map((enhancement) => (
         <EnhancementIcon key={enhancement.id} enhancement={enhancement} />
