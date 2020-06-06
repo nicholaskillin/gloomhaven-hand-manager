@@ -80,9 +80,12 @@ function PerkSelection({
     let cookieInfo = cookie.getAll()
     if (cookieInfo.perks) {
       setPerk(cookieInfo.perks)
+      console.log(`perks loaded from cookie`)
     }
     if (cookieInfo.modifierChanges) {
       setChangesToModifierDeck(cookieInfo.modifierChanges)
+      console.log(cookieInfo.modifierChanges)
+      console.log(`modifier deck changes loaded from cookie`)
     }
   }, [])
 
@@ -98,12 +101,16 @@ function PerkSelection({
     let changes = characterPerks.find((perk) => perk.id === perkId).changes
 
     // Add or remove the changes for this perk from state, which is used in handleConfirmPerks()
-    value === true
-      ? setChangesToModifierDeck([...changesToModifierDeck, ...changes])
-      : changesToModifierDeck.splice(
-          changesToModifierDeck.indexOf(...changes),
-          changesToModifierDeck.indexOf(...changes) + 1
-        )
+    if (value === true) {
+      setChangesToModifierDeck([...changesToModifierDeck, ...changes])
+    } else {
+      let newChangesToModifierDeck = [...changesToModifierDeck]
+      changes.forEach((change) => {
+        console.log(change)
+        _.remove(newChangesToModifierDeck, change)
+      })
+      setChangesToModifierDeck(newChangesToModifierDeck)
+    }
   }
 
   function handleConfirmPerks() {
