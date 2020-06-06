@@ -336,7 +336,7 @@ function DiscardedCards({
       </table>
       <button
         id="short-rest-button"
-        disabled={discardedCards.length < 2 || resting}
+        disabled={discardedCards.length < 2 || resting || longResting}
         className="button"
         onClick={() => handleShortRest()}
         type="button"
@@ -346,7 +346,7 @@ function DiscardedCards({
       </button>
       <button
         id="long-rest-button"
-        disabled={discardedCards.length < 2 || resting}
+        disabled={discardedCards.length < 2 || resting || longResting}
         className="button"
         onClick={() => handleLongRest()}
         type="button"
@@ -356,7 +356,7 @@ function DiscardedCards({
       </button>
       <button
         id="recover-discard-button"
-        disabled={selectedCards.length !== 1}
+        disabled={selectedCards.length !== 1 || resting || longResting}
         className="button"
         onClick={() => handleRecoverDiscardedCard(selectedCards[0])}
         type="button"
