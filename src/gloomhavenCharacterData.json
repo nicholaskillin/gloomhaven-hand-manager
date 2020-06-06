@@ -3509,7 +3509,7 @@
         "id": 4,
         "checkboxes": [{ "id": 5 }],
         "label": "Add one +0 Stun card",
-        "changes": [{ "cardTitle": "Stun", "action": "add", "number": 1 }]
+        "changes": [{ "cardTitle": "stun", "action": "add", "number": 1 }]
       },
       {
         "id": 5,
@@ -5740,7 +5740,7 @@
         "id": 8,
         "checkboxes": [{ "id": 11 }],
         "label": "Add one +0 Stun card",
-        "changes": [{ "cardTitle": "Stun", "action": "add", "number": 1 }]
+        "changes": [{ "cardTitle": "stun", "action": "add", "number": 1 }]
       },
       {
         "id": 9,
