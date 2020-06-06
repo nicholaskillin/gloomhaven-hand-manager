@@ -53,7 +53,7 @@ function EnhancementIcon({ enhancement }) {
       {enhancement.enhancement !== '' && (
         <img
           className="enhancement-icon"
-          src={`./images/enhancements/${enhancement.enhancement}.png`}
+          src={`./images/enhancements/${enhancement.enhancement.toLowerCase()}.png`}
           style={{ top: enhancement.top, left: enhancement.left }}
           alt={`Enhancement Name`}
         />
