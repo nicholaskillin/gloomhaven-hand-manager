@@ -80,12 +80,9 @@ function PerkSelection({
     let cookieInfo = cookie.getAll()
     if (cookieInfo.perks) {
       setPerk(cookieInfo.perks)
-      console.log(`perks loaded from cookie`)
     }
     if (cookieInfo.modifierChanges) {
       setChangesToModifierDeck(cookieInfo.modifierChanges)
-      console.log(cookieInfo.modifierChanges)
-      console.log(`modifier deck changes loaded from cookie`)
     }
   }, [])
 
@@ -106,7 +103,6 @@ function PerkSelection({
     } else {
       let newChangesToModifierDeck = [...changesToModifierDeck]
       changes.forEach((change) => {
-        console.log(change)
         _.remove(newChangesToModifierDeck, change)
       })
       setChangesToModifierDeck(newChangesToModifierDeck)
