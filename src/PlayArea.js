@@ -883,8 +883,8 @@ function ModifierModal({ handleClose, playedModifierCards, show }) {
           &times;
         </span>
         <div id="used-modifier-cards">
-          {playedModifierCards.map((card) => (
-            <img alt={card.title} src={card.image} />
+          {playedModifierCards.map((card, index) => (
+            <img alt={card.title} src={card.image} key={index} />
           ))}
         </div>
       </div>
