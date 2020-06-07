@@ -25,6 +25,10 @@ html {
   width: 100%;
 }
 
+.footer {
+  margin: 30px;
+}
+
 #root {
   margin-bottom: 30px;
 }
@@ -359,8 +363,19 @@ label.enhancement {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+#zoomModal.input {
+  color: red;
+}
+
 #zoomContent {
   background-color: #fefefe;
+  margin: 90px auto 60px auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 75%;
+}
+
+#zoomFeedbackContent {
   margin: 90px auto 60px auto;
   padding: 10px;
   border: 1px solid #888;
