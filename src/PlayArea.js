@@ -417,10 +417,13 @@ function ActiveCards({
   }
 
   function handleCardClick(cardClicked) {
+    if (cardClicked.tagName === 'BUTTON' || cardClicked.tagName === 'BR') {
+      return
+    }
     while (cardClicked.className === 'enhancement-icon') {
       cardClicked = cardClicked.previousSibling
     }
-    if (cardClicked.className === 'hand') {
+    if (cardClicked.className === 'active-card') {
       cardClicked = cardClicked.firstChild
     }
     let cardToSelect = character.cards.find(
