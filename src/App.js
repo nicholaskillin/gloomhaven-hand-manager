@@ -3,10 +3,8 @@ import './App.css'
 import _ from 'lodash'
 import {
   Button,
-  Divider,
   Field,
   Input,
-  Menu,
   Select,
   StackView,
   ThemeProvider,
@@ -359,7 +357,7 @@ function FeedbackModal({ show, hideModal }) {
   const [showErrors, setShowErrors] = useState(false)
   const { Octokit } = require('@octokit/rest')
   const octokit = new Octokit({
-    // auth: '1bd59bf8f5b8f2e4f101bdc142f9f98b62b13d33',
+    auth: process.env.REACT_APP_GITHUB_KEY,
   })
 
   function handleSubmitForm() {
