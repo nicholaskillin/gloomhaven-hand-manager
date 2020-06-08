@@ -1,17 +1,49 @@
 {
   "name": "gloomhaven-hand-manager",
-  "version": "1.0.0",
-  "description": "An app for playing Gloomhaven online",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "nicholaskillin",
-  "license": "ISC",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "express": "^4.17.1",
-    "http-server": "^0.12.3",
+    "@emotion/cache": "^10.0.29",
+    "@emotion/core": "^10.0.28",
+    "@octokit/rest": "^17.10.0",
+    "@planning-center/ui-kit": "^11.1.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "add": "^2.0.6",
+    "dotenv": "^8.2.0",
+    "emotion-theming": "^10.0.27",
+    "lodash": "^4.17.15",
     "react": "^16.13.1",
-    "socket.io": "^2.3.0"
+    "react-dom": "^16.13.1",
+    "react-konami-code": "^2.0.0-beta.1",
+    "react-scripts": "3.4.1",
+    "universal-cookie": "^4.0.3",
+    "yarn": "^1.22.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "postinstall": "npm run build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": "12.16.x"
   }
 }
