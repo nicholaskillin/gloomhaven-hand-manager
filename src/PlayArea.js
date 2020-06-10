@@ -804,7 +804,7 @@ function ModifierDeck({ modifierDeck }) {
   }
 
   function handleRemoveAllCurseCards() {
-    let newModDeck = [...modifierDeck]
+    let newModDeck = [...localModifierDeck]
     _.remove(newModDeck, curseCard)
     setLocalModifierDeck(newModDeck)
     setExtraCurseCount(0)
