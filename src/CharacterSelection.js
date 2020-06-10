@@ -4,6 +4,7 @@ import Cookies from 'universal-cookie'
 
 function CharacterSelection({
   availableCharacters,
+  game,
   handleGameChange,
   handleSetCharacter,
   handleSetLevel,
@@ -20,6 +21,16 @@ function CharacterSelection({
   const fifthRow = availableCharacters.slice(12, 15)
   const sixthRow = availableCharacters.slice(15, 18)
 
+  useEffect(() => {
+    let cookieInfo = cookies.getAll()
+    if (cookieInfo.character) {
+      selectCharacter(cookieInfo.character)
+    }
+    if (cookieInfo.level) {
+      handleSetLevel(parseInt(cookieInfo.level, 10))
+    }
+  }, [])
+
   function selectCharacter(characterName) {
     setCharacterName(characterName)
   }
@@ -32,16 +43,6 @@ function CharacterSelection({
     setBladeSwarmUnlocked(true)
   }
 
-  useEffect(() => {
-    let cookieInfo = cookies.getAll()
-    if (cookieInfo.character) {
-      selectCharacter(cookieInfo.character)
-    }
-    if (cookieInfo.level) {
-      handleSetLevel(parseInt(cookieInfo.level, 10))
-    }
-  }, [])
-
   return (
     <>
       <Konami action={handleUnlockBladeSwarm} />
@@ -50,10 +51,12 @@ function CharacterSelection({
           Select Your Character
         </h2>
         <select
-          id="game-selector"
           onChange={(event) => handleGameChange(event.target.value)}
+          id="game-selector"
+          value={game}
         >
           <option value="gloomhaven">Gloomhaven</option>
+          <option value="forgottenCircles">Forgotten Circles</option>
         </select>
         <table>
           <tbody>

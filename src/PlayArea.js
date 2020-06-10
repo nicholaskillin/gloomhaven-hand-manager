@@ -802,6 +802,14 @@ function ModifierDeck({ modifierDeck }) {
   function hideModal() {
     setDisplayModal(false)
   }
+
+  function handleRemoveAllCurseCards() {
+    let newModDeck = [...localModifierDeck]
+    _.remove(newModDeck, curseCard)
+    setLocalModifierDeck(newModDeck)
+    setExtraCurseCount(0)
+  }
+
   return (
     <div id="attack-modifier-deck" align="center">
       {mustShuffle && (
@@ -864,6 +872,13 @@ function ModifierDeck({ modifierDeck }) {
         onClick={() => handleResetModifierDeck()}
       >
         Reset Modifier Deck
+      </button>
+      <button
+        className="button"
+        type="button"
+        onClick={() => handleRemoveAllCurseCards()}
+      >
+        Remove all curse cards
       </button>
       <ModifierModal
         handleClose={hideModal}
