@@ -1,0 +1,648 @@
+[
+  {
+    "name": "diviner",
+    "initials": "dr",
+    "noSpoilerName": "Diviner",
+    "handSize": 9,
+    "startingCards": 12,
+    "cards": [
+      {
+        "title": "peer-into-battle",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 1,
+            "top": 198,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "anticipate-intricacies",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 2,
+            "top": 199,
+            "left": 140,
+            "enhancement": ""
+          },
+          {
+            "id": 3,
+            "top": 229,
+            "left": 132,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "protective-aura",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 4,
+            "top": 87,
+            "left": 170,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "clairvoyance",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 5,
+            "top": 55,
+            "left": 169,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "otherworldly-journey",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 6,
+            "top": 226,
+            "left": 98,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "ray-of-light",
+        "level": 1,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 7,
+            "top": 73,
+            "left": 135,
+            "enhancement": ""
+          },
+          {
+            "id": 8,
+            "top": 73,
+            "left": 153,
+            "enhancement": ""
+          },
+          {
+            "id": 9,
+            "top": 230,
+            "left": 140,
+            "enhancement": ""
+          },
+          {
+            "id": 10,
+            "top": 245,
+            "left": 130,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "dimensional-transfer",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 14,
+            "top": 100,
+            "left": 158,
+            "enhancement": ""
+          },
+          {
+            "id": 15,
+            "top": 227,
+            "left": 98,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "void-snare",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 13,
+            "top": 191,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "cursed-ground",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 11,
+            "top": 223,
+            "left": 146,
+            "enhancement": ""
+          },
+          {
+            "id": 12,
+            "top": 253,
+            "left": 131,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "bad-omen",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 16,
+            "top": 231,
+            "left": 98,
+            "enhancement": ""
+          }
+        ],
+        "tracker": [
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true }
+        ]
+      },
+      {
+        "title": "inspiration-from-beyond",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 17,
+            "top": 198,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 18,
+            "top": 223,
+            "left": 135,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "duality-shards",
+        "level": 1,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 19,
+            "top": 79,
+            "left": 132,
+            "enhancement": ""
+          },
+          {
+            "id": 20,
+            "top": 94,
+            "left": 132,
+            "enhancement": ""
+          },
+          {
+            "id": 21,
+            "top": 199,
+            "left": 140,
+            "enhancement": ""
+          },
+          {
+            "id": 22,
+            "top": 229,
+            "left": 132,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "revitalizing-fount",
+        "level": 2,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 23,
+            "top": 53,
+            "left": 134,
+            "enhancement": ""
+          },
+          {
+            "id": 24,
+            "top": 92,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "gift-of-the-void",
+        "level": 2,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 25,
+            "top": 202,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 26,
+            "top": 202,
+            "left": 155,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "envision-the-course",
+        "level": 3,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 27,
+            "top": 212,
+            "left": 80,
+            "enhancement": ""
+          },
+          {
+            "id": 28,
+            "top": 212,
+            "left": 121,
+            "enhancement": ""
+          },
+          {
+            "id": 29,
+            "top": 231,
+            "left": 80,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "call-of-the-nether",
+        "level": 3,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 30,
+            "top": 92,
+            "left": 125,
+            "enhancement": ""
+          },
+          {
+            "id": 31,
+            "top": 77,
+            "left": 150,
+            "enhancement": ""
+          },
+          {
+            "id": 32,
+            "top": 108,
+            "left": 150,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "preordain-the-path",
+        "level": 4,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 33,
+            "top": 93,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 34,
+            "top": 93,
+            "left": 155,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "cleansing-rite",
+        "level": 4,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 35,
+            "top": 54,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "seal-their-fate",
+        "level": 5,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 36,
+            "top": 199,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 37,
+            "top": 222,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "dimensional-divide",
+        "level": 5,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 38,
+            "top": 199,
+            "left": 111,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "enfeebling-hex",
+        "level": 6,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 39,
+            "top": 185,
+            "left": 145,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "careful-attunement",
+        "level": 6,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 40,
+            "top": 186,
+            "left": 136,
+            "enhancement": ""
+          },
+          {
+            "id": 41,
+            "top": 203,
+            "left": 167,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "curative-flux",
+        "level": 7,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 42,
+            "top": 67,
+            "left": 133,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "ethereal-vortex",
+        "level": 7,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 43,
+            "top": 75,
+            "left": 140,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "deep-contemplation",
+        "level": 8,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "anguish-and-salvation",
+        "level": 8,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 44,
+            "top": 63,
+            "left": 145,
+            "enhancement": ""
+          },
+          {
+            "id": 45,
+            "top": 79,
+            "left": 130,
+            "enhancement": ""
+          },
+          {
+            "id": 46,
+            "top": 192,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "hand-of-destiny",
+        "level": 9,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "planar-fissure",
+        "level": 9,
+        "enhancementSpots": 4,
+        "enhancements": [
+          {
+            "id": 47,
+            "top": 90,
+            "left": 140,
+            "enhancement": ""
+          },
+          {
+            "id": 48,
+            "top": 211,
+            "left": 81,
+            "enhancement": ""
+          },
+          {
+            "id": 49,
+            "top": 211,
+            "left": 121,
+            "enhancement": ""
+          },
+          {
+            "id": 50,
+            "top": 231,
+            "left": 81,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      }
+    ],
+    "perks": [
+      {
+        "id": 1,
+        "checkboxes": [{ "id": 0 }, { "id": 1 }],
+        "label": "Remove Two -1 Cards",
+        "changes": [{ "cardTitle": "minus1", "action": "remove", "number": 2 }]
+      },
+      {
+        "id": 2,
+        "checkboxes": [{ "id": 2 }],
+        "label": "Remove one -2 card",
+        "changes": [{ "cardTitle": "minus2", "action": "remove", "number": 1 }]
+      },
+      {
+        "id": 3,
+        "checkboxes": [{ "id": 3 }, { "id": 4 }],
+        "label": "Replace two +1 cards with one +3 Shield 1 Self card",
+        "changes": [
+          { "cardTitle": "plus1", "action": "remove", "number": 2 },
+          { "cardTitle": "plus3Shield1", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 4,
+        "checkboxes": [{ "id": 5 }],
+        "label": "Replace one +0 card with one +1 Sheild 1, Affect any ally card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 1 },
+          { "cardTitle": "plus1Shield1Ally", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 5,
+        "checkboxes": [{ "id": 6 }],
+        "label": "Replace one +0 card with one +2 Dark card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 1 },
+          { "cardTitle": "plus2Dark", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 6,
+        "checkboxes": [{ "id": 7 }],
+        "label": "Replace one +0 card with one +2 Light card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 1 },
+          { "cardTitle": "plus2Light", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 7,
+        "checkboxes": [{ "id": 8 }],
+        "label": "Replace one +0 card with one +3 Muddle card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 1 },
+          { "cardTitle": "plus3Muddle", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 8,
+        "checkboxes": [{ "id": 9 }],
+        "label": "Replace one +0 card with one +2 Curse card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 1 },
+          { "cardTitle": "plus2Curse", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 9,
+        "checkboxes": [{ "id": 10 }],
+        "label": "Replace one +0 card with one +2 Regenerate Self card",
+        "changes": [
+          { "cardTitle": "plus0", "action": "remove", "number": 1 },
+          { "cardTitle": "plus2Regenerate", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 10,
+        "checkboxes": [{ "id": 11 }],
+        "label": "Replace one -1 card with one +1 Heal 2 affect any ally card",
+        "changes": [
+          { "cardTitle": "minus1", "action": "remove", "number": 1 },
+          { "cardTitle": "plus1Heal2Ally", "action": "add", "number": 1 }
+        ]
+      },
+      {
+        "id": 11,
+        "checkboxes": [{ "id": 12 }],
+        "label": "Add two rolling Heal 1 self cards",
+        "changes": [
+          { "cardTitle": "rollingHeal1", "action": "add", "number": 2 }
+        ]
+      },
+      {
+        "id": 12,
+        "checkboxes": [{ "id": 13 }],
+        "label": "Add two rolling Curse cards",
+        "changes": [
+          { "cardTitle": "rollingCurse", "action": "add", "number": 2 }
+        ]
+      },
+      {
+        "id": 13,
+        "checkboxes": [{ "id": 14 }],
+        "label": "Ignore negative scenario effects and add two +1 cards",
+        "changes": [{ "cardTitle": "plus1", "action": "add", "number": 2 }]
+      }
+    ]
+  }
+]

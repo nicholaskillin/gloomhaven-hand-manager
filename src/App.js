@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css'
 import _ from 'lodash'
 import {
@@ -108,11 +108,22 @@ function App() {
   const allCharacterData = getGameCharacters(game)
   const cookies = new Cookies()
 
+  // Load the game selected from the cookie if possible
+  useEffect(() => {
+    let cookieInfo = cookies.getAll()
+    if (cookieInfo.game) {
+      setGame(cookieInfo.game)
+    }
+  }, [])
+
   function getGameCharacters(gameName) {
     if (gameName === 'gloomhaven') {
       return require('./gloomhavenCharacterData.json')
+    } else if (gameName === 'forgottenCircles') {
+      return require(`./forgottenCirclesCharacterData.json`)
     }
   }
+
   function handleGameChange(gameName) {
     setGame(gameName)
   }
@@ -122,6 +133,12 @@ function App() {
   }
 
   function handleSetCharacter(characterName) {
+    // Set game info in cookie for retrieval the next time they visit the site.
+    cookies.set('game', game, {
+      path: '/',
+      maxAge: 31104000,
+    })
+
     let characterData = allCharacterData.find((x) => x.name === characterName)
     if (characterName !== cookies.get('character')) {
       cookies.remove('perks')
@@ -282,6 +299,7 @@ function App() {
         <>
           <CharacterSelection
             availableCharacters={allCharacterData}
+            game={game}
             handleGameChange={handleGameChange}
             handleSetCharacter={handleSetCharacter}
             handleSetLevel={handleSetLevel}
