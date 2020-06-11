@@ -101,6 +101,13 @@ function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
     setLostCards([...lostCards, cardLost])
   }
 
+  function moveHandCardToLost(cardLost) {
+    let newHandCards = [...hand]
+    _.remove(newHandCards, cardLost)
+    setHand(newHandCards)
+    setLostCards([...lostCards, cardLost])
+  }
+
   function moveCardToActive(cardActivated) {
     let i = _.indexOf(chosenCards, cardActivated)
     let newChosenCards = [...chosenCards]
@@ -169,6 +176,7 @@ function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
       <HandCards
         character={character}
         hand={hand}
+        moveHandCardToLost={moveHandCardToLost}
         moveThirdCardToChosen={moveThirdCardToChosen}
         moveCardsToChosen={moveCardsToChosen}
         hasCardsInPlay={hasCardsInPlay}
@@ -1011,6 +1019,7 @@ function LostCards({ character, lostCards, moveLostCardToHand }) {
 function HandCards({
   character,
   hand,
+  moveHandCardToLost,
   moveCardsToChosen,
   moveThirdCardToChosen,
   hasCardsInPlay,
@@ -1063,6 +1072,11 @@ function HandCards({
   function handlePlayStaffOfCommand() {
     let cardToPlay = selectedCards
     moveThirdCardToChosen(cardToPlay)
+    setSelectedCards([])
+  }
+
+  function handleLostCardToAvoidDamage() {
+    moveHandCardToLost(selectedCards[0])
     setSelectedCards([])
   }
 
@@ -1137,6 +1151,7 @@ function HandCards({
           id="lose-hand-card"
           className="button"
           disabled={selectedCards.length !== 1}
+          onClick={() => handleLostCardToAvoidDamage()}
           type="button"
           title="Must Have One Card Selected"
         >
