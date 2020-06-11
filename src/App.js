@@ -434,7 +434,7 @@ function FeedbackModal({ show, hideModal }) {
                   style={{ color: 'black' }}
                 >
                   <Select.Option value="bug">Bug</Select.Option>
-                  <Select.Option value="featureRequest">
+                  <Select.Option value="enhancement">
                     Feature Request
                   </Select.Option>
                 </Select>
