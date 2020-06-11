@@ -66,7 +66,7 @@ function CharacterSelection({
                   character={character}
                   characterName={characterName}
                   handleStaffOfCommand={handleStaffOfCommand}
-                  key={character.name}
+                  key={character.noSpoilerName}
                   selectCharacter={selectCharacter}
                 />
               ))}
@@ -77,7 +77,7 @@ function CharacterSelection({
                   character={character}
                   characterName={characterName}
                   handleStaffOfCommand={handleStaffOfCommand}
-                  key={character.name}
+                  key={character.noSpoilerName}
                   selectCharacter={selectCharacter}
                 />
               ))}
@@ -88,7 +88,7 @@ function CharacterSelection({
                   character={character}
                   characterName={characterName}
                   handleStaffOfCommand={handleStaffOfCommand}
-                  key={character.name}
+                  key={character.noSpoilerName}
                   selectCharacter={selectCharacter}
                 />
               ))}
@@ -99,7 +99,7 @@ function CharacterSelection({
                   character={character}
                   characterName={characterName}
                   handleStaffOfCommand={handleStaffOfCommand}
-                  key={character.name}
+                  key={character.noSpoilerName}
                   selectCharacter={selectCharacter}
                 />
               ))}
@@ -110,7 +110,7 @@ function CharacterSelection({
                   character={character}
                   characterName={characterName}
                   handleStaffOfCommand={handleStaffOfCommand}
-                  key={character.name}
+                  key={character.noSpoilerName}
                   selectCharacter={selectCharacter}
                 />
               ))}
@@ -121,7 +121,7 @@ function CharacterSelection({
                   character={character}
                   characterName={characterName}
                   handleStaffOfCommand={handleStaffOfCommand}
-                  key={character.name}
+                  key={character.noSpoilerName}
                   selectCharacter={selectCharacter}
                 />
               ))}
@@ -183,14 +183,13 @@ function CharacterContainer({
       onClick={() => selectCharacter(character.name)}
     >
       <img
-        id={character.name}
         className={
           characterName === character.name
             ? 'character active character-selected'
             : 'character active'
         }
         src={`./images/character-icons/${character.initials}-icon.png`}
-        alt={character.name}
+        alt={character.noSpoilerName}
       />
       <br />
       {character.name === 'beastTyrant' && (
