@@ -57,6 +57,7 @@ function CharacterSelection({
         >
           <option value="gloomhaven">Gloomhaven</option>
           <option value="forgottenCircles">Forgotten Circles</option>
+          <option value="jotl">Jaws of the Lion</option>
         </select>
         <table>
           <tbody>

@@ -122,6 +122,8 @@ function App() {
       return require('./gloomhavenCharacterData.json')
     } else if (gameName === 'forgottenCircles') {
       return require(`./forgottenCirclesCharacterData.json`)
+    } else if (gameName === 'jotl') {
+      return require(`./jawsOfTheLionCharacterData.json`)
     }
   }
 
