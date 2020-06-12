@@ -676,6 +676,7 @@ function ModifierDeck({ modifierDeck }) {
   const [mustShuffle, setMustShuffle] = useState(false)
   const [extraBlessCount, setExtraBlessCount] = useState(0)
   const [extraCurseCount, setExtraCurseCount] = useState(0)
+  const [extraMinusOneCount, setExtraMinusOneCount] = useState(0)
   // PICK UP HERE: add a modal component and hand showModal state
   const [displayModal, setDisplayModal] = useState(false)
 
@@ -788,7 +789,19 @@ function ModifierDeck({ modifierDeck }) {
       newLocalModifierDeck[i] = newLocalModifierDeck[j]
       newLocalModifierDeck[j] = temp
     }
+    setExtraMinusOneCount(extraMinusOneCount + 1)
     setLocalModifierDeck(newLocalModifierDeck)
+  }
+
+  function handleRemoveMinusOneCard() {
+    if (extraMinusOneCount > 0) {
+      let newLocalModifierDeck = [...localModifierDeck]
+      let cardIndex = _.findIndex(newLocalModifierDeck, minus1Card)
+      newLocalModifierDeck.splice(cardIndex, 1)
+      console.log(newLocalModifierDeck, cardIndex)
+      setLocalModifierDeck(newLocalModifierDeck)
+      setExtraMinusOneCount(extraMinusOneCount - 1)
+    }
   }
 
   function handleResetModifierDeck() {
@@ -829,10 +842,13 @@ function ModifierDeck({ modifierDeck }) {
         Cards in Deck:{` ${localModifierDeck.length}`}
       </h2>
       <h6 id="blessesInDeck" style={{ color: 'white' }}>
-        Extra Blesses in Deck: {extraBlessCount}
+        Extra Blesses in deck: {extraBlessCount}
       </h6>
       <h6 id="cursesInDeck" style={{ color: 'white' }}>
-        Extra Curses in Deck: {extraCurseCount}
+        Extra Curses in deck: {extraCurseCount}
+      </h6>
+      <h6 id="cursesInDeck" style={{ color: 'white' }}>
+        Extra -1 cards in deck: {extraMinusOneCount}
       </h6>
       {localModifierDeck.length > 0 && (
         <img
@@ -873,6 +889,13 @@ function ModifierDeck({ modifierDeck }) {
         onClick={() => handleAddMinusOneCard()}
       >
         Add -1 Card
+      </button>
+      <button
+        className="button"
+        type="button"
+        onClick={() => handleRemoveMinusOneCard()}
+      >
+        Remove -1 card
       </button>
       <button
         className="button"
