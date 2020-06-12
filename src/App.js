@@ -15,6 +15,7 @@ import PerkSelection from './PerkSelection'
 import HandSelection from './HandSelection'
 import PlayArea from './PlayArea'
 import Cookies from 'universal-cookie'
+import CookieConsent from 'react-cookie-consent'
 
 function App() {
   const [stage, setStage] = useState('selectCharacter')
@@ -338,6 +339,9 @@ function App() {
         />
       )}
       <Feedback />
+      <CookieConsent>
+        This website uses cookies to save your selected preferences.
+      </CookieConsent>
     </>
   )
 }
