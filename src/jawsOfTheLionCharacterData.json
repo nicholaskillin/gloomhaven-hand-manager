@@ -306,109 +306,74 @@
     "perks": [
       {
         "id": 1,
-        "checkboxes": [{ "id": 0 }, { "id": 1 }],
-        "label": "Remove Two -1 Cards",
-        "changes": [{ "cardTitle": "minus1", "action": "remove", "number": 2 }]
+        "checkboxes": [{ "id": 0 }],
+        "label": "Remove four +0 cards",
+        "changes": [{ "cardTitle": "plus0", "action": "remove", "number": 4 }]
       },
       {
         "id": 2,
-        "checkboxes": [{ "id": 2 }],
-        "label": "Remove one -2 card",
-        "changes": [{ "cardTitle": "minus2", "action": "remove", "number": 1 }]
+        "checkboxes": [{ "id": 1 }, { "id": 2 }],
+        "label": "Remove two -1 cards",
+        "changes": [{ "cardTitle": "minus1", "action": "remove", "number": 2 }]
       },
       {
         "id": 3,
-        "checkboxes": [{ "id": 3 }, { "id": 4 }],
-        "label": "Replace two +1 cards with one +3 Shield 1 Self card",
+        "checkboxes": [{ "id": 3 }],
+        "label": "Remove one -2 card and one +1 card",
         "changes": [
-          { "cardTitle": "plus1", "action": "remove", "number": 2 },
-          { "cardTitle": "plus3Shield1", "action": "add", "number": 1 }
+          { "cardTitle": "minus2", "action": "remove", "number": 1 },
+          { "cardTitle": "plus1", "action": "remove", "number": 1 }
         ]
       },
       {
         "id": 4,
-        "checkboxes": [{ "id": 5 }],
-        "label": "Replace one +0 card with one +1 Sheild 1, Affect any ally card",
+        "checkboxes": [{ "id": 4 }, { "id": 5 }],
+        "label": "Replace one +0 card with one +2 Muddle card",
         "changes": [
           { "cardTitle": "plus0", "action": "remove", "number": 1 },
-          { "cardTitle": "plus1Shield1Ally", "action": "add", "number": 1 }
+          { "cardTitle": "plus2Muddle", "action": "add", "number": 1 }
         ]
       },
       {
         "id": 5,
         "checkboxes": [{ "id": 6 }],
-        "label": "Replace one +0 card with one +2 Dark card",
+        "label": "Replace one -1 card with one +0 Poison card",
         "changes": [
-          { "cardTitle": "plus0", "action": "remove", "number": 1 },
-          { "cardTitle": "plus2Dark", "action": "add", "number": 1 }
+          { "cardTitle": "minus1", "action": "remove", "number": 1 },
+          { "cardTitle": "poison", "action": "add", "number": 1 }
         ]
       },
       {
         "id": 6,
-        "checkboxes": [{ "id": 7 }],
-        "label": "Replace one +0 card with one +2 Light card",
-        "changes": [
-          { "cardTitle": "plus0", "action": "remove", "number": 1 },
-          { "cardTitle": "plus2Light", "action": "add", "number": 1 }
-        ]
+        "checkboxes": [{ "id": 7 }, { "id": 8 }],
+        "label": "Add one +2 card",
+        "changes": [{ "cardTitle": "plus2", "action": "add", "number": 1 }]
       },
       {
         "id": 7,
-        "checkboxes": [{ "id": 8 }],
-        "label": "Replace one +0 card with one +3 Muddle card",
+        "checkboxes": [{ "id": 9 }, { "id": 10 }],
+        "label": "Replace one +1 card with one +2 Leaf card",
         "changes": [
-          { "cardTitle": "plus0", "action": "remove", "number": 1 },
-          { "cardTitle": "plus3Muddle", "action": "add", "number": 1 }
+          { "cardTitle": "plus1", "action": "remove", "number": 1 },
+          { "cardTitle": "plus2Leaf", "action": "add", "number": 1 }
         ]
       },
       {
         "id": 8,
-        "checkboxes": [{ "id": 9 }],
-        "label": "Replace one +0 card with one +2 Curse card",
+        "checkboxes": [{ "id": 11 }, { "id": 12 }],
+        "label": "Replace one +1 card with one +2 Fire card",
         "changes": [
-          { "cardTitle": "plus0", "action": "remove", "number": 1 },
-          { "cardTitle": "plus2Curse", "action": "add", "number": 1 }
+          { "cardTitle": "plus1", "action": "remove", "number": 1 },
+          { "cardTitle": "plus2Fire", "action": "add", "number": 1 }
         ]
       },
       {
         "id": 9,
-        "checkboxes": [{ "id": 10 }],
-        "label": "Replace one +0 card with one +2 Regenerate Self card",
+        "checkboxes": [{ "id": 13 }, { "id": 14 }],
+        "label": "Add one +0 All adjacent enemies suffer 1 damage card",
         "changes": [
-          { "cardTitle": "plus0", "action": "remove", "number": 1 },
-          { "cardTitle": "plus2Regenerate", "action": "add", "number": 1 }
+          { "cardTitle": "1DamageAdjacent", "action": "add", "number": 1 }
         ]
-      },
-      {
-        "id": 10,
-        "checkboxes": [{ "id": 11 }],
-        "label": "Replace one -1 card with one +1 Heal 2 affect any ally card",
-        "changes": [
-          { "cardTitle": "minus1", "action": "remove", "number": 1 },
-          { "cardTitle": "plus1Heal2Ally", "action": "add", "number": 1 }
-        ]
-      },
-      {
-        "id": 11,
-        "checkboxes": [{ "id": 12 }],
-        "label": "Add two rolling Heal 1 self cards",
-        "changes": [
-          { "cardTitle": "rollingHeal1", "action": "add", "number": 2 }
-        ]
-      },
-      {
-        "id": 12,
-        "checkboxes": [{ "id": 13 }],
-        "label": "Add two rolling Curse cards",
-        "changes": [
-          { "cardTitle": "rollingCurse", "action": "add", "number": 2 }
-        ]
-      },
-      {
-        "id": 13,
-        "checkboxes": [{ "id": 14 }],
-        "label": "Ignore negative scenario effects and add two +1 cards",
-        "changes": [{ "cardTitle": "plus1", "action": "add", "number": 2 }]
       }
     ]
   }
