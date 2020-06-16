@@ -4,7 +4,7 @@
     "initials": "de",
     "noSpoilerName": "Demolitionist",
     "handSize": 9,
-    "startingCards": 11,
+    "startingCards": 12,
     "cards": [
       {
         "title": "windup",
@@ -184,18 +184,32 @@
         "tracker": []
       },
       {
+        "title": "rubble",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 16,
+            "top": 205,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
         "title": "robotic-enhancement",
         "level": 2,
         "enhancementSpots": 2,
         "enhancements": [
           {
-            "id": 16,
+            "id": 17,
             "top": 82,
             "left": 139,
             "enhancement": ""
           },
           {
-            "id": 17,
+            "id": 18,
             "top": 208,
             "left": 137,
             "enhancement": ""
@@ -209,7 +223,7 @@
         "enhancementSpots": 1,
         "enhancements": [
           {
-            "id": 18,
+            "id": 19,
             "top": 184,
             "left": 136,
             "enhancement": ""
@@ -228,19 +242,19 @@
         "enhancementSpots": 3,
         "enhancements": [
           {
-            "id": 19,
+            "id": 20,
             "top": 77,
             "left": 130,
             "enhancement": ""
           },
           {
-            "id": 20,
+            "id": 21,
             "top": 92,
             "left": 130,
             "enhancement": ""
           },
           {
-            "id": 21,
+            "id": 22,
             "top": 194,
             "left": 137,
             "enhancement": ""
@@ -254,13 +268,13 @@
         "enhancementSpots": 2,
         "enhancements": [
           {
-            "id": 22,
+            "id": 23,
             "top": 59,
             "left": 140,
             "enhancement": ""
           },
           {
-            "id": 23,
+            "id": 24,
             "top": 193,
             "left": 137,
             "enhancement": ""
@@ -274,7 +288,7 @@
         "enhancementSpots": 1,
         "enhancements": [
           {
-            "id": 24,
+            "id": 25,
             "top": 83,
             "left": 140,
             "enhancement": ""
@@ -288,13 +302,13 @@
         "enhancementSpots": 2,
         "enhancements": [
           {
-            "id": 25,
+            "id": 26,
             "top": 60,
             "left": 139,
             "enhancement": ""
           },
           {
-            "id": 26,
+            "id": 27,
             "top": 206,
             "left": 137,
             "enhancement": ""
