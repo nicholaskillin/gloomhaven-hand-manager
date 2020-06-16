@@ -229,20 +229,20 @@
         "enhancements": [
           {
             "id": 19,
-            "top": 212,
-            "left": 80,
+            "top": 77,
+            "left": 130,
             "enhancement": ""
           },
           {
             "id": 20,
-            "top": 212,
-            "left": 121,
+            "top": 92,
+            "left": 130,
             "enhancement": ""
           },
           {
             "id": 21,
-            "top": 231,
-            "left": 80,
+            "top": 194,
+            "left": 137,
             "enhancement": ""
           }
         ],
@@ -255,14 +255,14 @@
         "enhancements": [
           {
             "id": 22,
-            "top": 92,
-            "left": 125,
+            "top": 59,
+            "left": 140,
             "enhancement": ""
           },
           {
             "id": 23,
-            "top": 77,
-            "left": 150,
+            "top": 193,
+            "left": 137,
             "enhancement": ""
           }
         ],
@@ -275,8 +275,8 @@
         "enhancements": [
           {
             "id": 24,
-            "top": 93,
-            "left": 138,
+            "top": 83,
+            "left": 140,
             "enhancement": ""
           }
         ],
@@ -289,14 +289,14 @@
         "enhancements": [
           {
             "id": 25,
-            "top": 54,
-            "left": 134,
+            "top": 60,
+            "left": 139,
             "enhancement": ""
           },
           {
             "id": 26,
-            "top": 54,
-            "left": 134,
+            "top": 206,
+            "left": 137,
             "enhancement": ""
           }
         ],
