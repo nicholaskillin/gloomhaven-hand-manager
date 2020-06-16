@@ -4,16 +4,49 @@
     "initials": "de",
     "noSpoilerName": "Demolitionist",
     "handSize": 9,
-    "startingCards": 12,
+    "startingCards": 11,
     "cards": [
       {
-        "title": "peer-into-battle",
+        "title": "windup",
         "level": 1,
-        "enhancementSpots": 1,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": [{ "active": true }, { "active": true }]
+      },
+      {
+        "title": "crushing-weight",
+        "level": 1,
+        "enhancementSpots": 2,
         "enhancements": [
           {
             "id": 1,
-            "top": 198,
+            "top": 78,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 2,
+            "top": 205,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "knock-out-the-support",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 3,
+            "top": 61,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 4,
+            "top": 189,
             "left": 136,
             "enhancement": ""
           }
@@ -21,147 +54,47 @@
         "tracker": []
       },
       {
-        "title": "anticipate-intricacies",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 2,
-            "top": 199,
-            "left": 140,
-            "enhancement": ""
-          },
-          {
-            "id": 3,
-            "top": 229,
-            "left": 132,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "protective-aura",
-        "level": 1,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 4,
-            "top": 87,
-            "left": 170,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "clairvoyance",
+        "title": "explode",
         "level": 1,
         "enhancementSpots": 1,
         "enhancements": [
           {
             "id": 5,
-            "top": 55,
-            "left": 169,
+            "top": 213,
+            "left": 136,
             "enhancement": ""
           }
         ],
         "tracker": []
       },
       {
-        "title": "otherworldly-journey",
+        "title": "implode",
         "level": 1,
         "enhancementSpots": 1,
         "enhancements": [
           {
             "id": 6,
-            "top": 226,
-            "left": 98,
+            "top": 209,
+            "left": 136,
             "enhancement": ""
           }
         ],
         "tracker": []
       },
       {
-        "title": "ray-of-light",
+        "title": "piston-punch",
         "level": 1,
-        "enhancementSpots": 4,
+        "enhancementSpots": 2,
         "enhancements": [
           {
             "id": 7,
-            "top": 73,
-            "left": 135,
+            "top": 75,
+            "left": 138,
             "enhancement": ""
           },
           {
             "id": 8,
-            "top": 73,
-            "left": 153,
-            "enhancement": ""
-          },
-          {
-            "id": 9,
-            "top": 230,
-            "left": 140,
-            "enhancement": ""
-          },
-          {
-            "id": 10,
-            "top": 245,
-            "left": 130,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "dimensional-transfer",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 14,
-            "top": 100,
-            "left": 158,
-            "enhancement": ""
-          },
-          {
-            "id": 15,
-            "top": 227,
-            "left": 98,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "void-snare",
-        "level": 1,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 13,
-            "top": 191,
-            "left": 138,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "cursed-ground",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 11,
-            "top": 223,
-            "left": 146,
-            "enhancement": ""
-          },
-          {
-            "id": 12,
-            "top": 253,
+            "top": 91,
             "left": 131,
             "enhancement": ""
           }
@@ -169,14 +102,116 @@
         "tracker": []
       },
       {
-        "title": "bad-omen",
+        "title": "explosive-blitz",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 9,
+            "top": 87,
+            "left": 129,
+            "enhancement": ""
+          },
+          {
+            "id": 10,
+            "top": 181,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "the-big-one",
         "level": 1,
         "enhancementSpots": 1,
         "enhancements": [
           {
+            "id": 11,
+            "top": 189,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "one-two-punch",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 12,
+            "top": 60,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 13,
+            "top": 84,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "level",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 14,
+            "top": 77,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "lobbed-charge",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 15,
+            "top": 179,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "robotic-enhancement",
+        "level": 2,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
             "id": 16,
-            "top": 231,
-            "left": 98,
+            "top": 82,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 17,
+            "top": 208,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "crash-protocol",
+        "level": 2,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 18,
+            "top": 184,
+            "left": 136,
             "enhancement": ""
           }
         ],
@@ -184,122 +219,28 @@
           { "active": true },
           { "active": true },
           { "active": true },
-          { "active": true },
-          { "active": true },
           { "active": true }
         ]
       },
       {
-        "title": "inspiration-from-beyond",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 17,
-            "top": 198,
-            "left": 138,
-            "enhancement": ""
-          },
-          {
-            "id": 18,
-            "top": 223,
-            "left": 135,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "duality-shards",
-        "level": 1,
-        "enhancementSpots": 4,
-        "enhancements": [
-          {
-            "id": 19,
-            "top": 79,
-            "left": 132,
-            "enhancement": ""
-          },
-          {
-            "id": 20,
-            "top": 94,
-            "left": 132,
-            "enhancement": ""
-          },
-          {
-            "id": 21,
-            "top": 199,
-            "left": 140,
-            "enhancement": ""
-          },
-          {
-            "id": 22,
-            "top": 229,
-            "left": 132,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "revitalizing-fount",
-        "level": 2,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 23,
-            "top": 53,
-            "left": 134,
-            "enhancement": ""
-          },
-          {
-            "id": 24,
-            "top": 92,
-            "left": 138,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "gift-of-the-void",
-        "level": 2,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 25,
-            "top": 202,
-            "left": 138,
-            "enhancement": ""
-          },
-          {
-            "id": 26,
-            "top": 202,
-            "left": 155,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "envision-the-course",
+        "title": "fire-bombs",
         "level": 3,
         "enhancementSpots": 3,
         "enhancements": [
           {
-            "id": 27,
+            "id": 19,
             "top": 212,
             "left": 80,
             "enhancement": ""
           },
           {
-            "id": 28,
+            "id": 20,
             "top": 212,
             "left": 121,
             "enhancement": ""
           },
           {
-            "id": 29,
+            "id": 21,
             "top": 231,
             "left": 80,
             "enhancement": ""
@@ -308,228 +249,54 @@
         "tracker": []
       },
       {
-        "title": "call-of-the-nether",
+        "title": "nowhere-to-run",
         "level": 3,
-        "enhancementSpots": 3,
+        "enhancementSpots": 2,
         "enhancements": [
           {
-            "id": 30,
+            "id": 22,
             "top": 92,
             "left": 125,
             "enhancement": ""
           },
           {
-            "id": 31,
+            "id": 23,
             "top": 77,
             "left": 150,
             "enhancement": ""
-          },
-          {
-            "id": 32,
-            "top": 108,
-            "left": 150,
-            "enhancement": ""
           }
         ],
         "tracker": []
       },
       {
-        "title": "preordain-the-path",
-        "level": 4,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 33,
-            "top": 93,
-            "left": 138,
-            "enhancement": ""
-          },
-          {
-            "id": 34,
-            "top": 93,
-            "left": 155,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "cleansing-rite",
+        "title": "remote-detonation",
         "level": 4,
         "enhancementSpots": 1,
         "enhancements": [
           {
-            "id": 35,
+            "id": 24,
+            "top": 93,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "extra-fuel",
+        "level": 4,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 25,
             "top": 54,
             "left": 134,
             "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "seal-their-fate",
-        "level": 5,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 36,
-            "top": 199,
-            "left": 138,
-            "enhancement": ""
           },
           {
-            "id": 37,
-            "top": 222,
-            "left": 138,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "dimensional-divide",
-        "level": 5,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 38,
-            "top": 199,
-            "left": 111,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "enfeebling-hex",
-        "level": 6,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 39,
-            "top": 185,
-            "left": 145,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "careful-attunement",
-        "level": 6,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 40,
-            "top": 186,
-            "left": 136,
-            "enhancement": ""
-          },
-          {
-            "id": 41,
-            "top": 203,
-            "left": 167,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "curative-flux",
-        "level": 7,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 42,
-            "top": 67,
-            "left": 133,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "ethereal-vortex",
-        "level": 7,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 43,
-            "top": 75,
-            "left": 140,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "deep-contemplation",
-        "level": 8,
-        "enhancementSpots": 0,
-        "enhancements": [],
-        "tracker": []
-      },
-      {
-        "title": "anguish-and-salvation",
-        "level": 8,
-        "enhancementSpots": 3,
-        "enhancements": [
-          {
-            "id": 44,
-            "top": 63,
-            "left": 145,
-            "enhancement": ""
-          },
-          {
-            "id": 45,
-            "top": 79,
-            "left": 130,
-            "enhancement": ""
-          },
-          {
-            "id": 46,
-            "top": 192,
+            "id": 26,
+            "top": 54,
             "left": 134,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "hand-of-destiny",
-        "level": 9,
-        "enhancementSpots": 0,
-        "enhancements": [],
-        "tracker": []
-      },
-      {
-        "title": "planar-fissure",
-        "level": 9,
-        "enhancementSpots": 4,
-        "enhancements": [
-          {
-            "id": 47,
-            "top": 90,
-            "left": 140,
-            "enhancement": ""
-          },
-          {
-            "id": 48,
-            "top": 211,
-            "left": 81,
-            "enhancement": ""
-          },
-          {
-            "id": 49,
-            "top": 211,
-            "left": 121,
-            "enhancement": ""
-          },
-          {
-            "id": 50,
-            "top": 231,
-            "left": 81,
             "enhancement": ""
           }
         ],
