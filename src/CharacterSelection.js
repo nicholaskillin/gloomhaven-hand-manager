@@ -149,7 +149,7 @@ function CharacterSelection({
             className="level-modifier"
             type="button"
             onClick={() => handleSetLevel(level + 1)}
-            disabled={level > 8}
+            disabled={level > 8 || (game === 'jotl' && level > 3)}
           >
             +
           </button>

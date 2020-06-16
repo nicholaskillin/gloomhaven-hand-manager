@@ -129,6 +129,9 @@ function App() {
 
   function handleGameChange(gameName) {
     setGame(gameName)
+    if (gameName === 'jotl' && level > 4) {
+      setLevel(4)
+    }
   }
 
   function handleSetStage(stage) {
