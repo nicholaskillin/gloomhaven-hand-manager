@@ -1140,7 +1140,7 @@
         ]
       },
       {
-        "id": 9,
+        "id": 10,
         "checkboxes": [
           {
             "id": 12
@@ -1602,7 +1602,20 @@
         "checkboxes": [
           {
             "id": 0
-          },
+          }
+        ],
+        "label": "Remove four +0 cards",
+        "changes": [
+          {
+            "cardTitle": "plus0",
+            "action": "remove",
+            "number": 4
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "checkboxes": [
           {
             "id": 1
           }
@@ -1617,43 +1630,22 @@
         ]
       },
       {
-        "id": 2,
+        "id": 3,
         "checkboxes": [
           {
             "id": 2
           }
         ],
-        "label": "Replace one +0 card with one +2 Muddle card",
+        "label": "Remove one -2 card and one +1 card",
         "changes": [
           {
-            "cardTitle": "plus0",
+            "cardTitle": "minus2",
             "action": "remove",
             "number": 1
           },
           {
-            "cardTitle": "plus2Muddle",
-            "action": "add",
-            "number": 1
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "checkboxes": [
-          {
-            "id": 3
-          }
-        ],
-        "label": "Replace one +0 card with one +1 Poison card",
-        "changes": [
-          {
-            "cardTitle": "plus0",
+            "cardTitle": "plus1",
             "action": "remove",
-            "number": 1
-          },
-          {
-            "cardTitle": "plus1Poison",
-            "action": "add",
             "number": 1
           }
         ]
@@ -1662,18 +1654,21 @@
         "id": 4,
         "checkboxes": [
           {
+            "id": 3
+          },
+          {
             "id": 4
           }
         ],
-        "label": "Replace one +0 card with one +1 Wound card",
+        "label": "Replace one -1 card with one +1 card",
         "changes": [
           {
-            "cardTitle": "plus0",
+            "cardTitle": "minus1",
             "action": "remove",
             "number": 1
           },
           {
-            "cardTitle": "plus1Wound",
+            "cardTitle": "plus1",
             "action": "add",
             "number": 1
           }
@@ -1684,6 +1679,92 @@
         "checkboxes": [
           {
             "id": 5
+          },
+          {
+            "id": 6
+          }
+        ],
+        "label": "Replace one +1 card with one +2 Fire card",
+        "changes": [
+          {
+            "cardTitle": "plus1",
+            "action": "remove",
+            "number": 1
+          },
+          {
+            "cardTitle": "plus2Fire",
+            "action": "add",
+            "number": 1
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "checkboxes": [
+          {
+            "id": 7
+          },
+          {
+            "id": 8
+          }
+        ],
+        "label": "Replace one +1 card with one +2 Light card",
+        "changes": [
+          {
+            "cardTitle": "plus1",
+            "action": "remove",
+            "number": 1
+          },
+          {
+            "cardTitle": "plus2Light",
+            "action": "add",
+            "number": 1
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "checkboxes": [
+          {
+            "id": 9
+          },
+          {
+            "id": 10
+          }
+        ],
+        "label": "Add one +1 Fire and Light card",
+        "changes": [
+          {
+            "cardTitle": "plus1FireLight",
+            "action": "add",
+            "number": 1
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "checkboxes": [
+          {
+            "id": 11
+          },
+          {
+            "id": 12
+          }
+        ],
+        "label": "Add one +1 Shield 1 card",
+        "changes": [
+          {
+            "cardTitle": "plus1Shield1",
+            "action": "add",
+            "number": 1
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "checkboxes": [
+          {
+            "id": 13
           }
         ],
         "label": "Replace one +0 card with one +1 Immobilize card",
@@ -1701,112 +1782,21 @@
         ]
       },
       {
-        "id": 6,
+        "id": 10,
         "checkboxes": [
-          {
-            "id": 6
-          }
-        ],
-        "label": "Replace one +0 card with one +1 Push 2 card",
-        "changes": [
-          {
-            "cardTitle": "plus0",
-            "action": "remove",
-            "number": 1
-          },
-          {
-            "cardTitle": "plus1Push2",
-            "action": "add",
-            "number": 1
-          }
-        ]
-      },
-      {
-        "id": 7,
-        "checkboxes": [
-          {
-            "id": 7
-          }
-        ],
-        "label": "Replace one +0 card with one +0 Stun card",
-        "changes": [
-          {
-            "cardTitle": "plus0",
-            "action": "remove",
-            "number": 1
-          },
-          {
-            "cardTitle": "stun",
-            "action": "add",
-            "number": 1
-          }
-        ]
-      },
-      {
-        "id": 8,
-        "checkboxes": [
-          {
-            "id": 8
-          }
-        ],
-        "label": "Replace one +1 card with one +1 Stun card",
-        "changes": [
-          {
-            "cardTitle": "plus1",
-            "action": "remove",
-            "number": 1
-          },
-          {
-            "cardTitle": "plus1Stun",
-            "action": "add",
-            "number": 1
-          }
-        ]
-      },
-      {
-        "id": 9,
-        "checkboxes": [
-          {
-            "id": 9
-          },
-          {
-            "id": 10
-          },
-          {
-            "id": 11
-          }
-        ],
-        "label": "Add one +2 Wind card",
-        "changes": [
-          {
-            "cardTitle": "plus2Wind",
-            "action": "add",
-            "number": 1
-          }
-        ]
-      },
-      {
-        "id": 9,
-        "checkboxes": [
-          {
-            "id": 12
-          },
-          {
-            "id": 13
-          },
           {
             "id": 14
           }
         ],
-        "label": "Replace one +1 with one +3 card",
+        "label": "Replace one +0 card with one +1 Wound card",
         "changes": [
           {
-            "cardTitle": "plus1",
+            "cardTitle": "plus0",
             "action": "remove",
             "number": 1
           },
           {
-            "cardTitle": "plus3",
+            "cardTitle": "plus1Wound",
             "action": "add",
             "number": 1
           }
