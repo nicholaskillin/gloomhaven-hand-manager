@@ -1719,5 +1719,557 @@
         ]
       }
     ]
+  },
+  {
+    "name": "voidwarden",
+    "initials": "vw",
+    "noSpoilerName": "Voidwarden",
+    "handSize": 11,
+    "startingCards": 14,
+    "cards": [
+      {
+        "title": "swift-strength",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 1,
+            "top": 70,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 2,
+            "top": 230,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "healing-sands",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 3,
+            "top": 70,
+            "left": 135,
+            "enhancement": ""
+          },
+          {
+            "id": 4,
+            "top": 192,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "shield-spikes",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 5,
+            "top": 200,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "flaming-sickle",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 6,
+            "top": 65,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "blinding-sickle",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 7,
+            "top": 65,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "twirling-stabs",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 8,
+            "top": 62,
+            "left": 140,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "flame-shroud",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 9,
+            "top": 198,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": [
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          }
+        ]
+      },
+      {
+        "title": "shocking-advance",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 10,
+            "top": 61,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 11,
+            "top": 210,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "shield-of-the-desert",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 12,
+            "top": 195,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "desert-night",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 13,
+            "top": 64,
+            "left": 140,
+            "enhancement": ""
+          },
+          {
+            "id": 14,
+            "top": 201,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "warrior-of-the-sun",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 15,
+            "top": 60,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "blade-dance",
+        "level": 1,
+        "enhancementSpots": 3,
+        "enhancements": [
+          {
+            "id": 16,
+            "top": 50,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 17,
+            "top": 112,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 18,
+            "top": 184,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "precision-strike",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 19,
+            "top": 59,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 20,
+            "top": 201,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "harvest-sickle",
+        "level": 2,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 21,
+            "top": 70,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "barbaric-instincts",
+        "level": 2,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 22,
+            "top": 52,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "warmth-of-the-sun",
+        "level": 3,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 23,
+            "top": 218,
+            "left": 131,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "strangling-chain",
+        "level": 3,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 24,
+            "top": 51,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 25,
+            "top": 204,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "radiant-sickle",
+        "level": 4,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 26,
+            "top": 60,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 27,
+            "top": 246,
+            "left": 129,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "burn-away-the-dark",
+        "level": 4,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 28,
+            "top": 188,
+            "left": 137,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      }
+    ],
+    "perks": [
+      {
+        "id": 1,
+        "checkboxes": [
+          {
+            "id": 0
+          }
+        ],
+        "label": "Remove four +0 cards",
+        "changes": [
+          {
+            "cardTitle": "plus0",
+            "action": "remove",
+            "number": 4
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "checkboxes": [
+          {
+            "id": 1
+          }
+        ],
+        "label": "Remove two -1 cards",
+        "changes": [
+          {
+            "cardTitle": "minus1",
+            "action": "remove",
+            "number": 2
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "checkboxes": [
+          {
+            "id": 2
+          }
+        ],
+        "label": "Remove one -2 card and one +1 card",
+        "changes": [
+          {
+            "cardTitle": "minus2",
+            "action": "remove",
+            "number": 1
+          },
+          {
+            "cardTitle": "plus1",
+            "action": "remove",
+            "number": 1
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "checkboxes": [
+          {
+            "id": 3
+          },
+          {
+            "id": 4
+          }
+        ],
+        "label": "Replace one -1 card with one +1 card",
+        "changes": [
+          {
+            "cardTitle": "minus1",
+            "action": "remove",
+            "number": 1
+          },
+          {
+            "cardTitle": "plus1",
+            "action": "add",
+            "number": 1
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "checkboxes": [
+          {
+            "id": 5
+          },
+          {
+            "id": 6
+          }
+        ],
+        "label": "Replace one +1 card with one +2 Fire card",
+        "changes": [
+          {
+            "cardTitle": "plus1",
+            "action": "remove",
+            "number": 1
+          },
+          {
+            "cardTitle": "plus2Fire",
+            "action": "add",
+            "number": 1
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "checkboxes": [
+          {
+            "id": 7
+          },
+          {
+            "id": 8
+          }
+        ],
+        "label": "Replace one +1 card with one +2 Light card",
+        "changes": [
+          {
+            "cardTitle": "plus1",
+            "action": "remove",
+            "number": 1
+          },
+          {
+            "cardTitle": "plus2Light",
+            "action": "add",
+            "number": 1
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "checkboxes": [
+          {
+            "id": 9
+          },
+          {
+            "id": 10
+          }
+        ],
+        "label": "Add one +1 Fire and Light card",
+        "changes": [
+          {
+            "cardTitle": "plus1FireLight",
+            "action": "add",
+            "number": 1
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "checkboxes": [
+          {
+            "id": 11
+          },
+          {
+            "id": 12
+          }
+        ],
+        "label": "Add one +1 Shield 1 card",
+        "changes": [
+          {
+            "cardTitle": "plus1Shield1",
+            "action": "add",
+            "number": 1
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "checkboxes": [
+          {
+            "id": 13
+          }
+        ],
+        "label": "Replace one +0 card with one +1 Immobilize card",
+        "changes": [
+          {
+            "cardTitle": "plus0",
+            "action": "remove",
+            "number": 1
+          },
+          {
+            "cardTitle": "plus1Immobilize",
+            "action": "add",
+            "number": 1
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "checkboxes": [
+          {
+            "id": 14
+          }
+        ],
+        "label": "Replace one +0 card with one +1 Wound card",
+        "changes": [
+          {
+            "cardTitle": "plus0",
+            "action": "remove",
+            "number": 1
+          },
+          {
+            "cardTitle": "plus1Wound",
+            "action": "add",
+            "number": 1
+          }
+        ]
+      }
+    ]
   }
 ]
