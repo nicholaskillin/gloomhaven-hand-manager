@@ -1176,12 +1176,18 @@
     "startingCards": 13,
     "cards": [
       {
-        "title": "the-favorite",
+        "title": "swift-strength",
         "level": 1,
-        "enhancementSpots": 1,
+        "enhancementSpots": 2,
         "enhancements": [
           {
             "id": 1,
+            "top": 240,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 2,
             "top": 240,
             "left": 139,
             "enhancement": ""
@@ -1190,12 +1196,18 @@
         "tracker": []
       },
       {
-        "title": "retrieval",
+        "title": "healing-sands",
         "level": 1,
-        "enhancementSpots": 1,
+        "enhancementSpots": 2,
         "enhancements": [
           {
-            "id": 2,
+            "id": 3,
+            "top": 76,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 4,
             "top": 76,
             "left": 139,
             "enhancement": ""
@@ -1204,130 +1216,104 @@
         "tracker": []
       },
       {
-        "title": "close-cuts",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 3,
-            "top": 115,
-            "left": 136,
-            "enhancement": ""
-          },
-          {
-            "id": 4,
-            "top": 208,
-            "left": 140,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "center-mass",
-        "level": 1,
-        "enhancementSpots": 4,
-        "enhancements": [
-          {
-            "id": 5,
-            "top": 82,
-            "left": 138,
-            "enhancement": ""
-          },
-          {
-            "id": 6,
-            "top": 97,
-            "left": 131,
-            "enhancement": ""
-          },
-          {
-            "id": 7,
-            "top": 202,
-            "left": 137,
-            "enhancement": ""
-          },
-          {
-            "id": 8,
-            "top": 227,
-            "left": 137,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "stopping-power",
-        "level": 1,
-        "enhancementSpots": 3,
-        "enhancements": [
-          {
-            "id": 9,
-            "top": 75,
-            "left": 139,
-            "enhancement": ""
-          },
-          {
-            "id": 10,
-            "top": 90,
-            "left": 132,
-            "enhancement": ""
-          },
-          {
-            "id": 11,
-            "top": 183,
-            "left": 136,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "double-throw",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 12,
-            "top": 63,
-            "left": 140,
-            "enhancement": ""
-          },
-          {
-            "id": 13,
-            "top": 92,
-            "left": 130,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "disorienting-barrage",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 14,
-            "top": 86,
-            "left": 130,
-            "enhancement": ""
-          },
-          {
-            "id": 15,
-            "top": 100,
-            "left": 130,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "power-pitch",
+        "title": "shield-spikes",
         "level": 1,
         "enhancementSpots": 1,
         "enhancements": [
           {
-            "id": 16,
+            "id": 5,
+            "top": 115,
+            "left": 136,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "flaming-sickle",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 6,
+            "top": 82,
+            "left": 138,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "blinding-sickle",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 7,
+            "top": 75,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "twirling-stabs",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 8,
+            "top": 63,
+            "left": 140,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "flame-shroud",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 9,
+            "top": 86,
+            "left": 130,
+            "enhancement": ""
+          }
+        ],
+        "tracker": [
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          }
+        ]
+      },
+      {
+        "title": "shocking-advance",
+        "level": 1,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 10,
+            "top": 210,
+            "left": 137,
+            "enhancement": ""
+          },
+          {
+            "id": 11,
             "top": 210,
             "left": 137,
             "enhancement": ""
@@ -1336,32 +1322,32 @@
         "tracker": []
       },
       {
-        "title": "follow-through",
+        "title": "shield-of-the-desert",
         "level": 1,
-        "enhancementSpots": 2,
+        "enhancementSpots": 1,
         "enhancements": [
           {
-            "id": 17,
+            "id": 12,
             "top": 86,
             "left": 130,
-            "enhancement": ""
-          },
-          {
-            "id": 18,
-            "top": 192,
-            "left": 138,
             "enhancement": ""
           }
         ],
         "tracker": []
       },
       {
-        "title": "second-wind",
+        "title": "desert-night",
         "level": 1,
-        "enhancementSpots": 1,
+        "enhancementSpots": 2,
         "enhancements": [
           {
-            "id": 19,
+            "id": 13,
+            "top": 71,
+            "left": 135,
+            "enhancement": ""
+          },
+          {
+            "id": 14,
             "top": 71,
             "left": 135,
             "enhancement": ""
@@ -1370,25 +1356,39 @@
         "tracker": []
       },
       {
-        "title": "care-package",
+        "title": "warrior-of-the-sun",
+        "level": 1,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 15,
+            "top": 60,
+            "left": 140,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "blade-dance",
         "level": 1,
         "enhancementSpots": 3,
         "enhancements": [
           {
-            "id": 20,
-            "top": 60,
+            "id": 16,
+            "top": 75,
             "left": 140,
             "enhancement": ""
           },
           {
-            "id": 21,
-            "top": 98,
-            "left": 135,
+            "id": 17,
+            "top": 90,
+            "left": 131,
             "enhancement": ""
           },
           {
-            "id": 22,
-            "top": 230,
+            "id": 18,
+            "top": 90,
             "left": 131,
             "enhancement": ""
           }
@@ -1396,45 +1396,18 @@
         "tracker": []
       },
       {
-        "title": "extra-lift",
+        "title": "precision-strike",
         "level": 1,
         "enhancementSpots": 2,
         "enhancements": [
           {
-            "id": 23,
-            "top": 75,
-            "left": 140,
-            "enhancement": ""
-          },
-          {
-            "id": 24,
+            "id": 19,
             "top": 90,
-            "left": 131,
+            "left": 137,
             "enhancement": ""
-          }
-        ],
-        "tracker": [
-          {
-            "active": true
           },
           {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          }
-        ]
-      },
-      {
-        "title": "fancy-hat",
-        "level": 1,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 25,
+            "id": 20,
             "top": 90,
             "left": 137,
             "enhancement": ""
@@ -1443,115 +1416,80 @@
         "tracker": []
       },
       {
-        "title": "repeat-shot",
+        "title": "harvest-sickle",
         "level": 2,
-        "enhancementSpots": 2,
+        "enhancementSpots": 1,
         "enhancements": [
           {
-            "id": 26,
+            "id": 21,
             "top": 199,
             "left": 139,
             "enhancement": ""
-          },
-          {
-            "id": 27,
-            "top": 213,
-            "left": 131,
-            "enhancement": ""
           }
         ],
         "tracker": []
       },
       {
-        "title": "ricochet",
+        "title": "barbaric-instincts",
         "level": 2,
-        "enhancementSpots": 2,
+        "enhancementSpots": 1,
         "enhancements": [
           {
-            "id": 28,
+            "id": 22,
             "top": 58,
             "left": 139,
             "enhancement": ""
-          },
-          {
-            "id": 29,
-            "top": 97,
-            "left": 140,
-            "enhancement": ""
-          }
-        ],
-        "tracker": [
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          }
-        ]
-      },
-      {
-        "title": "fearsome-efficiency",
-        "level": 3,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 30,
-            "top": 52,
-            "left": 140,
-            "enhancement": ""
-          },
-          {
-            "id": 31,
-            "top": 68,
-            "left": 130,
-            "enhancement": ""
           }
         ],
         "tracker": []
       },
       {
-        "title": "sharpened-blades",
+        "title": "warmth-of-the-sun",
         "level": 3,
         "enhancementSpots": 1,
         "enhancements": [
           {
-            "id": 32,
+            "id": 23,
+            "top": 52,
+            "left": 140,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "strangling-chain",
+        "level": 3,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 24,
+            "top": 213,
+            "left": 138,
+            "enhancement": ""
+          },
+          {
+            "id": 25,
             "top": 213,
             "left": 138,
             "enhancement": ""
           }
         ],
-        "tracker": [
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          }
-        ]
+        "tracker": []
       },
       {
-        "title": "ripped-from-the-flesh",
+        "title": "radiant-sickle",
         "level": 4,
-        "enhancementSpots": 1,
+        "enhancementSpots": 2,
         "enhancements": [
           {
-            "id": 33,
+            "id": 26,
+            "top": 191,
+            "left": 134,
+            "enhancement": ""
+          },
+          {
+            "id": 27,
             "top": 191,
             "left": 134,
             "enhancement": ""
@@ -1560,40 +1498,18 @@
         "tracker": []
       },
       {
-        "title": "overwatch",
+        "title": "burn-away-the-dark",
         "level": 4,
-        "enhancementSpots": 2,
+        "enhancementSpots": 1,
         "enhancements": [
           {
-            "id": 34,
+            "id": 28,
             "top": 76,
             "left": 140,
             "enhancement": ""
-          },
-          {
-            "id": 35,
-            "top": 90,
-            "left": 131,
-            "enhancement": ""
           }
         ],
-        "tracker": [
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          }
-        ]
+        "tracker": []
       }
     ],
     "perks": [
