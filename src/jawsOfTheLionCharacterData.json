@@ -1734,33 +1734,23 @@
         "enhancements": [
           {
             "id": 1,
-            "top": 70,
-            "left": 139,
+            "top": 68,
+            "left": 137,
             "enhancement": ""
           },
           {
             "id": 2,
-            "top": 230,
-            "left": 136,
+            "top": 106,
+            "left": 137,
             "enhancement": ""
           }
         ],
         "tracker": [
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          }
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true },
+          { "active": true }
         ]
       },
       {
@@ -1770,14 +1760,14 @@
         "enhancements": [
           {
             "id": 3,
-            "top": 70,
-            "left": 135,
+            "top": 79,
+            "left": 130,
             "enhancement": ""
           },
           {
             "id": 4,
-            "top": 192,
-            "left": 138,
+            "top": 94,
+            "left": 130,
             "enhancement": ""
           }
         ],
@@ -1797,14 +1787,14 @@
         "enhancements": [
           {
             "id": 5,
-            "top": 65,
-            "left": 139,
+            "top": 64,
+            "left": 134,
             "enhancement": ""
           },
           {
             "id": 6,
-            "top": 65,
-            "left": 139,
+            "top": 243,
+            "left": 137,
             "enhancement": ""
           }
         ],
@@ -1817,14 +1807,14 @@
         "enhancements": [
           {
             "id": 7,
-            "top": 65,
+            "top": 77,
             "left": 139,
             "enhancement": ""
           },
           {
             "id": 8,
-            "top": 65,
-            "left": 139,
+            "top": 204,
+            "left": 130,
             "enhancement": ""
           }
         ],
@@ -1837,8 +1827,8 @@
         "enhancements": [
           {
             "id": 9,
-            "top": 62,
-            "left": 140,
+            "top": 87,
+            "left": 139,
             "enhancement": ""
           }
         ],
@@ -1851,14 +1841,14 @@
         "enhancements": [
           {
             "id": 10,
-            "top": 198,
-            "left": 137,
+            "top": 91,
+            "left": 130,
             "enhancement": ""
           },
           {
             "id": 11,
             "top": 198,
-            "left": 137,
+            "left": 141,
             "enhancement": ""
           }
         ],
@@ -1871,8 +1861,8 @@
         "enhancements": [
           {
             "id": 12,
-            "top": 61,
-            "left": 139,
+            "top": 67,
+            "left": 130,
             "enhancement": ""
           }
         ],
@@ -1885,13 +1875,13 @@
         "enhancements": [
           {
             "id": 13,
-            "top": 195,
-            "left": 137,
+            "top": 53,
+            "left": 139,
             "enhancement": ""
           },
           {
             "id": 14,
-            "top": 195,
+            "top": 211,
             "left": 137,
             "enhancement": ""
           }
@@ -1912,14 +1902,14 @@
         "enhancements": [
           {
             "id": 15,
-            "top": 60,
-            "left": 136,
+            "top": 63,
+            "left": 137,
             "enhancement": ""
           },
           {
             "id": 16,
-            "top": 60,
-            "left": 136,
+            "top": 88,
+            "left": 139,
             "enhancement": ""
           }
         ],
@@ -1932,7 +1922,7 @@
         "enhancements": [
           {
             "id": 17,
-            "top": 50,
+            "top": 79,
             "left": 139,
             "enhancement": ""
           }
@@ -1946,8 +1936,8 @@
         "enhancements": [
           {
             "id": 18,
-            "top": 59,
-            "left": 139,
+            "top": 87,
+            "left": 129,
             "enhancement": ""
           }
         ],
@@ -1960,14 +1950,14 @@
         "enhancements": [
           {
             "id": 19,
-            "top": 59,
-            "left": 139,
+            "top": 49,
+            "left": 141,
             "enhancement": ""
           },
           {
             "id": 20,
-            "top": 201,
-            "left": 137,
+            "top": 186,
+            "left": 138,
             "enhancement": ""
           }
         ],
@@ -1980,8 +1970,8 @@
         "enhancements": [
           {
             "id": 21,
-            "top": 70,
-            "left": 139,
+            "top": 181,
+            "left": 138,
             "enhancement": ""
           }
         ],
@@ -1994,8 +1984,8 @@
         "enhancements": [
           {
             "id": 22,
-            "top": 52,
-            "left": 137,
+            "top": 215,
+            "left": 144,
             "enhancement": ""
           }
         ],
@@ -2008,8 +1998,8 @@
         "enhancements": [
           {
             "id": 23,
-            "top": 218,
-            "left": 131,
+            "top": 54,
+            "left": 134,
             "enhancement": ""
           }
         ],
@@ -2022,13 +2012,13 @@
         "enhancements": [
           {
             "id": 24,
-            "top": 51,
-            "left": 139,
+            "top": 181,
+            "left": 138,
             "enhancement": ""
           },
           {
             "id": 25,
-            "top": 204,
+            "top": 267,
             "left": 137,
             "enhancement": ""
           }
@@ -2048,8 +2038,8 @@
         "enhancements": [
           {
             "id": 26,
-            "top": 60,
-            "left": 139,
+            "top": 69,
+            "left": 140,
             "enhancement": ""
           }
         ],
@@ -2062,8 +2052,8 @@
         "enhancements": [
           {
             "id": 27,
-            "top": 188,
-            "left": 137,
+            "top": 63,
+            "left": 141,
             "enhancement": ""
           }
         ],
