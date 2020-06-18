@@ -5,6 +5,7 @@
     "noSpoilerName": "Demolitionist",
     "handSize": 9,
     "startingCards": 12,
+    "health": [8, 9, 11, 12, 14, 15, 17, 18, 20],
     "cards": [
       {
         "title": "windup",
@@ -528,6 +529,7 @@
     "noSpoilerName": "Hatchet",
     "handSize": 10,
     "startingCards": 13,
+    "health": [8, 9, 11, 12, 14, 15, 17, 18, 20],
     "cards": [
       {
         "title": "the-favorite",
@@ -1174,6 +1176,7 @@
     "noSpoilerName": "Red Guard",
     "handSize": 10,
     "startingCards": 13,
+    "health": [10, 12, 14, 16, 18, 20, 22, 24, 26],
     "cards": [
       {
         "title": "swift-strength",
@@ -1726,6 +1729,7 @@
     "noSpoilerName": "Voidwarden",
     "handSize": 11,
     "startingCards": 14,
+    "health": [6, 7, 8, 9, 10, 11, 12, 13, 14],
     "cards": [
       {
         "title": "signs-of-the-void",
