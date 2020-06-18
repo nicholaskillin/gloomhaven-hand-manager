@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import _ from 'lodash'
 import CardContainer from './CardContainer'
+import { slide as Menu } from 'react-burger-menu'
+import { CheckboxCard, StackView, Text } from '@planning-center/ui-kit'
 
 function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
   const [hasCardsInPlay, setHasCardsInPlay] = useState(false)
@@ -136,6 +138,9 @@ function PlayArea({ character, hand, modifierDeck, setHand, staffOfCommand }) {
 
   return (
     <>
+      <Menu>
+        <SettingsMenu />
+      </Menu>
       <div id="play-game" align="center">
         <table id="play-area" align="center">
           <tbody>
@@ -1181,6 +1186,24 @@ function HandCards({
           Lose Card To Avoid Damage
         </button>
       </div>
+    </>
+  )
+}
+
+function SettingsMenu() {
+  function handlePlayerStatsChange(checked) {
+    console.log(`You clicked the box`, checked)
+  }
+  return (
+    <>
+      <StackView>
+        <Text>Settings</Text>
+        <CheckboxCard
+          onChange={(e) => handlePlayerStatsChange(e.target.checked)}
+          key="stats"
+          title="Player Stats"
+        />
+      </StackView>
     </>
   )
 }
