@@ -5,6 +5,7 @@
     "noSpoilerName": "Diviner",
     "handSize": 9,
     "startingCards": 12,
+    "health": [6, 7, 8, 9, 10, 11, 12, 13, 14],
     "cards": [
       {
         "title": "peer-into-battle",

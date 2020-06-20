@@ -5,6 +5,7 @@
     "noSpoilerName": "Brute",
     "handSize": 10,
     "startingCards": 13,
+    "health": [10, 12, 14, 16, 18, 20, 22, 24, 26],
     "cards": [
       {
         "title": "trample",
@@ -756,6 +757,7 @@
     "noSpoilerName": "Cragheart",
     "handSize": 11,
     "startingCards": 14,
+    "health": [10, 12, 14, 16, 18, 20, 22, 24, 26],
     "cards": [
       {
         "title": "opposing-strike",
@@ -1507,6 +1509,7 @@
     "noSpoilerName": "Mindthief",
     "handSize": 10,
     "startingCards": 13,
+    "health": [6, 7, 8, 9, 10, 11, 12, 13, 14],
     "cards": [
       {
         "title": "submissive-affliction",
@@ -2222,6 +2225,7 @@
     "noSpoilerName": "Scoundrel",
     "handSize": 9,
     "startingCards": 12,
+    "health": [8, 9, 11, 12, 14, 15, 17, 18, 20],
     "cards": [
       {
         "title": "single-out",
@@ -2883,6 +2887,7 @@
     "noSpoilerName": "Spellweaver",
     "handSize": 8,
     "startingCards": 11,
+    "health": [6, 7, 8, 9, 10, 11, 12, 13, 14],
     "cards": [
       {
         "title": "fire-orbs",
@@ -3569,6 +3574,7 @@
     "noSpoilerName": "Tinkerer",
     "handSize": 12,
     "startingCards": 15,
+    "health": [8, 9, 11, 12, 14, 15, 17, 18, 20],
     "cards": [
       {
         "title": "proximity-mine",
@@ -4338,6 +4344,7 @@
     "noSpoilerName": "\"Two Minis\"",
     "handSize": 10,
     "startingCards": 13,
+    "health": [6, 7, 8, 9, 10, 11, 12, 13, 14],
     "cards": [
       {
         "title": "disorienting-roar",
@@ -5064,6 +5071,7 @@
     "noSpoilerName": "\"Angry Face\"",
     "handSize": 12,
     "startingCards": 15,
+    "health": [8, 9, 11, 12, 14, 15, 17, 18, 20],
     "cards": [
       {
         "title": "rain-of-arrows",
@@ -5764,6 +5772,7 @@
     "noSpoilerName": "\"Eclipse\"",
     "handSize": 9,
     "startingCards": 12,
+    "health": [8, 9, 11, 12, 14, 15, 17, 18, 20],
     "cards": [
       {
         "title": "black-knives",
@@ -6293,6 +6302,7 @@
     "noSpoilerName": "\"Three Spears\"",
     "handSize": 9,
     "startingCards": 12,
+    "health": [10, 12, 14, 16, 18, 20, 22, 24, 26],
     "cards": [
       {
         "title": "restock",
@@ -6844,6 +6854,7 @@
     "noSpoilerName": "\"Triangles\"",
     "handSize": 10,
     "startingCards": 13,
+    "health": [6, 7, 8, 9, 10, 11, 12, 13, 14],
     "cards": [
       {
         "title": "raw-enhancement",
@@ -7599,6 +7610,7 @@
     "noSpoilerName": "\"Sun\"",
     "handSize": 11,
     "startingCards": 14,
+    "health": [10, 12, 14, 16, 18, 20, 22, 24, 26],
     "cards": [
       {
         "title": "purifying-aura",
@@ -8255,6 +8267,7 @@
     "noSpoilerName": "\"Circles\"",
     "handSize": 9,
     "startingCards": 12,
+    "health": [8, 9, 11, 12, 14, 15, 17, 18, 20],
     "cards": [
       {
         "title": "forged-ferocity",
@@ -8966,6 +8979,7 @@
     "noSpoilerName": "\"Lightning\"",
     "handSize": 10,
     "startingCards": 13,
+    "health": [10, 12, 14, 16, 18, 20, 22, 24, 26],
     "cards": [
       {
         "title": "resolute-stand",
@@ -9618,6 +9632,7 @@
     "noSpoilerName": "\"Music Notes\"",
     "handSize": 9,
     "startingCards": 12,
+    "health": [6, 7, 8, 9, 10, 11, 12, 13, 14],
     "cards": [
       {
         "title": "power-ballad",
@@ -10231,6 +10246,7 @@
     "noSpoilerName": "\"Saw\"",
     "handSize": 10,
     "startingCards": 13,
+    "health": [8, 9, 11, 12, 14, 15, 17, 18, 20],
     "cards": [
       {
         "title": "first-aid",
@@ -10827,6 +10843,7 @@
     "noSpoilerName": "\"Cthulhu\"",
     "handSize": 11,
     "startingCards": 14,
+    "health": [6, 7, 8, 9, 10, 11, 12, 13, 14],
     "cards": [
       {
         "title": "vile-pestilence",

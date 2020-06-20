@@ -338,6 +338,7 @@ function App() {
         <PlayArea
           character={character}
           hand={hand}
+          level={level}
           modifierDeck={modifierDeck}
           setHand={setHand}
           staffOfCommand={staffOfCommand}
