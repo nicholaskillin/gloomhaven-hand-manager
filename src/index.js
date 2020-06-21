@@ -16,12 +16,16 @@ var ErrorBoundary = Bugsnag.getPlugin('react').createErrorBoundary(React)
 
 ReactDOM.render(
   <React.StrictMode>
-    <ErrorBoundary>
+    <ErrorBoundary FallbackComponent={FallbackComponent}>
       <App />
     </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')
 )
+
+function FallbackComponent() {
+  return <p>Welp...</p>
+}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
