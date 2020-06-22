@@ -59,6 +59,9 @@ function HandSelection({
     while (selectedCard.className === 'enhancement-icon') {
       selectedCard = selectedCard.previousSibling
     }
+    if (selectedCard.className === 'chooseCardsTable') {
+      selectedCard = selectedCard.firstChild
+    }
     let cardFromCharacter = character.cards.find(
       (card) => card.title === selectedCard.alt
     )
