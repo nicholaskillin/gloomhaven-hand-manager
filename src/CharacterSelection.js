@@ -4,8 +4,8 @@ import Cookies from 'universal-cookie'
 
 function CharacterSelection({
   availableCharacters,
+  changeGame,
   game,
-  handleGameChange,
   handleSetCharacter,
   handleSetLevel,
   handleStaffOfCommand,
@@ -41,6 +41,11 @@ function CharacterSelection({
 
   function handleUnlockBladeSwarm() {
     setBladeSwarmUnlocked(true)
+  }
+
+  function handleGameChange(game) {
+    setCharacterName('')
+    changeGame(game)
   }
 
   return (
@@ -147,6 +152,7 @@ function CharacterSelection({
           <button
             id="level-up"
             className="level-modifier"
+            disabled={characterName === ''}
             type="button"
             onClick={() => handleSetLevel(level + 1)}
             disabled={level > 8 || (game === 'jotl' && level > 3)}

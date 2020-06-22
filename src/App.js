@@ -127,7 +127,7 @@ function App() {
     }
   }
 
-  function handleGameChange(gameName) {
+  function changeGame(gameName) {
     setGame(gameName)
     if (gameName === 'jotl' && level > 4) {
       setLevel(4)
@@ -305,8 +305,8 @@ function App() {
         <>
           <CharacterSelection
             availableCharacters={allCharacterData}
+            changeGame={changeGame}
             game={game}
-            handleGameChange={handleGameChange}
             handleSetCharacter={handleSetCharacter}
             handleSetLevel={handleSetLevel}
             handleStaffOfCommand={handleStaffOfCommand}
