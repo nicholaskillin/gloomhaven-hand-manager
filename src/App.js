@@ -152,6 +152,8 @@ function App() {
     if (characterName !== cookies.get('character')) {
       cookies.remove('perks')
       cookies.remove('modifierChanges')
+      cookies.remove('hand')
+      setHand([])
     }
     cookies.set('character', characterData.name, {
       path: '/',
