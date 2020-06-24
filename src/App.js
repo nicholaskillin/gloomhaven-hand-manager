@@ -115,6 +115,9 @@ function App() {
     if (cookieInfo.game) {
       setGame(cookieInfo.game)
     }
+    if (cookieInfo.hand) {
+      setHand(cookieInfo.hand)
+    }
   }, [])
 
   function getGameCharacters(gameName) {

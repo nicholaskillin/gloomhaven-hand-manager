@@ -1,4 +1,5 @@
 import React from 'react'
+import Cookies from 'universal-cookie'
 
 function HandSelection({
   addCardToHand,
@@ -37,6 +38,7 @@ function HandSelection({
   const levelNineCards = character.cards.filter((card) => {
     return card.level === 9
   })
+  const cookies = new Cookies()
 
   function cardIsInHand(cardToCheck) {
     if (hand.some((card) => card.title === cardToCheck.title)) {
@@ -78,7 +80,10 @@ function HandSelection({
 
   function handleConfirmHand() {
     handleSetStage('playing')
-    console.log('save hand data', hand)
+    cookies.set('hand', hand, {
+      path: '/',
+      maxAge: 31104000,
+    })
   }
 
   return (
