@@ -76,6 +76,11 @@ function HandSelection({
     }
   }
 
+  function handleConfirmHand() {
+    handleSetStage('playing')
+    console.log('save hand data', hand)
+  }
+
   return (
     <div id="initial-table" className="cardSet">
       <h2 id="choose-cards-number" className="header">
@@ -178,7 +183,7 @@ function HandSelection({
           className="button"
           type="button"
           title="Must Have a Full Hand"
-          onClick={() => handleSetStage('playing')}
+          onClick={handleConfirmHand}
           disabled={hand.length < character.handSize}
         >
           Confirm Hand
