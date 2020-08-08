@@ -1,8 +1,9 @@
+import { CheckboxCard, StackView, Text } from '@planning-center/ui-kit'
 import React, { useState } from 'react'
-import _ from 'lodash'
+
 import CardContainer from './CardContainer'
 import { slide as Menu } from 'react-burger-menu'
-import { CheckboxCard, StackView, Text } from '@planning-center/ui-kit'
+import _ from 'lodash'
 
 function PlayArea({
   character,
@@ -555,7 +556,10 @@ function ChosenCards({
     while (cardClicked.className === 'enhancement-icon') {
       cardClicked = cardClicked.previousSibling
     }
-    if (cardClicked.className === 'hand') {
+    if (
+      cardClicked.className === 'hand' ||
+      cardClicked.className === 'card-in-play'
+    ) {
       cardClicked = cardClicked.firstChild
     }
     let cardToSelect = character.cards.find(
