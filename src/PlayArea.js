@@ -1,5 +1,5 @@
 import { CheckboxCard, StackView, Text } from '@planning-center/ui-kit'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import CardContainer from './CardContainer'
 import { slide as Menu } from 'react-burger-menu'
@@ -19,6 +19,14 @@ function PlayArea({
   const [activeCards, setActiveCards] = useState([])
   const [lostCards, setLostCards] = useState([])
   const [showPlayerStats, setShowPlayerStats] = useState(false)
+
+  useEffect(() => {
+    console.log(modifierDeck)
+    modifierDeck.forEach((image) => {
+      const newImage = new Image()
+      newImage.src = image.image
+    })
+  }, [])
 
   function anyChosenCardsLeft(newArray) {
     let cardsStillInPlay = newArray.filter(
