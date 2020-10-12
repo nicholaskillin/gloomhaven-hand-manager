@@ -1,15 +1,27 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
 import './index.css'
-import App from './App'
+
 import * as serviceWorker from './serviceWorker'
+
+import App from './App'
 import Bugsnag from '@bugsnag/js'
 import BugsnagPluginReact from '@bugsnag/plugin-react'
+import Cookies from 'universal-cookie'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 // Instantiate and start Bugsnag
 Bugsnag.start({
   apiKey: process.env.REACT_APP_BUGSNAG_KEY,
   plugins: [new BugsnagPluginReact()],
+  onError: function (event) {
+    // Grab cookie data to help track down the issue
+    const cookies = new Cookies()
+    let cookieInfo = cookies.getAll()  
+
+    event.addMetadata('cookies', {
+      ...cookieInfo
+    })
+  }
 })
 
 var ErrorBoundary = Bugsnag.getPlugin('react').createErrorBoundary(React)
