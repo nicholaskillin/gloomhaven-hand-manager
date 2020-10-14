@@ -233,7 +233,7 @@ function DiscardedCards({
     while (cardClicked.className === 'enhancement-icon') {
       cardClicked = cardClicked.previousSibling
     }
-    if (cardClicked.className === 'hand') {
+    if (cardClicked.className === 'hand' || cardClicked.className === 'discarded') {
       cardClicked = cardClicked.firstChild
     }
     let characterCard = character.cards.find(
