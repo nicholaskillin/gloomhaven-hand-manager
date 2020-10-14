@@ -36,7 +36,7 @@ ReactDOM.render(
 )
 
 function FallbackComponent() {
-  return <p>Welp...</p>
+  return <p>Looks like you've hit a bug. Information about this has already been sent and I will look into it. For now, you can refresh the page to get things set back up.</p>
 }
 
 // If you want your app to work offline and load faster, you can change
