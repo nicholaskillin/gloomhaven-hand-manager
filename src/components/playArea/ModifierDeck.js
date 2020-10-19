@@ -129,7 +129,6 @@ function ModifierDeck({ modifierDeck }) {
       let newLocalModifierDeck = [...localModifierDeck]
       let cardIndex = _.findIndex(newLocalModifierDeck, minus1Card)
       newLocalModifierDeck.splice(cardIndex, 1)
-      console.log(newLocalModifierDeck, cardIndex)
       setLocalModifierDeck(newLocalModifierDeck)
       setExtraMinusOneCount(extraMinusOneCount - 1)
     }

@@ -22,7 +22,6 @@ function PlayArea({
   const [showPlayerStats, setShowPlayerStats] = useState(false)
 
   useEffect(() => {
-    console.log(modifierDeck)
     modifierDeck.forEach((image) => {
       const newImage = new Image()
       newImage.src = image.image
