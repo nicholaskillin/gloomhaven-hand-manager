@@ -10,6 +10,7 @@ function ChosenCards({
   moveCardToActive,
   moveCardToDiscard,
   moveCardToLost,
+  returnChosenCardsToHand,
   staffOfCommand,
 }) {
   const [selectedCard, setSelectedCard] = useState({})
@@ -19,6 +20,10 @@ function ChosenCards({
       return true
     }
     return false
+  }
+
+  function noCardsPlayed() {
+    return (Object.keys(chosenCards[0]).length === 0 || Object.keys(chosenCards[1]).length === 0) ? true : false
   }
 
   function handleCardClick(cardClicked) {
@@ -155,6 +160,15 @@ function ChosenCards({
         >
           Move Card to Active
         </button>
+        <button 
+          className="button tooltip" 
+          disabled={noCardsPlayed()}
+          onClick={() => returnChosenCardsToHand()}
+          title="Select New Cards"
+        >
+          Select New Cards
+        </button>
+        
       </div>
       <ModifierDeck modifierDeck={modifierDeck} />
     </td>

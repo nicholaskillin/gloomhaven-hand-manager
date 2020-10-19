@@ -158,6 +158,21 @@ function PlayArea({
     setShowPlayerStats(showStats)
   }
 
+  function returnChosenCardsToHand() {
+    // remove selected cards from hand
+    let newHand = [...hand]
+    chosenCards.forEach((chosenCard) => {
+      if (Object.keys(chosenCard).length !== 0) {
+        newHand = [...newHand, chosenCard]
+      } 
+    })
+    setHand(newHand)
+
+    // add selected cards to ChosenCards component
+    setChosenCards([{}, {}, {}])
+    setHasCardsInPlay(false)
+  }
+
   return (
     <>
       <Menu>
@@ -174,6 +189,7 @@ function PlayArea({
                 moveCardToActive={moveCardToActive}
                 moveCardToDiscard={moveCardToDiscard}
                 moveCardToLost={moveCardToLost}
+                returnChosenCardsToHand={returnChosenCardsToHand}
                 staffOfCommand={staffOfCommand}
               />
               <ActiveCards
