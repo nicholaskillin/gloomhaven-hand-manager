@@ -43,7 +43,9 @@ function PlayArea({
     // remove selected cards from hand
     let newHand = [...hand]
     cards.forEach((card) => {
-      _.remove(newHand, card)
+      _.remove(newHand, function(handCard) {
+        return handCard.title === card.title
+      })
     })
     setHand(newHand)
 
@@ -60,7 +62,9 @@ function PlayArea({
     // remove selected cards from hand
     let newHand = [...hand]
     cards.forEach((card) => {
-      _.remove(newHand, card)
+      _.remove(newHand, function(handCard) {
+        return handCard.title === card.title
+      })
     })
     setHand(newHand)
 
