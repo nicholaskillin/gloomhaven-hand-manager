@@ -1,21 +1,23 @@
-import React, { useState, useEffect } from 'react'
 import './App.css'
-import _ from 'lodash'
+
 import {
   Button,
   Field,
   Input,
   Select,
   StackView,
-  ThemeProvider,
   TextArea,
+  ThemeProvider,
 } from '@planning-center/ui-kit'
+import React, { useEffect, useState } from 'react'
+
 import CharacterSelection from './CharacterSelection'
-import PerkSelection from './PerkSelection'
-import HandSelection from './HandSelection'
-import PlayArea from './PlayArea'
-import Cookies from 'universal-cookie'
 import CookieConsent from 'react-cookie-consent'
+import Cookies from 'universal-cookie'
+import HandSelection from './HandSelection'
+import PerkSelection from './PerkSelection'
+import PlayArea from './PlayArea'
+import _ from 'lodash'
 
 function App() {
   const [stage, setStage] = useState('selectCharacter')
@@ -132,9 +134,6 @@ function App() {
 
   function changeGame(gameName) {
     setGame(gameName)
-    if (gameName === 'jotl' && level > 4) {
-      setLevel(4)
-    }
   }
 
   function handleSetStage(stage) {
