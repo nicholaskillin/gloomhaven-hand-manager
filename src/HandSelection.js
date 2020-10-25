@@ -1,5 +1,6 @@
-import React from 'react'
 import Cookies from 'universal-cookie'
+import React from 'react'
+import _ from 'lodash'
 
 function HandSelection({
   addCardToHand,
@@ -58,6 +59,8 @@ function HandSelection({
   }
 
   function handleCardClick(selectedCard) {
+    if (_.includes(selectedCard.alt, 'halt-back')) return
+    
     while (selectedCard.className === 'enhancement-icon') {
       selectedCard = selectedCard.previousSibling
     }
