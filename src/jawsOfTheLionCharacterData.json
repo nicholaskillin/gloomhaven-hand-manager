@@ -1117,6 +1117,188 @@
             "active": true
           }
         ]
+      },
+      {
+        "title": "ha-halt-back",
+        "level": 5,
+        "enhancementSpots": 1,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "the-new-favorite",
+        "level": 5,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 36,
+            "top": 191,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "bombardment",
+        "level": 6,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 37,
+            "top": 191,
+            "left": 134,
+            "enhancement": ""
+          },
+          {
+            "id": 38,
+            "top": 191,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "quick-turnaround",
+        "level": 6,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 39,
+            "top": 191,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "excessive-force",
+        "level": 7,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": [
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          }
+        ]
+      },
+      {
+        "title": "brutalize",
+        "level": 7,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 40,
+            "top": 191,
+            "left": 134,
+            "enhancement": ""
+          },
+          {
+            "id": 41,
+            "top": 191,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "shrapnel",
+        "level": 8,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 42,
+            "top": 191,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": [
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          }
+        ]
+      },
+      {
+        "title": "camaraderie",
+        "level": 8,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 43,
+            "top": 191,
+            "left": 134,
+            "enhancement": ""
+          },
+          {
+            "id": 44,
+            "top": 191,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "executioners-axe",
+        "level": 9,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "heart-seeker",
+        "level": 9,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 45,
+            "top": 191,
+            "left": 134,
+            "enhancement": ""
+          }
+        ],
+        "tracker": [
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          }
+        ]
       }
     ],
     "perks": [
