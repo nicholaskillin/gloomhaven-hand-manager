@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import Konami from 'react-konami-code'
+import React, { useEffect, useState } from 'react'
+
 import Cookies from 'universal-cookie'
+import Konami from 'react-konami-code'
 
 function CharacterSelection({
   availableCharacters,
@@ -152,10 +153,9 @@ function CharacterSelection({
           <button
             id="level-up"
             className="level-modifier"
-            disabled={characterName === ''}
             type="button"
             onClick={() => handleSetLevel(level + 1)}
-            disabled={level > 8 || (game === 'jotl' && level > 3)}
+            disabled={level > 8 || characterName === ''}
           >
             +
           </button>
