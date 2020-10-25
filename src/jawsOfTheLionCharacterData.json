@@ -1862,6 +1862,166 @@
           }
         ],
         "tracker": []
+      },
+      {
+        "title": "rg-halt-back",
+        "level": 5,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "sand-devil",
+        "level": 5,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "fierce-brilliance",
+        "level": 6,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 29,
+            "top": 218,
+            "left": 131,
+            "enhancement": ""
+          }
+        ],
+        "tracker": [
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          }
+        ]
+      },
+      {
+        "title": "flying-sickle",
+        "level": 6,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 30,
+            "top": 218,
+            "left": 131,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "vicious-ballet",
+        "level": 7,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 31,
+            "top": 218,
+            "left": 131,
+            "enhancement": ""
+          },
+          {
+            "id": 32,
+            "top": 218,
+            "left": 131,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "horns-of-the-beast",
+        "level": 7,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 33,
+            "top": 218,
+            "left": 131,
+            "enhancement": ""
+          },
+          {
+            "id": 34,
+            "top": 218,
+            "left": 131,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "prismatic-sickle",
+        "level": 8,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 35,
+            "top": 218,
+            "left": 131,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "no-fear",
+        "level": 8,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": [
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          },
+          {
+            "active": true
+          }
+        ]
+      },
+      {
+        "title": "soaring-shield",
+        "level": 9,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 36,
+            "top": 218,
+            "left": 131,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "honorable-fury",
+        "level": 9,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 37,
+            "top": 218,
+            "left": 131,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
       }
     ],
     "perks": [
