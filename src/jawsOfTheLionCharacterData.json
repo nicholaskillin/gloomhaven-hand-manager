@@ -2571,6 +2571,142 @@
           }
         ],
         "tracker": []
+      },
+      {
+        "title": "vw-halt-back",
+        "level": 5,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "stand-fast",
+        "level": 5,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 28,
+            "top": 87,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "withering-conviction",
+        "level": 6,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 29,
+            "top": 87,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "surge-of-power",
+        "level": 6,
+        "enhancementSpots": 0,
+        "enhancements": [],
+        "tracker": []
+      },
+      {
+        "title": "hateful-blast",
+        "level": 7,
+        "enhancementSpots": 2,
+        "enhancements": [
+          {
+            "id": 30,
+            "top": 87,
+            "left": 139,
+            "enhancement": ""
+          },
+          {
+            "id": 31,
+            "top": 87,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "spirit-hunger",
+        "level": 7,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 32,
+            "top": 87,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "lull-into-oblivion",
+        "level": 8,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 33,
+            "top": 87,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "empowered-link",
+        "level": 8,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 34,
+            "top": 87,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": [
+          { "active": true },
+          { "active": true },
+          { "active": true }
+        ]
+      },
+      {
+        "title": "eye-of-the-void",
+        "level": 9,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 35,
+            "top": 87,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
+      },
+      {
+        "title": "possessed-by-fate",
+        "level": 9,
+        "enhancementSpots": 1,
+        "enhancements": [
+          {
+            "id": 36,
+            "top": 87,
+            "left": 139,
+            "enhancement": ""
+          }
+        ],
+        "tracker": []
       }
     ],
     "perks": [
