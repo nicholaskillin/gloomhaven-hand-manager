@@ -1128,15 +1128,8 @@
       {
         "title": "the-new-favorite",
         "level": 5,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 36,
-            "top": 191,
-            "left": 134,
-            "enhancement": ""
-          }
-        ],
+        "enhancementSpots": 0,
+        "enhancements": [],
         "tracker": []
       },
       {
@@ -1146,14 +1139,14 @@
         "enhancements": [
           {
             "id": 37,
-            "top": 191,
-            "left": 134,
+            "top": 1192,
+            "left": 135,
             "enhancement": ""
           },
           {
             "id": 38,
-            "top": 191,
-            "left": 134,
+            "top": 233,
+            "left": 135,
             "enhancement": ""
           }
         ],
@@ -1166,8 +1159,8 @@
         "enhancements": [
           {
             "id": 39,
-            "top": 191,
-            "left": 134,
+            "top": 90,
+            "left": 129,
             "enhancement": ""
           }
         ],
@@ -1203,14 +1196,14 @@
         "enhancements": [
           {
             "id": 40,
-            "top": 191,
-            "left": 134,
+            "top": 78,
+            "left": 137,
             "enhancement": ""
           },
           {
             "id": 41,
-            "top": 191,
-            "left": 134,
+            "top": 192,
+            "left": 137,
             "enhancement": ""
           }
         ],
@@ -1223,8 +1216,8 @@
         "enhancements": [
           {
             "id": 42,
-            "top": 191,
-            "left": 134,
+            "top": 82,
+            "left": 128,
             "enhancement": ""
           }
         ],
@@ -1253,14 +1246,14 @@
         "enhancements": [
           {
             "id": 43,
-            "top": 191,
-            "left": 134,
+            "top": 60,
+            "left": 133,
             "enhancement": ""
           },
           {
             "id": 44,
-            "top": 191,
-            "left": 134,
+            "top": 98,
+            "left": 133,
             "enhancement": ""
           }
         ],
@@ -1280,8 +1273,8 @@
         "enhancements": [
           {
             "id": 45,
-            "top": 191,
-            "left": 134,
+            "top": 75,
+            "left": 137,
             "enhancement": ""
           }
         ],
