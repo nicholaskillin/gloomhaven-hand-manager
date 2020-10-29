@@ -12,6 +12,7 @@ import ReactDOM from 'react-dom'
 // Instantiate and start Bugsnag
 Bugsnag.start({
   apiKey: process.env.REACT_APP_BUGSNAG_KEY,
+  enabledReleaseStages: ['production', 'staging'],
   plugins: [new BugsnagPluginReact()],
   onError: function (event) {
     // Grab cookie data to help track down the issue
