@@ -192,7 +192,6 @@ function App() {
     })
 
     if (game === 'jotl' && campaign === '1') {
-      console.log('got here')
       setHand(characterData.cards)
     }
     setCharacter(characterData, setStage('selectPerks'))
