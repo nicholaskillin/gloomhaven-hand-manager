@@ -107,6 +107,7 @@ function App() {
       image: './images/attack-modifiers/base/player/am-x2.png',
     },
   ])
+
   const [staffOfCommand, setStaffOfCommand] = useState(false)
   const allCharacterData = getGameCharacters(game)
   const cookies = new Cookies()
@@ -322,8 +323,8 @@ function App() {
         <PerkSelection
           modifyModifierDeck={modifyModifierDeck}
           character={character}
-          handleSetStage={handleSetStage}
           characterPerks={character.perks}
+          handleSetStage={handleSetStage}
           resetModifierDeck={resetModifierDeck}
         />
       )}
@@ -368,7 +369,7 @@ function Feedback() {
   }
 
   return (
-    <div className="footer">
+    <div className='footer'>
       <p>
         Did you run into a bug or do you have some feedback about the app? I'd
         love to hear about it!
@@ -414,9 +415,9 @@ function FeedbackModal({ show, hideModal }) {
   }
 
   return (
-    <div id="zoomModal" style={style}>
-      <div id="zoomFeedbackContent">
-        <span className="close" onClick={hideModal}>
+    <div id='zoomModal' style={style}>
+      <div id='zoomFeedbackContent'>
+        <span className='close' onClick={hideModal}>
           &times;
         </span>
         <h1>Feedback</h1>
@@ -428,8 +429,8 @@ function FeedbackModal({ show, hideModal }) {
             <StackView spacing={1}>
               <Field
                 inline
-                label="Subject"
-                helpContent="Brief sentence describing the feedback"
+                label='Subject'
+                helpContent='Brief sentence describing the feedback'
               >
                 <Input
                   onChange={({ target }) => setTitle(target.value)}
@@ -438,30 +439,30 @@ function FeedbackModal({ show, hideModal }) {
               </Field>
               <Field
                 inline
-                label="Type"
-                helpContent="Is this a bug or a feature request?"
+                label='Type'
+                helpContent='Is this a bug or a feature request?'
               >
                 <Select
-                  emptyValue="Bug or Feature Request?"
+                  emptyValue='Bug or Feature Request?'
                   tooltip={{ title: 'Bug or Feature Request' }}
                   onChange={(e) => setType(e.value)}
                   style={{ color: 'black' }}
                 >
-                  <Select.Option value="bug">Bug</Select.Option>
-                  <Select.Option value="enhancement">
+                  <Select.Option value='bug'>Bug</Select.Option>
+                  <Select.Option value='enhancement'>
                     Feature Request
                   </Select.Option>
                 </Select>
               </Field>
               <Field
                 inline
-                label="Description"
-                helpContent="Please be detailed here if you found a bug. The more details the better."
+                label='Description'
+                helpContent='Please be detailed here if you found a bug. The more details the better.'
               >
                 <TextArea
                   onChange={({ target }) => setBody(target.value)}
                   style={{ color: 'black', height: '200px' }}
-                  placeholder="Please include as many details as you can for bugs"
+                  placeholder='Please include as many details as you can for bugs'
                 />
               </Field>
               <Field inline>
@@ -478,8 +479,8 @@ function FeedbackModal({ show, hideModal }) {
             Welp, seems like there was an issue sending your feedback. You can
             visit the{' '}
             <a
-              href="https://github.com/nicholaskillin/gloomhaven-hand-manager/issues"
-              target="_blank"
+              href='https://github.com/nicholaskillin/gloomhaven-hand-manager/issues'
+              target='_blank'
             >
               Github Repo
             </a>{' '}
