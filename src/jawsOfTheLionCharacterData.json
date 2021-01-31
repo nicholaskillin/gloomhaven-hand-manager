@@ -1458,819 +1458,1661 @@
     "name": "hatchet",
     "initials": "ha",
     "noSpoilerName": "Hatchet",
-    "handSize": 10,
-    "startingCards": 13,
-    "health": [8, 9, 11, 12, 14, 15, 17, 18, 20],
-    "cards": [
+    "campaignVersions": [
       {
-        "title": "the-favorite",
-        "level": 1,
-        "enhancementSpots": 1,
-        "enhancements": [
+        "name": "hatchet",
+        "initials": "ha",
+        "noSpoilerName": "Hatchet",
+        "handSize": 6,
+        "startingCards": 6,
+        "health": [8, 9, 11, 12, 14, 15, 17, 18, 20],
+        "cards": [
+          {
+            "title": "a-stopping-power",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "a-double-throw",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "a-disorienting-barrage",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "a-second-wind",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "a-center-mass",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "a-close-cuts",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          }
+        ],
+        "perks": [
           {
             "id": 1,
-            "top": 235,
-            "left": 135,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "retrieval",
-        "level": 1,
-        "enhancementSpots": 1,
-        "enhancements": [
+            "checkboxes": [
+              {
+                "id": 0
+              },
+              {
+                "id": 1
+              }
+            ],
+            "label": "Remove two -1 cards",
+            "changes": [
+              {
+                "cardTitle": "minus1",
+                "action": "remove",
+                "number": 2
+              }
+            ]
+          },
           {
             "id": 2,
-            "top": 81,
-            "left": 137,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "close-cuts",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
+            "checkboxes": [
+              {
+                "id": 2
+              }
+            ],
+            "label": "Replace one +0 card with one +2 Muddle card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus2Muddle",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
           {
             "id": 3,
-            "top": 117,
-            "left": 133,
-            "enhancement": ""
+            "checkboxes": [
+              {
+                "id": 3
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Poison card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Poison",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
             "id": 4,
-            "top": 205,
-            "left": 138,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "center-mass",
-        "level": 1,
-        "enhancementSpots": 4,
-        "enhancements": [
+            "checkboxes": [
+              {
+                "id": 4
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Wound card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Wound",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
           {
             "id": 5,
-            "top": 87,
-            "left": 138,
-            "enhancement": ""
+            "checkboxes": [
+              {
+                "id": 5
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Immobilize card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Immobilize",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
             "id": 6,
-            "top": 101,
-            "left": 129,
-            "enhancement": ""
+            "checkboxes": [
+              {
+                "id": 6
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Push 2 card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Push2",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
             "id": 7,
-            "top": 199,
-            "left": 135,
-            "enhancement": ""
+            "checkboxes": [
+              {
+                "id": 7
+              }
+            ],
+            "label": "Replace one +0 card with one +0 Stun card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "stun",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
             "id": 8,
-            "top": 223,
-            "left": 135,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "stopping-power",
-        "level": 1,
-        "enhancementSpots": 3,
-        "enhancements": [
+            "checkboxes": [
+              {
+                "id": 8
+              }
+            ],
+            "label": "Replace one +1 card with one +1 Stun card",
+            "changes": [
+              {
+                "cardTitle": "plus1",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Stun",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
           {
             "id": 9,
-            "top": 80,
-            "left": 138,
-            "enhancement": ""
+            "checkboxes": [
+              {
+                "id": 9
+              },
+              {
+                "id": 10
+              },
+              {
+                "id": 11
+              }
+            ],
+            "label": "Add one +2 Wind card",
+            "changes": [
+              {
+                "cardTitle": "plus2Wind",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
             "id": 10,
-            "top": 94,
-            "left": 129,
-            "enhancement": ""
-          },
-          {
-            "id": 11,
-            "top": 181,
-            "left": 135,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "double-throw",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 12,
-            "top": 69,
-            "left": 137,
-            "enhancement": ""
-          },
-          {
-            "id": 13,
-            "top": 97,
-            "left": 128,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "disorienting-barrage",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 14,
-            "top": 90,
-            "left": 130,
-            "enhancement": ""
-          },
-          {
-            "id": 15,
-            "top": 105,
-            "left": 130,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "power-pitch",
-        "level": 1,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 16,
-            "top": 207,
-            "left": 136,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "follow-through",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 17,
-            "top": 91,
-            "left": 129,
-            "enhancement": ""
-          },
-          {
-            "id": 18,
-            "top": 189,
-            "left": 136,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "second-wind",
-        "level": 1,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 19,
-            "top": 77,
-            "left": 133,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "care-package",
-        "level": 1,
-        "enhancementSpots": 3,
-        "enhancements": [
-          {
-            "id": 20,
-            "top": 66,
-            "left": 137,
-            "enhancement": ""
-          },
-          {
-            "id": 21,
-            "top": 102,
-            "left": 133,
-            "enhancement": ""
-          },
-          {
-            "id": 22,
-            "top": 226,
-            "left": 130,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "extra-lift",
-        "level": 1,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 23,
-            "top": 80,
-            "left": 138,
-            "enhancement": ""
-          },
-          {
-            "id": 24,
-            "top": 95,
-            "left": 129,
-            "enhancement": ""
-          }
-        ],
-        "tracker": [
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
+            "checkboxes": [
+              {
+                "id": 12
+              },
+              {
+                "id": 13
+              },
+              {
+                "id": 14
+              }
+            ],
+            "label": "Replace one +1 with one +3 card",
+            "changes": [
+              {
+                "cardTitle": "plus1",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus3",
+                "action": "add",
+                "number": 1
+              }
+            ]
           }
         ]
       },
       {
-        "title": "fancy-hat",
-        "level": 1,
-        "enhancementSpots": 1,
-        "enhancements": [
+        "name": "hatchet",
+        "initials": "ha",
+        "noSpoilerName": "Hatchet",
+        "handSize": 6,
+        "startingCards": 6,
+        "health": [8, 9, 11, 12, 14, 15, 17, 18, 20],
+        "cards": [
           {
-            "id": 25,
-            "top": 94,
-            "left": 135,
-            "enhancement": ""
+            "title": "a-stopping-power",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "a-double-throw",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "a-disorienting-barrage",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "a-second-wind",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "b-center-mass",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "b-close-cuts",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
           }
         ],
-        "tracker": []
-      },
-      {
-        "title": "repeat-shot",
-        "level": 2,
-        "enhancementSpots": 2,
-        "enhancements": [
+        "perks": [
           {
-            "id": 26,
-            "top": 195,
-            "left": 137,
-            "enhancement": ""
+            "id": 1,
+            "checkboxes": [
+              {
+                "id": 0
+              },
+              {
+                "id": 1
+              }
+            ],
+            "label": "Remove two -1 cards",
+            "changes": [
+              {
+                "cardTitle": "minus1",
+                "action": "remove",
+                "number": 2
+              }
+            ]
           },
           {
-            "id": 27,
-            "top": 210,
-            "left": 129,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "ricochet",
-        "level": 2,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 28,
-            "top": 64,
-            "left": 137,
-            "enhancement": ""
+            "id": 2,
+            "checkboxes": [
+              {
+                "id": 2
+              }
+            ],
+            "label": "Replace one +0 card with one +2 Muddle card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus2Muddle",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
-            "id": 29,
-            "top": 101,
-            "left": 138,
-            "enhancement": ""
-          }
-        ],
-        "tracker": [
-          {
-            "active": true
+            "id": 3,
+            "checkboxes": [
+              {
+                "id": 3
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Poison card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Poison",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
-            "active": true
+            "id": 4,
+            "checkboxes": [
+              {
+                "id": 4
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Wound card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Wound",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
-            "active": true
+            "id": 5,
+            "checkboxes": [
+              {
+                "id": 5
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Immobilize card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Immobilize",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
-            "active": true
+            "id": 6,
+            "checkboxes": [
+              {
+                "id": 6
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Push 2 card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Push2",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "checkboxes": [
+              {
+                "id": 7
+              }
+            ],
+            "label": "Replace one +0 card with one +0 Stun card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "stun",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "checkboxes": [
+              {
+                "id": 8
+              }
+            ],
+            "label": "Replace one +1 card with one +1 Stun card",
+            "changes": [
+              {
+                "cardTitle": "plus1",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Stun",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 9,
+            "checkboxes": [
+              {
+                "id": 9
+              },
+              {
+                "id": 10
+              },
+              {
+                "id": 11
+              }
+            ],
+            "label": "Add one +2 Wind card",
+            "changes": [
+              {
+                "cardTitle": "plus2Wind",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 10,
+            "checkboxes": [
+              {
+                "id": 12
+              },
+              {
+                "id": 13
+              },
+              {
+                "id": 14
+              }
+            ],
+            "label": "Replace one +1 with one +3 card",
+            "changes": [
+              {
+                "cardTitle": "plus1",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus3",
+                "action": "add",
+                "number": 1
+              }
+            ]
           }
         ]
       },
       {
-        "title": "fearsome-efficiency",
-        "level": 3,
-        "enhancementSpots": 2,
-        "enhancements": [
+        "name": "hatchet",
+        "initials": "ha",
+        "noSpoilerName": "Hatchet",
+        "handSize": 8,
+        "startingCards": 8,
+        "health": [8, 9, 11, 12, 14, 15, 17, 18, 20],
+        "cards": [
           {
-            "id": 30,
-            "top": 59,
-            "left": 138,
-            "enhancement": ""
+            "title": "a-stopping-power",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
           },
           {
-            "id": 31,
-            "top": 73,
-            "left": 129,
-            "enhancement": ""
+            "title": "a-double-throw",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "a-disorienting-barrage",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "a-second-wind",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "b-center-mass",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "b-close-cuts",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "the-favorite",
+            "level": 1,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 1,
+                "top": 235,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "retrieval",
+            "level": 1,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 2,
+                "top": 81,
+                "left": 137,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
           }
         ],
-        "tracker": []
-      },
-      {
-        "title": "sharpened-blades",
-        "level": 3,
-        "enhancementSpots": 1,
-        "enhancements": [
+        "perks": [
           {
-            "id": 32,
-            "top": 209,
-            "left": 136,
-            "enhancement": ""
-          }
-        ],
-        "tracker": [
-          {
-            "active": true
+            "id": 1,
+            "checkboxes": [
+              {
+                "id": 0
+              },
+              {
+                "id": 1
+              }
+            ],
+            "label": "Remove two -1 cards",
+            "changes": [
+              {
+                "cardTitle": "minus1",
+                "action": "remove",
+                "number": 2
+              }
+            ]
           },
           {
-            "active": true
+            "id": 2,
+            "checkboxes": [
+              {
+                "id": 2
+              }
+            ],
+            "label": "Replace one +0 card with one +2 Muddle card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus2Muddle",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
-            "active": true
+            "id": 3,
+            "checkboxes": [
+              {
+                "id": 3
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Poison card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Poison",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
-            "active": true
+            "id": 4,
+            "checkboxes": [
+              {
+                "id": 4
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Wound card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Wound",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
-            "active": true
+            "id": 5,
+            "checkboxes": [
+              {
+                "id": 5
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Immobilize card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Immobilize",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "checkboxes": [
+              {
+                "id": 6
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Push 2 card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Push2",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "checkboxes": [
+              {
+                "id": 7
+              }
+            ],
+            "label": "Replace one +0 card with one +0 Stun card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "stun",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "checkboxes": [
+              {
+                "id": 8
+              }
+            ],
+            "label": "Replace one +1 card with one +1 Stun card",
+            "changes": [
+              {
+                "cardTitle": "plus1",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Stun",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 9,
+            "checkboxes": [
+              {
+                "id": 9
+              },
+              {
+                "id": 10
+              },
+              {
+                "id": 11
+              }
+            ],
+            "label": "Add one +2 Wind card",
+            "changes": [
+              {
+                "cardTitle": "plus2Wind",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 10,
+            "checkboxes": [
+              {
+                "id": 12
+              },
+              {
+                "id": 13
+              },
+              {
+                "id": 14
+              }
+            ],
+            "label": "Replace one +1 with one +3 card",
+            "changes": [
+              {
+                "cardTitle": "plus1",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus3",
+                "action": "add",
+                "number": 1
+              }
+            ]
           }
         ]
       },
       {
-        "title": "ripped-from-the-flesh",
-        "level": 4,
-        "enhancementSpots": 1,
-        "enhancements": [
+        "name": "hatchet",
+        "initials": "ha",
+        "noSpoilerName": "Hatchet",
+        "handSize": 10,
+        "startingCards": 13,
+        "health": [8, 9, 11, 12, 14, 15, 17, 18, 20],
+        "cards": [
           {
-            "id": 33,
-            "top": 188,
-            "left": 133,
-            "enhancement": ""
+            "title": "the-favorite",
+            "level": 1,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 1,
+                "top": 235,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "retrieval",
+            "level": 1,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 2,
+                "top": 81,
+                "left": 137,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "close-cuts",
+            "level": 1,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 3,
+                "top": 117,
+                "left": 133,
+                "enhancement": ""
+              },
+              {
+                "id": 4,
+                "top": 205,
+                "left": 138,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "center-mass",
+            "level": 1,
+            "enhancementSpots": 4,
+            "enhancements": [
+              {
+                "id": 5,
+                "top": 87,
+                "left": 138,
+                "enhancement": ""
+              },
+              {
+                "id": 6,
+                "top": 101,
+                "left": 129,
+                "enhancement": ""
+              },
+              {
+                "id": 7,
+                "top": 199,
+                "left": 135,
+                "enhancement": ""
+              },
+              {
+                "id": 8,
+                "top": 223,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "stopping-power",
+            "level": 1,
+            "enhancementSpots": 3,
+            "enhancements": [
+              {
+                "id": 9,
+                "top": 80,
+                "left": 138,
+                "enhancement": ""
+              },
+              {
+                "id": 10,
+                "top": 94,
+                "left": 129,
+                "enhancement": ""
+              },
+              {
+                "id": 11,
+                "top": 181,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "double-throw",
+            "level": 1,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 12,
+                "top": 69,
+                "left": 137,
+                "enhancement": ""
+              },
+              {
+                "id": 13,
+                "top": 97,
+                "left": 128,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "disorienting-barrage",
+            "level": 1,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 14,
+                "top": 90,
+                "left": 130,
+                "enhancement": ""
+              },
+              {
+                "id": 15,
+                "top": 105,
+                "left": 130,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "power-pitch",
+            "level": 1,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 16,
+                "top": 207,
+                "left": 136,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "follow-through",
+            "level": 1,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 17,
+                "top": 91,
+                "left": 129,
+                "enhancement": ""
+              },
+              {
+                "id": 18,
+                "top": 189,
+                "left": 136,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "second-wind",
+            "level": 1,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 19,
+                "top": 77,
+                "left": 133,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "care-package",
+            "level": 1,
+            "enhancementSpots": 3,
+            "enhancements": [
+              {
+                "id": 20,
+                "top": 66,
+                "left": 137,
+                "enhancement": ""
+              },
+              {
+                "id": 21,
+                "top": 102,
+                "left": 133,
+                "enhancement": ""
+              },
+              {
+                "id": 22,
+                "top": 226,
+                "left": 130,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "extra-lift",
+            "level": 1,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 23,
+                "top": 80,
+                "left": 138,
+                "enhancement": ""
+              },
+              {
+                "id": 24,
+                "top": 95,
+                "left": 129,
+                "enhancement": ""
+              }
+            ],
+            "tracker": [
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              }
+            ]
+          },
+          {
+            "title": "fancy-hat",
+            "level": 1,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 25,
+                "top": 94,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "repeat-shot",
+            "level": 2,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 26,
+                "top": 195,
+                "left": 137,
+                "enhancement": ""
+              },
+              {
+                "id": 27,
+                "top": 210,
+                "left": 129,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "ricochet",
+            "level": 2,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 28,
+                "top": 64,
+                "left": 137,
+                "enhancement": ""
+              },
+              {
+                "id": 29,
+                "top": 101,
+                "left": 138,
+                "enhancement": ""
+              }
+            ],
+            "tracker": [
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              }
+            ]
+          },
+          {
+            "title": "fearsome-efficiency",
+            "level": 3,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 30,
+                "top": 59,
+                "left": 138,
+                "enhancement": ""
+              },
+              {
+                "id": 31,
+                "top": 73,
+                "left": 129,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "sharpened-blades",
+            "level": 3,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 32,
+                "top": 209,
+                "left": 136,
+                "enhancement": ""
+              }
+            ],
+            "tracker": [
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              }
+            ]
+          },
+          {
+            "title": "ripped-from-the-flesh",
+            "level": 4,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 33,
+                "top": 188,
+                "left": 133,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "overwatch",
+            "level": 4,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 34,
+                "top": 80,
+                "left": 138,
+                "enhancement": ""
+              },
+              {
+                "id": 35,
+                "top": 95,
+                "left": 130,
+                "enhancement": ""
+              }
+            ],
+            "tracker": [
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              }
+            ]
+          },
+          {
+            "title": "ha-halt-back",
+            "level": 5,
+            "enhancementSpots": 1,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "the-new-favorite",
+            "level": 5,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "bombardment",
+            "level": 6,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 37,
+                "top": 192,
+                "left": 135,
+                "enhancement": ""
+              },
+              {
+                "id": 38,
+                "top": 233,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "quick-turnaround",
+            "level": 6,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 39,
+                "top": 90,
+                "left": 129,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "excessive-force",
+            "level": 7,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": [
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              }
+            ]
+          },
+          {
+            "title": "brutalize",
+            "level": 7,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 40,
+                "top": 78,
+                "left": 137,
+                "enhancement": ""
+              },
+              {
+                "id": 41,
+                "top": 192,
+                "left": 137,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "shrapnel",
+            "level": 8,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 42,
+                "top": 82,
+                "left": 128,
+                "enhancement": ""
+              }
+            ],
+            "tracker": [
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              }
+            ]
+          },
+          {
+            "title": "camaraderie",
+            "level": 8,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 43,
+                "top": 60,
+                "left": 133,
+                "enhancement": ""
+              },
+              {
+                "id": 44,
+                "top": 98,
+                "left": 133,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "executioners-axe",
+            "level": 9,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "heart-seeker",
+            "level": 9,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 45,
+                "top": 75,
+                "left": 137,
+                "enhancement": ""
+              }
+            ],
+            "tracker": [
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              }
+            ]
           }
         ],
-        "tracker": []
-      },
-      {
-        "title": "overwatch",
-        "level": 4,
-        "enhancementSpots": 2,
-        "enhancements": [
+        "perks": [
           {
-            "id": 34,
-            "top": 80,
-            "left": 138,
-            "enhancement": ""
+            "id": 1,
+            "checkboxes": [
+              {
+                "id": 0
+              },
+              {
+                "id": 1
+              }
+            ],
+            "label": "Remove two -1 cards",
+            "changes": [
+              {
+                "cardTitle": "minus1",
+                "action": "remove",
+                "number": 2
+              }
+            ]
           },
           {
-            "id": 35,
-            "top": 95,
-            "left": 130,
-            "enhancement": ""
-          }
-        ],
-        "tracker": [
-          {
-            "active": true
+            "id": 2,
+            "checkboxes": [
+              {
+                "id": 2
+              }
+            ],
+            "label": "Replace one +0 card with one +2 Muddle card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus2Muddle",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
-            "active": true
+            "id": 3,
+            "checkboxes": [
+              {
+                "id": 3
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Poison card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Poison",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
-            "active": true
+            "id": 4,
+            "checkboxes": [
+              {
+                "id": 4
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Wound card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Wound",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
-            "active": true
+            "id": 5,
+            "checkboxes": [
+              {
+                "id": 5
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Immobilize card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Immobilize",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
-            "active": true
-          }
-        ]
-      },
-      {
-        "title": "ha-halt-back",
-        "level": 5,
-        "enhancementSpots": 1,
-        "enhancements": [],
-        "tracker": []
-      },
-      {
-        "title": "the-new-favorite",
-        "level": 5,
-        "enhancementSpots": 0,
-        "enhancements": [],
-        "tracker": []
-      },
-      {
-        "title": "bombardment",
-        "level": 6,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 37,
-            "top": 192,
-            "left": 135,
-            "enhancement": ""
+            "id": 6,
+            "checkboxes": [
+              {
+                "id": 6
+              }
+            ],
+            "label": "Replace one +0 card with one +1 Push 2 card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Push2",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
-            "id": 38,
-            "top": 233,
-            "left": 135,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "quick-turnaround",
-        "level": 6,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 39,
-            "top": 90,
-            "left": 129,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "excessive-force",
-        "level": 7,
-        "enhancementSpots": 0,
-        "enhancements": [],
-        "tracker": [
-          {
-            "active": true
+            "id": 7,
+            "checkboxes": [
+              {
+                "id": 7
+              }
+            ],
+            "label": "Replace one +0 card with one +0 Stun card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "stun",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
-            "active": true
+            "id": 8,
+            "checkboxes": [
+              {
+                "id": 8
+              }
+            ],
+            "label": "Replace one +1 card with one +1 Stun card",
+            "changes": [
+              {
+                "cardTitle": "plus1",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1Stun",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
-            "active": true
+            "id": 9,
+            "checkboxes": [
+              {
+                "id": 9
+              },
+              {
+                "id": 10
+              },
+              {
+                "id": 11
+              }
+            ],
+            "label": "Add one +2 Wind card",
+            "changes": [
+              {
+                "cardTitle": "plus2Wind",
+                "action": "add",
+                "number": 1
+              }
+            ]
           },
           {
-            "active": true
-          },
-          {
-            "active": true
-          }
-        ]
-      },
-      {
-        "title": "brutalize",
-        "level": 7,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 40,
-            "top": 78,
-            "left": 137,
-            "enhancement": ""
-          },
-          {
-            "id": 41,
-            "top": 192,
-            "left": 137,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "shrapnel",
-        "level": 8,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 42,
-            "top": 82,
-            "left": 128,
-            "enhancement": ""
-          }
-        ],
-        "tracker": [
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          }
-        ]
-      },
-      {
-        "title": "camaraderie",
-        "level": 8,
-        "enhancementSpots": 2,
-        "enhancements": [
-          {
-            "id": 43,
-            "top": 60,
-            "left": 133,
-            "enhancement": ""
-          },
-          {
-            "id": 44,
-            "top": 98,
-            "left": 133,
-            "enhancement": ""
-          }
-        ],
-        "tracker": []
-      },
-      {
-        "title": "executioners-axe",
-        "level": 9,
-        "enhancementSpots": 0,
-        "enhancements": [],
-        "tracker": []
-      },
-      {
-        "title": "heart-seeker",
-        "level": 9,
-        "enhancementSpots": 1,
-        "enhancements": [
-          {
-            "id": 45,
-            "top": 75,
-            "left": 137,
-            "enhancement": ""
-          }
-        ],
-        "tracker": [
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          },
-          {
-            "active": true
-          }
-        ]
-      }
-    ],
-    "perks": [
-      {
-        "id": 1,
-        "checkboxes": [
-          {
-            "id": 0
-          },
-          {
-            "id": 1
-          }
-        ],
-        "label": "Remove two -1 cards",
-        "changes": [
-          {
-            "cardTitle": "minus1",
-            "action": "remove",
-            "number": 2
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "checkboxes": [
-          {
-            "id": 2
-          }
-        ],
-        "label": "Replace one +0 card with one +2 Muddle card",
-        "changes": [
-          {
-            "cardTitle": "plus0",
-            "action": "remove",
-            "number": 1
-          },
-          {
-            "cardTitle": "plus2Muddle",
-            "action": "add",
-            "number": 1
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "checkboxes": [
-          {
-            "id": 3
-          }
-        ],
-        "label": "Replace one +0 card with one +1 Poison card",
-        "changes": [
-          {
-            "cardTitle": "plus0",
-            "action": "remove",
-            "number": 1
-          },
-          {
-            "cardTitle": "plus1Poison",
-            "action": "add",
-            "number": 1
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "checkboxes": [
-          {
-            "id": 4
-          }
-        ],
-        "label": "Replace one +0 card with one +1 Wound card",
-        "changes": [
-          {
-            "cardTitle": "plus0",
-            "action": "remove",
-            "number": 1
-          },
-          {
-            "cardTitle": "plus1Wound",
-            "action": "add",
-            "number": 1
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "checkboxes": [
-          {
-            "id": 5
-          }
-        ],
-        "label": "Replace one +0 card with one +1 Immobilize card",
-        "changes": [
-          {
-            "cardTitle": "plus0",
-            "action": "remove",
-            "number": 1
-          },
-          {
-            "cardTitle": "plus1Immobilize",
-            "action": "add",
-            "number": 1
-          }
-        ]
-      },
-      {
-        "id": 6,
-        "checkboxes": [
-          {
-            "id": 6
-          }
-        ],
-        "label": "Replace one +0 card with one +1 Push 2 card",
-        "changes": [
-          {
-            "cardTitle": "plus0",
-            "action": "remove",
-            "number": 1
-          },
-          {
-            "cardTitle": "plus1Push2",
-            "action": "add",
-            "number": 1
-          }
-        ]
-      },
-      {
-        "id": 7,
-        "checkboxes": [
-          {
-            "id": 7
-          }
-        ],
-        "label": "Replace one +0 card with one +0 Stun card",
-        "changes": [
-          {
-            "cardTitle": "plus0",
-            "action": "remove",
-            "number": 1
-          },
-          {
-            "cardTitle": "stun",
-            "action": "add",
-            "number": 1
-          }
-        ]
-      },
-      {
-        "id": 8,
-        "checkboxes": [
-          {
-            "id": 8
-          }
-        ],
-        "label": "Replace one +1 card with one +1 Stun card",
-        "changes": [
-          {
-            "cardTitle": "plus1",
-            "action": "remove",
-            "number": 1
-          },
-          {
-            "cardTitle": "plus1Stun",
-            "action": "add",
-            "number": 1
-          }
-        ]
-      },
-      {
-        "id": 9,
-        "checkboxes": [
-          {
-            "id": 9
-          },
-          {
-            "id": 10
-          },
-          {
-            "id": 11
-          }
-        ],
-        "label": "Add one +2 Wind card",
-        "changes": [
-          {
-            "cardTitle": "plus2Wind",
-            "action": "add",
-            "number": 1
-          }
-        ]
-      },
-      {
-        "id": 10,
-        "checkboxes": [
-          {
-            "id": 12
-          },
-          {
-            "id": 13
-          },
-          {
-            "id": 14
-          }
-        ],
-        "label": "Replace one +1 with one +3 card",
-        "changes": [
-          {
-            "cardTitle": "plus1",
-            "action": "remove",
-            "number": 1
-          },
-          {
-            "cardTitle": "plus3",
-            "action": "add",
-            "number": 1
+            "id": 10,
+            "checkboxes": [
+              {
+                "id": 12
+              },
+              {
+                "id": 13
+              },
+              {
+                "id": 14
+              }
+            ],
+            "label": "Replace one +1 with one +3 card",
+            "changes": [
+              {
+                "cardTitle": "plus1",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus3",
+                "action": "add",
+                "number": 1
+              }
+            ]
           }
         ]
       }
