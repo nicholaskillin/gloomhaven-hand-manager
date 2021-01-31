@@ -22,6 +22,7 @@ import _ from 'lodash'
 function App() {
   const [stage, setStage] = useState('selectCharacter')
   const [game, setGame] = useState('gloomhaven')
+  const [campaign, setCampaign] = useState(1)
   const [character, setCharacter] = useState({})
   const [level, setLevel] = useState(1)
   const [hand, setHand] = useState([])
@@ -121,7 +122,29 @@ function App() {
     if (cookieInfo.hand) {
       setHand(cookieInfo.hand)
     }
+    if (cookieInfo.campaign) {
+      setCampaign(cookieInfo.campaign)
+    }
   }, [])
+
+  useEffect(() => {
+    if (characterSelected && game === 'jotl') {
+      let characterData = allCharacterData.find(
+        (x) => x.name === character.name
+      ).campaignVersions[campaign - 1]
+
+      if (game === 'jotl' && campaign === '1') {
+        setHand(characterData.cards)
+      }
+
+      cookies.set('campaign', campaign, {
+        path: '/',
+        maxAge: 31104000,
+      })
+
+      setCharacter(characterData)
+    }
+  }, [campaign])
 
   function getGameCharacters(gameName) {
     if (gameName === 'gloomhaven') {
@@ -132,6 +155,8 @@ function App() {
       return require(`./jawsOfTheLionCharacterData.json`)
     }
   }
+
+  const characterSelected = !_.isEmpty(character)
 
   function changeGame(gameName) {
     setGame(gameName)
@@ -148,7 +173,13 @@ function App() {
       maxAge: 31104000,
     })
 
-    let characterData = allCharacterData.find((x) => x.name === characterName)
+    let characterData =
+      game === 'jotl'
+        ? allCharacterData.find((x) => x.name === characterName)
+            .campaignVersions[campaign - 1]
+        : allCharacterData.find((x) => x.name === characterName)
+    console.log(allCharacterData)
+    console.log(characterData)
     if (characterName !== cookies.get('character')) {
       cookies.remove('perks')
       cookies.remove('modifierChanges')
@@ -159,6 +190,11 @@ function App() {
       path: '/',
       maxAge: 31104000,
     })
+
+    if (game === 'jotl' && campaign === '1') {
+      console.log('got here')
+      setHand(characterData.cards)
+    }
     setCharacter(characterData, setStage('selectPerks'))
   }
 
@@ -332,11 +368,13 @@ function App() {
         <HandSelection
           addCardToHand={addCardToHand}
           character={character}
+          game={game}
           level={level}
           hand={hand}
           handleUpdateCharacter={handleUpdateCharacter}
           handleSetStage={handleSetStage}
           removeCardFromHand={removeCardFromHand}
+          {...{ campaign, setCampaign }}
         />
       )}
       {stage === 'playing' && (

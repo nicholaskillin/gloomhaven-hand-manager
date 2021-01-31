@@ -4,12 +4,15 @@ import _ from 'lodash'
 
 function HandSelection({
   addCardToHand,
+  campaign,
   character,
+  game,
   level,
   hand,
   handleUpdateCharacter,
   handleSetStage,
   removeCardFromHand,
+  setCampaign,
 }) {
   // TODO: move cards over to use the CardContainer component
   const firstRow = character.cards.slice(0, 5)
@@ -89,13 +92,34 @@ function HandSelection({
     })
   }
 
+  const handleCampaignChange = (campaignValue) => {
+    setCampaign(campaignValue)
+  }
+
   return (
     <div id='initial-table' className='cardSet'>
       <h2 id='choose-cards-number' className='header'>
         Choose {character.handSize} Cards
       </h2>
-      <div align="center">
-        <p id="card-counter" className="card-counter" align="center">
+      <div align='center' style={{ fontSize: '.7em' }}>
+        {game === 'jotl' && (
+          <>
+            <label for='campaign'>Choose a campaign:</label>
+
+            <select
+              id='campaign'
+              name='campaign'
+              onChange={(e) => handleCampaignChange(parseInt(e.target.value))}
+              value={campaign}
+            >
+              <option value='1'>1</option>
+              <option value='2'>2</option>
+              <option value='3'>3</option>
+              <option value='4'>4+</option>
+            </select>
+          </>
+        )}
+        <p id='card-counter' className='card-counter' align='center'>
           {hand.length}/{character.handSize}
         </p>
       </div>
@@ -115,13 +139,16 @@ function HandSelection({
             character={character}
             handleEnhancementChange={handleEnhancementChange}
           />
-          <CardTableRowLevelOne
-            cardIsInHand={cardIsInHand}
-            handleCardClick={handleCardClick}
-            cardSet={thirdRow}
-            character={character}
-            handleEnhancementChange={handleEnhancementChange}
-          />
+          {thirdRow.length > 0 && (
+            <CardTableRowLevelOne
+              cardIsInHand={cardIsInHand}
+              handleCardClick={handleCardClick}
+              cardSet={thirdRow}
+              character={character}
+              handleEnhancementChange={handleEnhancementChange}
+            />
+          )}
+
           {level >= 2 && (
             <CardTableRowTwoLevels
               cardIsInHand={cardIsInHand}
