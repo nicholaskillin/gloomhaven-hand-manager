@@ -138,6 +138,8 @@ function App() {
         (campaign === 1 || campaign === 2 || campaign === 3)
       ) {
         setHand(characterData.cards)
+      } else if (game === 'jotl') {
+        setHand([])
       }
 
       cookies.set('campaign', campaign, {
@@ -199,6 +201,8 @@ function App() {
       (campaign === 1 || campaign === 2 || campaign === 3)
     ) {
       setHand(characterData.cards)
+    } else if (game === 'jotl') {
+      setHand([])
     }
     setCharacter(characterData, setStage('selectPerks'))
   }

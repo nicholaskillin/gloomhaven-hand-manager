@@ -760,6 +760,697 @@
             ]
           }
         ]
+      },
+      {
+        "name": "demolitionist",
+        "initials": "de",
+        "noSpoilerName": "Demolitionist",
+        "handSize": 9,
+        "startingCards": 12,
+        "health": [8, 9, 11, 12, 14, 15, 17, 18, 20],
+        "cards": [
+          {
+            "title": "windup",
+            "level": 1,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": [
+              {
+                "active": true
+              },
+              {
+                "active": true
+              }
+            ]
+          },
+          {
+            "title": "crushing-weight",
+            "level": 1,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 1,
+                "top": 84,
+                "left": 135,
+                "enhancement": ""
+              },
+              {
+                "id": 2,
+                "top": 203,
+                "left": 134,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "knock-out-the-support",
+            "level": 1,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 3,
+                "top": 68,
+                "left": 136,
+                "enhancement": ""
+              },
+              {
+                "id": 4,
+                "top": 187,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "explode",
+            "level": 1,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 5,
+                "top": 210,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "implode",
+            "level": 1,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 6,
+                "top": 206,
+                "left": 134,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "piston-punch",
+            "level": 1,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 7,
+                "top": 81,
+                "left": 136,
+                "enhancement": ""
+              },
+              {
+                "id": 8,
+                "top": 95,
+                "left": 127,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "explosive-blitz",
+            "level": 1,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 9,
+                "top": 91,
+                "left": 127,
+                "enhancement": ""
+              },
+              {
+                "id": 10,
+                "top": 180,
+                "left": 134,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "the-big-one",
+            "level": 1,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 11,
+                "top": 187,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "one-two-punch",
+            "level": 1,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 12,
+                "top": 67,
+                "left": 136,
+                "enhancement": ""
+              },
+              {
+                "id": 13,
+                "top": 88,
+                "left": 136,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "level",
+            "level": 1,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 14,
+                "top": 82,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "lobbed-charge",
+            "level": 1,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 15,
+                "top": 177,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "rubble",
+            "level": 1,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 16,
+                "top": 202,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "robotic-enhancement",
+            "level": 2,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 17,
+                "top": 87,
+                "left": 136,
+                "enhancement": ""
+              },
+              {
+                "id": 18,
+                "top": 205,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "crash-protocol",
+            "level": 2,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 19,
+                "top": 182,
+                "left": 134,
+                "enhancement": ""
+              }
+            ],
+            "tracker": [
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              }
+            ]
+          },
+          {
+            "title": "fire-bombs",
+            "level": 3,
+            "enhancementSpots": 3,
+            "enhancements": [
+              {
+                "id": 20,
+                "top": 82,
+                "left": 128,
+                "enhancement": ""
+              },
+              {
+                "id": 21,
+                "top": 97,
+                "left": 128,
+                "enhancement": ""
+              },
+              {
+                "id": 22,
+                "top": 191,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "nowhere-to-run",
+            "level": 3,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 23,
+                "top": 65,
+                "left": 136,
+                "enhancement": ""
+              },
+              {
+                "id": 24,
+                "top": 191,
+                "left": 134,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "remote-detonation",
+            "level": 4,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 25,
+                "top": 88,
+                "left": 137,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "extra-fuel",
+            "level": 4,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 26,
+                "top": 66,
+                "left": 137,
+                "enhancement": ""
+              },
+              {
+                "id": 27,
+                "top": 203,
+                "left": 134,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "de-halt-back",
+            "level": 5,
+            "enhancementSpots": 0,
+            "enhancements": [],
+            "tracker": []
+          },
+          {
+            "title": "mech-suit",
+            "level": 5,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 28,
+                "top": 205,
+                "left": 134,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "dust-cloud",
+            "level": 6,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 29,
+                "top": 183,
+                "left": 134,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "drill-fist",
+            "level": 6,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 30,
+                "top": 183,
+                "left": 134,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "micro-missiles",
+            "level": 7,
+            "enhancementSpots": 3,
+            "enhancements": [
+              {
+                "id": 31,
+                "top": 96,
+                "left": 127,
+                "enhancement": ""
+              },
+              {
+                "id": 32,
+                "top": 110,
+                "left": 127,
+                "enhancement": ""
+              },
+              {
+                "id": 33,
+                "top": 192,
+                "left": 134,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "insult-to-injury",
+            "level": 7,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 34,
+                "top": 184,
+                "left": 134,
+                "enhancement": ""
+              }
+            ],
+            "tracker": [
+              {
+                "active": true
+              },
+              {
+                "active": true
+              },
+              {
+                "active": true
+              }
+            ]
+          },
+          {
+            "title": "gut-punch",
+            "level": 8,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 35,
+                "top": 211,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "the-bigger-one",
+            "level": 8,
+            "enhancementSpots": 1,
+            "enhancements": [
+              {
+                "id": 36,
+                "top": 60,
+                "left": 101,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "collateral-damage",
+            "level": 9,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 37,
+                "top": 82,
+                "left": 136,
+                "enhancement": ""
+              },
+              {
+                "id": 38,
+                "top": 195,
+                "left": 134,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          },
+          {
+            "title": "wholesale-destruction",
+            "level": 9,
+            "enhancementSpots": 2,
+            "enhancements": [
+              {
+                "id": 39,
+                "top": 97,
+                "left": 134,
+                "enhancement": ""
+              },
+              {
+                "id": 40,
+                "top": 118,
+                "left": 135,
+                "enhancement": ""
+              }
+            ],
+            "tracker": []
+          }
+        ],
+        "perks": [
+          {
+            "id": 1,
+            "checkboxes": [
+              {
+                "id": 0
+              }
+            ],
+            "label": "Remove four +0 cards",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 4
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "checkboxes": [
+              {
+                "id": 1
+              },
+              {
+                "id": 2
+              }
+            ],
+            "label": "Remove two -1 cards",
+            "changes": [
+              {
+                "cardTitle": "minus1",
+                "action": "remove",
+                "number": 2
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "checkboxes": [
+              {
+                "id": 3
+              }
+            ],
+            "label": "Remove one -2 card and one +1 card",
+            "changes": [
+              {
+                "cardTitle": "minus2",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus1",
+                "action": "remove",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "checkboxes": [
+              {
+                "id": 4
+              },
+              {
+                "id": 5
+              }
+            ],
+            "label": "Replace one +0 card with one +2 Muddle card",
+            "changes": [
+              {
+                "cardTitle": "plus0",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus2Muddle",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "checkboxes": [
+              {
+                "id": 6
+              }
+            ],
+            "label": "Replace one -1 card with one +0 Poison card",
+            "changes": [
+              {
+                "cardTitle": "minus1",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "poison",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "checkboxes": [
+              {
+                "id": 7
+              },
+              {
+                "id": 8
+              }
+            ],
+            "label": "Add one +2 card",
+            "changes": [
+              {
+                "cardTitle": "plus2",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "checkboxes": [
+              {
+                "id": 9
+              },
+              {
+                "id": 10
+              }
+            ],
+            "label": "Replace one +1 card with one +2 Leaf card",
+            "changes": [
+              {
+                "cardTitle": "plus1",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus2Leaf",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "checkboxes": [
+              {
+                "id": 11
+              },
+              {
+                "id": 12
+              }
+            ],
+            "label": "Replace one +1 card with one +2 Fire card",
+            "changes": [
+              {
+                "cardTitle": "plus1",
+                "action": "remove",
+                "number": 1
+              },
+              {
+                "cardTitle": "plus2Fire",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "id": 9,
+            "checkboxes": [
+              {
+                "id": 13
+              },
+              {
+                "id": 14
+              }
+            ],
+            "label": "Add one +0 All adjacent enemies suffer 1 damage card",
+            "changes": [
+              {
+                "cardTitle": "1DamageAdjacent",
+                "action": "add",
+                "number": 1
+              }
+            ]
+          }
+        ]
       }
     ]
   },
