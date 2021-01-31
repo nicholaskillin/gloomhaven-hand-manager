@@ -123,7 +123,7 @@ function App() {
       setHand(cookieInfo.hand)
     }
     if (cookieInfo.campaign) {
-      setCampaign(cookieInfo.campaign)
+      setCampaign(parseInt(cookieInfo.campaign))
     }
   }, [])
 
@@ -133,7 +133,10 @@ function App() {
         (x) => x.name === character.name
       ).campaignVersions[campaign - 1]
 
-      if (game === 'jotl' && campaign === '1') {
+      if (
+        game === 'jotl' &&
+        (campaign === 1 || campaign === 2 || campaign === 3)
+      ) {
         setHand(characterData.cards)
       }
 
@@ -178,8 +181,7 @@ function App() {
         ? allCharacterData.find((x) => x.name === characterName)
             .campaignVersions[campaign - 1]
         : allCharacterData.find((x) => x.name === characterName)
-    console.log(allCharacterData)
-    console.log(characterData)
+
     if (characterName !== cookies.get('character')) {
       cookies.remove('perks')
       cookies.remove('modifierChanges')
@@ -191,7 +193,11 @@ function App() {
       maxAge: 31104000,
     })
 
-    if (game === 'jotl' && campaign === '1') {
+    // TODO: Fix this so that it always does this for tutorial campaigns
+    if (
+      game === 'jotl' &&
+      (campaign === 1 || campaign === 2 || campaign === 3)
+    ) {
       setHand(characterData.cards)
     }
     setCharacter(characterData, setStage('selectPerks'))
