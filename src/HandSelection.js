@@ -300,31 +300,38 @@ function CardTableRowTwoLevels({
   return (
     <>
       <tr>
-        <td className='level'>Level {firstLevel}:</td>
-        {firstCardSet.map((card) => {
-          return (
-            <td
-              key={card.title}
-              className='chooseCardsTable'
-              onClick={(e) => handleCardClick(e.target)}
-            >
-              <img
-                src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                className={
-                  cardIsInHand(card) ? 'chooseCards add-border' : 'chooseCards'
-                }
-                alt={card.title}
-              />
-              {card.enhancements.map((enhancement) => (
-                <EnhancementIcon
-                  key={enhancement.id}
-                  enhancement={enhancement}
-                />
-              ))}
-            </td>
-          )
-        })}
-        {level >= secondLevel && (
+        {firstCardSet.length > 0 && (
+          <>
+            <td className='level'>Level {firstLevel}:</td>
+            {firstCardSet.map((card) => {
+              return (
+                <td
+                  key={card.title}
+                  className='chooseCardsTable'
+                  onClick={(e) => handleCardClick(e.target)}
+                >
+                  <img
+                    src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
+                    className={
+                      cardIsInHand(card)
+                        ? 'chooseCards add-border'
+                        : 'chooseCards'
+                    }
+                    alt={card.title}
+                  />
+                  {card.enhancements.map((enhancement) => (
+                    <EnhancementIcon
+                      key={enhancement.id}
+                      enhancement={enhancement}
+                    />
+                  ))}
+                </td>
+              )
+            })}
+          </>
+        )}
+
+        {level >= secondLevel && secondCardSet.length > 0 && (
           <>
             <td className='level'>Level {secondLevel}:</td>
             {secondCardSet.map((card) => {
