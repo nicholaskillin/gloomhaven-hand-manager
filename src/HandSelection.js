@@ -1,15 +1,18 @@
-import Cookies from 'universal-cookie'
 import React from 'react'
+import Cookies from 'universal-cookie'
 import _ from 'lodash'
 
 function HandSelection({
   addCardToHand,
+  campaign,
   character,
+  game,
   level,
   hand,
   handleUpdateCharacter,
   handleSetStage,
   removeCardFromHand,
+  setCampaign,
 }) {
   // TODO: move cards over to use the CardContainer component
   const firstRow = character.cards.slice(0, 5)
@@ -60,7 +63,7 @@ function HandSelection({
 
   function handleCardClick(selectedCard) {
     if (_.includes(selectedCard.alt, 'halt-back')) return
-    
+
     while (selectedCard.className === 'enhancement-icon') {
       selectedCard = selectedCard.previousSibling
     }
@@ -89,17 +92,38 @@ function HandSelection({
     })
   }
 
+  const handleCampaignChange = (campaignValue) => {
+    setCampaign(campaignValue)
+  }
+
   return (
-    <div id="initial-table" className="cardSet">
-      <h2 id="choose-cards-number" className="header">
+    <div id='initial-table' className='cardSet'>
+      <h2 id='choose-cards-number' className='header'>
         Choose {character.handSize} Cards
       </h2>
-      <div align="center">
-        <p id="card-counter" className="card-counter" align="center">
+      <div align='center' style={{ fontSize: '.7em' }}>
+        {game === 'jotl' && (
+          <>
+            <label for='campaign'>Choose a campaign:</label>
+
+            <select
+              id='campaign'
+              name='campaign'
+              onChange={(e) => handleCampaignChange(parseInt(e.target.value))}
+              value={campaign}
+            >
+              <option value='1'>1</option>
+              <option value='2'>2</option>
+              <option value='3'>3</option>
+              <option value='4'>4+</option>
+            </select>
+          </>
+        )}
+        <p id='card-counter' className='card-counter' align='center'>
           {hand.length}/{character.handSize}
         </p>
       </div>
-      <table className="cardTable" align="center">
+      <table className='cardTable' align='center'>
         <tbody>
           <CardTableRowLevelOne
             cardIsInHand={cardIsInHand}
@@ -115,13 +139,16 @@ function HandSelection({
             character={character}
             handleEnhancementChange={handleEnhancementChange}
           />
-          <CardTableRowLevelOne
-            cardIsInHand={cardIsInHand}
-            handleCardClick={handleCardClick}
-            cardSet={thirdRow}
-            character={character}
-            handleEnhancementChange={handleEnhancementChange}
-          />
+          {thirdRow.length > 0 && (
+            <CardTableRowLevelOne
+              cardIsInHand={cardIsInHand}
+              handleCardClick={handleCardClick}
+              cardSet={thirdRow}
+              character={character}
+              handleEnhancementChange={handleEnhancementChange}
+            />
+          )}
+
           {level >= 2 && (
             <CardTableRowTwoLevels
               cardIsInHand={cardIsInHand}
@@ -179,18 +206,18 @@ function HandSelection({
       <div>
         <SelectedHand character={character} hand={hand} />
       </div>
-      <div align="center">
+      <div align='center'>
         <button
-          className="button"
-          type="button"
+          className='button'
+          type='button'
           onClick={() => handleSetStage('selectPerks')}
         >
           Go Back To Perks
         </button>
         <button
-          className="button"
-          type="button"
-          title="Must Have a Full Hand"
+          className='button'
+          type='button'
+          title='Must Have a Full Hand'
           onClick={handleConfirmHand}
           disabled={hand.length < character.handSize}
         >
@@ -211,12 +238,12 @@ function CardTableRowLevelOne({
   return (
     <>
       <tr>
-        <td className="level">Level 1:</td>
+        <td className='level'>Level 1:</td>
         {cardSet.map((card) => {
           return (
             <td
               key={card.title}
-              className="chooseCardsTable"
+              className='chooseCardsTable'
               onClick={(e) => handleCardClick(e.target)}
             >
               <img
@@ -237,10 +264,10 @@ function CardTableRowLevelOne({
         })}
       </tr>
       <tr>
-        <td className="enhancement-label" />
+        <td className='enhancement-label' />
         {cardSet.map((card) => {
           return (
-            <td key={`${card.title}-Enhancements`} className="enhancement">
+            <td key={`${card.title}-Enhancements`} className='enhancement'>
               {card.enhancements.map((enhancement, index) => {
                 return (
                   <EnhancementDropdown
@@ -273,38 +300,45 @@ function CardTableRowTwoLevels({
   return (
     <>
       <tr>
-        <td className="level">Level {firstLevel}:</td>
-        {firstCardSet.map((card) => {
-          return (
-            <td
-              key={card.title}
-              className="chooseCardsTable"
-              onClick={(e) => handleCardClick(e.target)}
-            >
-              <img
-                src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                className={
-                  cardIsInHand(card) ? 'chooseCards add-border' : 'chooseCards'
-                }
-                alt={card.title}
-              />
-              {card.enhancements.map((enhancement) => (
-                <EnhancementIcon
-                  key={enhancement.id}
-                  enhancement={enhancement}
-                />
-              ))}
-            </td>
-          )
-        })}
-        {level >= secondLevel && (
+        {firstCardSet.length > 0 && (
           <>
-            <td className="level">Level {secondLevel}:</td>
+            <td className='level'>Level {firstLevel}:</td>
+            {firstCardSet.map((card) => {
+              return (
+                <td
+                  key={card.title}
+                  className='chooseCardsTable'
+                  onClick={(e) => handleCardClick(e.target)}
+                >
+                  <img
+                    src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
+                    className={
+                      cardIsInHand(card)
+                        ? 'chooseCards add-border'
+                        : 'chooseCards'
+                    }
+                    alt={card.title}
+                  />
+                  {card.enhancements.map((enhancement) => (
+                    <EnhancementIcon
+                      key={enhancement.id}
+                      enhancement={enhancement}
+                    />
+                  ))}
+                </td>
+              )
+            })}
+          </>
+        )}
+
+        {level >= secondLevel && secondCardSet.length > 0 && (
+          <>
+            <td className='level'>Level {secondLevel}:</td>
             {secondCardSet.map((card) => {
               return (
                 <td
                   key={card.title}
-                  className="chooseCardsTable"
+                  className='chooseCardsTable'
                   onClick={(e) => handleCardClick(e.target)}
                 >
                   <img
@@ -329,10 +363,10 @@ function CardTableRowTwoLevels({
         )}
       </tr>
       <tr>
-        <td className="enhancement-label" />
+        <td className='enhancement-label' />
         {firstCardSet.map((card) => {
           return (
-            <td key={`${card.title}-Enhancements`} className="enhancement">
+            <td key={`${card.title}-Enhancements`} className='enhancement'>
               {card.enhancements.map((enhancement, index) => {
                 return (
                   <EnhancementDropdown
@@ -348,10 +382,10 @@ function CardTableRowTwoLevels({
         })}
         {level >= secondLevel && (
           <>
-            <td className="enhancement-label" />
+            <td className='enhancement-label' />
             {secondCardSet.map((card) => {
               return (
-                <td key={`${card.title}-Enhancements`} className="enhancement">
+                <td key={`${card.title}-Enhancements`} className='enhancement'>
                   {card.enhancements.map((enhancement, index) => {
                     return (
                       <EnhancementDropdown
@@ -395,12 +429,12 @@ function EnhancementDropdown({ card, enhancement, handleEnhancementChange }) {
   ]
 
   return (
-    <div className="enhancement-row">
-      <label className="enhancement">Enhancement:</label>
+    <div className='enhancement-row'>
+      <label className='enhancement'>Enhancement:</label>
       <select
         onChange={(e) => handleEnhancementChange(card.title, enhancement.id, e)}
       >
-        <option value="">None</option>
+        <option value=''>None</option>
         {enhancementOptions.map((enhancementOption) => {
           return (
             <option key={enhancementOption} value={enhancementOption}>
@@ -418,15 +452,15 @@ function SelectedHand({ character, hand }) {
   const secondRow = hand.slice(4, 8)
   const thirdRow = hand.slice(8, 12)
   return (
-    <table align="center">
+    <table align='center'>
       <tbody>
         <tr>
           {firstRow.map((card) => {
             return (
-              <td key={card.title} className="hand">
+              <td key={card.title} className='hand'>
                 <img
                   src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                  className="chooseCards"
+                  className='chooseCards'
                   alt={card.title}
                 />
                 {card.enhancements.map((enhancement) => (
@@ -442,10 +476,10 @@ function SelectedHand({ character, hand }) {
         <tr>
           {secondRow.map((card) => {
             return (
-              <td key={card.title} className="hand">
+              <td key={card.title} className='hand'>
                 <img
                   src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                  className="chooseCards"
+                  className='chooseCards'
                   alt={card.title}
                 />
                 {card.enhancements.map((enhancement) => (
@@ -461,10 +495,10 @@ function SelectedHand({ character, hand }) {
         <tr>
           {thirdRow.map((card) => {
             return (
-              <td key={card.title} className="hand">
+              <td key={card.title} className='hand'>
                 <img
                   src={`./images/character-ability-cards/${character.initials}/${card.title}.png`}
-                  className="chooseCards"
+                  className='chooseCards'
                   alt={card.title}
                 />
                 {card.enhancements.map((enhancement) => (
@@ -487,7 +521,7 @@ function EnhancementIcon({ enhancement }) {
     <>
       {enhancement.enhancement !== '' && (
         <img
-          className="enhancement-icon"
+          className='enhancement-icon'
           src={`./images/enhancements/${enhancement.enhancement.toLowerCase()}.png`}
           style={{ top: enhancement.top, left: enhancement.left }}
           alt={`Enhancement Name`}

@@ -6,8 +6,8 @@ import Cookies from 'universal-cookie'
 function PerkSelection({
   modifyModifierDeck,
   character,
-  handleSetStage,
   characterPerks,
+  handleSetStage,
   resetModifierDeck,
 }) {
   const [perks, setPerk] = useState([
@@ -149,11 +149,11 @@ function PerkSelection({
 
   return (
     <>
-      <div id="perk-section" align="center">
-        <h2 id="perks-header" className="header">
+      <div id='perk-section' align='center'>
+        <h2 id='perks-header' className='header'>
           Select Your Perks
         </h2>
-        <div className="perks">
+        <div className='perks'>
           {characterPerks.map((perkData) => (
             <div key={perkData.id}>
               {perkData.checkboxes.map((checkbox) => (
@@ -175,17 +175,17 @@ function PerkSelection({
             </div>
           ))}
           <button
-            id="confirmPerksButton"
-            className="button"
-            type="button"
+            id='confirmPerksButton'
+            className='button'
+            type='button'
             onClick={() => handleConfirmPerks()}
           >
             Confirm Perks
           </button>
         </div>
         <button
-          className="button"
-          type="button"
+          className='button'
+          type='button'
           onClick={() => handleSetStage('selectCharacter')}
         >
           Go Back To Character Select

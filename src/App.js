@@ -22,6 +22,7 @@ import _ from 'lodash'
 function App() {
   const [stage, setStage] = useState('selectCharacter')
   const [game, setGame] = useState('gloomhaven')
+  const [campaign, setCampaign] = useState(1)
   const [character, setCharacter] = useState({})
   const [level, setLevel] = useState(1)
   const [hand, setHand] = useState([])
@@ -107,6 +108,7 @@ function App() {
       image: './images/attack-modifiers/base/player/am-x2.png',
     },
   ])
+
   const [staffOfCommand, setStaffOfCommand] = useState(false)
   const allCharacterData = getGameCharacters(game)
   const cookies = new Cookies()
@@ -120,7 +122,34 @@ function App() {
     if (cookieInfo.hand) {
       setHand(cookieInfo.hand)
     }
+    if (cookieInfo.campaign) {
+      setCampaign(parseInt(cookieInfo.campaign))
+    }
   }, [])
+
+  useEffect(() => {
+    if (characterSelected && game === 'jotl') {
+      let characterData = allCharacterData.find(
+        (x) => x.name === character.name
+      ).campaignVersions[campaign - 1]
+
+      if (
+        game === 'jotl' &&
+        (campaign === 1 || campaign === 2 || campaign === 3)
+      ) {
+        setHand(characterData.cards)
+      } else if (game === 'jotl') {
+        setHand([])
+      }
+
+      cookies.set('campaign', campaign, {
+        path: '/',
+        maxAge: 31104000,
+      })
+
+      setCharacter(characterData)
+    }
+  }, [campaign])
 
   function getGameCharacters(gameName) {
     if (gameName === 'gloomhaven') {
@@ -131,6 +160,8 @@ function App() {
       return require(`./jawsOfTheLionCharacterData.json`)
     }
   }
+
+  const characterSelected = !_.isEmpty(character)
 
   function changeGame(gameName) {
     setGame(gameName)
@@ -147,7 +178,12 @@ function App() {
       maxAge: 31104000,
     })
 
-    let characterData = allCharacterData.find((x) => x.name === characterName)
+    let characterData =
+      game === 'jotl'
+        ? allCharacterData.find((x) => x.name === characterName)
+            .campaignVersions[campaign - 1]
+        : allCharacterData.find((x) => x.name === characterName)
+
     if (characterName !== cookies.get('character')) {
       cookies.remove('perks')
       cookies.remove('modifierChanges')
@@ -158,6 +194,15 @@ function App() {
       path: '/',
       maxAge: 31104000,
     })
+
+    if (
+      game === 'jotl' &&
+      (campaign === 1 || campaign === 2 || campaign === 3)
+    ) {
+      setHand(characterData.cards)
+    } else if (game === 'jotl') {
+      setHand([])
+    }
     setCharacter(characterData, setStage('selectPerks'))
   }
 
@@ -322,8 +367,8 @@ function App() {
         <PerkSelection
           modifyModifierDeck={modifyModifierDeck}
           character={character}
-          handleSetStage={handleSetStage}
           characterPerks={character.perks}
+          handleSetStage={handleSetStage}
           resetModifierDeck={resetModifierDeck}
         />
       )}
@@ -331,11 +376,13 @@ function App() {
         <HandSelection
           addCardToHand={addCardToHand}
           character={character}
+          game={game}
           level={level}
           hand={hand}
           handleUpdateCharacter={handleUpdateCharacter}
           handleSetStage={handleSetStage}
           removeCardFromHand={removeCardFromHand}
+          {...{ campaign, setCampaign }}
         />
       )}
       {stage === 'playing' && (
@@ -368,7 +415,7 @@ function Feedback() {
   }
 
   return (
-    <div className="footer">
+    <div className='footer'>
       <p>
         Did you run into a bug or do you have some feedback about the app? I'd
         love to hear about it!
@@ -414,9 +461,9 @@ function FeedbackModal({ show, hideModal }) {
   }
 
   return (
-    <div id="zoomModal" style={style}>
-      <div id="zoomFeedbackContent">
-        <span className="close" onClick={hideModal}>
+    <div id='zoomModal' style={style}>
+      <div id='zoomFeedbackContent'>
+        <span className='close' onClick={hideModal}>
           &times;
         </span>
         <h1>Feedback</h1>
@@ -428,8 +475,8 @@ function FeedbackModal({ show, hideModal }) {
             <StackView spacing={1}>
               <Field
                 inline
-                label="Subject"
-                helpContent="Brief sentence describing the feedback"
+                label='Subject'
+                helpContent='Brief sentence describing the feedback'
               >
                 <Input
                   onChange={({ target }) => setTitle(target.value)}
@@ -438,30 +485,30 @@ function FeedbackModal({ show, hideModal }) {
               </Field>
               <Field
                 inline
-                label="Type"
-                helpContent="Is this a bug or a feature request?"
+                label='Type'
+                helpContent='Is this a bug or a feature request?'
               >
                 <Select
-                  emptyValue="Bug or Feature Request?"
+                  emptyValue='Bug or Feature Request?'
                   tooltip={{ title: 'Bug or Feature Request' }}
                   onChange={(e) => setType(e.value)}
                   style={{ color: 'black' }}
                 >
-                  <Select.Option value="bug">Bug</Select.Option>
-                  <Select.Option value="enhancement">
+                  <Select.Option value='bug'>Bug</Select.Option>
+                  <Select.Option value='enhancement'>
                     Feature Request
                   </Select.Option>
                 </Select>
               </Field>
               <Field
                 inline
-                label="Description"
-                helpContent="Please be detailed here if you found a bug. The more details the better."
+                label='Description'
+                helpContent='Please be detailed here if you found a bug. The more details the better.'
               >
                 <TextArea
                   onChange={({ target }) => setBody(target.value)}
                   style={{ color: 'black', height: '200px' }}
-                  placeholder="Please include as many details as you can for bugs"
+                  placeholder='Please include as many details as you can for bugs'
                 />
               </Field>
               <Field inline>
@@ -478,8 +525,8 @@ function FeedbackModal({ show, hideModal }) {
             Welp, seems like there was an issue sending your feedback. You can
             visit the{' '}
             <a
-              href="https://github.com/nicholaskillin/gloomhaven-hand-manager/issues"
-              target="_blank"
+              href='https://github.com/nicholaskillin/gloomhaven-hand-manager/issues'
+              target='_blank'
             >
               Github Repo
             </a>{' '}
