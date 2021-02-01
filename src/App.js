@@ -195,7 +195,6 @@ function App() {
       maxAge: 31104000,
     })
 
-    // TODO: Fix this so that it always does this for tutorial campaigns
     if (
       game === 'jotl' &&
       (campaign === 1 || campaign === 2 || campaign === 3)
