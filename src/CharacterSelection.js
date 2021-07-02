@@ -52,18 +52,18 @@ function CharacterSelection({
   return (
     <>
       <Konami action={handleUnlockBladeSwarm} />
-      <div id="select-className-section" align="center">
-        <h2 className="header" align="center" style={{ color: 'white' }}>
+      <div id='select-className-section' align='center'>
+        <h2 className='header' align='center' style={{ color: 'white' }}>
           Select Your Character
         </h2>
         <select
           onChange={(event) => handleGameChange(event.target.value)}
-          id="game-selector"
+          id='game-selector'
           value={game}
         >
-          <option value="gloomhaven">Gloomhaven</option>
-          <option value="forgottenCircles">Forgotten Circles</option>
-          <option value="jotl">Jaws of the Lion</option>
+          <option value='gloomhaven'>Gloomhaven</option>
+          <option value='forgottenCircles'>Forgotten Circles</option>
+          <option value='jotl'>Jaws of the Lion</option>
         </select>
         <table>
           <tbody>
@@ -135,25 +135,25 @@ function CharacterSelection({
             </tr>
           </tbody>
         </table>
-        <div id="level-selection" align="center">
-          <h2 className="header" align="center" style={{ color: 'white' }}>
+        <div id='level-selection' align='center'>
+          <h2 className='header' align='center' style={{ color: 'white' }}>
             Select Your Level
           </h2>
-          <p id="level-counter">Level: {level}</p>
+          <p id='level-counter'>Level: {level}</p>
           <br />
           <button
-            id="level-down"
-            className="level-modifier"
-            type="button"
+            id='level-down'
+            className='level-modifier'
+            type='button'
             onClick={() => handleSetLevel(level - 1)}
             disabled={level < 2}
           >
             -
           </button>
           <button
-            id="level-up"
-            className="level-modifier"
-            type="button"
+            id='level-up'
+            className='level-modifier'
+            type='button'
             onClick={() => handleSetLevel(level + 1)}
             disabled={level > 8 || characterName === ''}
           >
@@ -163,11 +163,11 @@ function CharacterSelection({
         </div>
         <br />
         <button
-          id="confirm-character-button"
-          className="button"
-          type="button"
-          align="center"
-          title="Must Select A Character"
+          id='confirm-character-button'
+          className='button'
+          type='button'
+          align='center'
+          title='Must Select A Character'
           onClick={() => handleSetCharacter(characterName)}
           disabled={characterName === ''}
         >
@@ -202,21 +202,21 @@ function CharacterContainer({
       {character.name === 'beastTyrant' && (
         <div>
           <div
-            id="beastTyrantStaffLabel"
+            id='beastTyrantStaffLabel'
             className={
               characterName === 'beastTyrant' ? 'solo-scenario-label' : 'hiding'
             }
           >
             Completed solo scenario
           </div>
-          <label className="switch">
+          <label className='switch'>
             <input
-              id="beastTyrantSolo"
-              type="checkbox"
+              id='beastTyrantSolo'
+              type='checkbox'
               onChange={(e) => handleStaffOfCommand(e.target.checked)}
             />
             <span
-              id="beastTyrantStaff"
+              id='beastTyrantStaff'
               className={
                 characterName === 'beastTyrant' ? 'slider' : 'slider hiding'
               }
@@ -224,7 +224,7 @@ function CharacterContainer({
           </label>
         </div>
       )}
-      <p className="character-title" align="center">
+      <p className='character-title' align='center'>
         {character.noSpoilerName}
       </p>
     </td>
