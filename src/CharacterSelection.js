@@ -15,6 +15,9 @@ function CharacterSelection({
   const [characterName, setCharacterName] = useState('')
   const [bladeSwarmUnlocked, setBladeSwarmUnlocked] = useState(false)
   const cookies = new Cookies()
+  if (bladeSwarmUnlocked) {
+    availableCharacters.push(require('./envelopeX.json'))
+  }
   const firstRow = availableCharacters.slice(0, 3)
   const secondRow = availableCharacters.slice(3, 6)
   const thirdRow = availableCharacters.slice(6, 9)
@@ -36,12 +39,9 @@ function CharacterSelection({
     setCharacterName(characterName)
   }
 
-  if (bladeSwarmUnlocked) {
-    alert(`You unlocked bladeswarm`)
-  }
-
   function handleUnlockBladeSwarm() {
     setBladeSwarmUnlocked(true)
+    alert(`You unlocked bladeswarm`)
   }
 
   function handleGameChange(game) {
