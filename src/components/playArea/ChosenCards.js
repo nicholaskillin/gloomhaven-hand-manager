@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 
 import CardContainer from '../../CardContainer'
 import ModifierDeck from './ModifierDeck'
+import { isEmpty } from 'lodash'
 
 function ChosenCards({
   character,
@@ -58,6 +59,9 @@ function ChosenCards({
     moveCardToActive(selectedCard)
     setSelectedCard({})
   }
+
+  const cardIsSelected = !isEmpty(selectedCard)
+  const canMoveToActive = cardIsSelected && selectedCard.tracker.length > 0
 
   return (
     <td
@@ -133,9 +137,9 @@ function ChosenCards({
         <button
           id="discard-button"
           className="button tooltip"
-          disabled={Object.keys(selectedCard).length === 0}
           type="button"
           title="Must Have a Card In Play Selected"
+          disabled={!cardIsSelected}
           onClick={() => handleDiscardChosenCard()}
         >
           Discard Card
@@ -143,7 +147,7 @@ function ChosenCards({
         <button
           id="lose-button"
           className="button tooltip"
-          disabled={Object.keys(selectedCard).length === 0}
+          disabled={!cardIsSelected}
           onClick={() => handleLostChosenCard()}
           type="button"
           title="Must Have a Card In Play Selected"
@@ -153,7 +157,7 @@ function ChosenCards({
         <button
           id="activate-button"
           className="button tooltip"
-          disabled={Object.keys(selectedCard).length === 0}
+          disabled={!canMoveToActive}
           onClick={() => handleActivateChosenCard()}
           type="button"
           title="Must Have a Card In Play Selected"
