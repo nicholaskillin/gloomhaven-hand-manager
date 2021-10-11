@@ -10380,7 +10380,8 @@
         "title": "battlefield-medicine",
         "level": 1,
         "enhancementSpots": 0,
-        "enhancements": []
+        "enhancements": [],
+        "tracker": []
       },
       {
         "title": "triage",
