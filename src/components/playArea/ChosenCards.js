@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 import CardContainer from '../../CardContainer'
 import ModifierDeck from './ModifierDeck'
+import { isEmpty } from 'lodash'
 
 function ChosenCards({
   character,
@@ -23,7 +24,10 @@ function ChosenCards({
   }
 
   function noCardsPlayed() {
-    return (Object.keys(chosenCards[0]).length === 0 || Object.keys(chosenCards[1]).length === 0) ? true : false
+    return (
+      Object.keys(chosenCards[0]).length === 0 ||
+      Object.keys(chosenCards[1]).length === 0
+    )
   }
 
   function handleCardClick(cardClicked) {
@@ -59,23 +63,26 @@ function ChosenCards({
     setSelectedCard({})
   }
 
+  const cardIsSelected = !isEmpty(selectedCard)
+  const canMoveToActive = cardIsSelected && selectedCard.tracker.length > 0
+
   return (
     <td
-      className="chosen-cards-title"
-      colSpan="2"
+      className='chosen-cards-title'
+      colSpan='2'
       style={{ border: '1px solid white', textAlign: 'center' }}
     >
       Chosen Cards
       <br />
-      <table align="center">
+      <table align='center'>
         <tbody>
           <tr>
             {Object.keys(chosenCards[0]).length === 0 ? (
-              <td id="chosen-card-1" className="card-in-play">
+              <td id='chosen-card-1' className='card-in-play'>
                 <img
-                  alt="Chosen Card 1"
+                  alt='Chosen Card 1'
                   src={`./images/character-ability-cards/${character.initials}/${character.initials}-back.png`}
-                  className="card"
+                  className='card'
                 />
               </td>
             ) : (
@@ -89,11 +96,11 @@ function ChosenCards({
               />
             )}
             {Object.keys(chosenCards[1]).length === 0 ? (
-              <td id="chosen-card-2" className="card-in-play">
+              <td id='chosen-card-2' className='card-in-play'>
                 <img
-                  alt="Chosen Card 1"
+                  alt='Chosen Card 1'
                   src={`./images/character-ability-cards/${character.initials}/${character.initials}-back.png`}
-                  className="card"
+                  className='card'
                 />
               </td>
             ) : (
@@ -107,11 +114,11 @@ function ChosenCards({
               />
             )}
             {staffOfCommand && Object.keys(chosenCards[2]).length === 0 && (
-              <td id="chosen-card-3" className="card-in-play">
+              <td id='chosen-card-3' className='card-in-play'>
                 <img
-                  alt="Chosen Card 1"
+                  alt='Chosen Card 1'
                   src={`./images/character-ability-cards/${character.initials}/${character.initials}-back.png`}
-                  className="card"
+                  className='card'
                 />
               </td>
             )}
@@ -131,44 +138,43 @@ function ChosenCards({
       <div>
         <br />
         <button
-          id="discard-button"
-          className="button tooltip"
-          disabled={Object.keys(selectedCard).length === 0}
-          type="button"
-          title="Must Have a Card In Play Selected"
+          id='discard-button'
+          className='button tooltip'
+          disabled={!cardIsSelected}
+          type='button'
+          title='Must Have a Card In Play Selected'
           onClick={() => handleDiscardChosenCard()}
         >
           Discard Card
         </button>
         <button
-          id="lose-button"
-          className="button tooltip"
-          disabled={Object.keys(selectedCard).length === 0}
+          id='lose-button'
+          className='button tooltip'
+          disabled={!cardIsSelected}
           onClick={() => handleLostChosenCard()}
-          type="button"
-          title="Must Have a Card In Play Selected"
+          type='button'
+          title='Must Have a Card In Play Selected'
         >
           Lose Card
         </button>
         <button
-          id="activate-button"
-          className="button tooltip"
-          disabled={Object.keys(selectedCard).length === 0}
+          id='activate-button'
+          className='button tooltip'
+          disabled={!canMoveToActive}
           onClick={() => handleActivateChosenCard()}
-          type="button"
-          title="Must Have a Card In Play Selected"
+          type='button'
+          title='Must Have a Card In Play Selected'
         >
           Move Card to Active
         </button>
-        <button 
-          className="button tooltip" 
+        <button
+          className='button tooltip'
           disabled={noCardsPlayed()}
           onClick={() => returnChosenCardsToHand()}
-          title="Select New Cards"
+          title='Select New Cards'
         >
           Select New Cards
         </button>
-        
       </div>
       <ModifierDeck modifierDeck={modifierDeck} />
     </td>
