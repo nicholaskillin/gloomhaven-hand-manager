@@ -24,10 +24,10 @@ function ChosenCards({
   }
 
   function noCardsPlayed() {
-    return Object.keys(chosenCards[0]).length === 0 ||
+    return (
+      Object.keys(chosenCards[0]).length === 0 ||
       Object.keys(chosenCards[1]).length === 0
-      ? true
-      : false
+    )
   }
 
   function handleCardClick(cardClicked) {
