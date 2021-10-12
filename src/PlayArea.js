@@ -44,7 +44,7 @@ function PlayArea({
     // remove selected cards from hand
     let newHand = [...hand]
     cards.forEach((card) => {
-      _.remove(newHand, function(handCard) {
+      _.remove(newHand, function (handCard) {
         return handCard.title === card.title
       })
     })
@@ -63,7 +63,7 @@ function PlayArea({
     // remove selected cards from hand
     let newHand = [...hand]
     cards.forEach((card) => {
-      _.remove(newHand, function(handCard) {
+      _.remove(newHand, function (handCard) {
         return handCard.title === card.title
       })
     })
@@ -169,7 +169,7 @@ function PlayArea({
     chosenCards.forEach((chosenCard) => {
       if (Object.keys(chosenCard).length !== 0) {
         newHand = [...newHand, chosenCard]
-      } 
+      }
     })
     setHand(newHand)
 
@@ -183,8 +183,8 @@ function PlayArea({
       <Menu>
         <SettingsMenu setPlayerStats={handleUpdateShowPlayerStats} />
       </Menu>
-      <div id="play-game" align="center">
-        <table id="play-area" align="center">
+      <div id='play-game' align='center'>
+        <table id='play-area' align='center'>
           <tbody>
             <tr>
               <ChosenCards
@@ -230,7 +230,9 @@ function PlayArea({
         moveCardsToChosen={moveCardsToChosen}
         hasCardsInPlay={hasCardsInPlay}
         staffOfCommand={staffOfCommand}
-        staffOfCommandPlayed={Object.keys(chosenCards[2]).length === 0 ? false : true}
+        staffOfCommandPlayed={
+          Object.keys(chosenCards[2]).length === 0 ? false : true
+        }
       />
     </>
   )
@@ -340,13 +342,13 @@ function DiscardedCards({
 
   return (
     <td
-      id="discarded-cards-title"
-      colSpan="2"
+      id='discarded-cards-title'
+      colSpan='2'
       style={{ border: '1px solid white', textAlign: 'center' }}
     >
       Discarded Cards
-      {longResting && <p id="choose-to-lose">Choose One Card to Lose</p>}
-      <table id="discard-table">
+      {longResting && <p id='choose-to-lose'>Choose One Card to Lose</p>}
+      <table id='discard-table'>
         <tbody>
           <tr>
             {firstRow.map((card) => (
@@ -393,63 +395,63 @@ function DiscardedCards({
         </tbody>
       </table>
       <button
-        id="short-rest-button"
+        id='short-rest-button'
         disabled={discardedCards.length < 2 || resting || longResting}
-        className="button"
+        className='button'
         onClick={() => handleShortRest()}
-        type="button"
-        title="Must Have At Least 2 Discarded Cards And No Cards in Play"
+        type='button'
+        title='Must Have At Least 2 Discarded Cards And No Cards in Play'
       >
         Short Rest
       </button>
       <button
-        id="long-rest-button"
+        id='long-rest-button'
         disabled={discardedCards.length < 2 || resting || longResting}
-        className="button"
+        className='button'
         onClick={() => handleLongRest()}
-        type="button"
-        title="Must Have At Least 2 Discarded Cards And No Cards in Play"
+        type='button'
+        title='Must Have At Least 2 Discarded Cards And No Cards in Play'
       >
         Long Rest
       </button>
       <button
-        id="recover-discard-button"
+        id='recover-discard-button'
         disabled={selectedCards.length !== 1 || resting || longResting}
-        className="button"
+        className='button'
         onClick={() => handleRecoverDiscardedCard(selectedCards[0])}
-        type="button"
-        title="Must Have A Discarded Card Selected"
+        type='button'
+        title='Must Have A Discarded Card Selected'
       >
         Recover Discarded Card
       </button>
       <br />
       <button
-        id="lose-discard-button"
-        className="button"
+        id='lose-discard-button'
+        className='button'
         disabled={Object.keys(cardToLose).length === 0}
         onClick={() => handleLoseCardFromRest()}
-        type="button"
-        title="Must Be Resting"
+        type='button'
+        title='Must Be Resting'
       >
         Lose Card From Rest
       </button>
       <button
-        id="reroll-random-card-button"
-        className="button"
+        id='reroll-random-card-button'
+        className='button'
         disabled={!canRerollLost}
         onClick={() => handleRerollLostCard()}
-        type="button"
-        title="Can Only Be Used Once Per Short Rest"
+        type='button'
+        title='Can Only Be Used Once Per Short Rest'
       >
         Reroll Lost Card
       </button>
       <button
-        id="lose-discard-button2"
-        className="button"
+        id='lose-discard-button2'
+        className='button'
         disabled={selectedCards.length !== 2}
         onClick={() => handleLoseCardsAvoidingDamage(selectedCards)}
-        type="button"
-        title="Must Have A Discarded Card Selected - Must Lose 2 to Avoid Damage"
+        type='button'
+        title='Must Have A Discarded Card Selected - Must Lose 2 to Avoid Damage'
       >
         Lose Cards To Avoid Damage
       </button>
@@ -504,13 +506,13 @@ function ActiveCards({
 
   return (
     <td
-      id="active-cards-title"
-      colSpan="2"
+      id='active-cards-title'
+      colSpan='2'
       style={{ border: '1px solid white', textAlign: 'center' }}
     >
       Active Cards
       <br />
-      <table id="active-table" align="center">
+      <table id='active-table' align='center'>
         <tbody>
           <tr>
             {firstRow.map((card) => (
@@ -541,22 +543,22 @@ function ActiveCards({
         </tbody>
       </table>
       <button
-        id="discard-active-card"
-        className="button tooltip"
+        id='discard-active-card'
+        className='button tooltip'
         disabled={Object.keys(selectedCard).length === 0}
         onClick={() => handleDiscardCard(selectedCard)}
-        type="button"
-        title="Must Have an Active Card Selected"
+        type='button'
+        title='Must Have an Active Card Selected'
       >
         Discard Active Card
       </button>
       <button
-        id="lose-active-card"
-        className="button tooltip"
+        id='lose-active-card'
+        className='button tooltip'
         disabled={Object.keys(selectedCard).length === 0}
         onClick={() => handleLoseCard(selectedCard)}
-        type="button"
-        title="Must Have an Active Card Selected"
+        type='button'
+        title='Must Have an Active Card Selected'
       >
         Lose Active Card
       </button>
@@ -600,13 +602,13 @@ function LostCards({ character, lostCards, moveLostCardToHand }) {
 
   return (
     <td
-      id="lost-cards-title"
-      colSpan="2"
+      id='lost-cards-title'
+      colSpan='2'
       style={{ border: '1px solid white', textAlign: 'center' }}
     >
       Lost Cards
       <br />
-      <table id="lost-table">
+      <table id='lost-table'>
         <tbody>
           <tr>
             {firstRow.map((card) => (
@@ -650,12 +652,12 @@ function LostCards({ character, lostCards, moveLostCardToHand }) {
         </tbody>
       </table>
       <button
-        id="recover-lost"
-        className="button"
+        id='recover-lost'
+        className='button'
         disabled={Object.keys(selectedCard).length === 0}
         onClick={() => handleRecoverLostCard(selectedCard)}
-        type="button"
-        title="Must Have a Lost Card Selected"
+        type='button'
+        title='Must Have a Lost Card Selected'
       >
         Recover Lost Card
       </button>
@@ -670,8 +672,8 @@ function SettingsMenu({ setPlayerStats }) {
         <Text>Settings</Text>
         <CheckboxCard
           onChange={(e) => setPlayerStats(e.target.checked)}
-          key="stats"
-          title="Player Stats"
+          key='stats'
+          title='Player Stats'
         />
       </StackView>
     </>
