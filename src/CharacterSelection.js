@@ -33,7 +33,7 @@ function CharacterSelection({
     if (cookieInfo.level) {
       handleSetLevel(parseInt(cookieInfo.level, 10))
     }
-  }, [cookies, handleSetLevel])
+  }, [])
 
   function selectCharacter(characterName) {
     setCharacterName(characterName)

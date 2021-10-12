@@ -28,7 +28,7 @@ function PlayArea({
       const newImage = new Image()
       newImage.src = image.image
     })
-  }, [modifierDeck])
+  }, [])
 
   function anyChosenCardsLeft(newArray) {
     let cardsStillInPlay = newArray.filter(

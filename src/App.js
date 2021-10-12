@@ -112,7 +112,6 @@ function App() {
   const [staffOfCommand, setStaffOfCommand] = useState(false)
   const allCharacterData = getGameCharacters(game)
   const cookies = new Cookies()
-  const characterSelected = !_.isEmpty(character)
 
   // Load the game selected from the cookie if possible
   useEffect(() => {
@@ -126,7 +125,7 @@ function App() {
     if (cookieInfo.campaign) {
       setCampaign(parseInt(cookieInfo.campaign))
     }
-  }, [cookies])
+  }, [])
 
   useEffect(() => {
     if (characterSelected && game === 'jotl') {
@@ -150,14 +149,7 @@ function App() {
 
       setCharacter(characterData)
     }
-  }, [
-    allCharacterData,
-    campaign,
-    character.name,
-    characterSelected,
-    cookies,
-    game,
-  ])
+  }, [campaign])
 
   function getGameCharacters(gameName) {
     if (gameName === 'gloomhaven') {
@@ -168,6 +160,8 @@ function App() {
       return require(`./jawsOfTheLionCharacterData.json`)
     }
   }
+
+  const characterSelected = !_.isEmpty(character)
 
   function changeGame(gameName) {
     setGame(gameName)
