@@ -532,6 +532,7 @@ function FeedbackModal({ show, hideModal }) {
             visit the{' '}
             <a
               href='https://github.com/nicholaskillin/gloomhaven-hand-manager/issues'
+              rel='noopener noreferrer'
               target='_blank'
             >
               Github Repo
