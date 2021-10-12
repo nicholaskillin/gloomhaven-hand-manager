@@ -3960,7 +3960,8 @@
         "title": "tinkerers-tools",
         "level": 3,
         "enhancementSpots": 0,
-        "enhancements": []
+        "enhancements": [],
+        "tracker": []
       },
       {
         "title": "crank-bow",
