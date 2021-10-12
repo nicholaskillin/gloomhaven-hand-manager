@@ -4980,7 +4980,8 @@
         "title": "tribal-sigil",
         "level": 9,
         "enhancementSpots": 0,
-        "enhancements": []
+        "enhancements": [],
+        "tracker": []
       },
       {
         "title": "jaws-of-death",
