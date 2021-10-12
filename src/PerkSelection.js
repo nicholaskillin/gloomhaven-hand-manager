@@ -84,7 +84,7 @@ function PerkSelection({
     if (cookieInfo.modifierChanges) {
       setChangesToModifierDeck(cookieInfo.modifierChanges)
     }
-  }, [])
+  }, [cookie, resetModifierDeck])
 
   function handlePerkChange(perkId, checkboxId, value) {
     // Update value of perk in state
