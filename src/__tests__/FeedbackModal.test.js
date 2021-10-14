@@ -1,5 +1,5 @@
 import React from 'react'
-import FeedbackModal from '../feedbackModal'
+import FeedbackModal from './../feedbackModal'
 import { render, screen } from '@testing-library/react'
 
 it('has a Subject field and label', () => {
