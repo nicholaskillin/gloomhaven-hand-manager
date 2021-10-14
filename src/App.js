@@ -407,7 +407,7 @@ function Feedback() {
   }
 
   return (
-    <div className='footer'>
+    <div className="footer">
       <p>
         Did you run into a bug or do you have some feedback about the app? I'd
         love to hear about it!
