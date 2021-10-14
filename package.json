@@ -15,7 +15,11 @@
     "add": "^2.0.6",
     "dotenv": "^8.2.0",
     "emotion-theming": "^10.0.27",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "lodash": "^4.17.21",
+    "mutationobserver-shim": "^0.3.7",
+    "prettier": "^2.4.1",
     "react": "^16.13.1",
     "react-burger-menu": "^2.6.15",
     "react-cookie-consent": "^5.0.1",
@@ -49,5 +53,8 @@
   },
   "engines": {
     "node": "14.X.x"
+  },
+  "devDependencies": {
+    "jest-canvas-mock": "^2.3.1"
   }
 }
