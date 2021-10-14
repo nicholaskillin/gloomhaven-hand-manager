@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@bugsnag/js": "^7.1.1",
-    "@bugsnag/plugin-react": "^7.1.1",
+    "@bugsnag/plugin-react": "^7.13.2",
     "@emotion/cache": "^10.0.29",
     "@emotion/core": "^10.0.28",
     "@octokit/rest": "^17.10.0",
