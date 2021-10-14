@@ -1,14 +1,5 @@
 import './App.css'
 
-import {
-  Button,
-  Field,
-  Input,
-  Select,
-  StackView,
-  TextArea,
-  ThemeProvider,
-} from '@planning-center/ui-kit'
 import React, { useEffect, useState } from 'react'
 
 import CharacterSelection from './CharacterSelection'
@@ -17,6 +8,7 @@ import Cookies from 'universal-cookie'
 import HandSelection from './HandSelection'
 import PerkSelection from './PerkSelection'
 import PlayArea from './PlayArea'
+import FeedbackModal from './FeedbackModal'
 import _ from 'lodash'
 
 function App() {
@@ -422,119 +414,6 @@ function Feedback() {
       </p>
       <button onClick={handleSubmitFeedback}>Submit Feedback</button>
       <FeedbackModal show={displayModal} hideModal={hideModal} />
-    </div>
-  )
-}
-
-function FeedbackModal({ show, hideModal }) {
-  const style = show ? { display: 'block' } : { display: 'none' }
-  const [title, setTitle] = useState('')
-  const [type, setType] = useState('')
-  const [body, setBody] = useState('')
-  const [submitted, setSubmitted] = useState(false)
-  const [submissionError, setSubmissionError] = useState(false)
-  const [showErrors, setShowErrors] = useState(false)
-  const { Octokit } = require('@octokit/rest')
-  const octokit = new Octokit({
-    auth: process.env.REACT_APP_GITHUB_KEY,
-  })
-
-  function handleSubmitForm() {
-    if (title !== '' && type !== '' && body !== '') {
-      setShowErrors(false)
-      setSubmitted(true)
-      octokit.issues
-        .create({
-          owner: 'nicholaskillin',
-          repo: 'gloomhaven-hand-manager',
-          title: title,
-          body: body,
-          labels: [type],
-        })
-        .catch((err) => {
-          setSubmissionError(true)
-          return
-        })
-    } else {
-      setShowErrors(true)
-    }
-  }
-
-  return (
-    <div id='zoomModal' style={style}>
-      <div id='zoomFeedbackContent'>
-        <span className='close' onClick={hideModal}>
-          &times;
-        </span>
-        <h1>Feedback</h1>
-        {showErrors && (
-          <h1 style={{ color: 'red' }}>Please fill out all fields</h1>
-        )}
-        {!submitted && (
-          <ThemeProvider>
-            <StackView spacing={1}>
-              <Field
-                inline
-                label='Subject'
-                helpContent='Brief sentence describing the feedback'
-              >
-                <Input
-                  onChange={({ target }) => setTitle(target.value)}
-                  style={{ color: 'black' }}
-                />
-              </Field>
-              <Field
-                inline
-                label='Type'
-                helpContent='Is this a bug or a feature request?'
-              >
-                <Select
-                  emptyValue='Bug or Feature Request?'
-                  tooltip={{ title: 'Bug or Feature Request' }}
-                  onChange={(e) => setType(e.value)}
-                  style={{ color: 'black' }}
-                >
-                  <Select.Option value='bug'>Bug</Select.Option>
-                  <Select.Option value='enhancement'>
-                    Feature Request
-                  </Select.Option>
-                </Select>
-              </Field>
-              <Field
-                inline
-                label='Description'
-                helpContent='Please be detailed here if you found a bug. The more details the better.'
-              >
-                <TextArea
-                  onChange={({ target }) => setBody(target.value)}
-                  style={{ color: 'black', height: '200px' }}
-                  placeholder='Please include as many details as you can for bugs'
-                />
-              </Field>
-              <Field inline>
-                <Button onClick={handleSubmitForm}>Submit</Button>
-              </Field>
-            </StackView>
-          </ThemeProvider>
-        )}
-        {submitted && !submissionError && (
-          <h1>Thank you for your submission!</h1>
-        )}
-        {submissionError && (
-          <p>
-            Welp, seems like there was an issue sending your feedback. You can
-            visit the{' '}
-            <a
-              href='https://github.com/nicholaskillin/gloomhaven-hand-manager/issues'
-              rel='noopener noreferrer'
-              target='_blank'
-            >
-              Github Repo
-            </a>{' '}
-            to provide that feedback if you'd like.
-          </p>
-        )}
-      </div>
     </div>
   )
 }
