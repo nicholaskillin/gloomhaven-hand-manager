@@ -1,3 +1,13 @@
+## This app will be shutting down and no longer support on November 28th, 2022
+
+This app was built shortly after the worldwide COVID-19 pandemic began. I built it because my gaming group was playing through Gloomhaven at the time, and like many other groups, we needed to quickly pivot to find solutions for playing online. This gave people without a physical copy of the game the ability to see and manage the different decks of cards they needed to play.
+
+I have been hosting this app for a few years now on a free platform. That platform is removing the free tier. Now that the pandemic is over and most people are playing in person again, there are not enough people using this to justify paying monthly for it.
+
+This is all open source, so anyone that would like to is more than welcome to fork and take ownership of this project.
+
+If you want to take this over but have some questions feel free to open up an issue in this repo and I will respond.
+
 ## This code had major spoilers. Please don't look at the code if you don't want anything spoiled.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
