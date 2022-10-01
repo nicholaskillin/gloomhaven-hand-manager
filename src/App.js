@@ -2,6 +2,8 @@ import './App.css'
 
 import React, { useEffect, useState } from 'react'
 
+import Alert from '@mui/material/Alert'
+import Button from '@mui/material/Button'
 import CharacterSelection from './CharacterSelection'
 import CookieConsent from 'react-cookie-consent'
 import Cookies from 'universal-cookie'
@@ -342,6 +344,21 @@ function App() {
 
   return (
     <>
+      <Alert
+        action={
+          <Button
+            href="https://www.github.com/nicholaskillin/gloomhaven-hand-manager"
+            size="small"
+            target="_blank"
+            variant="outlined"
+          >
+            To find out more click here.
+          </Button>
+        }
+        severity="warning"
+      >
+        Gloomhaven Hand Manager will be shutting down on November 28th, 2022.
+      </Alert>
       {stage === 'selectCharacter' && (
         <>
           <CharacterSelection
